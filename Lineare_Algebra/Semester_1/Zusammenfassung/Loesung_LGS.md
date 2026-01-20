@@ -72,7 +72,7 @@ A:=
 \hspace{1cm}
 b := 
 \begin{pmatrix} 
-10 \\ 
+10 \\
 5 \\ 
 20 
 \end{pmatrix}
