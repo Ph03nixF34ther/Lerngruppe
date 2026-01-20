@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream:Lineare_Algebra/Semester_1/Lineare_Algebra.md
-# Behandelter Stoff
-
-Test Test
-
-=======
->>>>>>> Stashed changes:Semester 1/Lineare Algebra/Behandelter Stoff.md
 1. Lösung linearer Gleichungssysteme
     1. gaußsche Algorithmus
     2. gauß-jordansche Algorithmus
