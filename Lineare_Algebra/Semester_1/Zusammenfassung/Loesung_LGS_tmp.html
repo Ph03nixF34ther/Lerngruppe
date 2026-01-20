@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loesung_LGS.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+html,footer,header{
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Custom MD PDF CSS
+ */
+html,footer,header{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+
+ }
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///Users/elias_mac/Documents/Lerngruppe/R%3A%5C2.Travail%5C1.Enseignement%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css"><link rel="stylesheet" href="file:///Users/elias_mac/Documents/Lerngruppe/D%3A%5Crdaros%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css">
+</head>
+
+<body>
+    <h1 id="l%C3%B6sung-linearer-gleichungssysteme">Lösung linearer Gleichungssysteme</h1>
+<h2 id="inhaltsverzeichnis">Inhaltsverzeichnis</h2>
+<ol>
+<li><a href="#%C3%BCberblick-lineare-gleichungssysteme">Überblick über LGS</a></li>
+<li><a href="#das-gau%C3%9Fsche-eliminationsverfahren">Das gaußsche Eliminationsverfahren</a></li>
+<li><a href="#der-gau%C3%9F-jordansche-algorithmus">Der Gauß-Jordansche Algorithmus</a></li>
+<li><a href="#die-cramersche-regel">Die Cramersche Regel</a></li>
+<li>[Die lineare Abhängigkeit von LGS]</li>
+<li>[Parameterabhängige LGS]</li>
+<li>[Aufgabe: Kaffeeplantage]</li>
+</ol>
+<h2 id="%C3%BCberblick-lineare-gleichungssysteme">Überblick lineare Gleichungssysteme</h2>
+<p>Bei linearen Gleichungssystemen wird ein Urbildvektor $x$ über eine Matrix $A$ auf einen Bildvektor $b$ abgeblildet.</p>
+<p>$$<br>
+x * A = b<br>
+$$<br>
+$$<br>
+A = \text{Koeffizienten-Matrix} \<br>
+x = \text{Urbildvektor} \<br>
+b = \text{Bildvektor}<br>
+$$<br>
+Die Darstellung lässt sich aus $n$-dimensionalen Gleichungssystemen aus der Schule ableiten:<br>
+$$<br>
+(x_0 * a_{00}) + (x_1 * a_{01}) + (x_2 * a_{02}) = b_0 \<br>
+(x_1 * a_{10}) + (x_1 * a_{11}) + (x_2 * a_{12}) = b_1 \<br>
+(x_2 * a_{20}) + (x_1 * a_{21}) + (x_2 * a_{22}) = b_2<br>
+$$</p>
+<h1 id="beginpmatrixx0-x1-x2endpmatrixbeginpmatrixa00--a01--a02-a10--a11--a12-a20--a21--a22endpmatrix">$$<br>
+\begin{pmatrix}<br>
+x_0 \<br>
+x_1 \<br>
+x_2<br>
+\end{pmatrix}<br>
+*<br>
+\begin{pmatrix}<br>
+a_00 &amp; a_01 &amp; a_02 \<br>
+a_10 &amp; a_11 &amp; a_12 \<br>
+a_20 &amp; a_21 &amp; a_22<br>
+\end{pmatrix}</h1>
+<p>\begin{pmatrix}<br>
+b_0 \<br>
+b_1 \<br>
+b_2<br>
+\end{pmatrix}<br>
+$$</p>
+<h2 id="das-gau%C3%9Fsche-eliminationsverfahren">Das gaußsche Eliminationsverfahren</h2>
+<h3 id="beschreibung-des-gau%C3%9Fschen-eliminationsverfahrens">Beschreibung des gaußschen Eliminationsverfahrens</h3>
+<table>
+<thead>
+<tr>
+<th>Gesucht</th>
+<th>$x$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gegeben</td>
+<td>$b$, $A$</td>
+</tr>
+</tbody>
+</table>
+<p>Das gaußsche Eliminationsverfahren verändert durch simple Rechenschritte sowohl die Matrix $A$ alsauch den Bildvektor $b$ um die Matrix in eine Dreiecksmatrix umzuwandeln.</p>
+<p>Die Variablen des Urbildvektors lassen sich dann aus $A'$ un $b'$ ableiten.</p>
+<h3 id="beispiel-f%C3%BCr-das-gau%C3%9Fsche-eliminationsverfahren">Beispiel für das gaußsche Eliminationsverfahren</h3>
+<p>$$<br>
+A:=<br>
+\begin{pmatrix}<br>
+3 &amp; 5 &amp; -2 \<br>
+4  &amp; -1 &amp; 4 \<br>
+1 &amp; 1 &amp; 1<br>
+\end{pmatrix}<br>
+\hspace{1cm}<br>
+b :=<br>
+\begin{pmatrix}<br>
+10 \<br>
+5 \<br>
+20<br>
+\end{pmatrix}<br>
+$$<br>
+$$<br>
+\left[<br>
+\begin{array}{ccc|c}<br>
+1 &amp; 1 &amp; 1 &amp; 20 \<br>
+4 &amp; -1 &amp; 4 &amp; 5 \<br>
+3  &amp; 5 &amp; -2  &amp; 10<br>
+\end{array}<br>
+\right]<br>
+*</p>
+<p>\left[<br>
+\begin{array}{ccc}<br>
+1 &amp; 0 &amp; 0        \<br>
+-4 &amp; 1 &amp; 0         \<br>
+-3 &amp; 0 &amp; 1<br>
+\end{array}<br>
+\right] =</p>
+<p>\left[<br>
+\begin{array}{ccc|c}<br>
+1 &amp; 1 &amp; 1 &amp; 20 \<br>
+0 &amp; -5 &amp; 0 &amp; -75 \<br>
+0  &amp; 2 &amp; -5  &amp; -50<br>
+\end{array}<br>
+\right]<br>
+$$<br>
+An diesem Punkt könnte man die Suche nach der Dreiecksmatrix beenden, da durch verschiedene Matrizenoperationen, wie Spalten oder Zeilenverschiebungen aus dieser Matrix bereits eine Dreiecksmatrix entsteht.<br>
+Aus gründen der Beispielführung wird die Vorgehenswiese hier nicht abgebrochen sondern fortgeführt<br>
+$$<br>
+\left[<br>
+\begin{array}{ccc|c}<br>
+1 &amp; 1 &amp; 1 &amp; 20 \<br>
+0 &amp; -5 &amp; 0 &amp; -75 \<br>
+0  &amp; 2 &amp; -5  &amp; -50<br>
+\end{array}<br>
+\right]<br>
+*</p>
+<p>\left[<br>
+\begin{array}{ccc}<br>
+1 &amp; 0 &amp; 0        \<br>
+0 &amp; 1 &amp; 0         \<br>
+0 &amp; 2 &amp; 5<br>
+\end{array}<br>
+\right] =<br>
+\left[<br>
+\begin{array}{ccc|c}<br>
+1 &amp; 1 &amp; 1 &amp; 20 \<br>
+0 &amp; -5 &amp; 0 &amp; -75 \<br>
+0  &amp; 0 &amp; -25  &amp; -400<br>
+\end{array}<br>
+\right]<br>
+$$</p>
+<p>Mit dieser erweiterten Matrix können nun die Parameter bestimmt werden:<br>
+$$<br>
+-25 * x_3 = -400 \hspace{1cm} \Rightarrow x_3 = 16 \<br>
+-5  * x_2 = -75  \hspace{1cm} \Rightarrow x_2 = 15 \<br>
+x_1 + x_2 + x_3 = 20 \hspace{1cm} \Rightarrow x_1 = -11<br>
+$$</p>
+<h2 id="der-gau%C3%9F-jordansche-algorithmus">Der Gauß-Jordansche Algorithmus</h2>
+<h3 id="beschreibung-des-gau%C3%9Fschen-eliminationsverfahrens">Beschreibung des gaußschen Eliminationsverfahrens</h3>
+<table>
+<thead>
+<tr>
+<th>Gesucht</th>
+<th>$x$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gegeben</td>
+<td>$b$, $A$</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Das gaußsche Eliminationsverfahren verändert durch simple Rechenschritte sowohl die Matrix $A$ alsauch den Bildvektor $b$ um die Matrix in eine Dreiecksmatrix umzuwandeln.</p>
+</li>
+<li>
+<p>Daraufhin wird die Matrix mit einer $L$ Matrix so multipliziert, dass alle Werte auf der Diagonale $1$ ist.</p>
+</li>
+<li>
+<p>Zuletzt wird das gaußsche Eliminationsverfahren erneut angewandt, sodass die Koeffizieentenmatrix nun zur Einheitsmatrix wird.</p>
+</li>
+</ol>
+<p>Die Variablen müssen jedoch nicht aus der Koeffizientenmatrix und dem Bildvektor gedeutet werden, sondern der Urbildvektor <strong>ist</strong> der veränderte Bildvektor<br>
+$$<br>
+x = b'<br>
+$$</p>
+<h3 id="beispiel-f%C3%BCr-das-gau%C3%9Fsche-eliminationsverfahren">Beispiel für das gaußsche Eliminationsverfahren</h3>
+<h2 id="es-wird-das-beischpiel-aus-dem-unterkapitel-das-gau%C3%9Fsche-eliminationsverfahren-verwendet-es-wird-vorrausgesetzt-dass-das-gau%C3%9Fsche-eliminationsverfahren-bereits-angewandt-wurdeabeginpmatrix3--5---2-4---1--4-1--1--1endpmatrixhspace1cmb-beginpmatrix10-5-20endpmatrix">Es wird das Beischpiel aus dem Unterkapitel <a href="#das-gau%C3%9Fsche-eliminationsverfahren">Das gaußsche Eliminationsverfahren</a> verwendet. Es wird vorrausgesetzt, dass das gaußsche Eliminationsverfahren bereits angewandt wurde.<br>
+$$<br>
+A:=<br>
+\begin{pmatrix}<br>
+3 &amp; 5 &amp; -2 \<br>
+4  &amp; -1 &amp; 4 \<br>
+1 &amp; 1 &amp; 1<br>
+\end{pmatrix}<br>
+\hspace{1cm}<br>
+b :=<br>
+\begin{pmatrix}<br>
+10 \<br>
+5 \<br>
+20<br>
+\end{pmatrix}<br>
+$$</h2>
+<h2 id="rightarrowleftbeginarraycccc1--1--1--20-0---5--0---75-0--0---25---400endarrayright">$$<br>
+\Rightarrow<br>
+\left[<br>
+\begin{array}{ccc|c}<br>
+1 &amp; 1 &amp; 1 &amp; 20 \<br>
+0 &amp; -5 &amp; 0 &amp; -75 \<br>
+0  &amp; 0 &amp; -25  &amp; -400<br>
+\end{array}<br>
+\right]<br>
+$$</h2>
+<p>$$<br>
+\left[<br>
+\begin{array}{ccc|c}<br>
+1 &amp; 1 &amp; 1 &amp; 20 \<br>
+0 &amp; -5 &amp; 0 &amp; -75 \<br>
+0  &amp; 0 &amp; -25  &amp; -400<br>
+\end{array}<br>
+\right] *<br>
+\left[<br>
+\begin{array}{ccc}<br>
+1 &amp; 0 &amp; 0        \<br>
+0 &amp; -0.2 &amp; 0         \<br>
+0 &amp; 0 &amp; -0.04<br>
+\end{array}<br>
+\right] =<br>
+\left[<br>
+\begin{array}{ccc|c}<br>
+1 &amp; 1 &amp; 1 &amp; 20 \<br>
+0 &amp; 1 &amp; 0 &amp; 15 \<br>
+0  &amp; 0 &amp; 1  &amp; 16<br>
+\end{array}<br>
+\right]<br>
+$$<br>
+$$<br>
+\left[<br>
+\begin{array}{ccc|c}<br>
+1 &amp; 1 &amp; 1 &amp; 20 \<br>
+0 &amp; 1 &amp; 0 &amp; 15 \<br>
+0  &amp; 0 &amp; 1  &amp; 16<br>
+\end{array}<br>
+\right] *</p>
+<p>\left[<br>
+\begin{array}{ccc}<br>
+1 &amp; -1 &amp; -1        \<br>
+0 &amp; 0 &amp; 0         \<br>
+0 &amp; 0 &amp; 0<br>
+\end{array}<br>
+\right] =</p>
+<p>\left[<br>
+\begin{array}{ccc|c}<br>
+1 &amp; 0 &amp; 0 &amp; -11 \<br>
+0 &amp; 1 &amp; 0 &amp; 15 \<br>
+0  &amp; 0 &amp; 1  &amp; 16<br>
+\end{array}<br>
+\right]<br>
+$$<br>
+Das Ergebnis steht im Vektor $b'$. Dieser ist der erweiterte Teil der Matrix (hinter dem Strich).</p>
+<p>D.h. Das Ergebnis ist $x_0 = -11$, $x_1 = 15$ und $x_2 = 16$.</p>
+<h2 id="lgs-l%C3%B6sen-mithilfe-der-cramerschen-regel">LGS lösen mithilfe der cramerschen Regel</h2>
+<h3 id="beschreibung-des-gau%C3%9Fschen-eliminationsverfahrens">Beschreibung des gaußschen Eliminationsverfahrens</h3>
+<table>
+<thead>
+<tr>
+<th>Gesucht</th>
+<th>$x$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gegeben</td>
+<td>$b$, $A$</td>
+</tr>
+</tbody>
+</table>
+<p>Die Cramersche Regel findet die Lösungsvariable $x_z$, indem die Determinante der Koeffizientenmatrix, deren Spalte $z$ durch den Bildvektor ersetzt wurde, durch die Determinante $det(A)$ geteilt wird.</p>
+<p>$$<br>
+x_i = \frac{det(A_i)}{det(A)}<br>
+$$</p>
+<ol>
+<li>
+<p>Errechne die Determinante $det(A)$</p>
+</li>
+<li>
+<p>Setze den Bildvektor an der $i$ ten Spalte der Koeffizientenmatrix $A$ ein (diese neue Matrix heißt $A_i$)</p>
+</li>
+<li>
+<p>Errechne die Determinante $det(A_i)$</p>
+</li>
+<li>
+<p>Rechne $x_i = \frac{det(A_i)}{det(A)}$</p>
+</li>
+</ol>
+<h3 id="beispiel-f%C3%BCr-das-l%C3%B6sen-eines-lgs-mittels-der-cramerschen-regel">Beispiel für das Lösen eines LGS mittels der Cramerschen Regel</h3>
+<h2 id="abeginpmatrix3--5---2-4---1--4-1--1--1endpmatrixhspace1cmb-beginpmatrix10-5-20endpmatrix">$$<br>
+A:=<br>
+\begin{pmatrix}<br>
+3 &amp; 5 &amp; -2 \<br>
+4  &amp; -1 &amp; 4 \<br>
+1 &amp; 1 &amp; 1<br>
+\end{pmatrix}<br>
+\hspace{1cm}<br>
+b :=<br>
+\begin{pmatrix}<br>
+10 \<br>
+5 \<br>
+20<br>
+\end{pmatrix}<br>
+$$</h2>
+<p>$$<br>
+det\left(\left[<br>
+\begin{array}{ccc}<br>
+3 &amp; 5 &amp; -2 \<br>
+4  &amp; -1 &amp; 4 \<br>
+1 &amp; 1 &amp; 1<br>
+\end{array}\right]\right):= -33<br>
+$$<br>
+Die Determinante ist $\not = 0$, dh. es gibt eine Lösung des LGS.<br>
+$$<br>
+det\left(\left[<br>
+\begin{array}{ccc}<br>
+10 &amp; 5 &amp; -2 \<br>
+5 &amp; -1 &amp; 4 \<br>
+20 &amp; 1 &amp; 1<br>
+\end{array}\right]\right):= 275<br>
+\hspace{1cm}<br>
+\Rightarrow x_0 = \frac{275}{-25} = \underline{\underline{-11}}<br>
+$$<br>
+$$<br>
+det\left(\left[<br>
+\begin{array}{ccc}<br>
+3 &amp; 10 &amp; -2 \<br>
+4 &amp; 5 &amp; 4 \<br>
+1 &amp; 20 &amp; 1<br>
+\end{array}\right]\right):= -375<br>
+\hspace{1cm}<br>
+\Rightarrow x_1 = \frac{-375}{-25} = \underline{\underline{15}}<br>
+$$</p>
+<p>$$<br>
+det\left(\left[<br>
+\begin{array}{ccc}<br>
+3 &amp; 5 &amp; 10 \<br>
+4 &amp; -1 &amp; 5 \<br>
+1 &amp; 1 &amp; 20<br>
+\end{array}\right]\right):= -400<br>
+\hspace{1cm}<br>
+\Rightarrow x_2 = \frac{-400}{-25} = \underline{\underline{16}}<br>
+$$</p>
+
+</body>
+
+</html>

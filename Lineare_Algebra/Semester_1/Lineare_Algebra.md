@@ -24,4 +24,5 @@
     1. Rechenregeln komplexer Zahlen
     2. Taylorpolynome
     3. Eulerische Form
+    4. Polarkoordinaten-Form
 
