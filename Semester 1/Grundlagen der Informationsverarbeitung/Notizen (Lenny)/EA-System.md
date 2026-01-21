@@ -12,6 +12,6 @@ Dadurch geht der Ausgabeprozess wie folgt
 
 - Die Zentraleinheit sendet dem [[Kanal]] den Typ des gewünschten Gerätes
 - Die [[Adresse]] eines [[Kanalprogramm|Kanalprogramms]]
-- Die Start[[adresse]] und die Länge des Hauptspeicherbereichs, der ausgegeben werden soll
+- Die Start[[Adresse]] und die Länge des Hauptspeicherbereichs, der ausgegeben werden soll
 - bzw. in den die [[Daten]] bei einer Eingabeoperation gebraucht werden sollen
 - Der [[Kanal]] holt sich jetzt selbstständig die [[Daten]] aus dem [[Arbeitsspeicher|Hauptspeicher]] der [[Zentraleinheit]] und sorgt für deren ordnungsgemäße Ausgabe (oder umgekehrt bei Eingabeoperationen)
