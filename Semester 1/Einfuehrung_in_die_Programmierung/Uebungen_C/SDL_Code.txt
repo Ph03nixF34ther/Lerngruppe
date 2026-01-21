@@ -1,1 +1,0 @@
-gcc -o program -I/opt/homebrew/include -D_THREAD_SAFE program.c sdlinterf.c -L/opt/homebrew/lib -lSDL2
