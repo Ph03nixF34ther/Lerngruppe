@@ -1,5 +1,3 @@
-# Homepage Lerngruppe
-
 ## Inhalt der Lerngruppe
 1. Semester
 	1. Lineare Algebra (Feldmann)
