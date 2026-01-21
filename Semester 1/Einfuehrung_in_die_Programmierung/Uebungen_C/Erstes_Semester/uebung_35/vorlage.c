@@ -226,7 +226,7 @@ void sort(int arr[], int anzahl)
 int main(int argc, const char *argv[])
 {
   if (argc != 3) {
-    fprintf(stderr, "Aufruf: %s anzahl\n", argv[0]);
+    fprintf(stderr, "Aufruf: %s mode n\n", argv[0]);
     exit(EXIT_FAILURE);
   }
   int anzahl = atoi(argv[1]);
