@@ -15,8 +15,6 @@ Bei Rückfragen bitte an mich (Elias) wenden.
 
 # How-To
 
-## Erklärung
-
 Git ist ein Version Control System was geschaffen wurde, um es Software-Entwicklern zu vereinfachen zusammen an einem Projekt zu arbeiten.
 Mehr dazu [hier](https://git-scm.com/about)
 
@@ -39,6 +37,8 @@ Damit du unsere Notizen nutzen und (wenn du möchtest) dazu beitragen kannst, is
 
 Dafür ist dieser Abschnitt.
 
+---
+
 ## Git
 
 ### 1. Installation
@@ -52,51 +52,51 @@ Folge dem [Link](https://git-scm.com/install/) und lade die Datei für dein Betr
 Komponenten können nach eigenem Ermessen gewählt werden.
 Die standardmäßigen Einstellungen sollten genügen.
 
-![Git component window](Components.png)
+![Git component window](./bilder/Components.png)
 
 Den standartmäßigen Text-Editor kann ebenfalls frei gewählt werden.
 Ich empfehle Nano zu benutzen, weil die Benutzeroberfläche einfach ist und man (nicht wie bei Vim) sofort drauf los schreiben kann oder irgendeinen anderen den du schon installiert (und benutzt) hast.
 (Speichern: Strg + O, Schließen (speichert nicht): Strg + X)
 
-![Git Editor Screen](Editor.png)
+![Git Editor Screen](./bilder/Editor.png)
 
 Der standartmäßigen Branch-Name  kann ebenfalls frei entschieden werden.
 Unser Repository benutzt "main", wird aber von dieser Einstellung nicht beeinflusst.
 
-![Git initial branch name Screen](InitialBranchName.png)
+![Git initial branch name Screen](./bilder/InitialBranchName.png)
 
 PATH-Environment Einstellung sollte so gelassen werden, außer du weißt was du tust.
 
-![Git PATH Environment Screen](PATHEnvironment.png)
+![Git PATH Environment Screen](./bilder/PATHEnvironment.png)
 
 SSH-Executable Einstellung sollte auch so gelassen werden, außer du weißt was du tust.
 (Beeinflusst unser Vorhaben nicht)
 
-![Git SSH Executable Screen](SSHExecutable.png)
+![Git SSH Executable Screen](./bilder/SSHExecutable.png)
 
 HTTPS transport backend Einstellung sollte ebenfalls so gelassen werden, außer du weißt was du tust.
 
-![Git HTTPS transport backend Screen](HTTPStransport.png)
+![Git HTTPS transport backend Screen](./bilder/HTTPStransport.png)
 
 Die Line Ending Convention Einstellung kann frei gewählt werden, wir empfehlen aber sie so zu lassen.
 
-![Git Line Ending Convention Screen](LineEndingConvention.png)
+![Git Line Ending Convention Screen](./bilder/LineEndingConvention.png)
 
 Die Terminal Emulator Einstellung kann frei gewählt werden, wir empfehlen die MinTTY
 
-![Git Terminal Emulator Screen](TerminalEmulator.png)
+![Git Terminal Emulator Screen](./bilder/TerminalEmulator.png)
 
 Die default git pull Einstellung sollte so gelassen werden, außer du weißt **wirklich** was du tust.
 
-![Git default git pull behavior Screen](DefaultGitPull.png)
+![Git default git pull behavior Screen](./bilder/DefaultGitPull.png)
 
 Die Git Credential Helper Einstellung kann frei entschieden werden.
 
-![Git Credential helper Screen](CredentialHelper.png)
+![Git Credential helper Screen](./bilder/CredentialHelper.png)
 
 Die Extra Options können ebenfalls frei gewählt werden, wir empfehlen sie so zu lassen.
 
-![Git Extra options Screen](ExtraOptions.png)
+![Git Extra options Screen](./bilder/ExtraOptions.png)
 
 Nun auf installieren und warten bis es fertig ist.
 
@@ -110,7 +110,7 @@ Jetzt wo Git installiert ist, können wir im nächsten Schritt das Repository au
 
 Dafür öffnen wir "Git CMD" (oder welches terminal du gewählt hast) und werden von diesem Fenster begrüßt
 
-![Git CMD Window 1](GitCMDClear.png)
+![Git CMD Window 1](./bilder/GitCMDClear.png)
 
 Jetzt navigieren wir zu dem Ordner in dem du die Notizen speichern möchtest.
 
@@ -119,11 +119,11 @@ cd <your>/<folder>/<path>/<here>/
 ```
 
 
-![Git CMD cd](GitCMDcd.png)
+![Git CMD cd](./bilder/GitCMDcd.png)
 
 Holen uns den Link zum [Repository](https://github.com/Ph03nixF34ther/Lerngruppe.git) (https://github.com/Ph03nixF34ther/Lerngruppe.git) 
 
-![Github code copy](GithubCopy.png)
+![Github code copy](./bilder/GithubCopy.png)
 
 Und klonen es mit
 
@@ -132,11 +132,75 @@ git clone https://github.com/Ph03nixF34ther/Lerngruppe.git
 ```
 
 
+![Git CMD clone](./bilder/GitCMDClone.png)
+
+Und Fertig (mit dem git) wenn du nur Lesen und Lernen möchtest.
+
+Willst du auch beitragen, siehe Abschnitt: [Beitragen](#4.%20Beitragen).
+
+---
+
+### 3. Updaten
+
+Wir werden das Repository (höchstwahrscheinlich) kontinuierlich updaten und diese Updates müssen manuell heruntergeladen werden.
+
+Dafür öffnen wir wieder Git CMD (oder dein gewähltes Terminal) und navigieren zum Speicherort und updaten es mit
+
+``` bash
+git pull origin main
+```
+
+Dieser Befehl setzt sich zusammen aus:
+- pull: Lade die neusten Veränderungen herunter und wende sie auf meine lokal gespeicherte Version an
+- origin: Der Ort, wo das Git-Repository herkam (Das Remote Repository auf GitHub)
+- main: Die Branch die du haben möchtest
+
+Jetzt gibt es zwei Fälle:
+
+#### 3.1 Alles funktioniert wie es soll
+
+![Git CMD pull success](./bilder/GitCMDPullSuc.png)
+
+Der Git-Pull funktioniert wie geplant und du bist fertig
+
+#### 3.2 Oh nein es beschwert sich
+
+
+
+
+---
+
+(**Optional**)
+
+### 4. Beitragen
+
+**(Dafür müsst ihr Eingeladen werden: Den Owner fragen)**
+
+Wir bewegen uns in den Ordner der Lerngruppe, wieder mit
+
+``` bash
+cd <your>/<file>/<path>/<here>/Lerngruppe
+```
+
+
+![Git CMD cd 2](./bilder/GitCMDcd2.png)
+
+Und wechseln die Branch auf "build"
+
+``` bash
+git checkout build
+git pull origin build
+```
+
+
+![Git CMD Branch](./bilder/GitCMDBranch.png)
+
+Auf diesen Branch kann man Änderungen pushen und einen Pull Request beantragen, um diese in den main branch aufzunehmen.
 
 
 ## Obsidian
 
-### 0. Erklärung
+
 
 
 ### 1. Installation
