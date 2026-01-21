@@ -196,15 +196,15 @@ git pull origin build
 
 Auf diesen Branch kann man Änderungen pushen und einen Pull Request beantragen, um diese in den main branch aufzunehmen.
 
+// TODO
 
 ## Obsidian
-
-
-
 
 ### 1. Installation
 
 Folge dem [Link]([https://obsidian.md/](https://obsidian.md/download)) und wähle die für dich passende Version aus
+
+// TODO
 
 # To-Do-Liste
 
