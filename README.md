@@ -6,7 +6,8 @@
 	2. Einführung in die Programmierung (Kusche)
 
 # About
-Lerngruppe 
+Lerngruppe PIB.
+Bei Rückfragen bitte an mich (Elias) wenden.
 
 # How-To
 

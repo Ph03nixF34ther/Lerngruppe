@@ -22,17 +22,31 @@
             }
           },
           {
-            "id": "b1dabb6a266b4b43",
+            "id": "c9ade0091ec29e28",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Semester 1/Lineare Algebra/Lineare Gleichungssysteme/Loesung LGS.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Loesung LGS"
+              "title": "README"
+            }
+          },
+          {
+            "id": "16dd78a06c9b73d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Semester 1/Lineare Algebra/Lineare Gleichungssysteme/0 lineare Gleichungssysteme lösen.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "0 lineare Gleichungssysteme lösen"
             }
           }
         ],
@@ -109,6 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rückverweise"
+              "title": "Rückverweise auf README"
             }
           },
           {
@@ -195,8 +210,15 @@
       "bases:Neue Base erstellen": false
     }
   },
-  "active": "b1dabb6a266b4b43",
+  "active": "c9ade0091ec29e28",
   "lastOpenFiles": [
+    "Semester 1/Lineare Algebra/Lineare Gleichungssysteme/1 Überblick über Lineare Gleichungssysteme.md",
+    "Semester 1/Lineare Algebra/Lineare Gleichungssysteme/0 lineare Gleichungssysteme lösen.md",
+    "Semester 1/Lineare Algebra/Lineare Gleichungssysteme/4 Die Cramersche Regel.md",
+    "Semester 1/Lineare Algebra/Lineare Gleichungssysteme/3 Der Gauß-Jordansche Algorithmus.md",
+    "Semester 1/Lineare Algebra/Lineare Gleichungssysteme/2 Das gaußsche Eliminationsverfahren.md",
+    "Semester 1/Lineare Algebra/Matrixoperationen/Test für Matrix.md",
+    "README.md",
     "Semester 1/Einfuehrung_in_die_Programmierung/SDL_Code.txt",
     "Semester 1/Einfuehrung_in_die_Programmierung/uebung_53/program.c",
     "Semester 1/Einfuehrung_in_die_Programmierung/uebung_53/program",
@@ -207,14 +229,10 @@
     "Semester 1/Einfuehrung_in_die_Programmierung/uebung_47/program.c",
     "Semester 1/Einfuehrung_in_die_Programmierung/uebung_47/program#",
     "Semester 1/Einfuehrung_in_die_Programmierung/uebung_47/program",
-    "Semester 1/Einfuehrung_in_die_Programmierung/uebung_47",
     "Semester 1/Lineare Algebra/Übersicht über den bereits behandelten Stoff.md",
-    "README.md",
     "Unbenannt.canvas",
     "2026-01-21.md",
     "Semester 1/Lineare Algebra/Komplexe Zahlen/Komplexe Zahlen.md",
-    "Semester 1/Lineare Algebra/Lineare Gleichungssysteme/Loesung LGS.md",
-    "Semester 1/Lineare Algebra/Matrixoperationen/Test für Matrix.md",
     "Lineare_Algebra/Semester_1/Lineare_Algebra.md",
     "Lineare_Algebra/Semester_1/Zusammenfassung/Loesung_LGS.md"
   ]
