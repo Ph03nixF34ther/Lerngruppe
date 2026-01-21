@@ -18,7 +18,9 @@ x * A = b
 $$
 $$
 A = \text{Koeffizienten-Matrix} \\
+
 x = \text{Urbildvektor} \\
+
 b = \text{Bildvektor}
 $$
 Die Darstellung lässt sich aus $n$-dimensionalen Gleichungssystemen aus der Schule ableiten:
@@ -79,21 +81,19 @@ b :=
 $$
 $$
 \left[
-\begin{array}{ccc|c}
-1 & 1 & 1 & 20 \\
-4 & -1 & 4 & 5 \\ 
-3  & 5 & -2  & 10 
-\end{array} 
-\right] 
-*
-
-\left[
 \begin{array}{ccc}
 1 & 0 & 0        \\
 -4 & 1 & 0         \\
 -3 & 0 & 1
 \end{array} 
-\right] = 
+\right] *
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 20 \\
+4 & -1 & 4 & 5 \\ 
+3  & 5 & -2  & 10 
+\end{array} 
+\right]  = 
 
 \left[
 \begin{array}{ccc|c}
@@ -107,21 +107,21 @@ An diesem Punkt könnte man die Suche nach der Dreiecksmatrix beenden, da durch 
 Aus gründen der Beispielführung wird die Vorgehenswiese hier nicht abgebrochen sondern fortgeführt
 $$
 \left[
+\begin{array}{ccc}
+1 & 0 & 0        \\
+0 & 1 & 0         \\
+0 & 2 & 5
+\end{array} 
+\right]
+*
+\left[
 \begin{array}{ccc|c}
 1 & 1 & 1 & 20 \\
 0 & -5 & 0 & -75 \\ 
 0  & 2 & -5  & -50
 \end{array} 
 \right] 
-*
-
-\left[
-\begin{array}{ccc}
-1 & 0 & 0        \\
-0 & 1 & 0         \\
-0 & 2 & 5
-\end{array} 
-\right] = 
+ = 
 \left[
 \begin{array}{ccc|c}
 1 & 1 & 1 & 20 \\
@@ -187,17 +187,17 @@ $$
 ---
 $$
 \left[
-\begin{array}{ccc|c}
-1 & 1 & 1 & 20 \\
-0 & -5 & 0 & -75 \\ 
-0  & 0 & -25  & -400
-\end{array} 
-\right] *
-\left[
 \begin{array}{ccc}
 1 & 0 & 0        \\
 0 & -0.2 & 0         \\
 0 & 0 & -0.04
+\end{array} 
+\right] *
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 20 \\
+0 & -5 & 0 & -75 \\ 
+0  & 0 & -25  & -400
 \end{array} 
 \right] =
 \left[
@@ -210,20 +210,20 @@ $$
 $$
 $$
 \left[
-\begin{array}{ccc|c}
-1 & 1 & 1 & 20 \\
-0 & 1 & 0 & 15 \\ 
-0  & 0 & 1  & 16
-\end{array} 
-\right] * 
-
-\left[
 \begin{array}{ccc}
 1 & -1 & -1        \\
 0 & 0 & 0         \\
 0 & 0 & 0
 \end{array} 
-\right] =
+\right]* 
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 20 \\
+0 & 1 & 0 & 15 \\ 
+0  & 0 & 1  & 16
+\end{array} 
+\right]
+ =
 
 \left[
 \begin{array}{ccc|c}
@@ -285,7 +285,7 @@ $$
 Die Determinante ist $\not = 0$, dh. es gibt eine Lösung des LGS.
 $$
 det\left(\left[
-\begin{array}{ccc}
+\begin{array}{c|cc}
 10 & 5 & -2 \\ 
 5 & -1 & 4 \\ 
 20 & 1 & 1 
@@ -295,7 +295,7 @@ det\left(\left[
 $$
 $$
 det\left(\left[
-\begin{array}{ccc}
+\begin{array}{c|c|c}
 3 & 10 & -2 \\ 
 4 & 5 & 4 \\ 
 1 & 20 & 1 
@@ -303,11 +303,9 @@ det\left(\left[
 \hspace{1cm}
 \Rightarrow x_1 = \frac{-375}{-25} = \underline{\underline{15}}
 $$
-
-
 $$
 det\left(\left[
-\begin{array}{ccc}
+\begin{array}{cc|c}
 3 & 5 & 10 \\ 
 4 & -1 & 5 \\ 
 1 & 1 & 20 
@@ -315,3 +313,4 @@ det\left(\left[
 \hspace{1cm}
 \Rightarrow x_2 = \frac{-400}{-25} = \underline{\underline{16}}
 $$
+# Lineare Abhängigkeit von LGS

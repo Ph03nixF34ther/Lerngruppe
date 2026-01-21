@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "4b357a610e36d1a3",
+    "type": "split",
+    "children": [
+      {
+        "id": "663b29547c81dcda",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "055f953eb5328a11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Semester 1/Lineare Algebra/Übersicht über den bereits behandelten Stoff.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Übersicht über den bereits behandelten Stoff"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a3523499c4de04c8",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1a55a05f44c7960",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3aa35673f9df9634",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e6a58d1d0c205616",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "624e873b84e2623b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4f02e3fefcca19b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "5291c1415cad7e74",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7a11e61b0d1f51d2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for README"
+            }
+          },
+          {
+            "id": "af54e2ab23bea32b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from README"
+            }
+          },
+          {
+            "id": "380bbad2527d7fb1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "25ca2d82d60b7087",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "0b0c374786a58d3e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "055f953eb5328a11",
+  "lastOpenFiles": [
+    "README.md",
+    "Semester 1/Lineare Algebra/Übersicht über den bereits behandelten Stoff.md",
+    "Semester 1/Lineare Algebra/Behandelter Stoff.md",
+    "Semester 1/Einfuehrung_in_die_Programmierung/Uebungen_C/SDL_Code.txt",
+    "Semester 1/Einfuehrung_in_die_Programmierung/Uebungen_C/Erstes_Semester/uebung_3/power-vorgabe.c",
+    "Semester 1/Einfuehrung_in_die_Programmierung/Uebungen_C/Erstes_Semester/uebung_9/min_max.c",
+    "Semester 1/Einfuehrung_in_die_Programmierung/Uebungen_C/Erstes_Semester/uebung_8/hex_input.c",
+    "Semester 1/Einfuehrung_in_die_Programmierung/Uebungen_C/Erstes_Semester/uebung_6/uebung.c",
+    "Semester 1/Einfuehrung_in_die_Programmierung/Uebungen_C/Erstes_Semester/uebung_6/program.c",
+    "Semester 1/Einfuehrung_in_die_Programmierung/Uebungen_C/Erstes_Semester/uebung_53/program.c",
+    "Semester 1/Einfuehrung_in_die_Programmierung/Uebungen_C/Erstes_Semester/uebung_53/program",
+    "Semester 1/Einfuehrung_in_die_Programmierung/Uebungen_C/Erstes_Semester/uebung_51/program.c",
+    "Semester 1/Einfuehrung_in_die_Programmierung/Uebungen_C/Erstes_Semester/uebung_51/program",
+    "Behandelter.md",
+    "_fit/Semester 1/Lineare Algebra/Komplexe Zahlen/Komplexe Zahlen.md",
+    "_fit/Semester 1/Lineare Algebra/Lineare Gleichungssysteme/Loesung LGS.md",
+    "_fit/Semester 1/Lineare Algebra/Matrixoperationen/Test für Matrix.md",
+    "_fit/Semester 1/Lineare Algebra/Behandelter Stoff.md",
+    "_fit/README.md",
+    "Lineare_Algebra/Semester_1/Zusammenfassung/Loesung_LGS.md",
+    "Lineare_Algebra/Semester_1/Zusammenfassung/Komplexe Zahlen.md",
+    "Lineare_Algebra/Semester_1/Lineare_Algebra.md",
+    "Lineare_Algebra/Mein_Test.md",
+    "Semester 1/Lineare Algebra/Matrixoperationen/Test für Matrix.md",
+    "Semester 1/Lineare Algebra/Lineare Gleichungssysteme/Loesung LGS.md",
+    "Lineare_Algebra/Semester_1/Lineare Algebra/Untitled.md",
+    "Semester 1/Lineare Algebra/Komplexe Zahlen/Komplexe Zahlen.md",
+    "Lineare_Algebra/Semester_1/Zusammenfassung/Komplexe zahlen.md"
+  ]
+}
