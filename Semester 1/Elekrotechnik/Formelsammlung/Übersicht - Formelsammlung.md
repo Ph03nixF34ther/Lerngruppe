@@ -91,6 +91,7 @@ $$
 | $P_{V}$       | Verlustleistung         |
 | $\eta$        | Wirkungsgrad            |
 ## [[Elektrische Stromdichte]]
+![[Leiterquerschnitt.svg]]
 $$
 S = \frac{I}{A}
 $$
@@ -99,5 +100,171 @@ $$
 | ------------- | -------------------------------- |
 | $S$           | [[Elektrische Stromdichte]]      |
 | $I$           | [[Elektrische(r) Strom(stärke)]] |
-| A             |                                  |
-![[Leiterquerschnitt.svg]]
+| A             | Leiterquerschnitt                |
+## [[Elektrischer Widerstand]] und [[Elektrischer Leitwert]]
+$$
+G = \frac{1}{R}
+$$
+$$
+R = \frac{1}{G}
+$$
+
+| Formelzeichen | Verlinkung                  |
+| ------------- | --------------------------- |
+| $R$           | [[Elektrischer Widerstand]] |
+| $G$           | [[Elektrischer Leitwert]]   |
+## [[Spezifischer Widerstand]] und [[Spezifischer Leitwert]]
+$$
+\rho = \frac{1}{\kappa}
+$$
+$$
+\kappa = \frac{1}{\rho}
+$$
+## [[Leiterwiderstand]]
+$$
+R = \rho \cdot \frac{l}{A}
+$$
+$$
+R = \frac{l}{\kappa \cdot A}
+$$
+
+| Formelzeichen | Verlinkung              |
+| ------------- | ----------------------- |
+| $R$           | [[Leiterwiderstand]]    |
+| $l$           | [[Länge]] des Drahtes   |
+| $A$           | Querschnitt des Drahtes |
+## Temperaturabhängigkeit von [[Elektrischer Widerstand|Widerständen]]
+$$
+\Delta R = \alpha \cdot \Delta v \cdot R_{20}
+$$
+$$
+R_{v} = R_{20} + \Delta R
+$$
+$$
+R_{v} = R_{20} \cdot (1 + \alpha_{20} \cdot \Delta v)
+$$
+$$
+\Delta v = \frac{R_{v} - R_{20}}{\alpha_{20} \cdot R_{20}}
+$$
+$$
+A = \frac{\rho \cdot l}{R_{20}} \cdot (1 + \alpha_{20} \cdot \Delta v)
+$$
+
+| Formelzeichen | Verlinkung                                                         |
+| ------------- | ------------------------------------------------------------------ |
+| $\Delta R$    | Änderung des [[Elektrischer Widerstand\|elektrischen Widerstands]] |
+| $R_v$         | Warmwiderstand                                                     |
+| $R_{20}$      | Kaltwiderstand bei $20°C$                                          |
+| $\alpha_{20}$ | [[Temperaturkoeffizient]]                                          |
+| $\Delta v$    | [[Temperatur]]differenz                                            |
+| $A$           | Querschnittsfläche bei gleichem Widerstand aber anderer Temperatur |
+| $l$           | Länge des Drahts                                                   |
+## Reihenschaltung von [[Elektrischer Widerstand|Widerständen]]
+$$
+R_{ers} = R_{1}+ R_{2} + \dots + R_{n}
+$$
+$$
+I = I_{1} = I_{2} = \dots = I_{n}
+$$
+$$
+U = U_{1}+ U_{2} + \dots + U_{n}
+$$
+
+| Formelzeichen | Verlinkung                                                 |
+| ------------- | ---------------------------------------------------------- |
+| $R_{ers}$     | Ersatzwiderstand ([[Elektrischer Widerstand\|Widerstand]]) |
+| $I$           | [[Elektrische(r) Strom(stärke)]]                           |
+| $U$           | [[Elektrische Spannung]]                                   |
+## Paralellschaltungen von [[Elektrischer Widerstand|Widerständen]]
+$$
+\frac{1}{R_{ers}} = \frac{1}{R_{1}} + \frac{1}{R_{2}} + \dots + \frac{1}{R_{n}}
+$$
+$$
+R_{ers} = \frac{R_{1} \cdot R_{2}}{R_{1} + R_{2}}
+$$
+$$
+I = I_{1} + I_{2} + \dots + I_{n}
+$$
+$$
+U = U_{1} = U_{2} = \dots = U_{n}
+$$
+
+| Formelzeichen | Verlinkung                                                 |
+| ------------- | ---------------------------------------------------------- |
+| $R_{ers}$     | Ersatzwiderstand ([[Elektrischer Widerstand\|Widerstand]]) |
+| $I$           | [[Elektrische(r) Strom(stärke)]]                           |
+| $U$           | [[Elektrische Spannung]]                                   |
+## Knotenregel (1. Kirschhoffsches Gesetz) 
+$$
+\sum I_{zu} = \sum I_{ab}
+$$
+
+| Formelzeichen | Verlinkung                    |
+| ------------- | ----------------------------- |
+| $\sum I_{zu}$ | Summe der zufließenden Ströme |
+| $\sum I_{ab}$ | Summe der abfließenden Ströme |
+## Maschenregel (2. Kirschhoffsches Gesetz) 
+$$
+\sum U_{\text{Erzeuger}} = \sum U_{\text{Verbraucher}}
+$$
+
+| Formelzeichen                 | Verlinkung                      |
+| ----------------------------- | ------------------------------- |
+| $\sum U_{\text{Erzeuger}}$    | Summe der Erzeugerspannungen    |
+| $\sum U_{\text{Verbraucher}}$ | Summe der Verbraucherspannungen |
+## [[Leistungsanpassung]]
+$$
+R_{i} = R_{a}
+$$
+$$
+P = U \cdot I = U_{0}^2 \cdot \frac{R_{a}}{(R_{a} + R_{i})^2}
+$$
+
+| Formelzeichen | Verlinkung                                                       |
+| ------------- | ---------------------------------------------------------------- |
+| $R_{i}$       | Innenwiderstand der [[Spannungsquelle]]                          |
+| $R_{a}$       | Außenwiderstand                                                  |
+| $U_{0}$       | [[Elektrische Spannung]] der modellierten dealen Spannungsquelle |
+|               |                                                                  |
+## [[Spannungsteiler]]
+$$
+U_{\text{Teil}} = U_{\text{Ges}} \cdot \frac{R_{\text{Teil}}}{R_{\text{Ges}}}
+$$
+
+| Formelzeichen     | Verlinkung                                                       |
+| ----------------- | ---------------------------------------------------------------- |
+| $U_{\text{Teil}}$ | Teilspannung                                                     |
+| $R_{a}$           | Außenwiderstand                                                  |
+| $U_{0}$           | [[Elektrische Spannung]] der modellierten dealen Spannungsquelle |
+
+
+## [[Stromteiler]]
+$$
+I_{\text{Teil}} = I_{\text{Ges}} \cdot \frac{R_{\text{Ges}}}{R_{\text{Teil}}}
+$$
+
+| Formelzeichen | Verlinkung                                                       |
+| ------------- | ---------------------------------------------------------------- |
+| $R_{i}$       | Innenwiderstand der [[Spannungsquelle]]                          |
+| $R_{a}$       | Außenwiderstand                                                  |
+| $U_{0}$       | [[Elektrische Spannung]] der modellierten dealen Spannungsquelle |
+|               |                                                                  |
+
+```tikz
+\usepackage{circuitikz}
+\begin{document}
+
+\begin{circuitikz}[american, voltage shift=0.5]
+	% Paths, nodes and wires:
+	\draw (4, 2) to[european current source] (4, 6);
+	\draw (7, 2) to[european resistor, l={$R_{Teil}$] (7, 6);
+	\draw (9, 2) to[european resistor, l={$R_{2}$}] (9, 6);
+	\draw (4, 6) -- (9, 6);
+	\draw (4, 2) -- (9, 2);
+	\node[circ] at (7, 6){};
+	\node[circ] at (7, 2){};
+\end{circuitikz}
+
+\end{document}
+```
+

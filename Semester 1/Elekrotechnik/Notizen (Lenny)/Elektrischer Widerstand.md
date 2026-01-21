@@ -1,3 +1,10 @@
+---
+aliases:
+  - elektrischen Widerstands
+  - Widerstand
+  - Widerständen
+---
+
 Formelzeichen: $R$
 
 Formel: $R = \dfrac{U}{I}$
