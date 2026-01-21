@@ -18,7 +18,7 @@
     7. Vollrankzerlegung
     8. Linearkombinationen von Vektoren (Leon)
     9. Eigenwerte und Eigenvektoren (Leon)
-3. Komplexe Zahlen (Lenni)
+3. Komplexe Zahlen (Lenny)
     1. Rechenregeln komplexer Zahlen
     2. Taylorpolynome
     3. Eulerische Form
