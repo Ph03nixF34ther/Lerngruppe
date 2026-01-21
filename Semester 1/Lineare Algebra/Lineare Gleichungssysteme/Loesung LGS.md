@@ -285,7 +285,7 @@ $$
 Die Determinante ist $\not = 0$, dh. es gibt eine Lösung des LGS.
 $$
 det\left(\left[
-\begin{array}{c|cc}
+\begin{array}{|c|cc}
 10 & 5 & -2 \\ 
 5 & -1 & 4 \\ 
 20 & 1 & 1 
@@ -305,7 +305,7 @@ det\left(\left[
 $$
 $$
 det\left(\left[
-\begin{array}{cc|c}
+\begin{array}{cc|c|}
 3 & 5 & 10 \\ 
 4 & -1 & 5 \\ 
 1 & 1 & 20 
