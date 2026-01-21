@@ -14,8 +14,8 @@
     3. Determinanten
     4. Assoziativität
     5. Distributivität
-    6. Rank
-    7. Vollrankzerlegung
+    6. Rank (Leon)
+    7. Vollrankzerlegung (Leon)
     8. Linearkombinationen von Vektoren (Leon)
     9. Eigenwerte und Eigenvektoren (Leon)
 3. Komplexe Zahlen (Lenny)
