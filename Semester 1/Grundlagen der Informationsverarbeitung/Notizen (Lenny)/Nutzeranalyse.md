@@ -1,0 +1,1 @@
+Ist eine Methodik, welche die Entscheidungsfindung bei komplexen Problemen rational unterstützen soll

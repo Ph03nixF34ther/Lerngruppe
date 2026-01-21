@@ -1,0 +1,1 @@
+Die Menge aller Adressen, die im physisch vorhandenen [[Arbeitsspeicher|Hauptspeicher]] vorkommen
