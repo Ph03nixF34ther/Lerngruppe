@@ -1,2 +1,7 @@
 **/*.pdf
 **/.DS_Store
+**/.vscode
+**/SDL_Code.txt
+**/cspell.json
+**/program
+**/*.json

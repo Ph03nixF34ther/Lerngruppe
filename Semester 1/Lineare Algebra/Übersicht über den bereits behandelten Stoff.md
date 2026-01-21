@@ -1,20 +1,13 @@
-<<<<<<< Updated upstream:Lineare_Algebra/Semester_1/Lineare_Algebra.md
-# Behandelter Stoff
-
-Test Test
-
-=======
->>>>>>> Stashed changes:Semester 1/Lineare Algebra/Behandelter Stoff.md
-1. Lösung linearer Gleichungssysteme
+1. Lösung linearer Gleichungssysteme (Elias)
     1. gaußsche Algorithmus
     2. gauß-jordansche Algorithmus
     3. Cramersche Regel
     4. lineare Abhängigkeit
     5. parameterabhängige Gleichungssysteme
     6. Aufgabe: Kaffeeplantage
-2. Matrixoperationen
-    1. Grundlegende Matrixoperationen
-        1. Multiplikationen von Matrizen
+2. Matrixoperationen (Emil)
+    1. Grundlegende Matrixoperationen 
+        1. Multiplikationen von Matrizen 
         2. Inverse Matrizen
         3. Transponierte Matrizen
     2. Dreiecksmatrizen
@@ -23,9 +16,9 @@ Test Test
     5. Distributivität
     6. Rank
     7. Vollrankzerlegung
-    8. Linearkombinationen von Vektoren
-    9. Eigenwerte und Eigenvektoren
-3. Komplexe Zahlen
+    8. Linearkombinationen von Vektoren (Leon)
+    9. Eigenwerte und Eigenvektoren (Leon)
+3. Komplexe Zahlen (Lenny)
     1. Rechenregeln komplexer Zahlen
     2. Taylorpolynome
     3. Eulerische Form
