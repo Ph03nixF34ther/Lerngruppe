@@ -1,0 +1,1 @@
+Der Zeitraum der für einen [[Arbeitsspeicher|Speicher]]-Zugriff benötigt wird
