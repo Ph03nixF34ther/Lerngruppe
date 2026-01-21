@@ -231,11 +231,12 @@ $$
 U_{\text{Teil}} = U_{\text{Ges}} \cdot \frac{R_{\text{Teil}}}{R_{\text{Ges}}}
 $$
 
-| Formelzeichen     | Verlinkung                                                       |
-| ----------------- | ---------------------------------------------------------------- |
-| $U_{\text{Teil}}$ | Teilspannung                                                     |
-| $R_{a}$           | Außenwiderstand                                                  |
-| $U_{0}$           | [[Elektrische Spannung]] der modellierten dealen Spannungsquelle |
+| Formelzeichen     | Verlinkung       |
+| ----------------- | ---------------- |
+| $U_{\text{Teil}}$ | Teilspannung     |
+| $U_{\text{Ges}}$  | Gesamtspannung   |
+| $R_{\text{Teil}}$ | Teilwiderstand   |
+| $R_{\text{Ges}}$  | Gesamtwiderstand |
 
 
 ## [[Stromteiler]]
@@ -243,28 +244,9 @@ $$
 I_{\text{Teil}} = I_{\text{Ges}} \cdot \frac{R_{\text{Ges}}}{R_{\text{Teil}}}
 $$
 
-| Formelzeichen | Verlinkung                                                       |
-| ------------- | ---------------------------------------------------------------- |
-| $R_{i}$       | Innenwiderstand der [[Spannungsquelle]]                          |
-| $R_{a}$       | Außenwiderstand                                                  |
-| $U_{0}$       | [[Elektrische Spannung]] der modellierten dealen Spannungsquelle |
-|               |                                                                  |
-
-```tikz
-\usepackage{circuitikz}
-\begin{document}
-
-\begin{circuitikz}[american, voltage shift=0.5]
-	% Paths, nodes and wires:
-	\draw (4, 2) to[european current source] (4, 6);
-	\draw (7, 2) to[european resistor, l={$R_{Teil}$] (7, 6);
-	\draw (9, 2) to[european resistor, l={$R_{2}$}] (9, 6);
-	\draw (4, 6) -- (9, 6);
-	\draw (4, 2) -- (9, 2);
-	\node[circ] at (7, 6){};
-	\node[circ] at (7, 2){};
-\end{circuitikz}
-
-\end{document}
-```
-
+| Formelzeichen     | Verlinkung        |
+| ----------------- | ----------------- |
+| $I_{\text{Teil}}$ | Teilstromstärke   |
+| $I_{\text{Ges}}$  | Gesamtstromstärke |
+| $R_{\text{Teil}}$ | Teilwiderstand    |
+| $R_{\text{Ges}}$  | Gesamtwiderstand  |

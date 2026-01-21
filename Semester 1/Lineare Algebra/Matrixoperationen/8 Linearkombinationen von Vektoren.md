@@ -1,10 +1,6 @@
 # Linearkombinationen von Vektoren
 
-Bei der Linearkombination wird ein Vektor 
-gesucht der sich aus verschiedenen anderen Vektoren 
-ergibt. Die ursprünglichen Vektoren werden jeweils 
-mit einem Faktor Multipliziert um Addiert den Vektor 
-zu Ergeben.
+Bei der Linearkombination wird ein Vektor gesucht der sich aus verschiedenen anderen Vektoren ergibt. Die ursprünglichen Vektoren werden jeweils mit einem Faktor multipliziert um addiert den Vektor zu Ergeben.
 
 ## Beispiel:
 
