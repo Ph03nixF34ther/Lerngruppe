@@ -1,10 +1,24 @@
 ## Inhalt der Lerngruppe
 
 1. [Einführung in die Programmierung](./Semester%201/Einführung%20in%20die%20Programmierung/Übersicht%20-%20Elektrotechnik.md) 
-2. Lineare Algebra (Feldmann)
-3. Einführung in die Programmierung (Kusche)
+2. [Elektrotechnik](./Semester%201/Elektrotechnik/Übersicht%20-%20Elektrotechnik.md)
+3. [Grundlagen der Informationsverarbeitung](Semester%201/Grundlagen%20der%20Informationsverarbeitung/Übersicht%20-%20Grundlagen%20der%20Informationsverarbeitung.md)
+4. [Lineare Algebra](Semester%201/Lineare%20Algebra/Übersicht%20-%20Lineare%20Algebra.md)
 
 ---
+
+# Inhaltsverzeichnis
+
+1. [About](#about)
+2. [How-To](#how-to)
+	1. [Git](#git)
+		1. [Installation](#installation) 
+		2. [Setup](#setup)
+		3. [Updaten](#updaten)
+			1. [Alles funktioniert wie es soll](#alles-funktioniert-wie-es-soll)
+			2. [Oh nein es beschwert sich](#oh-nein-es-beschwert-sich)
+	2. [Obsidian](#obisidan) 
+		1. [Installation](#installation) 
 
 # About
 
@@ -41,7 +55,7 @@ Dafür ist dieser Abschnitt.
 
 ## Git
 
-### 1. Installation
+### Installation
 
 (Auf Windows demonstriert)
 
@@ -104,7 +118,7 @@ Und fertig! (Mit der Installation)
 
 ---
 
-### 2. Setup
+### Setup
 
 Jetzt wo Git installiert ist, können wir im nächsten Schritt das Repository auf dein Gerät laden.
 
@@ -136,11 +150,11 @@ git clone https://github.com/Ph03nixF34ther/Lerngruppe.git
 
 Und Fertig (mit dem git) wenn du nur Lesen und Lernen möchtest.
 
-Willst du auch beitragen, siehe Abschnitt: [Beitragen](#4-beitragen).
+Willst du auch beitragen, siehe Abschnitt: [Beitragen](#beitragen).
 
 ---
 
-### 3. Updaten
+### Updaten
 
 Wir werden das Repository (höchstwahrscheinlich) kontinuierlich updaten und diese Updates müssen manuell heruntergeladen werden.
 
@@ -157,13 +171,13 @@ Dieser Befehl setzt sich zusammen aus:
 
 Jetzt gibt es zwei Fälle:
 
-#### 3.1 Alles funktioniert wie es soll
+#### Alles funktioniert wie es soll
 
 ![Git CMD pull success](./bilder/GitCMDPullSuc.png)
 
 Der Git-Pull funktioniert wie geplant und du bist fertig
 
-#### 3.2 Oh nein es beschwert sich
+#### Oh nein es beschwert sich
 
 // TODO
 
@@ -171,7 +185,7 @@ Der Git-Pull funktioniert wie geplant und du bist fertig
 
 (**Optional**)
 
-### 4. Beitragen
+### Beitragen
 
 **(Dafür müsst ihr Eingeladen werden: Den Owner fragen)**
 
@@ -200,7 +214,7 @@ Auf diesen Branch kann man Änderungen pushen und einen Pull Request beantragen,
 
 ## Obsidian
 
-### 1. Installation
+### Installation
 
 Folge dem [Link]([https://obsidian.md/](https://obsidian.md/download)) und wähle die für dich passende Version aus
 
