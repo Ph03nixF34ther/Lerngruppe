@@ -1,8 +1,8 @@
 ## Inhalt der Lerngruppe
 
-1. Semester
-	1. Lineare Algebra (Feldmann)
-	2. Einführung in die Programmierung (Kusche)
+1. [Einführung in die Programmierung](./Semester%201/Einführung%20in%20die%20Programmierung/Übersicht%20-%20Elektrotechnik.md) 
+2. Lineare Algebra (Feldmann)
+3. Einführung in die Programmierung (Kusche)
 
 ---
 
@@ -136,7 +136,7 @@ git clone https://github.com/Ph03nixF34ther/Lerngruppe.git
 
 Und Fertig (mit dem git) wenn du nur Lesen und Lernen möchtest.
 
-Willst du auch beitragen, siehe Abschnitt: [Beitragen](#4.%20Beitragen).
+Willst du auch beitragen, siehe Abschnitt: [Beitragen](#4-beitragen).
 
 ---
 
@@ -196,7 +196,7 @@ git pull origin build
 
 Auf diesen Branch kann man Änderungen pushen und einen Pull Request beantragen, um diese in den main branch aufzunehmen.
 
-// TODO
+
 
 ## Obsidian
 
