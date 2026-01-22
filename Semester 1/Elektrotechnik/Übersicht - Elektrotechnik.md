@@ -14,3 +14,4 @@ Im folgenden stehen alle wichtigen grundlegenden Formel für die Elektroctechnic
 	7. Elektrisches Feld
 	8. Plattenkondensatoren
 	9. Magnetisches Feld
+
