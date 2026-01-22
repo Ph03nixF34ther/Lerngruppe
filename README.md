@@ -1,8 +1,8 @@
 ## Inhalt der Lerngruppe
 
-1. [About]()
-	1. Lineare Algebra (Feldmann)
-	2. Einführung in die Programmierung (Kusche)
+1. [Einführung in die Programmierung](./Semester-1/Einführung-in-die-Programmierung/Übersicht-Elektrotechnik.md) 
+2. Lineare Algebra (Feldmann)
+3. Einführung in die Programmierung (Kusche)
 
 ---
 
@@ -196,7 +196,7 @@ git pull origin build
 
 Auf diesen Branch kann man Änderungen pushen und einen Pull Request beantragen, um diese in den main branch aufzunehmen.
 
-// TODO
+
 
 ## Obsidian
 
