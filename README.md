@@ -1,6 +1,6 @@
 ## Inhalt der Lerngruppe
 
-1. Semester
+1. [About]()
 	1. Lineare Algebra (Feldmann)
 	2. Einführung in die Programmierung (Kusche)
 
@@ -136,7 +136,7 @@ git clone https://github.com/Ph03nixF34ther/Lerngruppe.git
 
 Und Fertig (mit dem git) wenn du nur Lesen und Lernen möchtest.
 
-Willst du auch beitragen, siehe Abschnitt: [Beitragen](#4.%20Beitragen).
+Willst du auch beitragen, siehe Abschnitt: [Beitragen](#4.-Beitragen).
 
 ---
 
