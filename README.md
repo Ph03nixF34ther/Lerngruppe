@@ -21,7 +21,7 @@
 			- [Installation & Setup](#installation-&-setup) 
 		- [Beitragen](#beitragen)
 - [To-Do-Liste](#to-do-liste)
-- [Termine](termine)
+- [Termine](#termine)
 
 ---
 
