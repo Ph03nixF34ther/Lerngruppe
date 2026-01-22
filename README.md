@@ -1,4 +1,4 @@
-## Inhalt der Lerngruppe
+# Inhalt der Lerngruppe
 
 1. [Einführung in die Programmierung](./Semester%201/Einführung%20in%20die%20Programmierung/Übersicht%20-%20Einführung%20in%20die%20Programmierung.md) 
 2. [Elektrotechnik](./Semester%201/Elektrotechnik/Übersicht%20-%20Elektrotechnik.md)
