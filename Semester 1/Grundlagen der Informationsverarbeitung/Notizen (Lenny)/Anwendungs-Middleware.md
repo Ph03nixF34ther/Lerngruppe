@@ -1,0 +1,1 @@
+Ein solider Startpunkt von dem aus [[Software]] entwickelt wird

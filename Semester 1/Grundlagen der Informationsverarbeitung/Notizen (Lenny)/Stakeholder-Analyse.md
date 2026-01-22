@@ -1,0 +1,1 @@
+Zweck ist es, die Interessen-/Anspruchsgruppen hinsichtlich der Tragweite ihres Einflusses auf das Projekt zu analysieren

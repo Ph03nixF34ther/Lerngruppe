@@ -2,6 +2,11 @@
 **/.DS_Store
 **/.vscode
 **/SDL_Code.txt
-**/cspell.json
 **/program
 **/*.json
+
+# git magic
+.obsidian/*
+!.obsidian/plugins/
+.obsidian/plugins/*
+!.obsidian/plugins/obsidian-tikzjax/

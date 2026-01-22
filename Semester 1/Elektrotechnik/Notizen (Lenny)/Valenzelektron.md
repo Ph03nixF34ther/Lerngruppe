@@ -1,0 +1,1 @@
+Die [[Elektron|Elektronen]] der äußersten [[Elektronenschalen|Elektronenschale]] 
