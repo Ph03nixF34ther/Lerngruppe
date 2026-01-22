@@ -136,7 +136,7 @@ git clone https://github.com/Ph03nixF34ther/Lerngruppe.git
 
 Und Fertig (mit dem git) wenn du nur Lesen und Lernen möchtest.
 
-Willst du auch beitragen, siehe Abschnitt: [Beitragen](#4.beitragen).
+Willst du auch beitragen, siehe Abschnitt: [Beitragen](#4-beitragen).
 
 ---
 
