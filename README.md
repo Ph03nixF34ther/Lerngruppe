@@ -1,6 +1,6 @@
 ## Inhalt der Lerngruppe
 
-1. [Einführung in die Programmierung](./Semester-1/Einführung-in-die-Programmierung/Übersicht-Elektrotechnik.md) 
+1. [Einführung in die Programmierung](./Semester%201/Einführung%20in%20die%20Programmierung/Übersicht%20-%20Elektrotechnik.md) 
 2. Lineare Algebra (Feldmann)
 3. Einführung in die Programmierung (Kusche)
 
@@ -171,7 +171,7 @@ Der Git-Pull funktioniert wie geplant und du bist fertig
 
 (**Optional**)
 
-### 4. Beitragen<a names='4.beitragen'></a> 
+### 4. Beitragen
 
 **(Dafür müsst ihr Eingeladen werden: Den Owner fragen)**
 
