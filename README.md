@@ -9,16 +9,16 @@
 
 # Inhaltsverzeichnis
 
-1. [About](#about)
-2. [How-To](#how-to)
-	1. [Git](#git)
-		1. [Installation](#installation) 
-		2. [Setup](#setup)
-		3. [Updaten](#updaten)
-			1. [Alles funktioniert wie es soll](#alles-funktioniert-wie-es-soll)
-			2. [Oh nein es beschwert sich](#oh-nein-es-beschwert-sich)
-	2. [Obsidian](#obisidan) 
-		1. [Installation](#installation) 
+- [About](#about)
+- [How-To](#how-to)
+	- [Git](#git)
+		- [Installation](#installation) 
+		- [Setup](#setup)
+		- [Updaten](#updaten)
+			- [Alles funktioniert wie es soll](#alles-funktioniert-wie-es-soll)
+			- [Oh nein es beschwert sich](#oh-nein-es-beschwert-sich)
+		- [Obsidian](#obsidian) 
+			- [Installation](#installation-1) 
 
 # About
 
