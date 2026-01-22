@@ -1,6 +1,6 @@
 ## Inhalt der Lerngruppe
 
-1. [Einführung in die Programmierung](./Semester%201/Einführung%20in%20die%20Programmierung/Übersicht%20-%20Elektrotechnik.md) 
+1. [Einführung in die Programmierung](./Semester%201/Einführung%20in%20die%20Programmierung/Übersicht%20-%20Einführung%20in%20die%20Programmierung.md) 
 2. [Elektrotechnik](./Semester%201/Elektrotechnik/Übersicht%20-%20Elektrotechnik.md)
 3. [Grundlagen der Informationsverarbeitung](Semester%201/Grundlagen%20der%20Informationsverarbeitung/Übersicht%20-%20Grundlagen%20der%20Informationsverarbeitung.md)
 4. [Lineare Algebra](Semester%201/Lineare%20Algebra/Übersicht%20-%20Lineare%20Algebra.md)
@@ -18,7 +18,12 @@
 			- [Alles funktioniert wie es soll](#alles-funktioniert-wie-es-soll)
 			- [Oh nein es beschwert sich](#oh-nein-es-beschwert-sich)
 		- [Obsidian](#obsidian) 
-			- [Installation](#installation-1) 
+			- [Installation & Setup](#installation-&-setup) 
+		- [Beitragen](#beitragen)
+- [To-Do-Liste](#to-do-liste)
+- [Termine](termine)
+
+---
 
 # About
 
@@ -45,7 +50,7 @@ MarkDown ist, in kurz, eine Konvention um Formatierungen zu erlauben und gleichz
 Mehr dazu findest du [hier](https://www.markdownguide.org/getting-started/).
 
 Um unsere Notizen zu schreiben nutzen wir [Obsidian](https://obsidian.md/). Das erlaubt uns interne Links zwischen Notizen zu schaffen und eine Art Wiki zu erstellen.
-Allerdings sind diese Links Obsidian-Spezifisch.
+Allerdings sind diese Links Obsidian-Gebunden.
 
 Damit du unsere Notizen nutzen und (wenn du möchtest) dazu beitragen kannst, ist es von Vorteil Git und Obsidian zu installieren und einzurichten.
 
@@ -59,7 +64,7 @@ Dafür ist dieser Abschnitt.
 
 (Auf Windows demonstriert)
 
-Folge dem [Link](https://git-scm.com/install/) und lade die Datei für dein Betriebssystem herunter
+Folge dem [Link](https://git-scm.com/install/) oder gehe auf https://git-scm.com/install/ und lade die Datei für dein Betriebssystem herunter
 
 Öffne die Datei und folge den Schritten:
 
@@ -185,7 +190,35 @@ Der Git-Pull funktioniert wie geplant und du bist fertig
 
 (**Optional**)
 
-### Beitragen
+
+---
+
+## Obsidian
+
+### Installation & Setup
+
+Im Vergleich zu Git ist die Obsidian einfach.
+
+Folge dem [Link](https://obsidian.md/download) oder gehe auf https://obsidian.md/download und lade die Datei für dein Betriebssystem herunter.
+
+Öffne die Datei.
+
+Alle Optionen sind selbsterklärend und können frei gewählt werden
+
+Dann öffnen wir Obsidian und gehen auf die Zweite Option "Öffnen" und navigieren zu dem Speicherort der Lerngruppe.
+
+Damit kann mit unseren Notizen gelernt werden.
+
+Um Schaltungen in der Elektrotechnik ansehen zu können, benötigen wir allerdings noch eine Erweiterung.
+Diese findet man unter Einstellungen > Externe Erweiterungen > Community Erweiterungen aktivieren > Durchsuchen > "TikZJax" suchen > Installieren > Aktivieren
+
+Und fertig! (diesmal aber wirklich)
+
+[[Cheat Sheet]] um dich mit der Syntax vertraut zu machen
+
+---
+
+## Beitragen
 
 **(Dafür müsst ihr Eingeladen werden: Den Owner fragen)**
 
@@ -210,16 +243,23 @@ git pull origin build
 
 Auf diesen Branch kann man Änderungen pushen und einen Pull Request beantragen, um diese in den main branch aufzunehmen.
 
+``` bash
+git stage .
+git commit -m "[tag] <Message>"
+git push origin build
+```
 
+Wenn es zu einem Merge conflict kommt und du nicht weißt was das bedeutet, bitte bei uns melden.
 
-## Obsidian
-
-### Installation
-
-Folge dem [Link]([https://obsidian.md/](https://obsidian.md/download)) und wähle die für dich passende Version aus
-
-// TODO
+---
 
 # To-Do-Liste
+
+- [ ] Semester 1 Stoff
+- [ ] Semester 2 Stoff
+- [ ] Semester 3 Stoff
+- [ ] Semester 4 Stoff
+
+---
 
 # Termine
