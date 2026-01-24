@@ -3,7 +3,6 @@
 - Magnetnadel dreht sich (? => Drehmoment!)
 - Drehmoment versucht die Nadel in Richtung des Felds auszurichten
 - Höhe des Drehmoments stellt ein Maß für die Stärke des Magnetfelds dar
-
 ### Experiment:
 - Variation des Spulenstroms $I \implies I \sim M$
 - Variation der Windungszahl $N \implies N \sim M$
@@ -45,7 +44,7 @@ H = \frac{\Theta}{l} = \frac{I}{2 \cdot \pi \cdot r}
 $$
 > Magnetische Feldstärke ist eine Größe, die in dem Punkt des Raums zugeordnet werden kann. Sie ist eine gerichtete Größe und lässt sich drch einen Vektor darstellen
 
-## Elektrische Flussdichte
+## Magnetische Flussdichte
 -> $H$ berücksichtigt die Materialeigenschaften des Raums nicht!
 	-> Keine AUssage über die Stärke eines Felds möglich
 -> weitere Größen nötig => magnetische Flussdichte $B$
