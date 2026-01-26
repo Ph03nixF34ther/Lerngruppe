@@ -2,6 +2,7 @@
 aliases:
   - komplexen Zahlen
 ---
+# Erklärung
 
 Die Menge der komplexen Zahlen wird mit $\mathbb{C}$ beschrieben und erweitert die Menge der reellen Zahlen $\mathbb{R}$ 
 
@@ -56,4 +57,41 @@ $$5 = 5 + 0\mathrm{i}$$
 > 
 > $\dfrac{4 + 5\mathrm{i}}{3 - 4\mathrm{i}}$
 > > [!Success]- Lösung
-> > $=$
+> > $=\dfrac{(4 + 5\mathrm{i}) * (3 + 4\mathrm{i})}{(3 - 4\mathrm{i}) * (3 + 4\mathrm{i})}$
+> > $=\dfrac{12 + 16\mathrm{i} + 15\mathrm{i} + 20\mathrm{i}^2}{9 - (\mathrm{4i})^2}$
+> > $= \dfrac{12 + 16\mathrm{i} + 15\mathrm{i} + 20 (-1)}{9 - 16(-1)}$
+> > $\underline{= \dfrac{-8 + 31\mathrm{i}}{25} = - 0.32 + 1.24\mathrm{i}}$
+
+# Darstellung als Punkte
+
+Nun hat man die [[#Erklärung]], warum es die komplexen Zahlen gibt, aber wie kann man sich das Vorstellen
+
+
+
+``` tikz
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}[
+    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
+    filled/.style={dot},
+    open/.style={dot=white}
+]
+\begin{axis}[
+    x=20pt,
+    axis y line=none,
+    axis x line=center,
+    xtick align=outside,
+    xtick={-5,...,0,...,5},
+    xmin=-5, xmax=5, 
+    ymin=0, ymax=0,
+    xlabel=$x$,
+    xlabel near ticks
+]
+\addplot coordinates {(2,0)} node[above]{$2$};
+\addplot coordinates {(-4,0)} node[above]{$-4$};
+\end{axis}
+\end{tikzpicture}
+\end{document}
+
+```

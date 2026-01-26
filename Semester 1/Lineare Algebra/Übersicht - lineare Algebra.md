@@ -21,6 +21,8 @@
     10. Formel von Rodrigues
     11. Jacobi-Matrix
     12. Natürlicher Logarithmus
+    13. Hesse-Matrix
+    14. Newton-Verfahren
 3. Komplexe Zahlen (Lenny)
     1. Rechenregeln komplexer Zahlen
     2. Taylorpolynome
