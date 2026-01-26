@@ -207,6 +207,10 @@ Alle Optionen sind selbsterklärend und können frei gewählt werden
 
 Dann öffnen wir Obsidian und gehen auf die Zweite Option "Öffnen" und navigieren zu dem Speicherort der Lerngruppe.
 
+Möchtest du nur Lernen empfehlen wir den Read-Mode einzuschalten um das Bearbeiten aus Versehen zu vermeiden
+
+![Obsidian Read Mode](./bilder/ObsidianReadMode.png)
+
 Damit kann mit unseren Notizen gelernt werden.
 
 Um Schaltungen in der Elektrotechnik ansehen zu können, benötigen wir allerdings noch eine Erweiterung.
