@@ -17,9 +17,9 @@
 		- [Updaten](#updaten)
 			- [Alles funktioniert wie es soll](#alles-funktioniert-wie-es-soll)
 			- [Oh nein es beschwert sich](#oh-nein-es-beschwert-sich)
-		- [Obsidian](#obsidian) 
-			- [Installation & Setup](#installation-&-setup) 
-		- [Beitragen](#beitragen)
+	- [Obsidian](#obsidian) 
+		- [Installation & Setup](#installation-&-setup) 
+	- [Beitragen](#beitragen)
 - [To-Do-Liste](#to-do-liste)
 - [Termine](#termine)
 
@@ -221,6 +221,7 @@ Und fertig! (diesmal aber wirklich)
 ## Beitragen
 
 **(Dafür müsst ihr Eingeladen werden: Den Owner fragen)**
+(Es wird ein GitHub account vorausgesetzt)
 
 Wir bewegen uns in den Ordner der Lerngruppe, wieder mit
 
@@ -231,23 +232,39 @@ cd <your>/<file>/<path>/<here>/Lerngruppe
 
 ![Git CMD cd 2](./bilder/GitCMDcd2.png)
 
-Und wechseln die Branch auf "build"
+Legen das Repository als standardmäßiges Ziel fest
+
+``` bash
+git remote add https://github.com/Ph03nixF34ther/Lerngruppe.git
+```
+
+Wechseln die Branch auf "build"
 
 ``` bash
 git checkout build
+```
+
+Um auf den neusten Stand zu kommen machen wir
+
+``` bash
 git pull origin build
 ```
 
+(Falls du schon Änderungen vorgenommen hast, machst du diesen Schritt erst im nächsten zwischen `git commit ...` und `git push ...`)
 
 ![Git CMD Branch](./bilder/GitCMDBranch.png)
 
-Auf diesen Branch kann man Änderungen pushen und einen Pull Request beantragen, um diese in den main branch aufzunehmen.
+Auf diese Branch kann man Änderungen pushen, einen Pull Request beantragen und diese in den main branch aufnehmen zu lassen.
 
 ``` bash
 git stage .
 git commit -m "[tag] <Message>"
-git push origin build
+git push -u origin build
 ```
+
+`-u` legt die Branch als standard für die nächsten Male fest.
+
+Beim ersten Mal wird man nach seinen Anmeldedaten für GitHub gefragt.
 
 Wenn es zu einem Merge conflict kommt und du nicht weißt was das bedeutet, bitte bei uns melden.
 
