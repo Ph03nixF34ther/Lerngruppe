@@ -90,7 +90,7 @@ c
 \right]
 $$
 
-Nun können wir mit dem [[2 Das gaußsche Eliminationsverfahren|Gaußschen Eliminationsverfahren]] dieses Gleichungssystem lösen.
+Nun können wir mit dem [[Das gaußsche Eliminationsverfahren|Gaußschen Eliminationsverfahren]] dieses Gleichungssystem lösen.
 
 $$
 \left[
