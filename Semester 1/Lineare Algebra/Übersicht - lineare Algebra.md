@@ -1,9 +1,9 @@
-1. Lösung linearer Gleichungssysteme (Elias)
-    1. gaußsche Algorithmus
-    2. gauß-jordansche Algorithmus
-    3. Cramersche Regel
-    4. lineare Abhängigkeit
-    5. parameterabhängige Gleichungssysteme
+1. [[Lineare Gleichungssysteme lösen]] (Elias)
+    1. [[Das gaußsche Eliminationsverfahren]]
+    2. [[Der Gauß-Jordansche Algorithmus]]
+    3. [[Die Cramersche Regel]]
+    4. [[Die lineare Abhängigkeit von LGS]]
+    5. [[Parameterabhängige LGS]]
     6. Aufgabe: Kaffeeplantage
 2. Matrixoperationen (Emil)
     1. Grundlegende Matrixoperationen 
@@ -18,9 +18,14 @@
     7. Vollrankzerlegung (Leon)
     8. Linearkombinationen von Vektoren (Leon)
     9. Eigenwerte und Eigenvektoren (Leon)
+    10. Formel von Rodrigues
+    11. Jacobi-Matrix
+    12. Natürlicher Logarithmus
+    13. Hesse-Matrix
+    14. Newton-Verfahren
 3. Komplexe Zahlen (Lenny)
     1. Rechenregeln komplexer Zahlen
     2. Taylorpolynome
-    3. Eulerische Form
+    3. Eulersche Form
     4. Polarkoordinaten-Form
-
+    5. 
