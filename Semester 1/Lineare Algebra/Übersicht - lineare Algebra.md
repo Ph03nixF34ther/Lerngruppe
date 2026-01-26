@@ -1,9 +1,9 @@
-1. Lösung linearer Gleichungssysteme (Elias)
-    1. gaußsche Algorithmus
-    2. gauß-jordansche Algorithmus
-    3. Cramersche Regel
-    4. lineare Abhängigkeit
-    5. parameterabhängige Gleichungssysteme
+1. [[Lineare Gleichungssysteme lösen]] (Elias)
+    1. [[Das gaußsche Eliminationsverfahren]]
+    2. [[Der Gauß-Jordansche Algorithmus]]
+    3. [[Die Cramersche Regel]]
+    4. [[Die lineare Abhängigkeit von LGS]]
+    5. [[Parameterabhängige LGS]]
     6. Aufgabe: Kaffeeplantage
 2. Matrixoperationen (Emil)
     1. Grundlegende Matrixoperationen 
