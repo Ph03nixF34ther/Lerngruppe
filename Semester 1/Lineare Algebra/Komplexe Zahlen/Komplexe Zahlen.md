@@ -65,9 +65,10 @@ $$5 = 5 + 0\mathrm{i}$$
 # Darstellung als Punkte
 
 Nun hat man die [[#Erklärung]], warum es die komplexen Zahlen gibt, aber wie kann man sich das Vorstellen
+Hier ist der Zahlenstrahl der die gesamte Menge der reellen zahlen $\mathbb{R}$ dargestellt
+Heißt alle reellen Zahlen $\mathbb{R}$ passen auf diesen Zahlenstrahl
 
-
-
+Hier sind die Zahlen $-4$, $-\dfrac{1}{3}$
 ``` tikz
 \usepackage{pgfplots}
 
@@ -78,7 +79,7 @@ Nun hat man die [[#Erklärung]], warum es die komplexen Zahlen gibt, aber wie ka
     open/.style={dot=white}
 ]
 \begin{axis}[
-    x=20pt,
+    x=40pt,
     axis y line=none,
     axis x line=center,
     xtick align=outside,
@@ -90,8 +91,11 @@ Nun hat man die [[#Erklärung]], warum es die komplexen Zahlen gibt, aber wie ka
 ]
 \addplot coordinates {(2,0)} node[above]{$2$};
 \addplot coordinates {(-4,0)} node[above]{$-4$};
+\addplot coordinates {(-1/3,0)} node[above]{$-\frac{1}{3}$};
+\addplot coordinates {({pi},0)} node[above]{$\pi$};
+\addplot coordinates {({sqrt(2)},0)} node[above]{$\sqrt{2}$};
 \end{axis}
 \end{tikzpicture}
 \end{document}
-
 ```
+
