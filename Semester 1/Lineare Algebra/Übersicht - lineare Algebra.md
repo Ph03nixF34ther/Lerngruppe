@@ -18,9 +18,12 @@
     7. Vollrankzerlegung (Leon)
     8. Linearkombinationen von Vektoren (Leon)
     9. Eigenwerte und Eigenvektoren (Leon)
+    10. Formel von Rodrigues
+    11. Jacobi-Matrix
+    12. Natürlicher Logarithmus
 3. Komplexe Zahlen (Lenny)
     1. Rechenregeln komplexer Zahlen
     2. Taylorpolynome
-    3. Eulerische Form
+    3. Eulersche Form
     4. Polarkoordinaten-Form
-
+    5. 
