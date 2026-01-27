@@ -11,16 +11,45 @@ Drehspulmesswerk mit Dauermagnet
 - Daraus ergibt sich, dass $130 V \cdot 0.01 = 1.3 V$
 
 # Aufgabe 2
+## Stromechtes messen
 
 ```tikz
 \usepackage{circuitikz}
 
 \begin{document}
 
-\begin{circuitikz}
+\begin{tikzpicture}
 	% Paths, nodes and wires:
+	\draw (3, 7) to[european voltage source, v=$U_q$] (3, 4);
+	\draw (6, 5.5) to[european, R=$R_1$] (6, 4);
+	\draw (6, 5.5) to[ammeter, i<=$I_M$] (6, 7);
+	\draw (8, 4) to[voltmeter, v<=$U_M$] (8, 7);
+	\draw (3, 7) -- (8, 7);
 	\draw (8, 4) -- (3, 4);
-\end{circuitikz}
+	\node[circ] at (6, 4){};
+	\node[circ] at (6, 7){};
+\end{tikzpicture}
+
+\end{document}
+```
+## Spannungsechtes messen
+
+```tikz
+\usepackage{circuitikz}
+
+\begin{document}
+
+\begin{tikzpicture}[european]
+	% Paths, nodes and wires:
+	\draw (3, 7.5) to[european voltage source, v=$U_q$] (3, 4);
+	\draw (6, 6) to[R=$R_1$] (6, 4);
+	\draw (6, 6) to[ammeter, i<_=$I_M$] (6, 7.5);
+	\draw (8, 4) to[voltmeter, v<=$U_M$] (8, 6) -- (6, 6);
+	\draw (3, 7.5) -- (6, 7.5);
+	\draw (8, 4) -- (3, 4);
+	\node[circ] at (6, 4){};
+	\node[circ] at (6, 6){};
+\end{tikzpicture}
 
 \end{document}
 ```
