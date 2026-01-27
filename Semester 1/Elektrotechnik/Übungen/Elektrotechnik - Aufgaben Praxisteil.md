@@ -167,4 +167,3 @@ $$
 $$
 \text{relativer Fehler} = 0,091 
 $$
-der Feh
