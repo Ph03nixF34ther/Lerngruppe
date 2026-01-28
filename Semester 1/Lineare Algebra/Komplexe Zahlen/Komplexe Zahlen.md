@@ -7,7 +7,12 @@ aliases:
 
 Komplexe Zahlen $\mathbb{C}$ erweitern die reellen Zahlen $\mathbb{R}$, um das Wurzelziehen negativer Werte zu ermöglichen
 
-Sie werden in der Form $z = a + b \mathrm{i}$ notiert und können geometrisch als
+Sie werden in der Form $z = a + b \mathrm{i}$ notiert
+
+- $a$ ist der reelle Teil
+- $b$ ist der imaginäre Teil
+
+Sie können geometrisch als
 
 - Punkt in der Zahlenebene
 - Vektor vom Nullpunkt zu diesem Punkt
@@ -76,6 +81,8 @@ $$5 = 5 + 0\mathrm{i}$$
 > > $=\dfrac{12 + 16\mathrm{i} + 15\mathrm{i} + 20\mathrm{i}^2}{9 - (\mathrm{4i})^2}$
 > > $= \dfrac{12 + 16\mathrm{i} + 15\mathrm{i} + 20 (-1)}{9 - 16(-1)}$
 > > $\underline{= \dfrac{-8 + 31\mathrm{i}}{25} = - 0.32 + 1.24\mathrm{i}}$
+
+---
 
 ## Darstellung als Punkte
 
@@ -206,6 +213,8 @@ Wie wir zuvor festgestellt haben lassen sich reelle Zahlen als $a+0\mathrm{i}$ d
 \end{tikzpicture}
 \end{document}
 ```
+
+---
 
 ## Darstellung als Vektoren
 

@@ -25,7 +25,7 @@
     14. Newton-Verfahren
 3. Komplexe Zahlen (Lenny)
 	1. [[Komplexe Zahlen|Was sind Komplexe Zahlen]]
-    2. Rechenregeln der komplexen Zahlen
+    2. [[Rechenregeln Komplexe Zahlen|Rechenregeln der komplexen Zahlen]]
     3. Taylorpolynome
     4. Eulersche Form
     5. Polarkoordinaten-Form
