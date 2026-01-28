@@ -46,6 +46,9 @@ $$
 $$
 R_{\text{Analog. Multimeter}} = \frac{U_{CD\_GDM-8245}}{I_{\text{Analog. Multimeter}}} = \frac{9,690\text{ V}}{30,031 \mu\Omega} = \underline{\underline{0,3226 M\Omega}}
 $$
+### Teilaufgabe C)
+![[Circuit1.svg]]
+
 ### Teilaufgabe D)
 $$
 20.000 \frac{\Omega}{V} \cdot 15 \text{ V} = 300 \text{ k}\Omega
