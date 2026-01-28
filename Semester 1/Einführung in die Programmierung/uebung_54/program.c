@@ -88,6 +88,7 @@ int main (int argc, char *argv[]) {
         while (fgets(current_line_out_of_input, 83, input_file) != NULL) {
 
                 current_position_in_line = current_line_out_of_input;
+                
                 char *position_of_word = strstr(current_position_in_line, argv[1]);
 
                 while (position_of_word != NULL) {
