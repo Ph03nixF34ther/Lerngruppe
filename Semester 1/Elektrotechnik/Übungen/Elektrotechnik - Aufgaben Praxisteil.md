@@ -1,7 +1,6 @@
 # Aufgabe 1
 ## Teilaufgabe A)
 > Der Innenwiderstand beträgt im Gleichspannungsbereich $20.000 \Omega$
-
 -- 3. Einführung
 ## Teilaufgabe B)
 Drehspulmesswerk mit Dauermagnet
