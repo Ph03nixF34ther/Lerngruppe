@@ -24,8 +24,8 @@
     13. Hesse-Matrix
     14. Newton-Verfahren
 3. Komplexe Zahlen (Lenny)
-    1. Rechenregeln komplexer Zahlen
-    2. Taylorpolynome
-    3. Eulersche Form
-    4. Polarkoordinaten-Form
-    5. 
+	1. [[Komplexe Zahlen|Was sind Komplexe Zahlen]]
+    2. Rechenregeln der komplexen Zahlen
+    3. Taylorpolynome
+    4. Eulersche Form
+    5. Polarkoordinaten-Form
