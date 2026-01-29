@@ -77,3 +77,48 @@ $$
 $$
 w_{1} = w_{2}
 $$
+# Aufgabenset 3
+## Aufgabe 1
+$$
+F = \frac{1}{4\pi\epsilon_{0}} \cdot \frac{|q_{1} \cdot q_{2}|}{r^2}
+$$
+- Der Radius $r$ ist der Abstand zwischen $q_{1}$ und $q_{2}$ 
+$$
+F = \frac{1}{4\pi \cdot 8,854 \cdot 10^{-12} \frac{As}{Vm}} \cdot \frac{|-2 \text{ nC} \cdot 4 \text{ nC}|}{(6 \text{ m})^2} = 19,97 \frac{\mu \text{N}}{m}
+$$
+## Aufgabe 2
+$E_{q_{1}, q_{2}}$ hat die Richtung, die positiven Ladungsträger nehmen würden.
+$F$ und $-E$ sind gleichgerichtet, wenn $\Delta Q$ negativ ist. Das ist der Fall. 
+Darum ist die Kraft $\vec{F}_{q_{2}}$ von $q_{2}$ nach $q_{1}$ gerichtet
+
+## Aufgabe 3
+$$
+F = \frac{1}{4\pi\epsilon_{0}} \cdot \frac{|q_{1} \cdot q_{2}|}{r^2}
+$$
+- Der Radius $r$ ist der Abstand zwischen $q_{1}$ und $q_{2}$ 
+$$
+F = \frac{1}{4\pi \cdot 8,854 \cdot 10^{-12} \frac{As}{Vm}} \cdot \frac{|-2 \text{ nC} \cdot 4 \text{ nC}|}{(6 \text{ m})^2} = 19,97 \frac{\mu \text{N}}{m}
+$$
+## Aufgabe 4
+- $\vec{E}$ ist von $q_{1}$ nach $q_{2}$ gerichtet
+- $\vec{E} = \frac{\vec{F}}{Q}$
+- $Q_{12} = q_{2} - q_{1} = -6\text{nC}$
+- $Q_{21} = q_{1} - q_{2} = 6\text{nC}$
+$$
+\implies \vec{F_{12}} = \vec{E} \cdot Q_{12} = \vec{E}\cdot -6\text{ nC} 
+$$
+$\implies\vec{F_{12}}$ ist antiparallel zu $\vec{E}$
+
+$$
+\implies \vec{F_{21}} = \vec{E} \cdot Q_{21} = \vec{E}\cdot 6\text{ nC} 
+$$
+$\implies\vec{F_{21}}$ ist parallel zu $\vec{E}$
+
+Laut actio = reactio
+$$
+\vec{F}_{12} = -\vec{F}_{21}
+$$
+$$
+\vec{E}\cdot -6\text{ nC} = -(\vec{E}\cdot 6\text{ nC})
+$$
+$q.e.d.$
