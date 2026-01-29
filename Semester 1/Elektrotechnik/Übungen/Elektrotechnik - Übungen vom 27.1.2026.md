@@ -122,3 +122,171 @@ $$
 \vec{E}\cdot -6\text{ nC} = -(\vec{E}\cdot 6\text{ nC})
 $$
 $q.e.d.$
+
+# Aufgabenset 4
+
+## Aufgabe 1
+
+$$\begin{array}{l|l}
+\vec{E} = \dfrac{U}{d} \\
+= \dfrac{10 \text{ V}}{5 \text{ mm}} = \dfrac{10 \text{ V}}{5 \text{ m} \cdot 10^{-3}} \\
+\underline{= 2.000 \frac{\text{V}}{\text{m}}}
+\end{array}$$
+
+## Aufgabe 2
+
+$$\begin{array}{l|l}
+J = E \cdot \sigma \\
+= 2.000 \frac{\text{V}}{\text{m}} \cdot 2 \frac{\text{S}} {\text{m}} = 2.000 \frac{\text{V}}{\text{m}} \cdot 2 \frac{\frac{\text{A}}{\text{V}}}{\text{m}} \\
+\underline{= 4.000 \frac{\text{A}}{\text{m}^2}}
+\end{array}$$
+
+## Aufgabe 3
+
+$$\begin{array}{l|l}
+I = J \cdot A  \\
+= 4.000 \frac{\text{A}}{\text{m}^2} \cdot 20 \text{ m}^2 \\
+\underline{= 8 \text{ A}} \\
+\end{array}$$
+
+## Aufgabe 4
+
+$$\begin{array}{l|l}
+p = U \cdot I \\
+p_v = \dfrac{U \cdot I}{V} = \dfrac{J \cdot A \cdot E \cdot d}{V} = \dfrac{J \cdot E \cdot V}{V} = J \cdot E = E^2 \cdot \sigma = \dfrac{J^2}{\sigma} \\
+= 4.000 \frac{\text{A}}{\text{m}^2} \cdot 2.000 \frac{\text{V}}{\text{m}} \\
+\underline{= 8 \frac{\text{MW}}{\text{m}^3}}
+\end{array}$$
+
+## Aufgabe 5
+
+### Teil $I$
+
+$$\begin{array}{l|l}
+P = U \cdot I \\
+= 10 \text{ V} \cdot 8 \text{ A} \\
+\underline{= 80 \text{ W}}
+\end{array}$$
+
+### Teil $II$
+
+$$\begin{array}{l|l}
+P = \int_{V} p_v \cdot dV \\
+= p_v \int_{V} dV = p_v \cdot A \cdot L \\
+= 8 \frac{\text{MW}}{\text{m}^3} \cdot 0,002 \text{ m}^2 \cdot 0,005 \text{ m} \\
+\underline{= 80 \text{ W}}
+\end{array}$$
+
+# Aufgabenset 5
+
+## Aufgabe 1
+
+$$\begin{array}{l|l}
+\Theta = N \cdot I \\
+= 500 \cdot 0,8 \text{ A} \\
+\underline{= 40 \text{ A}}
+\end{array}$$
+
+## Aufgabe 2
+
+$$\begin{array}{l|l}
+H = \dfrac{\Theta}{l_m} = \dfrac{\Theta}{2 \pi \cdot r_m} \\
+= \dfrac{40 \text{ A}}{2 \pi \cdot 6 \text{ m} \cdot 10^{-2}} \\
+\underline{= 1.061,03 \frac{\text{A}}{\text{m}}}
+\end{array}$$
+
+# Aufgabenset 6
+
+## Aufgabe 1
+
+$$\begin{array}{l|l}
+A = a \cdot b \\
+= 8 \text{ cm} \cdot 5 \text{ cm} = 8 \text{ m} \cdot 10^{-2} \cdot 5 \text{ m} \cdot 10^{-2} \\
+\underline{= 4 \text{ m}^2 \cdot 10^{-3}}
+\end{array}$$
+
+## Aufgabe 2
+
+$$\begin{array}{l|l}
+\Phi = \int_A B \cdot dA = B \cdot \int_A dA = A \cdot B \\
+= 0,25 \text{ T} \cdot 4 \text{ m}^2 \cdot 10^{-3} \\
+\underline{= 1 \text{ mWb}}
+\end{array}$$
+
+## Aufgabe 3
+
+$$\begin{array}{l|l}
+\Phi = \int_A \vec{B} \cdot d\vec{A} \\
+= \int_A B \cdot \cos(\alpha) \cdot dA = B \cdot \cos(\alpha) \cdot \int_A dA = A \cdot B \cdot \cos(\alpha) \\
+= 4 \text{ m}^2 \cdot 10^{-3} \cdot 0,25 \text{ T} \cdot \frac{1}{2} \\
+\underline{= 0,5 \text{ mWb}}
+\end{array}$$
+
+# Aufgabenset 7
+
+## Aufgabe 1
+
+$$\begin{array}{l|l}
+\Phi = \int_A \vec{B} \cdot dA \\
+\underline{= \int_0^{2\pi}\int_0^r \vec{B}(r) \cdot dr \cdot d\varphi} & B(r) = B_0 \cdot (1 - \dfrac{r}{R})
+\end{array}$$
+
+## Aufgabe 2
+
+![[KegelDarstellung.jpeg]]
+
+$$\begin{array}{l|l}
+\Phi = B \cdot A  \\
+= \int_A B(r) \cdot dA & B(r) = B_0 \cdot (1 - \dfrac{r}{R}) \\
+= \int_0^R B(r) \cdot l(r) \cdot dr &
+l(r) =  2 \pi \cdot r 
+\end{array}$$
+
+## Aufgabe 3
+
+$$\begin{array}{ll}
+= \int_0^R (B_0 \cdot (1 - \dfrac{r}{R}) \cdot 2 \pi \cdot r) \cdot dr \\ 
+= B_0 \cdot 2 \pi \cdot \left[ -\dfrac{1}{3} \cdot \dfrac{r^3}{R} + \dfrac{1}{2} \cdot r^2 \right]_0^R \\
+= B_0 \cdot 2 \pi \cdot ((-\dfrac{1}{3} \cdot \dfrac{R^3}{R} + \dfrac{1}{2} \cdot R^2) - (-\dfrac{1}{3} \cdot \dfrac{0^3}{R} + \dfrac{1}{2} \cdot 0^2)) \\
+= B_0 \cdot 2 \pi \cdot (-\dfrac{1}{3} \cdot R^2 + \dfrac{1}{2} \cdot R^2) \\
+= B_0 \cdot 2 \pi \cdot \dfrac{1}{6} \cdot R^2 = B_0 \cdot \pi \cdot \dfrac{1}{3} \cdot R^2 \\
+= 0,3 \text{ T} \cdot \pi \cdot \dfrac{1}{3} \cdot 4 \text{ m} \cdot 10^{-2} \\
+\underline{= 0,502 \text{ mWb}}
+\end{array}$$
+
+## Aufgabe 4
+
+$$\begin{array}{ll}
+B_{\text{mittel}} = \dfrac{\Phi}{A} \\
+=\dfrac{0,502 \text{ mWb}}{\pi \cdot (4 \text{ m} \cdot 10^{-2})^2} \\
+\underline{= 0,1 \frac{\text{Wb}}{\text{m}^2}}
+\end{array}$$
+
+# Aufgabenset 8
+
+## Aufgabe 1
+
+$$\begin{array}{ll}
+H = \dfrac{B_l}{\mu_0} \\
+= \dfrac{0,8 \text{ T}}{4 \pi \cdot10^{-7} \frac{V \cdot m}{A \cdot s}} \\ 
+\underline{= 630.619,77 \text{ Wb} = 0,63 \text{ MWb}}
+\end{array}$$
+
+## Aufgabe 2
+
+$$\begin{array}{ll}
+V_m = \int_l \vec{H} \cdot dl \\
+ = H \cdot l \\
+ = 0,63 \text{ MWb} \cdot 4 \text{ m} \cdot 10^-3 \\
+ \underline{= 2.546,5 \text{ A} = 2,5 \text{ kA}}
+\end{array}$$
+
+## Aufgabe 3
+
+$$\begin{array}{ll}
+\Theta = N \cdot I \\
+I = \dfrac{\Theta}{N} \\
+= \dfrac{l \cdot H}{N} \\
+= 4 \text{ m} \cdot 10^{-3} \cdot 0,63 \frac{\text{MA}}{\text{m}} \\
+\underline{= 1,26 \text{ A}}
+\end{array}$$
