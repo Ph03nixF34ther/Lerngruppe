@@ -190,5 +190,8 @@ Rechte-Hand-Regel:
 | V                 | $\vec{B_{1}}$                 |
 | W                 | resultierende Kraft $\vec{F}$ |
 $$
- F = B_{1} \cdot I_{2} \cdot l = ()
+F = B_{1} \cdot I_{2} \cdot l = ()
 $$
+> Allgemein: 
+> $\implies$ Stromdurchflossene Leiter ziehen sich an, wen die Stromrichtungen übereinstimmen.
+> $\implies$ Stromdurchflossene Leiter stoßen sich ab, wen die Stromrichtungen entgegengesetzt sind.
