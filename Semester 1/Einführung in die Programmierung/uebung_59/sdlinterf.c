@@ -53,10 +53,10 @@ void sdlInit(void)
     fprintf(stderr, "Could not create SDL Window: %s\n", SDL_GetError());
     exit(EXIT_FAILURE);
   }
-  myRenderer = SDL_CreateRenderer(myWindow, -1, 0);
+  //myRenderer = SDL_CreateRenderer(myWindow, -1, 0);
   // Alternative, wenn es Anzeige-Fehler gibt,
   // die nach Grafik-Treiber-Bugs aussehen
-  //myRenderer = SDL_CreateRenderer(myWindow, -1, SDL_RENDERER_SOFTWARE);
+  myRenderer = SDL_CreateRenderer(myWindow, -1, SDL_RENDERER_SOFTWARE);
   if (myRenderer == NULL) {
     fprintf(stderr, "Could not create SDL Renderer: %s\n", SDL_GetError());
     exit(EXIT_FAILURE);

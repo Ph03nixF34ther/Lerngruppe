@@ -96,7 +96,7 @@ int main (int argc, char *argv[]) {
 
                 frame ++;
                 sdlUpdate();
-                sdlMilliSleep(50);
+                sdlMilliSleep(2);
 
         }
         
