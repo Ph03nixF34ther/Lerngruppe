@@ -245,3 +245,130 @@ $\psi > 0$ Spannung eilt dem Strom voraus
 $\psi = 0$ Spannung und Strom in Phase
 $\psi < 0$ Strom eilt der Spannung voraus
 
+# Mittelwerte periodisch zeitabhängiger Größen
+(Amplitude / Scheitelwert sagt nichts über den Verlauf aus. Es sind andere Größen notwendig)
+
+zeitliche Mittelwert des Betrags der Funktion.
+die negative Halbwelle wird in den positiven Bereich geklappt
+$$
+|\hat{i}| = \frac{1}{T} \cdot \int^T_{0} |i(t)| \cdot dt
+$$
+$$
+|\hat{u}| = \frac{1}{T} \cdot \int^T_{0} |u(t)| \cdot dt
+$$
+---
+$$
+i(t) = \hat{i} \cdot \sin(\omega t)
+$$
+---
+$$
+|\hat{i}| = \frac{1}{2\pi} \cdot \hat{i} \cdot\int_{0}^{2\pi} |\sin(\omega t)| \cdot d(\omega t) 
+$$
+$$= \frac{1}{\pi} \cdot \hat{i} \cdot \int_{0}^{\pi} |\sin(\omega t)| \cdot d(\omega t)
+$$
+$$
+ = \frac{1}{\pi} \cdot \hat{i} \cdot \int_{0}^{\pi} \sin(\omega t) \cdot d(\omega t) 
+$$
+$$
+= \frac{2 \cdot \hat{i}}{\pi}
+$$
+## Effektivwert
+Erzeugt ein periodisch zeitabhängiger Strom in einem Widerstand die gleiche Wärmeleistung wie ein Gleichstrom, so ist der Effektivwert des Wechselstroms gleich dem Wert des Gleichstroms.
+$$
+P = U \cdot I
+\hspace{1,5cm}
+U = R \cdot I
+$$
+$$
+\implies P = R \cdot I^2
+$$
+$$
+\text{Momentanleistung}:
+\hspace{3,5cm} 
+p(t) = i(t)^2 \cdot R 
+
+$$
+$$
+ \text{Energie} : 
+\hspace{1,5cm} W = \int^T_{0}p(t) \cdot dt = R \cdot \int^T_{0} i(t)^2 \cdot dt
+$$
+
+$$
+\text{Mittlere Wärmeleistung} :  P = \frac{W}{T} = \frac{1}{T}\cdot R \cdot \int^T_{0} i(t)^2 \cdot dt
+$$
+$$
+P = P'
+$$
+$$
+\frac{1}{T}\cdot \cancel{ R } \cdot \int^T_{0} i(t)^2 \cdot dt = \cancel{ R } \cdot I^2
+$$
+$$
+\implies I = \sqrt{ \frac{1}{T}  \cdot \int^T_{0} i^2 (t) \cdot dt}
+$$
+Spannung analog:
+$$
+U = \sqrt{ \frac{1}{T}  \cdot \int^T_{0} u^2 (t) \cdot dt}
+$$
+am Beispiel eines sinusförmigen Wechselstroms:
+$$
+i(t) = \hat{i} \cdot \sin(\omega t)
+$$
+statt Zeit: Winkel
+$$
+\implies I = \sqrt{ \frac{1}{2\pi}  \cdot \int^{2\pi}_{0} \hat{i}^2 (\omega t) \cdot d(\omega t)}
+$$
+$$
+ = \frac{\hat{i}}{\sqrt{ 2 }}
+$$
+analog: 
+$$
+U = \frac{\hat{u}}{\sqrt{ 2 }}
+$$
+
+# Einfache Wechselstromkreise
+## Kreis mit Widerstand
+
+// Abb. Kreis mit ohmschem Widerstand
+
+$$
+u(t) = \hat{u} \cdot \sin(\omega t)
+$$
+$$
+\text{ohmsches Gesetz} : \hspace{2cm} i = \frac{u}{R} = \frac{\hat{u} \cdot \sin(\omega t)}{R}
+$$
+gleicher Kurvenverlauf, gleiche Phasenlage
+
+Scheitelwert des Stroms:
+$$
+\hat{i} = \frac{\hat{u}}{R}
+$$
+$$
+\text{Effektiv Wert} : \hspace{2cm} I = \frac{U}{R}
+$$
+Diesen Widerstand nennt man "Wirkwiderstand" / "Resistanz"
+$$
+G = \frac{1}{R}
+$$
+"Konduktanz" / "Wirkleitwert"
+$$
+\underline{U} = U \cdot e^{j \omega t} \hspace{2cm} : \text{Nullphasenwinkel } \psi_{u} = 0 
+$$
+$$
+\underline{I} = \frac{\underline{U}}{R} = \frac{U \cdot e^{j\omega t}}{R}
+$$
+$\underline{U}$ ist ein rotierender Zeiger mit Kreisfrequenz $\omega$
+$\underline{I}$ ist ein rotierender Zeiger mit Kreisfrequenz $\omega$
+$\implies$ Identische Phasenlage
+
+## Kreis mit Spule
+- Strom in Spule führt zu Magnetfeld führt zu selbstinduktion
+$$
+U = L \cdot \frac{di}{dt}
+$$
+$$
+i(t) = \hat{i} \cdot \sin(\omega t)
+$$
+$$
+u = L \cdot \frac{d(\hat{i} \cdot \sin(\omega t))}{dt} = L \cdot \hat{i} \cdot \frac{d \sin(\omega t)}{dt} = L \cdot \hat{i} \cdot \omega \cdot \cos(\omega t)
+$$
+$\implies$ Es ergibt sich eine Phasenverschiebung von $90°$, Änderung der Amplitude
