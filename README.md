@@ -284,3 +284,7 @@ Wenn es zu einem Merge conflict kommt und du nicht weißt was das bedeutet, bitt
 ---
 
 # Termine
+- [ ] KW6 (02.02-05.02): Abschließen von Linearer Algebra
+- [ ] KW7 (09.02-12.02): Abschließen von Elektrotechnik
+- [ ] KW8 (16.02-20.02): Lernen für Klausuren
+- [ ] KW8 (23.02-27.02): 1. Semester Überleben / Abschließen

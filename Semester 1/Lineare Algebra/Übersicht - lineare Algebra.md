@@ -14,9 +14,9 @@
     3. Determinanten
     4. Assoziativität
     5. Distributivität
-    6. Rank (Leon)
-    7. Vollrankzerlegung (Leon)
-    8. Linearkombinationen von Vektoren (Leon)
+    6. Rang (Leon)
+    7. Vollrangzerlegung (Leon)
+    8. [[Linearkombinationen von Vektoren]](Leon)
     9. Eigenwerte und Eigenvektoren (Leon)
     10. Formel von Rodrigues
     11. Jacobi-Matrix

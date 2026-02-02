@@ -1,0 +1,3 @@
+#Rang 
+
+Der Rang einer Matrix wird durch die liear unabhängigen vektoren bestimmt. Dabei wird der Höchstmögliche Rang durch die Dimension bestimmt. Bei einer Quadratischen Matrix ist der Rang maximal gleich der Dimension der matrix. Dementsprechend ist der rang einer $3x3$ Matrix maximal 3. Bei Unsymetrischen Matritzen bestimmt den Maximalen Rang die Nidrigere Zeilen beziehungsweise Spalten anzahl. Bei einer $2X4$ Matrix wäre der höchtmögliche Rang. Andersrum bei einer $5x3$ Matrix wäre er 3.
