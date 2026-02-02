@@ -1,5 +1,5 @@
 # Gleichstrom
-## [[Elektrische(r) Strom(stärke)]] und Elektrische [[Ladung]]
+## [[Elektrische Stromstärke]] und Elektrische [[Ladung]]
 $$
 I = \frac{Q}{t}
 $$
@@ -26,7 +26,7 @@ Genutzte Formelzeichen:
 | ------------- | -------------------------------- |
 | $U$           | [[Elektrische Spannung]]         |
 | $W$           | [[Arbeit]]                       |
-| $I$           | [[Elektrische(r) Strom(stärke)]] |
+| $I$           | [[Elektrische Stromstärke]] |
 | $Q$           | [[Ladung]]                       |
 
 ## Ohmsches Gesetz
@@ -44,8 +44,8 @@ $$
 | ------------- | -------------------------------- |
 | $R$           | [[Elektrischer Widerstand]]      |
 | $U$           | [[Elektrische Spannung]]         |
-| $I$           | [[Elektrische(r) Strom(stärke)]] |
-## [[Arbeit]], [[Leistung]]
+| $I$           | [[Elektrische Stromstärke]] |
+## [[Arbeit]], [[Leistung bei Gleichstrom]]
 $$
 W = U \cdot I \cdot t
 $$
@@ -65,10 +65,10 @@ $$
 | Formelzeichen | Verlinkung                       |
 | ------------- | -------------------------------- |
 | $U$           | [[Elektrische Spannung]]         |
-| $I$           | [[Elektrische(r) Strom(stärke)]] |
+| $I$           | [[Elektrische Stromstärke]] |
 | $t$           | [[Zeit]]                         |
 | $W$           | [[Arbeit]]                       |
-| $P$           | [[Leistung]]                     |
+| $P$           | [[Leistung bei Gleichstrom]]                     |
 ## [[Wirkungsgrad]]
 $$
 \eta = \frac{P_{ab}}{P_{zu}}
@@ -86,8 +86,8 @@ $$
 
 | Formelzeichen | Verlinkung              |
 | ------------- | ----------------------- |
-| $P_{ab}$      | abgegebene [[Leistung]] |
-| $P_{zu}$      | zugrführte [[Leistung]] |
+| $P_{ab}$      | abgegebene [[Leistung bei Gleichstrom]] |
+| $P_{zu}$      | zugrführte [[Leistung bei Gleichstrom]] |
 | $P_{V}$       | Verlustleistung         |
 | $\eta$        | Wirkungsgrad            |
 ## [[Elektrische Stromdichte]]
@@ -99,7 +99,7 @@ $$
 | Formelzeichen | Verlinkung                       |
 | ------------- | -------------------------------- |
 | $S$           | [[Elektrische Stromdichte]]      |
-| $I$           | [[Elektrische(r) Strom(stärke)]] |
+| $I$           | [[Elektrische Stromstärke]] |
 | A             | Leiterquerschnitt                |
 ## [[Elektrischer Widerstand]] und [[Elektrischer Leitwert]]
 $$
@@ -173,7 +173,7 @@ $$
 | Formelzeichen | Verlinkung                                                 |
 | ------------- | ---------------------------------------------------------- |
 | $R_{ers}$     | Ersatzwiderstand ([[Elektrischer Widerstand\|Widerstand]]) |
-| $I$           | [[Elektrische(r) Strom(stärke)]]                           |
+| $I$           | [[Elektrische Stromstärke]]                           |
 | $U$           | [[Elektrische Spannung]]                                   |
 ## Paralellschaltungen von [[Elektrischer Widerstand|Widerständen]]
 $$
@@ -192,7 +192,7 @@ $$
 | Formelzeichen | Verlinkung                                                 |
 | ------------- | ---------------------------------------------------------- |
 | $R_{ers}$     | Ersatzwiderstand ([[Elektrischer Widerstand\|Widerstand]]) |
-| $I$           | [[Elektrische(r) Strom(stärke)]]                           |
+| $I$           | [[Elektrische Stromstärke]]                           |
 | $U$           | [[Elektrische Spannung]]                                   |
 ## Knotenregel (1. Kirschhoffsches Gesetz) 
 $$
