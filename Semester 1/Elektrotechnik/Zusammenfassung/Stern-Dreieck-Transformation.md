@@ -212,7 +212,7 @@ $$
 R_{E 3} = \frac{R_{1}^2}{2R_{1} + R_{2}}  = \frac{(100\Omega)^2}{200\Omega + 50\Omega} = 40\Omega
 $$
 ---
-Nun kann der Widerstand von $A$ nach $B$ berechnet werden, da sich die aktuelle Schaltung ausschließlich aus Reihen und Parallelschaltungen zusammensetzt.
+Nun kann der Widerstand von $A$ nach $B$ berechnet werden, da sich die aktuelle Schaltung ausschließlich aus [[Reihenschaltung|Reihen-]] und [[Parallelschaltung|Parallelschaltungen]] zusammensetzt.
 $$
 R_{AB} = R_{E 1} + \frac{(R_{E 2} + R_{2}) \cdot (R_{E 3} + R_{2})}{2 R_{2} + R_{E 2} + R_{E 3}} 
 = 20\Omega + \frac{(20\Omega + 50\Omega) \cdot (40\Omega + 50\Omega)}{2 \cdot 50\Omega + 20\Omega +40\Omega} = \underline{\underline{59,375\Omega}}

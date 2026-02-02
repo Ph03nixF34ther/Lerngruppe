@@ -11,7 +11,7 @@ Im folgenden stehen alle wichtigen grundlegenden Formel für die Elektroctechnic
 	- [[Bezugssinn und Pfeilsysteme]]
 	- [[Kirchhoff'sche Gesetze]]
 	- [[Spannungsquelle]]und [[Stromquellen]] mit Innenwiderstand/-leitwert
-	- Berechnung von Gleichstromkreisen ([[Reihenschaltungen]] / [[Parallelschaltungen]]) 
+	- Berechnung von Gleichstromkreisen ([[Reihenschaltung|Reihenschaltungen]] / [[Parallelschaltung|Parallelschaltungen]]) 
 	- [[Stern-Dreieck-Transformation]]
 	- Netzwerkberechnungen für Netzwerke mit Spannungsquellen nach weiteren Verfahren ([[Maschenstromverfahren]], [[Knotenpotenzialverfahren]], [[Überlagerungsverfahren]])
 	- [[Ersatzspannungsquelle|Ersatzspannungsquellen]] und [[Ersatzstromquelle|Ersatzstromquellen]]

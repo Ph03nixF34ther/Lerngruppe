@@ -1,3 +1,8 @@
+---
+aliases:
+  - Spannungsquellen
+---
+
 # Übersicht
 
 # Schaltsymbol
