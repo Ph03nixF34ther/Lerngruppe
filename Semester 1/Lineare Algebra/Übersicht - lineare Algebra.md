@@ -26,6 +26,6 @@
 3. Komplexe Zahlen (Lenny)
 	1. [[Komplexe Zahlen|Was sind Komplexe Zahlen]]
     2. [[Rechenregeln Komplexe Zahlen|Rechenregeln der komplexen Zahlen]]
-    3. Taylorpolynome
-    4. Eulersche Form
-    5. Polarkoordinaten-Form
+    3. [[Polar-Koordinaten-Form]]
+    4. Taylorpolynome
+    5. Eulersche Form
