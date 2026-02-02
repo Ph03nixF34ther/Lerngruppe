@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Magnetische Feldgrößen.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+html,footer,header{
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Custom MD PDF CSS
+ */
+html,footer,header{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+
+ }
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///Users/elias_mac/Documents/Lerngruppe/R%3A%5C2.Travail%5C1.Enseignement%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css"><link rel="stylesheet" href="file:///Users/elias_mac/Documents/Lerngruppe/D%3A%5Crdaros%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css">
+</head>
+
+<body>
+    <h1 id="magnetische-feldst%C3%A4rke">Magnetische Feldstärke</h1>
+<ul>
+<li>Magnetnadel im Feld einer Spule (Ringspule)</li>
+<li>Magnetnadel dreht sich (? =&gt; Drehmoment!)</li>
+<li>Drehmoment versucht die Nadel in Richtung des Felds auszurichten</li>
+<li>Höhe des Drehmoments stellt ein Maß für die Stärke des Magnetfelds dar</li>
+</ul>
+<h3 id="experiment">Experiment:</h3>
+<ul>
+<li>Variation des Spulenstroms $I \implies I \sim M$</li>
+<li>Variation der Windungszahl $N \implies N \sim M$</li>
+<li>Variation des Radus =&gt; Änderung der Mittleren Länge $l_{m}$ einer Feldline: $M \sim \frac{1}{l_{m}}$<br>
+$$<br>
+\implies M \sim \boxed{\frac{I \cdot N}{l_{m}}} \implies \text{Magnetische Feldstärke } H<br>
+$$<br>
+$$<br>
+M \sim H<br>
+$$<br>
+$$<br>
+H = \frac{\Theta}{l_{m}}<br>
+$$<br>
+=&gt; magnetische Feldstärke als Größe, die das aus dem Strom resultierenden Feld beschreibt</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Formelzeichen</th>
+<th>Beschreibung // Verlinkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$H$</td>
+<td>magnetische Feldstärke</td>
+</tr>
+<tr>
+<td>$I$</td>
+<td>[[Elektrische Stromstärke]]</td>
+</tr>
+<tr>
+<td>$N$</td>
+<td>Windungszahö</td>
+</tr>
+<tr>
+<td>$l_{m}$</td>
+<td>Lämge der Spule (Mittelpunkte des taurischen Körpers)</td>
+</tr>
+<tr>
+<td>$\Theta = I \cdot N$</td>
+<td>Summe aller Ströme, die durch Kreisförmige (Ringspule!) Flächen mit Umfang $l_{m}$ duchfluten</td>
+</tr>
+</tbody>
+</table>
+<h3 id="einheit-der-magnetischen-feldst%C3%A4rke">Einheit der magnetischen Feldstärke</h3>
+<p>$$<br>
+[H] = \frac{A}{m}<br>
+$$</p>
+<h3 id="gerader-leiter">gerader Leiter</h3>
+<p>// Abb. Ermittlung Feldstärke gerader Leiter</p>
+<ul>
+<li>
+<p>Stromdurchflossener gerader Leiter</p>
+</li>
+<li>
+<p>Aufpunkt $P$ im Abstand $r$ vom Mittelpunkt des Leiters<br>
+=&gt; ? Feldstärke im Punkt $P$</p>
+</li>
+<li>
+<p>Länge einer Feldlinie $l = 2 \cdot \pi \cdot r$</p>
+</li>
+<li>
+<p>elektrische Durchflutung: $\Theta = N \cdot I$; hier: $N = 1 \implies \Theta = I$<br>
+$$<br>
+H = \frac{\Theta}{l} = \frac{I}{2 \cdot \pi \cdot r}<br>
+$$</p>
+</li>
+</ul>
+<blockquote>
+<p>Magnetische Feldstärke ist eine Größe, die in dem Punkt des Raums zugeordnet werden kann. Sie ist eine gerichtete Größe und lässt sich drch einen Vektor darstellen</p>
+</blockquote>
+<h2 id="magnetische-flussdichte">Magnetische Flussdichte</h2>
+<p>-&gt; $H$ berücksichtigt die Materialeigenschaften des Raums nicht!<br>
+-&gt; Keine AUssage über die Stärke eines Felds möglich<br>
+-&gt; weitere Größen nötig =&gt; magnetische Flussdichte $B$</p>
+<p>// Abb. Stromführender Leiter im homogenen Magnetfeld</p>
+<h4 id="versuchsaufbau-mit">Versuchsaufbau mit</h4>
+<ul>
+<li>
+<p>magnetischem Feld (z.B. Hufeisenmagnet, zwei Stabmagnete)</p>
+</li>
+<li>
+<p>stromführender Leiter $I$ in Zeichenebene hinein, Länge $l$<br>
+=&gt; &quot;Leiterschaukel&quot;</p>
+</li>
+<li>
+<p>Magnetfeld übt Kraft auf den Stromdurchflossenen Leiter aus, die senkrecht zu Feldrichtung und Leiter steht</p>
+</li>
+<li>
+<p>Umkehrung der Stromrichtung $\implies$ Umkehrung der Kraft (Bewegungsrichtung)</p>
+</li>
+<li>
+<p>Umkehrung des Magnetfelds $\implies$ Umkehrung der Auslenkung</p>
+</li>
+</ul>
+<p>Variation der Parameter:</p>
+<ul>
+<li>Stromstärke $I$ $\implies$ höhere Stromstärke =&gt; größere Ausdehnung<br>
+$$<br>
+F \sim I<br>
+$$</li>
+<li>Länge des Leiters $l \implies$ längerer Leiter $\to$ größere Ausdehnung<br>
+$$<br>
+F \sim l<br>
+$$<br>
+$$<br>
+F \sim l \cdot I<br>
+$$<br>
+Proportionalitätskonstante ? $\implies B \implies F = B \cdot I \cdot l$<br>
+$\implies$ magnetische Flussdichte, gerichtete Größe, $B, H$ sind stets gleich gerichtet<br>
+$$<br>
+[B] = \frac{[F]}{[I \cdot l]} = \frac{N}{A \cdot m} = \frac{V \cdot A \cdot s}{A \cdot m^2} = \frac{V \cdot \cancel{ A } \cdot s}{\cancel{ A } \cdot m^2} = \frac{V \cdot s}{m^2} = T (\text{Tesla})<br>
+$$<br>
+Dichte:<br>
+$$<br>
+\rho = \frac{\text{irgendwas}}{m^2}<br>
+$$</li>
+</ul>
+<h4 id="verkn%C3%BCpfung-von-b-h-%C3%BCber-permeabilit%C3%A4t">Verknüpfung von $B, H$ über Permeabilität</h4>
+<p>$$<br>
+B = \mu \cdot H<br>
+$$<br>
+beschreibt die Magnetischen Eigenschaften des vom Feld durchsetzten Raums!<br>
+$$<br>
+[\mu] = \frac{[B]}{[H]} = \frac{\left( \frac{V \cdot s}{m^2} \right)}{\frac{A}{m}} = \frac{V \cdot s}{A \cdot m}<br>
+$$<br>
+$$<br>
+\mu = \mu_{0} \cdot \mu_{r}<br>
+$$<br>
+$$<br>
+\mu_{0} = 4 \cdot \pi \cdot 10^{-7} \frac{V \cdot s}{A \cdot m}<br>
+$$</p>
+<h2 id="der-magnetische-fluss">Der magnetische Fluss</h2>
+<p>$$<br>
+\text{Flussdichte} = \frac{\text{Fluss}}{\text{Fläche}}<br>
+$$<br>
+$\implies$ Integration über die Fläche liefert den magnetischen Fluss</p>
+<p>// Abb. homogenes magnetisches Feld, mit Körper</p>
+<p>$$<br>
+\Phi = B \cdot A<br>
+$$<br>
+$$<br>
+[\Phi] = [B] \cdot [A] = \frac{V \cdot s}{\cancel{ m^2 }} \cdot \cancel{ m^2 } = V \cdot s = \text{Weber} = \text{Wb}<br>
+$$</p>
+<p>// Abb. Vom magnetischen Feld durchsetztes Flächenelement</p>
+<p>gesucht: Anteil von $B$, der in Richtung $dA$ wirkt $\implies B \cdot \cos(\alpha)$<br>
+$$<br>
+d \Phi = \vec{B} \cdot dA \cdot \cos(\alpha)<br>
+$$<br>
+$$<br>
+\Phi = \int_{A} \vec{B} \cdot d\vec{A}<br>
+$$</p>
+<h2 id="die-magnetische-spannung">Die magnetische Spannung</h2>
+<p>Anaogie zum elektrischen Stromkreis: elektrische Spannung treibt den Strom.<br>
+$\implies$ ? treibende Kraft im magnetischen Kreis? $\implies$ magnetische Spannung</p>
+<h3 id="homogenes-magnetfeld">homogenes Magnetfeld</h3>
+<p>// Abb. Stabmagneten</p>
+<p>$H$ im Spalt:<br>
+$$<br>
+B = \mu \cdot H = \mu_{1} \cdot \mu_{r} \cdot H<br>
+$$<br>
+$\implies$ Luft: $\mu_{r} = 1$<br>
+$$<br>
+\implies B = \mu_{0} \cdot H \implies H = \frac{B}{\mu_{0}}<br>
+$$<br>
+$\implies$ mit gegebenem $B$ ist $H$ bekannt. $s$ ist unbekannt</p>
+<p>E-Feld: $U = E \cdot s$       : elektrische Spannung : treibt Strom<br>
+H-Feld: $V_{mag} = H \cdot s$ : magnetische Spannung : treibt Fluss<br>
+$$<br>
+[V_{mag}] = \frac{A}{\cancel{ m }} \cdot \cancel{ m } = A<br>
+$$</p>
+<h3 id="inhomogenes-magnetfeld">inhomogenes Magnetfeld</h3>
+<p>// Abb. inhomogenes Magnetfeld</p>
+<p>$$<br>
+dV_{mag} = H \cdot \cos(\alpha) \cdot ds = \vec{H} \cdot d\vec{s}<br>
+$$<br>
+$$<br>
+V_{mag 1,2} = \int_{1}^2 \vec{H} \cdot d\vec{s}<br>
+$$<br>
+bisher: Wegausschnitt Punkt $1 \to 2$<br>
+jetzt: Beginn und Ende bei $1 \implies \text{geschlossener Weg} \implies V_{mag} = \oint_{s} \vec{H} \cdot d\vec{s}$<br>
+$\implies$ magnetische Umlaufspannung (Ergebnis unabhängig von der Wahl de Integrationswegs)</p>
+<p>Integrationsweg:<br>
+bisherM Konzentrischer Kreis rund um Leiter, Radus $r$<br>
+$\implies$ Feldstärke betragsmäßig konstant<br>
+$\implies$ $d\vec{s}$ und $\vec{H}$ haben stets die gleiche Richtung<br>
+$$<br>
+V_{m} = \oint_{s} \vec{H} \cdot d\vec{s} = \oint_{s} H \cdot ds = H \cdot \oint_{s}ds = H \cdot 2 \cdot \pi \cdot r<br>
+$$<br>
+mit:<br>
+$$<br>
+H = \frac{I}{2 \cdot \pi \cdot r} =(\text{Feldstärke im Abstand r von einem geraden leiter})<br>
+$$<br>
+$$<br>
+I = V_{mag}<br>
+$$<br>
+Im Fall mehrerer Ströme: $\oint_{s} \vec{H} \cdot c\vec{s} = \Theta$</p>
+<p>// Abb. Stromdurchflossene Fläche</p>
+<p>$$<br>
+\Theta = I_{1} + I_{2} - I_{3}<br>
+$$</p>
+<h1 id="magnetkreis--ohmsches-gesetz-im-magnetkreis">Magnetkreis // Ohmsches Gesetz im Magnetkreis</h1>
+<h3 id="analogie-elektrischer-stromkreis">Analogie: elektrischer Stromkreis</h3>
+<pre class="hljs"><code><div>\usepackage{circuitikz}
+\begin{document}
+
+\begin{circuitikz}[european, voltage shift=0.5]
+\draw (0,0)
+to[isource, l=$I_0$, v=$V_0$] (0,3)
+to[short, --, i=$I_0$] (2,3)
+to[R=$R_1$, i&gt;_=$i_1$] (2,0) -- (0,0);
+
+\draw (2,3) -- (4,3)
+to[R=$R_2$, i&gt;_=$i_2$]
+(4,0) to[short, -*] (2,0);
+\end{circuitikz}
+
+\end{document}
+</div></code></pre>
+<pre class="hljs"><code><div>\usepackage{circuitikz}
+\begin{document}
+
+\begin{circuitikz}[european, voltage shift=0.5]
+\draw (0,0)
+to[isource, l=$I_0$, v=$V_0$] (0,3)
+to[short, -*, i=$I_0$] (2,3)
+to[R=$R_1$, i&gt;_=$i_1$] (2,0);
+
+\draw (2,3) -- (4,3)
+to[R=$R_2$, i&gt;_=$i_2$]
+(4,0) to[short, -*] (2,0);
+
+\end{circuitikz}
+
+\end{document}
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$r_{m}$</td>
+<td>mittlerer Radius</td>
+</tr>
+<tr>
+<td>$A$</td>
+<td>Fläche des Kerns</td>
+</tr>
+<tr>
+<td>$N$</td>
+<td>Anzahl der Windungen</td>
+</tr>
+<tr>
+<td>$I$</td>
+<td>Strom</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ringspule">Ringspule</h3>
+<p>Idealisiert:<br>
+Feldlinien im inneren sind konzentrierte Kreise<br>
+$\implies$ homogenes Magnetfeld im Kern<br>
+Durchflutungsgesetz: $\oint_{s} \vec{H} \cdot d\vec{s}$<br>
+Die Weglänge ergibt sich über die mittlere Länge einer Feldlinie $l_{m} = 2 \cdot \pi \cdot r \cdot r_{m}$<br>
+$$<br>
+H \cdot l_{m} = H \cdot 2 \cdot \pi \cdot r_{m} = \Theta<br>
+$$</p>
+<p>mit:<br>
+$$<br>
+B = \mu \cdot H<br>
+$$<br>
+$$<br>
+\mu_{0} = 4 \pi 10^{-7} \frac{Vs}{Am}<br>
+$$<br>
+$$<br>
+\Phi = B \cdot A<br>
+$$<br>
+$$<br>
+H \cdot l = 2 \pi r H = \Theta = I \cdot N<br>
+$$<br>
+$$<br>
+\Phi = B \cdot A = \mu \cdot H \cdot A = \mu \cdot \frac{I \cdot N}{l_{m}} \cdot A<br>
+$$<br>
+$$<br>
+I \cdot N = \Phi \cdot \boxed{\frac{l_{m}}{\mu \cdot A}}<br>
+$$<br>
+Im Falle elektrischer Leiter: $\rho$ ist [[Spezifischer Widerstand]]<br>
+$$<br>
+\kappa = \frac{1}{\rho} : \text{spezifischer Widerstand}<br>
+$$</p>
+
+</body>
+
+</html>
