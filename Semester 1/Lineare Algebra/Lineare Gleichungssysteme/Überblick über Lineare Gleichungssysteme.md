@@ -37,6 +37,33 @@ $$
 # Beispielmatrix
 
 
+
 # Darstellung 3 Dimensionaler Gleichungssysteme als Ebenen im 3 Dimensionalen Raum
 
-!ToDo
+Jede Gleichung in einem 3 dimensionalen Gleichungssystem kann im 3 dimensionalen Raum als Ebene dargestellt werden.
+$$
+\begin{pmatrix}
+3 & 4 &-5 \\
+2 & 5 & 3 \\
+1 & 1 & 1 \\
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix} =
+\begin{pmatrix}
+10 \\
+20 \\
+15
+\end{pmatrix}
+$$
+Daraus ergeben sich 3 Ebenengleichungen
+$$
+3 x + 4 y - 5 z = 10 \hspace{0,5cm} | \hspace{0,5cm}
+2 x + 5 y + 3 z = 10 \hspace{0,5cm} | \hspace{0,5cm}
+1 x + 1 y + 1 z = 10
+$$
+Die Koordinaten des Schnittpunkts dieser drei Gleichungen sind die Lösung des Gleichungssystems.
+

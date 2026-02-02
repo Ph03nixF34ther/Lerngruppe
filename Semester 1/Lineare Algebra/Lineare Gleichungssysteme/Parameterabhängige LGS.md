@@ -1,11 +1,35 @@
+# Übersicht
 In einem parameterabhängigen Gleichungssystem sind eine oder mehr Werte durch variablen ersetzt.
 Diese können über die bisherigen Lösungsmethoden gelöst werden
 ([[Das gaußsche Eliminationsverfahren]], 
 [[Der Gauß-Jordansche Algorithmus]],
 [[Die Cramersche Regel]]). 
 
+Beispiel:
+$$
+\begin{pmatrix}
+p & 1 & 2 \\
+1 & p & 3 \\
+2  & 3 & 4
+\end{pmatrix}
+
+\cdot 
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix}
+= 
+\begin{pmatrix}
+1 \\
+3 \\
+1
+\end{pmatrix}
+$$
+Das Gleichungssystem und vor allem dessen Lösung ist abhängig vom Parameter $p$.
+# Lösung parameterabhängiger Gleichungssysteme
 Die Lösungen dieses Gleichungssystems sind selbst parameterabhängig. 
-Zu den Aufgaben gibt es meist vorgaben, wie das Ergebnis auszusehen hat. Daraus kann dann der Parameter errechnet werden.
+Zu den Aufgaben gibt es meist Vorgaben, wie das Ergebnis auszusehen hat. Daraus kann dann sowohl der Parameter, als auch die Lösung errechnet werden.
 $$
 A(p) = \left(\begin{array}{ccc} p & 1 & 2\\ 1 & p & 3\\ 2 & 3 & 4 \end{array}\right)
 $$
@@ -48,4 +72,3 @@ x_{1} =
 -2.6592 \\
 \end{pmatrix}
 $$
-Dies funktioniert auch mit mehreren Variablen
