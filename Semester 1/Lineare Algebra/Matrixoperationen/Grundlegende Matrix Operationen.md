@@ -89,6 +89,30 @@ g-p & h-q & i-r
 \right]
 $$
 
+## Dreiecksmatrix
+
+Eine Dreiecksmatrix ist eine quadratische Matrix, bei der alle Elemente unterhalb oder oberhalb der Hauptdiagonale null sind. Dies führt zu einer charakteristischen Dreiecksform.
+
+$$
+\overbrace{
+\left[
+\begin{matrix}
+x & 0 & 0 \\
+x & x & 0 \\
+x & x & x
+\end{matrix}
+\right]}^{\text{\Large obere Dreiecksmatrix}}
+\hspace{3cm}
+\overbrace{
+\left[
+\begin{matrix}
+x & x & x \\
+0 & x & x \\
+0 & 0 & x
+\end{matrix}
+\right]}^{\text{\Large untere Dreiecksmatrix}}
+$$
+
 ## Determinante  von Matrizen (siehe Addition)
 
 Die Determinante einer Matrix A gibt an, wie sich das Volumen einer aus Eckpunkten erstellten Geometrie skaliert, wenn sie durch die Matrix A abgebildet wird. Einfach gesagt wird durch die Determinante einer Matrix eine Zahl zugeordnet, welche Auskünfte über die Eigenschafften der Matrix gibt. Determinanten lassen sich nur von Quadratischen Matrizen berechnen. Die wichtigste Aussage, die wir aus der Determinante entnehmen können ist die Invertierbarkeit. Eine Matrix A ist nur dann invertierbar, wenn ihre Determinante ungleich Null ist. Angegeben wird sie durch '|'. Also |A| oder det(A). 
