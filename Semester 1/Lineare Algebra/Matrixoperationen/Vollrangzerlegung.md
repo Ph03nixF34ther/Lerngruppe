@@ -160,4 +160,136 @@ M_{0} =
 $$
 Mit der Matrix $M_{0}$ wird das selbe verfahren wieder angewendet mit $M_{0} = v_{1}$;
 
+$$
+\frac{\left[
+\begin{matrix}
+3 & 2 & 4 \\
+5 & 1 & 7
+\end{matrix}
+\right]*
+\left[
+\begin{matrix}
+4 \\
+9 \\
+2
+\end{matrix}
+\right]
+}
+{
+\left[
+\begin{matrix}
+3 & 2 & 4 \\
+5 & 1 & 7
+\end{matrix}
+\right]*
+\left[
+\begin{matrix}
+3 & 5 \\
+2 & 1\\
+4 & 7
+\end{matrix}
+\right]
+} =
+\left[
+\begin{matrix}
+6,1 \\
+-3,087
+\end{matrix}
+\right]
 
+$$
+$$
+\left[
+\begin{matrix}
+3 & 5 \\
+2 & 1\\
+4 & 7
+\end{matrix}
+\right]*
+\left[
+\begin{matrix}
+6,1 \\
+-3,087
+\end{matrix}
+\right]=
+\left[
+\begin{matrix}
+2,865 \\
+9,113\\
+2,791
+\end{matrix}
+\right]
+$$
+Da das Ergebnis nicht mit dem Vektor $v_{3}$ übereinstimmt, ist auch dieser [[Die lineare Abhängigkeit von LGS|Linear unabhängige]].
+
+Aus den [[Die lineare Abhängigkeit von LGS|Linear unabhängigen Vektoren]] $v_{0}, v_{2}, v_{3}$ wird die Matrix $Q$ gebildet:
+$$
+Q =
+\left[
+\begin{matrix}
+3 & 5 & 4 \\
+2 & 1 & 9 \\
+4 & 7 & 2
+\end{matrix}
+\right]
+$$
+Die Matrix $R$ wird aus den Ergebnissen der Rechnungen gebildet. Die Dimension von $R$ wird so gewählt: 
+$R$ hat so viele Zeile, wie $Q$ Spalten hat.   
+$R$ hat so viele Spalten, wie $M$ spalten hat.
+$$
+R = 
+\left[
+\begin{matrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 
+\end{matrix}
+\right]
+$$
+Diese wird gefüllt. Für jeden [[Die lineare Abhängigkeit von LGS|Linear unabhängigen Vektor]] in der Matrix $M$ wird eine 1 in der entsprechenden Zeile und Spalte eingetragen:
+$$
+R = 
+\left[
+\begin{matrix}
+1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 
+\end{matrix}
+\right]
+$$
+Die noch ungefüllten Zeilen werden mit den Faktoren gefüllt, der zuvor Errechneten [[Die lineare Abhängigkeit von LGS|Linear abhängigen Vektoren]]: 
+$$
+R = 
+\left[
+\begin{matrix}
+1 & 2 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 
+\end{matrix}
+\right]
+$$
+Zur Überprüfung kann nun $Q*R$ rechnen
+$$
+\left[
+\begin{matrix}
+3 & 5 & 4 \\
+2 & 1 & 9 \\
+4 & 7 & 2
+\end{matrix}
+\right]*
+\left[
+\begin{matrix}
+1 & 2 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 
+\end{matrix}
+\right] = 
+\left[
+\begin{matrix}
+3 & 6 & 5 & 4 \\
+2 & 4 & 1 & 9 \\
+4 & 8 & 7 & 2
+\end{matrix}
+\right]
+$$
+Damit ist die Zerlegung abgeschlossen. Q erhält alle [[Die lineare Abhängigkeit von LGS|Linear unabhängigen Vektoren]] aus $M$ und Q die Faktoren um $M$ wieder herzustellen.
