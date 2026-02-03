@@ -14,7 +14,7 @@
     3. Determinanten
     4. Assoziativität
     5. Distributivität
-    6. Rang (Leon)
+    6. [[Rang]](Leon)
     7. Vollrangzerlegung (Leon)
     8. [[Linearkombinationen von Vektoren]](Leon)
     9. Eigenwerte und Eigenvektoren (Leon)
