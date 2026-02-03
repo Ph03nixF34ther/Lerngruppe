@@ -88,6 +88,27 @@ g-p & h-q & i-r
 \end{matrix}
 \right]
 $$
+## Transponieren von Matrizen
+
+Die transponierte Matrix (gespiegelte Matrix oder gestürzte Matrix) ist in der Mathematik diejenige Matrix, die durch Vertauschen der Rollen von Zeilen und Spalten einer gegebenen Matrix entsteht. Zum Aufstellen einer solchen Matrix werden Zeilen mit Spalten vertauscht. Stelle hierfür die Matrix so um, dass die erste Zeile zur ersten Spalte wird usw. . Angegeben wird sie durch '$^T$'. Also $A^T$. Ein Beispiel hierfür sieht wie folgt aus:
+
+$$
+\left[
+\begin{matrix}
+a & b & c \\
+d & e & f
+\end{matrix}
+\right]
+\to
+\left[
+\begin{matrix}
+a & d\\
+b & e\\
+c & f
+\end{matrix}
+\right]
+
+$$
 
 ## Dreiecksmatrix
 
