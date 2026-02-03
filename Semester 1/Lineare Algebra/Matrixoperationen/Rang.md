@@ -22,6 +22,30 @@ M =
 $$
 Mittels [[Das gaußsche Eliminationsverfahren|Gauß]] erhalten wir diese Matrix:
 $$
+\left[
+\begin{matrix}
+1 & 0 & 0 \\
+-2 & 1 & 0 \\
+-3 & 0 & 1
+\end{matrix}
+\right]*
+\left[
+\begin{matrix}
+1 & 2 & 3 \\
+2 & 4 & 7 \\
+3 & 5 & 9
+\end{matrix}
+\right]
+=
+\left[
+\begin{matrix}
+1 & 2 & 3 \\
+0 & 0 & 1 \\
+0 & -1 & 0
+\end{matrix}
+\right]
+$$
+$$
 M =
 \left[
 \begin{matrix}
@@ -48,6 +72,60 @@ M =
 $$
 Da sie nur drei spalten hat ist der Rang maximal 3.
 
+$$
+
+\left[
+\begin{matrix}
+1 & 0 & 0 & 0 \\
+-2 & 1 & 0 & 0 \\
+-3 & 0 & 1 & 0 \\
+-9 & 0 & 0 & 1
+\end{matrix}
+\right]*
+\left[
+\begin{matrix}
+1 & 2 & 5 \\
+2 & 4 & 10 \\
+3 & 1 & 6 \\
+9 & 3 & 18
+\end{matrix}
+\right]
+=
+\left[
+\begin{matrix}
+1 & 2 & 5 \\
+0 & 0 & 0 \\
+0 & -5 & -9 \\
+0 & -15 & -27
+\end{matrix}
+\right]
+$$
+$$
+\left[
+\begin{matrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & -3 & 1
+\end{matrix}
+\right]*
+\left[
+\begin{matrix}
+1 & 2 & 5 \\
+0 & 0 & 0 \\
+0 & -5 & -9 \\
+0 & -15 & -27
+\end{matrix}
+\right]=
+\left[
+\begin{matrix}
+1 & 2 & 5 \\
+0 & 0 & 0 \\
+0 & -5 & -9 \\
+0 & 0 & 0
+\end{matrix}
+\right]
+$$
 $$
 M = 
 \left[
