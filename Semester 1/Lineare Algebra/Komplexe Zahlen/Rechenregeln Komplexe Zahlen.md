@@ -1,5 +1,15 @@
 # Zusammenfassung
 
+Der [[#Betrag]] $\left| z \right|$ und das [[#Argument]] $\varphi$ von einer [[Komplexe Zahlen|komplexen Zahl]] $z$ lassen sich wie folgt bestimmen
+
+$$
+z = a + b \mathrm{i}
+$$
+$$\begin{array}{l}
+\left| z \right| = \sqrt{a^2 + b^2} \\
+\varphi = \arctan(\dfrac{b}{a})
+\end{array}$$
+
 Beim Addieren oder Subtrahieren von zwei [[Komplexe Zahlen|komplexen Zahlen]] $\mathbb{C}$ werden einfach die reellen und imaginären Teile für sich addiert bzw. subtrahiert und daraus bildet sich das Ergebnis
 
 $$ \begin{array}{c}
@@ -254,5 +264,5 @@ Auch die Subtraktion kann von zwei [[Komplexe Zahlen|komplexen Zahlen]] entspric
 
 ---
 
-# Multipliaktion
+# Multiplikation
 
