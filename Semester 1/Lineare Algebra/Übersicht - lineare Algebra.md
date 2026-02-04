@@ -7,14 +7,13 @@
     6. Aufgabe: Kaffeeplantage
 2. Matrixoperationen
     1. [[Grundlegende Matrix Operationen]]
-        1. Multiplikationen von Matrizen
-        2. Addieren von Matrizen
-        3. Subtrahieren von Matrizen
-        4. Transponierte Matrizen
-        5. Inverse Matrizen
-        6. Dreiecksmatrizen
-        7. Determinanten
-        8. Inverse
+        1. [[Grundlegende Matrix Operationen#Multiplikation von Matrizen|Multiplikation von Matrizen]]
+        2. [[Grundlegende Matrix Operationen#Addieren von Matrizen (siehe Subtraktion)|Addieren von Matrizen]]
+        3. [[Grundlegende Matrix Operationen#Subtrahieren von Matrizen (siehe Addition)|Subtrahieren von Matrizen]]
+        4. [[Grundlegende Matrix Operationen#Transponieren von Matrizen|Transponierte Matrizen]]
+        5. [[Grundlegende Matrix Operationen#Inverse einer Matrix|Inverse Matrizen]]
+        6. [[Grundlegende Matrix Operationen#Dreiecksmatrix|Dreiecksmatrizen]]
+        7. [[Grundlegende Matrix Operationen#Determinante von Matrizen (siehe Addition)|Determinanten]]
     2. Assoziativität(Emil)
     3. Distributivität(Emil)
     4. Charakteristisches Polynom
@@ -40,4 +39,4 @@
     4. Taylorpolynome
     5. Eulersche Form
 4. Weitere Verfahren
-	1. [[Newton Verfahren]](Emil)
+	1. [[Newton Verfahren]]
