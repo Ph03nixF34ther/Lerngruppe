@@ -247,3 +247,14 @@ $$
 \right]
 $$
 3) Die Inverse Matrix kann nun auf der rechten Seite abgelesen werden.
+
+## Assoziativität bei Matrizen
+Grundlegende Idee: Eine Verknüpfung ist assoziativ, wenn die Klammerung egal ist.  Für die Matrizenmultiplikation heißt das:
+$$
+(A \cdot B) \cdot C = A \cdot (B \cdot C)
+$$
+## Distributivität bei Matrizen
+Grundlegende Idee: Distributivität bei Matrizen beschreibt, wie sich die Multiplikation zur Addition verhält. Für die Matrizenmultiplikation heißt das:
+$$
+A(B+C)=AB + AC
+$$

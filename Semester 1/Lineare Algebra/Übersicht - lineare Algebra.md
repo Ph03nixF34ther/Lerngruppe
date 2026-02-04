@@ -14,8 +14,8 @@
         5. [[Grundlegende Matrix Operationen#Inverse einer Matrix|Inverse Matrizen]]
         6. [[Grundlegende Matrix Operationen#Dreiecksmatrix|Dreiecksmatrizen]]
         7. [[Grundlegende Matrix Operationen#Determinante von Matrizen (siehe Addition)|Determinanten]]
-    2. Assoziativität(Emil)
-    3. Distributivität(Emil)
+    2. [[Grundlegende Matrix Operationen#Assoziativität bei Matrizen|Assoziativität]]
+    3. [[Grundlegende Matrix Operationen#Distributivität bei Matrizen|Distributivität]]
     4. Charakteristisches Polynom
     5. Euklidische länge
     6. [[Rang]](Leon)
