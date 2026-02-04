@@ -52,7 +52,7 @@ Der Betrag einer [[Komplexe Zahlen|komplexen Zahl]] $\mathbb{C}$ beschreibt den 
     axis x line=center,
     xtick={-5,...,0,...,5},
     xmin=-1, xmax=5, 
-    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $1\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
     ytick={-2,...,0,1,2,3,4,5},
     ymin=-1, ymax=5
 ]
@@ -73,7 +73,59 @@ Der Betrag einer [[Komplexe Zahlen|komplexen Zahl]] $\mathbb{C}$ beschreibt den 
 
 Und wie man hier sehen kann, ist es das selbe Prinzip, wie den Betrag von Vektoren zu berechnen
 
+# Argument
 
+Das Argument einer [[Komplexe Zahlen|komplexen Zahl]] $\mathbb{C}$ ist der Winkel $\varphi$ zwischen dem positivem Teil der x-Achse und dem Vektor der [[Komplexe Zahlen|komplexen Zahl]]
+
+$$\begin{array}{l}
+z = 2 + 3 \mathrm{i} \\
+\arg(z) = \varphi \\
+\tan(\varphi) = \dfrac{b}{a} \\
+\varphi = \arctan(\dfrac{b}{a}) \\
+\varphi = \arctan(\dfrac{3}{2}) \\
+\underline{\arg(z) = \varphi \approx 0.9828 \text{ rad} \approx 56.31 \degree}
+\end{array}$$
+
+``` tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+\begin{tikzpicture}[
+	/pgf/declare function={
+        RADIUS = 2;
+        RANGE = 1.2;
+    }
+]
+\begin{axis} [
+	width=\textwidth,
+	axis lines=center,
+    axis equal,
+    xmin=-RANGE, xmax=5,
+    xtick={-1,0,...,5},
+    ymin=-RANGE, ymax=5,
+    ytick={-1,0,...,5},
+    yticklabels={$-\mathrm{i}$,0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    disabledatascaling
+]
+\coordinate (N) at (axis cs:0,0);
+\coordinate (Z) at (axis cs:2,3);
+
+\fill[blue] (Z) circle[radius=2pt] node[above] {$2 + 3 \mathrm{i}$};
+
+\draw[->, thick] (N) -- (Z) ;
+
+\draw[red] (N) -- (3,0);
+
+\draw[green] (axis cs:RADIUS,0) arc [radius=RADIUS, start angle=0, end angle=56.31] node[midway,right] {$\varphi = 56.31 \deg$};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+$$
+\arg(0 + 0 \mathrm{i}) = 0
+$$
 
 ---
 
