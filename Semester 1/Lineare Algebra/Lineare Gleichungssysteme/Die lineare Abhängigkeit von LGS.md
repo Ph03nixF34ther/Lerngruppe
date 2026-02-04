@@ -1,14 +1,14 @@
 # Lineare Abhängigkeit
 ## Lineare Abhängigkeit erklärt
-Zwei Vektoren heißen linear abhängig, wenn sie paralell sind. Das heißt, wenn man einen Vektor durch den anderen darstellen kann.
+Zwei Vektoren heißen linear abhängig, wenn sie parallel sind. Das heißt, wenn man einen Vektor durch den anderen darstellen kann.
 $$
 \vec{x} = a \cdot \vec{v}
 $$
-Hat man $n$ $m$-dimensionale linear unabhängige Vektoren gegeben, heißt ein Vektor $\vec{x}$ dann linear abhängig von den $n$ Vektoren, wenn gilt 
+Hat man $n$ viele $m$-dimensionale linear unabhängige Vektoren gegeben, heißt ein Vektor $\vec{x}$ dann linear abhängig von den $n$ Vektoren, wenn gilt 
 $$
 \vec{a} \cdot M = \vec{x}
 $$
-wobei $M$ die Matrix aus den $n$ gegebenen Vektoren ist und $\vec{a}$ eine beliebige Kombination aus Parametern abbildet. 
+wobei $M$ die Matrix aus den $n$ gegebenen Vektoren ist (selbes Prinzip, wie bei der [[Linearkombinationen von Vektoren|Linearkombination]]) und $\vec{a}$ eine beliebige Kombination aus Parametern abbildet. 
 ## Lineare Abhängigkeit an einem Beispiel
 Leichter zu verstehen ist dies an einem Beispiel:
 $$

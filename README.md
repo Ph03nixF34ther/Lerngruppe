@@ -3,7 +3,7 @@
 1. [Einführung in die Programmierung](./Semester%201/Einführung%20in%20die%20Programmierung/Übersicht%20-%20Einführung%20in%20die%20Programmierung.md) 
 2. [Elektrotechnik](./Semester%201/Elektrotechnik/Übersicht%20-%20Elektrotechnik.md)
 3. [Grundlagen der Informationsverarbeitung](Semester%201/Grundlagen%20der%20Informationsverarbeitung/Übersicht%20-%20Grundlagen%20der%20Informationsverarbeitung.md)
-4. [Lineare Algebra](Semester%201/Lineare%20Algebra/Übersicht%20-%20Lineare%20Algebra.md)
+4. [Lineare Algebra](01%20Übersicht%20-%20lineare%20Algebra.md)
 
 ---
 
@@ -284,3 +284,7 @@ Wenn es zu einem Merge conflict kommt und du nicht weißt was das bedeutet, bitt
 ---
 
 # Termine
+- [ ] KW6 (02.02-05.02): Abschließen von Linearer Algebra
+- [ ] KW7 (09.02-12.02): Abschließen von Elektrotechnik
+- [ ] KW8 (16.02-20.02): Lernen für Klausuren
+- [ ] KW8 (23.02-27.02): 1. Semester Überleben / Abschließen

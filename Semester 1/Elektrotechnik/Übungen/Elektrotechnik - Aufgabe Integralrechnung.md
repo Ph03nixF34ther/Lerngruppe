@@ -33,8 +33,6 @@ $${\displaystyle \Phi =\oint _{A}{\vec {E}}\;\cdot \mathrm {d} {\vec {A}}={\frac
 - $\vec{E}$ sind Feldstärkevektoren, die von der Punktladung $Q$ aus von innen auf die Oberfläche $A$ treffen.
 - $d\vec{A}$ bezeichnet den **Normalenvektor** eines kleinen Flächenausschnitts von $A$.
 
-Das sieht 
-
 ## Begründung
 In unserem Beispiel ignorieren wir jedoch die innere Ladung $Q$. Das ist gegeben durch die Aufgabenstellung ("wenn sich innerhalb der Oberfläche keine Ladung befindet.")
 
@@ -58,7 +56,7 @@ $$
 \oint_{A(r)} \vec{D} \cdot d\vec{A} = D(r) \cdot 4 r^2 \pi \cdot \hat{r}
 $$
 $$
-D \cdot A(r) \cdot \cos(\alpha) = D \cdot 4 r^2 \pi \cdot \hat{r}
+D \cdot A(r) \cdot \cos(\alpha) = D\cdot \hat{r} \cdot 4 r^2 \pi \cdot \hat{r}
 $$
 Der $\cos(\alpha)$ ist $1$, da die Ladung $Q$ im Mittelpunkt der Sphäre liegt und daher die Normalenvektoren $\vec{A}$ die selbe Richtung besitzen, wie die Feldlinien ($\vec{D}$), die in alle Richtungen vom Mittelpunkt ausgehen.
 $$

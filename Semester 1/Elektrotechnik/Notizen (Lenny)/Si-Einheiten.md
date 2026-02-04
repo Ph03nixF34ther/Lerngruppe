@@ -7,7 +7,7 @@ Sammlung [[Physikalische Größen|physikalische Größen]]
 | [[Länge]]                                                 | Meter        | m      |
 | [[Masse]]                                                 | Kilogramm    | kg     |
 | [[Zeit]]                                                  | Sekunde      | s      |
-| [[Elektrische(r) Strom(stärke)\|Elektrische Stromstärke]] | Ampere       | A      |
+| [[Elektrische Stromstärke\|Elektrische Stromstärke]] | Ampere       | A      |
 | [[Temperatur]]                                            | Kelvin       | K      |
 | [[Lichtstärke]]                                           | Candela      | cd     |
 | [[Stoffmenge]]                                            | Mol          | mol    |

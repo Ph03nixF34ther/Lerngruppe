@@ -1,4 +1,4 @@
-Verursacht das Fließen von [[Elektrische(r) Strom(stärke)|elektrischem Strom]]
+Verursacht das Fließen von [[Elektrische Stromstärke|elektrischem Strom]]
 
 Formelzeichen: $U$
 

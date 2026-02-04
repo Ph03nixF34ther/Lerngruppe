@@ -1,6 +1,6 @@
-// SDL-Interface-Funktionen für C / C++
+// SDL-Interface-Funktionen fï¿½r C / C++
 //
-// Klaus Kusche, 2012, vereinheitlichte Version für alle Beispiele
+// Klaus Kusche, 2012, vereinheitlichte Version fï¿½r alle Beispiele
 // Klaus Kusche, 2014, umgestellt auf SDL Version 2, mit Pixel-Array
 // Klaus Kusche, 2020, Funktionen erweitert
 
@@ -9,16 +9,16 @@
 #include <stdbool.h>
 
 #include "sdlinterf.h"
-#include "SDL2/SDL.h"
+#include "SDL.h"
 
 // ein Wert kleiner als der kleinste Koordinatenwert
 #define MINVAL -1
-// ein Wert größer als der größte Koordinatenwert
+// ein Wert grï¿½ï¿½er als der grï¿½ï¿½te Koordinatenwert
 #define MAXVAL 9999
 
-// kleinste / größte Koordinaten des rechteckigen Bildausschnittes,
-// der vom nächsten sdlUpdate aktualisiert werden muss
-// (ursprünglich: gar keiner).
+// kleinste / grï¿½ï¿½te Koordinaten des rechteckigen Bildausschnittes,
+// der vom nï¿½chsten sdlUpdate aktualisiert werden muss
+// (ursprï¿½nglich: gar keiner).
 static int minX = MAXVAL, maxX = MINVAL, minY = MAXVAL, maxY = MINVAL;
 
 static SDL_Window *myWindow;
@@ -27,7 +27,7 @@ static SDL_Texture *myTexture;
 // Array von Pixeln
 static Uint32 myPixArray[SDL_Y_SIZE * SDL_X_SIZE];
 
-// zyklische Farbtabelle mit 192 Farben für Fraktale
+// zyklische Farbtabelle mit 192 Farben fï¿½r Fraktale
 static struct colors {
   int r, g, b;
 } colormap[192];
@@ -44,8 +44,8 @@ void sdlInit(void)
     SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
     SDL_X_SIZE, SDL_Y_SIZE, 0);
   // Alternative: SDL fullscreen statt in einem Fenster anzeigen
-  // Achtung: SDL_X_SIZE und SDL_Y_SIZE müssen in sdlinterf.h
-  // auf die tatsächliche Auflösung des Bildschirmes gesetzt werden!!!
+  // Achtung: SDL_X_SIZE und SDL_Y_SIZE mï¿½ssen in sdlinterf.h
+  // auf die tatsï¿½chliche Auflï¿½sung des Bildschirmes gesetzt werden!!!
   //myWindow = SDL_CreateWindow("SDL Graphics",
   //  SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
   //  SDL_X_SIZE, SDL_Y_SIZE, SDL_WINDOW_FULLSCREEN);
@@ -164,7 +164,7 @@ void sdlDrawPoint(int x, int y, int r, int g, int b)
 
   putPixel(x, y, getPixVal(r, g, b));
 
-  // ev. modifizierten Bereich vergrößern
+  // ev. modifizierten Bereich vergrï¿½ï¿½ern
   if (x < minX) minX = x;
   if (y < minY) minY = y;
   if (x > maxX) maxX = x;
@@ -199,19 +199,19 @@ void sdlDrawRect(int centerX, int centerY, int extX, int extY,
   
   Uint32 pixel = getPixVal(r, g, b);
 
-  // Rechteck zeichnen: Schleife über die Zeilen
+  // Rechteck zeichnen: Schleife ï¿½ber die Zeilen
   Uint32 *e1 = myPixArray + lastY * SDL_X_SIZE + firstX; // Ende-Wert
   for (Uint32 *p1 = myPixArray + firstY * SDL_X_SIZE + firstX;
        p1 <= e1;
        p1 += SDL_X_SIZE) {
-    // ... und über die Spalten
+    // ... und ï¿½ber die Spalten
     Uint32 *e2 = p1 + extX + extX; // Ende-Wert
     for (Uint32 *p2 = p1; p2 <= e2; p2++) {
       *p2 = pixel;
     }
   }
 
-  // ev. modifizierten Bereich vergrößern
+  // ev. modifizierten Bereich vergrï¿½ï¿½ern
   if (firstX < minX) minX = firstX;
   if (firstY < minY) minY = firstY;
   if (lastX > maxX) maxX = lastX;
@@ -234,19 +234,19 @@ void sdlDrawRectFromTo(int X1, int Y1, int X2, int Y2,
   
   Uint32 pixel = getPixVal(r, g, b);
 
-  // Rechteck zeichnen: Schleife über die Zeilen
+  // Rechteck zeichnen: Schleife ï¿½ber die Zeilen
   Uint32 *e1 = myPixArray + lastY * SDL_X_SIZE + firstX; // Ende-Wert
   for (Uint32 *p1 = myPixArray + firstY * SDL_X_SIZE + firstX;
        p1 <= e1;
        p1 += SDL_X_SIZE) {
-    // ... und über die Spalten
+    // ... und ï¿½ber die Spalten
     Uint32 *e2 = p1 + (lastX - firstX); // Ende-Wert
     for (Uint32 *p2 = p1; p2 <= e2; p2++) {
       *p2 = pixel;
     }
   }
 
-  // ev. modifizierten Bereich vergrößern
+  // ev. modifizierten Bereich vergrï¿½ï¿½ern
   if (firstX < minX) minX = firstX;
   if (firstY < minY) minY = firstY;
   if (lastX > maxX) maxX = lastX;
@@ -264,8 +264,8 @@ void sdlDrawLine(int x1, int y1, int x2, int y2, int r, int g, int b)
     exit(EXIT_FAILURE);
   }
 
-  // ev. modifizierten Bereich vergrößern 
-  // (vorher, weil x1/x2/y1/y2 unten verändert werden)
+  // ev. modifizierten Bereich vergrï¿½ï¿½ern 
+  // (vorher, weil x1/x2/y1/y2 unten verï¿½ndert werden)
   if (x1 <= x2) {
     if (x1 < minX) minX = x1;
     if (x2 > maxX) maxX = x2;
@@ -359,7 +359,7 @@ void sdlDrawCircPart(int centerX, int centerY, int radX, int radY,
 
   Uint32 pixel = getPixVal(r, g, b); 
 
-  // Wenn beide rad's 0 sind, geht der Algorithmus fürchterlich schief...
+  // Wenn beide rad's 0 sind, geht der Algorithmus fï¿½rchterlich schief...
   if ((radX == 0) && (radY == 0)) {
     putPixel(centerX, centerY, pixel);
   } else {
@@ -368,7 +368,7 @@ void sdlDrawCircPart(int centerX, int centerY, int radX, int radY,
     int lastX = 0;
     int lastY = 0;
     int oldX = 0;
-    // Achtung auf Overflow bei großen Fenstern (z.B. 4K fullscreen):
+    // Achtung auf Overflow bei groï¿½en Fenstern (z.B. 4K fullscreen):
     // in 64 bit rechnen!
     long long int sqrX = 2LL * radX * radX;
     long long int sqrY = 2LL * radY * radY;    
@@ -416,7 +416,7 @@ void sdlDrawCircPart(int centerX, int centerY, int radX, int radY,
       }
     }
     
-    // Lücken an den Stößen zwischen oberer und unterer Schleife füllen,
+    // Lï¿½cken an den Stï¿½ï¿½en zwischen oberer und unterer Schleife fï¿½llen,
     // vor allem bei extrem flachen Ellipsen
     for ( ; y > lastY; --y) {
       drawCircLine(centerX, centerY, x - 1, oldX, y, pixel, part);
@@ -426,7 +426,7 @@ void sdlDrawCircPart(int centerX, int centerY, int radX, int radY,
     }
   }
   
-  // ev. modifizierten Bereich vergrößern
+  // ev. modifizierten Bereich vergrï¿½ï¿½ern
   if (leftX < minX) minX = leftX;
   if (upperY < minY) minY = upperY;
   if (rightX > maxX) maxX = rightX;
@@ -446,9 +446,9 @@ static void sdlQuitOnEvent(void)
 void sdlUpdate(void)
 {
   sdlQuitOnEvent();
-  // Wenn seit letztem Mal nichts geändert wurde: Kein Update  
+  // Wenn seit letztem Mal nichts geï¿½ndert wurde: Kein Update  
   if (maxX > MINVAL) {
-    // Begrenzung für neu zu zeichnende Fläche
+    // Begrenzung fï¿½r neu zu zeichnende Flï¿½che
     SDL_Rect updRect;
     updRect.x = minX;
     updRect.y = minY;

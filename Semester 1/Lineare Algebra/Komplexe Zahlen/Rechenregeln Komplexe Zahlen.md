@@ -1,0 +1,268 @@
+# Zusammenfassung
+
+Der [[#Betrag]] $\left| z \right|$ und das [[#Argument]] $\varphi$ von einer [[Komplexe Zahlen|komplexen Zahl]] $z$ lassen sich wie folgt bestimmen
+
+$$
+z = a + b \mathrm{i}
+$$
+$$\begin{array}{l}
+\left| z \right| = \sqrt{a^2 + b^2} \\
+\varphi = \arctan(\dfrac{b}{a})
+\end{array}$$
+
+Beim Addieren oder Subtrahieren von zwei [[Komplexe Zahlen|komplexen Zahlen]] $\mathbb{C}$ werden einfach die reellen und imaginären Teile für sich addiert bzw. subtrahiert und daraus bildet sich das Ergebnis
+
+$$ \begin{array}{c}
+z = 2 + 3 \mathrm{i} \\
+w = -4 + \mathrm{i}
+\end{array}$$
+$$\begin{array}{l|l}
+z + w & \text{subst }z, w\\
+= (2 + 3 \mathrm{i}) + (-4 + \mathrm{i}) & \text{Terme mit gleichen Variablen zusammen} \\
+= (2 - 4) + (3 + 1)\mathrm{i} & \text{Ganz normal addieren}\\
+\underline{= -2 + 4\mathrm{i}}
+\end{array}$$
+$$\begin{array}{l|l}
+z - w & \text{subst }z, w\\
+= (2 + 3 \mathrm{i}) - (-4 + \mathrm{i}) & \text{Klammer auflösen} \\
+= 2 + 3\mathrm{i} + 4 - \mathrm{i} & \text{Terme mit gleichen Variablen zusammen}\\
+\underline{= 6 + 2\mathrm{i}}
+\end{array}$$
+
+---
+
+# Betrag
+
+## Erklärung
+
+Der Betrag einer [[Komplexe Zahlen|komplexen Zahl]] $\mathbb{C}$ wird durch die Anwendung des Satz des Pythagoras zwischen reellem und imaginären Teil berechnet
+
+$$\begin{array}{l}
+z = 2 + 3 \mathrm{i} \\
+\left| z \right| = \sqrt{2^2 + 3^2} \\
+\underline{\left| z \right| = \sqrt{13} \approx 3.6055}
+\end{array}$$
+
+## Visuelle Herleitung
+
+Der Betrag einer [[Komplexe Zahlen|komplexen Zahl]] $\mathbb{C}$ beschreibt den Abstand des Punktes zum Nullpunkt
+
+``` tikz
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}[
+    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
+    filled/.style={dot},
+    open/.style={dot=white}
+]
+\begin{axis}[
+	width=\textwidth,
+    axis y line=center,
+    axis x line=center,
+    xtick={-5,...,0,...,5},
+    xmin=-1, xmax=5, 
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    ytick={-2,...,0,1,2,3,4,5},
+    ymin=-1, ymax=5
+]
+\coordinate (N) at (axis cs:0,0);
+\coordinate (A) at (axis cs:2,3);
+
+\draw[->, blue, thick] (N) -- (A) node[color=black, pos=.75, above, left] {$\left| z \right| = \sqrt{13}$};
+
+\fill[black, thick] (A) circle[radius=2pt] node[above] {$2 + 3 \mathrm{i}$};
+
+\draw[green, thick, dotted] (N) -- (A |- N) node[midway, above] {$2$};
+\draw[red, thick, dotted] (A |- N) -- (A) node[midway, right] {$3$};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+Und wie man hier sehen kann, ist es das selbe Prinzip, wie den Betrag von Vektoren zu berechnen
+
+# Argument
+
+Das Argument einer [[Komplexe Zahlen|komplexen Zahl]] $\mathbb{C}$ ist der Winkel $\varphi$ zwischen dem positivem Teil der x-Achse und dem Vektor der [[Komplexe Zahlen|komplexen Zahl]]
+
+$$\begin{array}{l}
+z = 2 + 3 \mathrm{i} \\
+\arg(z) = \varphi \\
+\tan(\varphi) = \dfrac{b}{a} \\
+\varphi = \arctan(\dfrac{b}{a}) \\
+\varphi = \arctan(\dfrac{3}{2}) \\
+\underline{\arg(z) = \varphi \approx 0.9828 \text{ rad} \approx 56.31 \degree}
+\end{array}$$
+
+``` tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+\begin{tikzpicture}[
+	/pgf/declare function={
+        RADIUS = 2;
+        RANGE = 1.2;
+    }
+]
+\begin{axis} [
+	width=\textwidth,
+	axis lines=center,
+    axis equal,
+    xmin=-RANGE, xmax=5,
+    xtick={-1,0,...,5},
+    ymin=-RANGE, ymax=5,
+    ytick={-1,0,...,5},
+    yticklabels={$-\mathrm{i}$,0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    disabledatascaling
+]
+\coordinate (N) at (axis cs:0,0);
+\coordinate (Z) at (axis cs:2,3);
+
+\fill[blue] (Z) circle[radius=2pt] node[above] {$2 + 3 \mathrm{i}$};
+
+\draw[->, thick] (N) -- (Z) ;
+
+\draw[red] (N) -- (3,0);
+
+\draw[green] (axis cs:RADIUS,0) arc [radius=RADIUS, start angle=0, end angle=56.31] node[midway,right] {$\varphi = 56.31 \deg$};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+$$
+\arg(0 + 0 \mathrm{i}) = 0
+$$
+
+---
+
+# Addition
+
+## Erklärung
+
+Beim Addieren von zwei [[Komplexe Zahlen|komplexen Zahlen]] $\mathbb{C}$ werden einfach die reellen und imaginären Teile für sich addiert und daraus bildet sich das Ergebnis
+
+$$ \begin{array}{c}
+z = 2 + 3 \mathrm{i} \\
+w = -4 + \mathrm{i}
+\end{array}$$
+$$\begin{array}{l|l}
+z + w & \text{subst }z, w\\
+= (2 + 3 \mathrm{i}) + (-4 + \mathrm{i}) & \text{Terme mit gleichen Variablen zusammen} \\
+= (2 - 4) + (3 + 1)\mathrm{i} & \text{Ganz normal addieren}\\
+= -2 + 4\mathrm{i}
+\end{array}$$
+
+---
+
+## Darstellung als Vektor
+
+Die Addition von zwei [[Komplexe Zahlen|komplexen Zahlen]] entspricht der Addition der zwei zugehörigen Vektoren
+
+$$\begin{array}{c}
+z = 2 + 3 \mathrm{i} \\
+w = -4 + \mathrm{i} \\
+z + w = -2 + 4\mathrm{i}
+\end{array}$$
+
+``` tikz
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}[
+    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
+    filled/.style={dot},
+    open/.style={dot=white}
+]
+\begin{axis}[
+	x=40pt,
+    axis y line=center,
+    axis x line=center,
+    xtick={-5,...,0,...,5},
+    xmin=-5, xmax=5, 
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $1\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    ytick={-2,...,0,1,2,3,4,5},
+    ymin=-2, ymax=5
+]
+\coordinate (N) at (axis cs:0,0);
+\coordinate (A) at (axis cs:2,3);
+\coordinate (B) at (axis cs:{-4},1);
+\coordinate (AB) at (axis cs:-2,4);
+
+\draw[->, very thick, red] (N) -- (A) node[midway, above, sloped] {$z$};
+\draw[->, very thick, blue] (N) -- (B) node[midway, above, sloped] {$w$};
+\draw[->, very thick, green] (N) -- (AB) node[midway, above, sloped] {$z + w$};
+\draw[->, dotted, thick, blue] (A) -- (AB) node[midway, above, sloped] {$w$};
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+# Subtraktion
+
+## Erklärung
+
+Subtraktion zwei [[Komplexe Zahlen|komplexer Zahlen]] funktioniert wie die Addition
+Die reellen Teile und die imaginären Teile jeweils miteinander subtrahieren und daraus ergibt sich das Ergebnis
+
+$$\begin{array}{c}
+z = 2 + 3 \mathrm{i} \\
+w = -4 + \mathrm{i} \\
+z + w = -2 + 4\mathrm{i}
+\end{array}$$
+$$\begin{array}{l|l}
+z - w & \text{subst }z, w\\
+= (2 + 3 \mathrm{i}) - (-4 + \mathrm{i}) & \text{Klammer auflösen} \\
+= 2 + 3\mathrm{i} + 4 - \mathrm{i} & \text{Terme mit gleichen Variablen zusammen}\\
+\underline{= 6 + 2\mathrm{i}}
+\end{array}$$
+
+---
+
+## Darstellung als Vektor
+
+Auch die Subtraktion kann von zwei [[Komplexe Zahlen|komplexen Zahlen]] entspricht der Subtraktion der zwei zugehörigen Vektoren 
+
+``` tikz
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}[
+    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
+    filled/.style={dot},
+    open/.style={dot=white}
+]
+\begin{axis}[
+	x=40pt,
+    axis y line=center,
+    axis x line=center,
+    xtick={-5,...,0,...,5,6,7},
+    xmin=-5, xmax=7, 
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $1\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    ytick={-2,...,0,1,2,3,4,5},
+    ymin=-2, ymax=5
+]
+\coordinate (N) at (axis cs:0,0);
+\coordinate (A) at (axis cs:2,3);
+\coordinate (B) at (axis cs:{-4},1);
+\coordinate (AB) at (axis cs:6,2);
+
+\draw[->, very thick, red] (N) -- (A) node[midway, above, sloped] {$z$};
+\draw[->, very thick, blue] (N) -- (B) node[midway, above, sloped] {$w$};
+\draw[->, very thick, green] (N) -- (AB) node[midway, above, sloped] {$z - w$};
+\draw[->, dotted, thick, blue] (A) -- (AB) node[midway, above, sloped] {$-w$};
+\draw[->, dotted, thick, green] (B) -- (A) node[midway, above, sloped] {$z -w$};
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+# Multiplikation
+

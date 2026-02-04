@@ -21,7 +21,7 @@ $$
 | Formelzeichen        | Beschreibung // Verlinkung                                                                    |
 | -------------------- | --------------------------------------------------------------------------------------------- |
 | $H$                  | magnetische Feldstärke                                                                        |
-| $I$                  | [[Elektrische(r) Strom(stärke)]]                                                              |
+| $I$                  | [[Elektrische Stromstärke]]                                                              |
 | $N$                  | Windungszahö                                                                                  |
 | $l_{m}$              | Lämge der Spule (Mittelpunkte des taurischen Körpers)                                         |
 | $\Theta = I \cdot N$ | Summe aller Ströme, die durch Kreisförmige (Ringspule!) Flächen mit Umfang $l_{m}$ duchfluten |

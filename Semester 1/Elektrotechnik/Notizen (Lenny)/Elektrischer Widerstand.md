@@ -3,6 +3,7 @@ aliases:
   - elektrischen Widerstands
   - Widerstand
   - Widerständen
+  - Widerstände
 ---
 
 Formelzeichen: $R$
@@ -19,7 +20,7 @@ Der [[Leiter]] hat einen Widerstand von $1 \Omega$, wenn ein [[Elektrische Spann
 
 # Ohm'sches Gesetz
 
-Wenn man die [[Elektrische(r) Strom(stärke)|elektrische Stromstärke]] und [[Elektrische Spannung]] misst, beobachtet man folgende Proportionalität
+Wenn man die [[Elektrische Stromstärke|elektrische Stromstärke]] und [[Elektrische Spannung]] misst, beobachtet man folgende Proportionalität
 
 $U \sim J$
 

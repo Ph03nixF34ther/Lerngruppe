@@ -1,3 +1,13 @@
+---
+aliases:
+  - Stromstärke
+  - Stromstärken
+  - elektrische Stromstärke
+  - Strom
+  - Ströme
+  - elektrischen Stromstärke
+---
+
 Eigentlich Stromstärke
 
 Überlagerung einer Vorzugsrichtung über die zunächst zufällige Bewegungen der [[Ladungsträger]]
