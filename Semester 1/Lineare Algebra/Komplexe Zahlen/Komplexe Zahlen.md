@@ -1,6 +1,7 @@
 ---
 aliases:
   - komplexen Zahlen
+  - komplexen Zahl
 ---
 
 # Zusammenfassung
