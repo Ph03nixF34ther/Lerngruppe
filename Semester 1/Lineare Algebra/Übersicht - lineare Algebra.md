@@ -1,10 +1,10 @@
-1. [[Lineare Gleichungssysteme lösen]] (Elias)
+1. [[Lineare Gleichungssysteme lösen]]
     1. [[Das gaußsche Eliminationsverfahren]]
     2. [[Der Gauß-Jordansche Algorithmus]]
     3. [[Die Cramersche Regel]]
     4. [[Die lineare Abhängigkeit von LGS]]
     5. [[Parameterabhängige LGS]]
-    6. Aufgabe: Kaffeeplantage
+    6. [[Aufgabe - Kaffeeplantage]]
 2. Matrixoperationen
     1. [[Grundlegende Matrix Operationen]]
         1. Multiplikationen von Matrizen
