@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/elias_mac/Documents/Lerngruppe/Semester 1/Einführung in die Programmierung/uebung_61/program"
+relocations:     []
+...
