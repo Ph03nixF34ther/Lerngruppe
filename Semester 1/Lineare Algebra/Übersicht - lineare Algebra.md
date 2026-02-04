@@ -31,7 +31,7 @@
     16. Koeffizienten Matrix
     17. Krylow-Matrix
     18. Cholesky-Zerlegung
-    19. QR Zerlegung(Emil)
+    19. [[QR-Zerlegung]]
 3. Komplexe Zahlen (Lenny)
 	1. [[Komplexe Zahlen|Was sind Komplexe Zahlen]]
     2. [[Rechenregeln Komplexe Zahlen|Rechenregeln der komplexen Zahlen]]

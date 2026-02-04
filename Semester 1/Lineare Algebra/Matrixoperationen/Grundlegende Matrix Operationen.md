@@ -117,7 +117,7 @@ x & 0 & 0 \\
 x & x & 0 \\
 x & x & x
 \end{matrix}
-\right]}^{\text{\Large obere Dreiecksmatrix}}
+\right]}^{\text{\Large untere Dreiecksmatrix}}
 \hspace{3cm}
 \overbrace{
 \left[
@@ -126,7 +126,7 @@ x & x & x \\
 0 & x & x \\
 0 & 0 & x
 \end{matrix}
-\right]}^{\text{\Large untere Dreiecksmatrix}}
+\right]}^{\text{\Large obere Dreiecksmatrix}}
 $$
 
 ## Determinante  von Matrizen (siehe Addition)
