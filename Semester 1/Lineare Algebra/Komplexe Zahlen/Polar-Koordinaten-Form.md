@@ -98,3 +98,12 @@ $$
 \end{tikzpicture}
 \end{document}
 ```
+
+Zu $E(\varphi)$ lassen sich folgende Eigenschaften feststellen
+
+$$\begin{array}{l}
+E(\varphi + k \cdot 360 \degree) = E(\varphi) \text{ für } k \in \mathbb{Z} \\
+\dfrac{1}{2} (E(\varphi) + E(-\varphi)) = \cos(\varphi) \\
+\dfrac{1}{2 \mathrm{i}}(E(\varphi)-E(-\varphi)) = \sin(\varphi)
+\end{array}$$
+

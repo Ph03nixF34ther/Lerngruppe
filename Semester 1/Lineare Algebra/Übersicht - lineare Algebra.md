@@ -14,8 +14,8 @@
     3. Determinanten
     4. Assoziativität
     5. Distributivität
-    6. Rang (Leon)
-    7. Vollrangzerlegung (Leon)
+    6. [[Rang]](Leon)
+    7. [[Vollrangzerlegung]](Leon)
     8. [[Linearkombinationen von Vektoren]](Leon)
     9. Eigenwerte und Eigenvektoren (Leon)
     10. Formel von Rodrigues
@@ -29,3 +29,5 @@
     3. [[Polar-Koordinaten-Form]]
     4. Taylorpolynome
     5. Eulersche Form
+4. Weitere Verfahren
+	1. Newton Verfahren (Emil)
