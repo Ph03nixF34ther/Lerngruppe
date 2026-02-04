@@ -4,7 +4,7 @@
     3. [[Die Cramersche Regel]]
     4. [[Die lineare Abhängigkeit von LGS]]
     5. [[Parameterabhängige LGS]]
-    6. Aufgabe: Kaffeeplantage
+    6. [[Aufgabe - Kaffeeplantage]]
 2. Matrixoperationen (Emil)
     1. Grundlegende Matrixoperationen 
         1. Multiplikationen von Matrizen 

@@ -372,3 +372,43 @@ $$
 u = L \cdot \frac{d(\hat{i} \cdot \sin(\omega t))}{dt} = L \cdot \hat{i} \cdot \frac{d \sin(\omega t)}{dt} = L \cdot \hat{i} \cdot \omega \cdot \cos(\omega t)
 $$
 $\implies$ Es ergibt sich eine Phasenverschiebung von $90°$, Änderung der Amplitude
+$\implies$ Spannung eilt dem Strom vorraus
+
+Scheitelwert:
+$$
+\hat{i} = \frac{\hat{u}}{\omega \cdot L}
+$$
+Effektivwerte:
+$$
+I = \frac{U}{\omega \cdot L}
+$$
+$\implies$ Entspricht formal dem Ohmschen Widerstand 
+(formal: $R = \omega L \implies \omega L = X_{L}$ - Blindwiderstand / Reaktanz / induktiver Widerstand)
+$$
+I = \frac{U}{X_{L}}
+$$
+$X_{L}$ ist frequenzabhängig $X_{L} \sim f$
+Kehrwert des Blindwiderstands ist der Blindleitwert
+$$
+B_{L} = - \frac{1}{\omega L}
+$$
+==Konventionsmäßig negatives Vorzeichen um ihn abzuheben vom Blindleitwert eines Kondensators==
+
+"Suspektanz"
+
+$$
+\underline{U} = L \cdot \frac{d\underline{I}}{dt}
+$$$$
+\underline{I} = I \cdot e^{j\omega t}
+$$$$
+\underline{U} = L \cdot \frac{dI \cdot e^{j\omega t}}{dt} =  L \cdot I \cdot \frac{de^{j\omega t}}{dt} = L Ij\omega \cdot e^{j\omega t} = L \cdot j\omega \cdot \underline{I}
+$$
+$$
+U = \omega L \cdot I \text{ Für Effektivwerte}
+$$
+$\implies$ Phasenversatz zwischen Strom und Spannung um $90°$
+Kehrwert:
+$$
+j B_{L} = \frac{1}{jX_{L}} = -j \frac{1}{X_{L}}
+$$
+$\implies$ Admittanz
