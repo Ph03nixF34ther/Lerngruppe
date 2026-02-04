@@ -1,7 +1,6 @@
 
 ### Multiplikation von Matrizen
-
-Bei der Multiplikation von Matrizen ($A \cdot B=C$) wird jede Zeile der Matrix A mit jeder Spalte der Matrix B multipliziert. Hierbei ist es wichtig, dass die Dimensionen der zu multiplizierenden Matrizen identisch ist. Einfach ausgedrückt bedeutet das in diesem Fall, dass Matrix A die gleiche Anzahl Zeilen wie Matrix B Spalten hat. Die Multiplikation von Matrizen ist **nicht kommutativ**. Das heißt, dass A * B nicht zwingend das gleiche wie B * A ist. Ein Beispiel für die Matrizenmultiplikation sieht wie folgt aus:
+Bei der Multiplikation von Matrizen ($A \cdot B=C$) wird jede Zeile der Matrix A mit jeder Spalte der Matrix $B$ multipliziert. Hierbei ist es wichtig, dass die Dimensionen der zu multiplizierenden Matrizen identisch ist. Einfach ausgedrückt bedeutet das in diesem Fall, dass Matrix $A$ die gleiche Anzahl Zeilen wie Matrix $B$ Spalten hat. Die Multiplikation von Matrizen ist **nicht kommutativ**. Das heißt, dass $A * B$ nicht zwingend das gleiche wie $B * A$ ist. Ein Beispiel für die Matrizenmultiplikation sieht wie folgt aus:
 
 $$
 \left[
@@ -30,8 +29,7 @@ i*p + h*m + g*j & i*q + h*n + g*k & i*r + h*o + g*l
 $$
 
 ## Addieren von Matrizen (siehe Subtraktion)
-
-Bei der Addition von Matrizen ($A+B=C$) werden die einzelnen Elemente von A und B addiert und tauchen dabei im Ergebnis C an der identischen wieder Stelle auf. Ein Beispiel für die Matrizenaddition sieht wie folgt aus:
+Bei der Addition von Matrizen ($A+B=C$) werden die einzelnen Elemente von $A$ und $B$ addiert und tauchen dabei im Ergebnis $C$ an der identischen wieder Stelle auf. Ein Beispiel für die Matrizenaddition sieht wie folgt aus:
 
 $$
 \left[
@@ -59,8 +57,7 @@ g+p & h+q & i+r
 \right]
 $$
 
-## Subtrahieren  von Matrizen (siehe Addition)
-
+## Subtrahieren von Matrizen (siehe Addition)
 Bei der Subtraktion von Matrizen ($A-B=C$) werden die einzelnen Elemente von A und B subtrahiert und tauchen dabei im Ergebnis C an der identischen Stelle wieder auf. Ein Beispiel für die Matrizenaddition sieht wie folgt aus:
 
 $$
@@ -89,7 +86,6 @@ g-p & h-q & i-r
 \right]
 $$
 ## Transponieren von Matrizen
-
 Die transponierte Matrix (gespiegelte Matrix oder gestürzte Matrix) ist in der Mathematik diejenige Matrix, die durch Vertauschen der Rollen von Zeilen und Spalten einer gegebenen Matrix entsteht. Zum Aufstellen einer solchen Matrix werden Zeilen mit Spalten vertauscht. Stelle hierfür die Matrix so um, dass die erste Zeile zur ersten Spalte wird usw. . Angegeben wird sie durch '$^T$'. Also $A^T$. Ein Beispiel hierfür sieht wie folgt aus:
 
 $$
@@ -111,7 +107,6 @@ c & f
 $$
 
 ## Dreiecksmatrix
-
 Eine Dreiecksmatrix ist eine quadratische Matrix, bei der alle Elemente unterhalb oder oberhalb der Hauptdiagonale null sind. Dies führt zu einer charakteristischen Dreiecksform.
 
 $$
@@ -135,7 +130,6 @@ x & x & x \\
 $$
 
 ## Determinante  von Matrizen (siehe Addition)
-
 Die Determinante einer Matrix A gibt an, wie sich das Volumen einer aus Eckpunkten erstellten Geometrie skaliert, wenn sie durch die Matrix A abgebildet wird. Einfach gesagt wird durch die Determinante einer Matrix eine Zahl zugeordnet, welche Auskünfte über die Eigenschafften der Matrix gibt. Determinanten lassen sich nur von Quadratischen Matrizen berechnen. Die wichtigste Aussage, die wir aus der Determinante entnehmen können ist die Invertierbarkeit. Eine Matrix A ist nur dann invertierbar, wenn ihre Determinante ungleich Null ist. Angegeben wird sie durch '|'. Also |A| oder det(A). 
 
 $$
@@ -159,7 +153,6 @@ $$
 = \colorbox{blue}{a*e*i}+\colorbox{red}{b*f*g}+\colorbox{green}{c*d*h}-\colorbox{orange}{g*e*c}-\colorbox{gray}{h*f*a}-\colorbox{purple}{i*d*b}
 $$
 ## Inverse einer Matrix
-
 Bei der Berechnung einer Inversen Matrix x wird eine Matrix gesucht, bei der gilt $A \cdot x = I$. Dabei ist $I$ die Einheitsmatrix der selben Dimension von A. Die Berechnung kann mit der  Findung eines Kehrwertes verglichen werden. Wie z.B. $5 \cdot \frac{1}{5} = 1$. Hierbei ist wichtig, dass A eine quadratische Matrix ist und ihre Determinante ungleich Null ist. Angegeben wird si durch ein '$^{-1}$'. Also $A^{-1}$.
 
 1) Zur Berechnung wird zunächst neben die Matrix A, also der Matrix, zu der du die Inverse Matrix berechnen willst, die Einheitsmatrix schreiben.
