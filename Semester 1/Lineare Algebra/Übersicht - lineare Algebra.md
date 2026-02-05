@@ -5,6 +5,7 @@
     4. [[Die lineare Abhängigkeit von LGS]]
     5. [[Parameterabhängige LGS]]
     6. [[Aufgabe - Kaffeeplantage]]
+    7. System mit komplexer Lösung
 2. Matrixoperationen
     1. [[Grundlegende Matrix Operationen]]
         1. [[Grundlegende Matrix Operationen#Multiplikation von Matrizen|Multiplikation von Matrizen]]
