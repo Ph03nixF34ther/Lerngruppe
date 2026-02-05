@@ -14,22 +14,24 @@
         5. [[Grundlegende Matrix Operationen#Inverse einer Matrix|Inverse Matrizen]]
         6. [[Grundlegende Matrix Operationen#Dreiecksmatrix|Dreiecksmatrizen]]
         7. [[Grundlegende Matrix Operationen#Determinante von Matrizen (siehe Addition)|Determinanten]]
-    2. Assoziativität(Emil)
-    3. Distributivität(Emil)
+    2. [[Grundlegende Matrix Operationen#Assoziativität bei Matrizen|Assoziativität]]
+    3. [[Grundlegende Matrix Operationen#Distributivität bei Matrizen|Distributivität]]
     4. Charakteristisches Polynom
-    5. [[Rang]](Leon)
-    6. [[Vollrangzerlegung]](Leon)
-    7. [[Linearkombinationen von Vektoren]](Leon)
-    8. Eigenwerte und Eigenvektoren (Leon)
-    9. Formel von Rodrigues
-    10. Jacobi-Matrix
-    11. Hesse-Matrix
-    12. Begleitmatrix
-    13. Vandermonde-Matrix
-    14. Koeffizienten Matrix
-    15. Krylow-Matrix
-    16. Cholesky-Zerlegung
-    17. QR Zerlegung(Emil)
+    5. Euklidische länge
+    6. [[Rang]](Leon)
+    7. [[Vollrangzerlegung]](Leon)
+    8. [[Linearkombinationen von Vektoren]](Leon)
+    9. Eigenwerte und Eigenvektoren (Leon)
+    10. Formel von Rodrigues
+    11. Jacobi-Matrix
+    12. Natürlicher Logarithmus
+    13. Hesse-Matrix
+    14. Begleitmatrix
+    15. Vandermonde-Matrix
+    16. Koeffizienten Matrix
+    17. Krylow-Matrix
+    18. Cholesky-Zerlegung
+    19. [[QR-Zerlegung]]
 3. Komplexe Zahlen (Lenny)
 	1. [[Komplexe Zahlen|Was sind Komplexe Zahlen]]
     2. [[Rechenregeln Komplexe Zahlen|Rechenregeln der komplexen Zahlen]]
