@@ -4,7 +4,7 @@ p(\lambda)= \det(A-\lambda\cdot E)
 $$
 Dabei ist E die Einheitsmatrix in der Form von $A$.
 
-Das Charakteristische Polynom wird für die [[Eigenwerte und Eigenvektoren|Eigenwerte]] einer Matrix benötigt. Diese entstehen aus den Nullstelen dieses Polynoms.
+Das Charakteristische Polynom wird für die [[Eigenwerte und Eigenvektoren#Eigenwerte|Eigenwerte]] einer Matrix benötigt. Diese entstehen aus den Nullstelen dieses Polynoms.
 An einem Beispiel sieht es folgendermaßen aus:
 $$
 A=
