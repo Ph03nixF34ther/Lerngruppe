@@ -170,7 +170,7 @@ Das lässt sich auf alle komplexen Zahlen $a + b\mathrm{i}$ übertragen wo $a$ a
     axis x line=center,
     xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
-    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $1\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
     ytick={-2,...,0,1,2,3,4,5},
     ymin=-2, ymax=5
 ]
@@ -202,7 +202,7 @@ Wie wir zuvor festgestellt haben lassen sich reelle Zahlen als $a+0\mathrm{i}$ d
     axis x line=center,
     xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
-    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $1\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
     ytick={-2,...,0,1,2,3,4,5},
     ymin=-2, ymax=5
 ]
@@ -271,7 +271,7 @@ Dieses Konzept lässt sich genauso auf komplexe Zahlen übertragen
     axis x line=center,
     xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
-    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $1\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
     ytick={-2,...,0,1,2,3,4,5},
     ymin=-2, ymax=5
 ]
@@ -308,7 +308,7 @@ $\vec{z_1} = \vec{z_2}$
     axis x line=center,
     xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
-    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $1\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
     ytick={-2,...,0,1,2,3,4,5},
     ymin=-2, ymax=5
 ]
