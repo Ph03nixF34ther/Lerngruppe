@@ -5,15 +5,37 @@ Die Polar-Koordinaten-Form einer Zahl besteht aus dem [[Rechenregeln Komplexe Za
 $$
 E(\varphi) = \cos(\varphi) + \mathrm{i} \cdot \sin(\varphi)
 $$
+
 $$
 z = \left| z \right| \cdot E(\varphi)
 $$
 
-Der reelle Teil $a$ und der imaginäre Teil $b$ lassen sich aus dem [[Rechenregeln Komplexe Zahlen#Betrag|Betrag]] $\left| z \right|$ und dem [[Rechenregeln Komplexe Zahlen#Argument|Argument]] $\varphi$ berechnen
+Um von einer [[Komplexe Zahlen|komplexen Zahl]] $\mathbb{C}$ die Polar-Koordinaten-Form zu bekommen, muss man den [[Rechenregeln Komplexe Zahlen#Betrag|Betrag]] und das [[Rechenregeln Komplexe Zahlen#Argument|Argument]] ausrechnen
+
+$$\begin{array}{c}
+z = a + b \mathrm{i} \\
+z = 3 + 4 \mathrm{i}
+\end{array}$$
 
 $$\begin{array}{l}
-a = \left| z \right| \cdot \cos(\varphi) \\
-b = \left| z \right| \cdot \sin(\varphi) 
+\left| z \right| = \sqrt{a^2 + b^2} = \sqrt{3^2 + 4^2} = 5 \\
+\varphi = \arctan(\dfrac{b}{a}) = \arctan(\dfrac{4}{3}) = 53.13 \degree \\
+z = \left| z \right| + E(\varphi) \\
+\underline{z = 5 + E(53.13 \degree)}
+\end{array}$$
+
+Um zurück in die normale Form zu kommen, berechnet man den reellen Teil $a$ und den imaginären Teil $b$ aus dem [[Rechenregeln Komplexe Zahlen#Betrag|Betrag]] $\left| z \right|$ und dem [[Rechenregeln Komplexe Zahlen#Argument|Argument]] $\varphi$
+
+$$\begin{array}{c}
+z = \left| z \right| + E(\varphi) \\
+z = 5 + E(53.13 \degree)
+\end{array}$$
+
+$$\begin{array}{l}
+a = \left| z \right| \cdot \cos(\varphi) = 5 \cdot \cos(53.13 \degree) \approx 3 \\
+b = \left| z \right| \cdot \sin(\varphi) = 5 \cdot \sin(53.13 \degree) \approx 4 \\
+z = a + b \mathrm{i} \\
+\underline{z = 3 + 4 \mathrm{i}}
 \end{array}$$
 
 ---
@@ -130,14 +152,15 @@ b = \left| z \right| \cdot \sin(\varphi)
 
 Betrachten wir eine allgemeine [[Komplexe Zahlen|komplexen Zahlen]] $\mathbb{C}$ mit dem [[Rechenregeln Komplexe Zahlen#Betrag|Betrag]] $\left| z \right|$ und dem [[Rechenregeln Komplexe Zahlen#Argument|Argument]] $\varphi$ lässt sich folgender Zusammenhang herleiten
 
-$$\begin{array}{c}
+$$
 \begin{array}{l|l}
 z = a + b \mathrm{i} & a = \left| z \right| \cdot \cos(\varphi) \\
 &b = \left| z \right| \cdot \sin(\varphi) \\
 = \left| z \right| \cdot \cos(\varphi) + \left| z \right| \cdot \sin(\varphi) \cdot \mathrm{i} & \left| z \right| \, (\quad) \\
-= \left| z \right| \cdot (\cos(\varphi) + \sin(\varphi) \cdot \mathrm{i}) & E(\varphi) = \cos(\varphi) + \mathrm{i} \cdot \sin(\varphi) \end{array} \\ \\
-\underline{z = \left| z \right| \cdot E(\varphi)}
+= \left| z \right| \cdot (\cos(\varphi) + \sin(\varphi) \cdot \mathrm{i}) & E(\varphi) = \cos(\varphi) + \mathrm{i} \cdot \sin(\varphi) \\
+\underline{= \left| z \right| \cdot E(\varphi)}
 \end{array}$$
+
 
 Diese Form nennt man Polar-Koordinaten-Form
 
