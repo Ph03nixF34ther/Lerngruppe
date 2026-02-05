@@ -25,7 +25,7 @@
     10. Formel von Rodrigues
     11. Jacobi-Matrix
     12. Natürlicher Logarithmus
-    13. Hesse-Matrix
+    13. [[Hesse-Matrix]]
     14. Begleitmatrix
     15. Vandermonde-Matrix
     16. Koeffizienten Matrix
