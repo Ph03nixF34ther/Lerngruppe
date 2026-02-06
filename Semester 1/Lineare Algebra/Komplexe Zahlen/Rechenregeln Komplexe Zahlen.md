@@ -1,5 +1,14 @@
 # Zusammenfassung
 
+Die [[#Konjugation]] von einer [[Komplexe Zahlen|komplexen Zahl]] $z$ bildet sich aus dem reellen Teil und dem umgekehrten imaginären Teil
+
+$$
+z = a + b \mathrm{i}
+$$
+$$
+\overline{z} = a - b \mathrm{i}
+$$
+
 Der [[#Betrag]] $\left| z \right|$ und das [[#Argument]] $\varphi$ von einer [[Komplexe Zahlen|komplexen Zahl]] $z$ lassen sich wie folgt bestimmen
 
 $$\begin{array}{c}
@@ -75,7 +84,7 @@ w = 1 - 2 \mathrm{i} \\
 \dfrac{z}{w} = \mathrm{i}
 \end{array}$$
 
-Um die Vereinfachung zu ermöglichen werden Zähler und Nenner mit dem Nenner multipliziert aber der imaginäre Teil des Nenners wird umgekehrt
+Um die Vereinfachung zu ermöglichen werden Zähler und Nenner mit der [[#Konjugation]] des Nenners multipliziert
 
 Damit ist der Nenner ohne imaginären Teil
 
@@ -110,6 +119,74 @@ $$\begin{array}{l|l}
 = \dfrac{4}{2} \cdot E(80 \degree - 30 \degree) & \text{Vereinfachen} \\
 \underline{= 2 \cdot E(50 \degree)}
 \end{array}$$
+
+---
+
+# Konjugation
+
+## Erklärung
+
+Es ist eine [[Komplexe Zahlen|komplexe Zahl]] $z$ gegeben
+
+$$
+z = a + b \mathrm{i}
+$$
+
+Die Konjugation $\overline{z}$ ist die selbe Zahl aber das Vorzeichen vom imaginären Teil wird vertauscht
+
+$$
+\overline{z} = a - b \mathrm{i}
+$$
+
+---
+
+## Visuelle Darstellung
+
+Die Konjugation von einer [[Komplexe Zahlen|komplexen Zahl]] $z$ ist wie eine Spiegelung um die x-Achse
+
+$$
+z = 4 + 3 \mathrm{i}
+$$
+$$
+\overline{z} = 4 - 3 \mathrm{i}
+$$
+
+``` tikz
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}[
+    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
+    filled/.style={dot},
+    open/.style={dot=white}
+]
+\begin{axis}[
+	width=\textwidth,
+    axis lines=center,
+    axis equal,
+    xtick={-5,...,0,...,5,6},
+    xmin=-1, xmax=4, 
+    yticklabels={$-4\mathrm{i}$,$-3\mathrm{i}$,$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$, $6\mathrm{i}$},
+    ytick={-4,...,0,1,2,3,4,5,6},
+    ymin=-4, ymax=4
+]
+\coordinate (N) at (axis cs:0,0);
+\coordinate (Z) at (axis cs:4,3);
+\coordinate (ZK) at (axis cs:4,-3);
+
+\draw[->, thick, green] (N) -- (Z) node[right] {$z$};
+
+\draw[->, thick, red] (N) -- (ZK) node[right] {$\overline{z}$};
+
+\pgfmathsetmacro{\zval}{atan(3/4)}
+\draw[->, green, thick] (axis cs:3,0) arc [radius=300, start angle=0, end angle=\zval] node[midway,left] {$\varphi$};
+
+\draw[->, red, thick] (axis cs:3,0) arc [radius=300, start angle=0, end angle=-\zval] node[midway,left] {$-\varphi$};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
 
 ---
 
@@ -534,7 +611,7 @@ w = 1 - 2 \mathrm{i} \\
 \dfrac{z}{w} = \mathrm{i}
 \end{array}$$
 
-Um das Vereinfachen zu ermöglichen werden Zähler und Nenner mit dem Nenner erweitert aber kehren das Vorzeichen des imaginären Teils um
+Um das Vereinfachen zu ermöglichen werden Zähler und Nenner mit der [[#Konjugation]] des Nenners erweitert 
 
 Damit ist der Nenner ohne imaginären Teil
 
