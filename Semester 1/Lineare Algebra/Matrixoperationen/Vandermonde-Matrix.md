@@ -1,0 +1,1 @@
+Die Vandermonde-Matrix wird aus wird aus einzelnen Datenpunkten gebildet.  

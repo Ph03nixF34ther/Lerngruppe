@@ -1,0 +1,1 @@
+Wenn wir über Partielle Ableitungen reden betrachten wir immer eine Funktion die von mehreren Variablen abhängig ist. Wessen Werte alle in $\mathbb{R}$ 
