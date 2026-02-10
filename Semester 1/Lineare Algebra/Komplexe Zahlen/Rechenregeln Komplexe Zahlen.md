@@ -1,6 +1,24 @@
+# Shortcuts
+
+1. [[#Zusammenfassung]]
+	1. [[Rechenregeln Komplexe Zahlen#^768f47|Konjugation]]
+	2. [[Rechenregeln Komplexe Zahlen#^e83bee|Betrag und Argument]]
+	3. [[Rechenregeln Komplexe Zahlen#^415890|Addieren und Subtrahieren]]
+	4. [[Rechenregeln Komplexe Zahlen#^7682b0|Multiplizieren]]
+		1. [[Rechenregeln Komplexe Zahlen#^d9d8fb|Polar-Koordinaten-Form]]
+	5. [[Rechenregeln Komplexe Zahlen#^eb805f|Dividieren]]
+		1. [[Rechenregeln Komplexe Zahlen#^cb76ea|Polar-Koordinaten-Form]]
+2. [[#Konjugation]]
+3. [[#Betrag]]
+4. [[#Argument]]
+5. [[#Addition]]
+6. [[#Subtraktion]]
+7. [[#Multiplikation]]
+8. [[#Division]]
+
 # Zusammenfassung
 
-Die [[#Konjugation]] von einer [[Komplexe Zahlen|komplexen Zahl]] $z$ bildet sich aus dem reellen Teil und dem umgekehrten imaginären Teil
+Die [[#Konjugation]] von einer [[Komplexe Zahlen|komplexen Zahl]] $z$ bildet sich aus dem reellen Teil und dem umgekehrten imaginären Teil ^768f47
 
 $$
 z = a + b \mathrm{i}
@@ -9,7 +27,7 @@ $$
 \overline{z} = a - b \mathrm{i}
 $$
 
-Der [[#Betrag]] $\left| z \right|$ und das [[#Argument]] $\varphi$ von einer [[Komplexe Zahlen|komplexen Zahl]] $z$ lassen sich wie folgt bestimmen
+Der [[#Betrag]] $\left| z \right|$ und das [[#Argument]] $\varphi$ von einer [[Komplexe Zahlen|komplexen Zahl]] $z$ lassen sich wie folgt bestimmen ^e83bee
 
 $$\begin{array}{c}
 z = a + b \mathrm{i} \\
@@ -21,7 +39,7 @@ $$\begin{array}{l}
 \varphi = \arctan(\dfrac{b}{a}) = \arctan(\dfrac{3}{2}) = 56.31 \degree
 \end{array}$$
 
-Beim [[#Addition|Addieren]] oder [[#Subtraktion|Subtrahieren]] von zwei [[Komplexe Zahlen|komplexen Zahlen]] $\mathbb{C}$ werden einfach die reellen und imaginären Teile für sich addiert bzw. subtrahiert und daraus bildet sich das Ergebnis
+Beim [[#Addition|Addieren]] oder [[#Subtraktion|Subtrahieren]] von zwei [[Komplexe Zahlen|komplexen Zahlen]] $\mathbb{C}$ werden einfach die reellen und imaginären Teile für sich addiert bzw. subtrahiert und daraus bildet sich das Ergebnis ^415890
 
 $$ \begin{array}{c}
 z = 2 + 3 \mathrm{i} \\
@@ -42,7 +60,7 @@ z - w & \text{subst }z, w\\
 \underline{= 6 + 2\mathrm{i}}
 \end{array}$$
 
-Beim [[#Multiplikation|Multiplizieren]] von zwei [[Komplexe Zahlen|komplexen Zahlen]] $\mathbb{C}$ wird einfach wie mit normalen Variablen gerechnet
+Beim [[#Multiplikation|Multiplizieren]] von zwei [[Komplexe Zahlen|komplexen Zahlen]] $\mathbb{C}$ wird einfach wie mit normalen Variablen gerechnet ^7682b0
 
 $$ \begin{array}{c}
 z = 2 + 3 \mathrm{i} \\
@@ -57,7 +75,7 @@ z \cdot w & \text{subst }z, w\\
 \underline{= -11 + 10 \mathrm{i}}
 \end{array}$$
 
-Beim [[#Multiplikation|Multiplizieren]] der [[Polar-Koordinaten-Form]] werden die [[#Betrag|Beträge]] multipliziert und die [[#Argument|Argumente]] in $E$ addiert
+Beim [[#Multiplikation|Multiplizieren]] der [[Polar-Koordinaten-Form]] werden die [[#Betrag|Beträge]] multipliziert und die [[#Argument|Argumente]] in $E$ addiert ^d9d8fb
 
 $$\begin{array}{c}
 z = \left| z \right| \cdot E(\varphi) \\
@@ -76,7 +94,7 @@ z \cdot w & \text{subst } z, w \\
 \underline{= 6 \cdot E(65 \degree)}
 \end{array}$$
 
-Beim [[#Division|Dividieren]] von zwei [[Komplexe Zahlen|komplexen Zahlen]] $\mathbb{C}$ wird einfach wie mit normalen Variablen gerechnet
+Beim [[#Division|Dividieren]] von zwei [[Komplexe Zahlen|komplexen Zahlen]] $\mathbb{C}$ wird einfach wie mit normalen Variablen gerechnet ^eb805f
 
 $$\begin{array}{c}
 z = 2 + \mathrm{i} \\
@@ -101,7 +119,7 @@ $$
 \underline{\dfrac{z}{w} = \mathrm{i}}
 $$
 
-Beim [[#Division|Dividieren]] von der [[Polar-Koordinaten-Form]] werden die [[#Betrag|Beträge]] dividiert und die [[#Argument|Argumente]] in $E$ subtrahiert
+Beim [[#Division|Dividieren]] von der [[Polar-Koordinaten-Form]] werden die [[#Betrag|Beträge]] dividiert und die [[#Argument|Argumente]] in $E$ subtrahiert ^cb76ea
 
 $$\begin{array}{c}
 z = \left| z \right| \cdot E(\varphi) \\
