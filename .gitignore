@@ -9,4 +9,4 @@
 .obsidian/*
 !.obsidian/plugins/
 .obsidian/plugins/*
-!.obsidian/plugins/obsidian-tikzjax/
+!.obsidian/plugins/tikz/
