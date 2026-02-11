@@ -2,7 +2,7 @@ alternativ: Vorgegebener Spulenstrom $\implies$ Fluss bestimmen
 $$
 H_{E} =\frac{I \cdot N}{l_{m}}
 $$
-Dann $B_{E}$ aus dem DIagram ablesen
+Dann $B_{E}$ aus dem Diagram ablesen
 $\implies$ $\Phi = B_{E} \cdot A$
 
 ## Eisenkern mit Luftspalt

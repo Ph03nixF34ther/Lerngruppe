@@ -5,6 +5,7 @@
     4. [[Die lineare Abhängigkeit von LGS]]
     5. [[Parameterabhängige LGS]]
     6. [[Aufgabe - Kaffeeplantage]]
+    7. System mit komplexer Lösung
 2. Matrixoperationen
     1. [[Grundlegende Matrix Operationen]]
         1. [[Grundlegende Matrix Operationen#Multiplikation von Matrizen|Multiplikation von Matrizen]]
@@ -22,20 +23,21 @@
     7. [[Vollrangzerlegung]](Leon)
     8. [[Linearkombinationen von Vektoren]](Leon)
     9. [[Eigenwerte und Eigenvektoren]](Leon)
-    10. Formel von Rodrigues
-    11. Jacobi-Matrix
-    12. [[Hesse-Matrix]]
-    13. [[Begleitmatrix]]
-    14. Vandermonde-Matrix
-    15. [[Koeffizienten-Matrix]]
-    16. Krylow-Matrix
-    17. Cholesky-Zerlegung
-    18. [[QR-Zerlegung]]
+    10. [[Rotation eines Teilchens um eine Rotationsachse]]
+    11. [[Formel von Rodrigues]]
+    12. Jacobi-Matrix
+    13. [[Hesse-Matrix]]
+    14. [[Begleitmatrix]]
+    15. Vandermonde-Matrix
+    16. [[Koeffizienten-Matrix]]
+    17. Krylow-Matrix
+    18. Cholesky-Zerlegung
+    19. [[QR-Zerlegung]]
 3. Komplexe Zahlen (Lenny)
 	1. [[Komplexe Zahlen|Was sind Komplexe Zahlen]]
     2. [[Rechenregeln Komplexe Zahlen|Rechenregeln der komplexen Zahlen]]
     3. [[Polar-Koordinaten-Form]]
     4. Taylorpolynome
-    5. Eulersche Form
+    5. [[Eulersche Form]]
 4. Weitere Verfahren
 	1. [[Newton Verfahren]]
