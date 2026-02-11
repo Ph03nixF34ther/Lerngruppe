@@ -53,7 +53,7 @@ Die allgemeine Lösung für ein solches Differenzialgleichungssystem ist
 $$
 T(t) = T(0) \cdot e^{\Omega t}
 $$
-Die Exponenzialfunktion einer Matrix lässt sich dann über die [[Die Rodrigues Formel|Formel von Rodrigues]] darstellen. 
+Die Exponenzialfunktion einer Matrix lässt sich dann über die [[Formel von Rodrigues|Formel von Rodrigues]] darstellen. 
 Dafür muss die Matrix allerdings normiert werden:
 $$
 u = \frac{\omega}{\alpha} \qquad \text{wenn } \alpha = \|\omega\|
@@ -64,7 +64,7 @@ $$
 $$
 T(t) = T(0) \cdot e^{\alpha t\Omega}
 $$
-um nun nur noch 2 Faktoren im Exponenten zu haben und die [[Die Rodrigues Formel|Formel von Rodrigues]] anzuwenden, wird eine weitere Substitution durchgeführt.
+um nun nur noch 2 Faktoren im Exponenten zu haben und die [[Formel von Rodrigues|Formel von Rodrigues]] anzuwenden, wird eine weitere Substitution durchgeführt.
 $$
 \theta = \alpha t
 $$
