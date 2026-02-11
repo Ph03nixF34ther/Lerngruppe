@@ -4,6 +4,7 @@
 **/SDL_Code.txt
 **/program
 **/*.json
+!.obsidian/plugins/tikz/manifest.json
 
 # git magic
 .obsidian/*
