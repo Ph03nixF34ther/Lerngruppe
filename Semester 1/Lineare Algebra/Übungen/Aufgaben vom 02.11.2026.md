@@ -48,3 +48,96 @@ v = \begin{pmatrix}
 2,690625 \\ 2,4975 \\ -1,696875 \\ 0,42
 \end{pmatrix}
 $$
+# Hauptachsentransformation 
+Man zerlege folgende Matrix in die Form
+$$
+T \cdot D \cdot T^{-1}
+$$
+$$
+A = \begin{pmatrix}
+1 & 1 & 0 \\
+1 & 1 & \sqrt{ 3 } \\
+0 & \sqrt{ 3 } & 1
+\end{pmatrix}
+$$
+## Charakteristisches Polynom
+$$
+p(x)= x^3 - (3) * x^2* + (0-2+1) \cdot x - (-1-2)
+$$
+$$
+p(x) = x^3 -3 \cdot x^2 -x + 3
+$$
+$$
+\implies \text{Lösungen von } p(x) = \text{eigenvals}(A)
+$$
+$$
+D = \begin{pmatrix}
+-1 & 0 & 0 \\
+0 & 3 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+$$
+Diff = -1 \cdot I - A = \begin{pmatrix}
+-2 & -1 & 0 \\
+-1 & -2 & -\sqrt{ 3 } \\
+0 & -\sqrt{ 3 } & -2
+\end{pmatrix}
+$$
+$$
+w = \begin{pmatrix}
+-2 & -2 \\
+-1 & -2
+\end{pmatrix}^{-1}
+\cdot 
+\begin{pmatrix}
+0 \\
+-\sqrt{ 3 }
+\end{pmatrix}
+=
+\begin{pmatrix}
+-\frac{\sqrt{ 3 }}{3} \\
+2 \cdot \frac{\sqrt{ 3 }}{3}
+\end{pmatrix}
+$$
+$$
+v_{0} = \begin{pmatrix}
+-\frac{\sqrt{ 3 }}{3} \\
+2 \cdot \frac{\sqrt{ 3 }}{3} \\
+-1
+\end{pmatrix}
+$$
+---
+
+$$
+Diff = 3 \cdot I - A = \begin{pmatrix}
+2 & -1 & 0 \\
+-1 & 2 & -\sqrt{ 3 } \\
+0 & -\sqrt{ 3 } & 2
+\end{pmatrix}
+$$
+$$
+w = \begin{pmatrix}
+2 & -2 \\
+-1 & 2
+\end{pmatrix}^{-1}
+\cdot 
+\begin{pmatrix}
+0 \\
+-\sqrt{ 3 }
+\end{pmatrix}
+=
+\begin{pmatrix}
+-\frac{\sqrt{ 3 }}{3} \\
+2 \cdot \frac{\sqrt{ 3 }}{3}
+\end{pmatrix}
+$$
+$$
+v_{0} = \begin{pmatrix}
+-\frac{\sqrt{ 3 }}{3} \\
+2 \cdot \frac{\sqrt{ 3 }}{3} \\
+3
+\end{pmatrix}
+$$
+---
+
