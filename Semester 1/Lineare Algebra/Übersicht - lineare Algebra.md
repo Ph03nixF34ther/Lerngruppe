@@ -25,7 +25,7 @@
     9. [[Eigenwerte und Eigenvektoren]](Leon)
     10. [[Rotation eines Teilchens um eine Rotationsachse]]
     11. [[Formel von Rodrigues]]
-    12. Jacobi-Matrix
+    12. [[Jacobi Matrix]]
     13. [[Hesse-Matrix]]
     14. [[Begleitmatrix]]
     15. Vandermonde-Matrix
