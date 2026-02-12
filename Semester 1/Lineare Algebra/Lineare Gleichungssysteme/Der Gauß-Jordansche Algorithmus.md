@@ -16,7 +16,7 @@ x = b'
 $$
 
 # Beispiel für das gaußsche Eliminationsverfahren
-Es wird das Beischpiel aus dem Unterkapitel [Das gaußsche Eliminationsverfahren](#das-gaußsche-eliminationsverfahren) verwendet. Es wird vorrausgesetzt, dass das gaußsche Eliminationsverfahren bereits angewandt wurde.
+Es wird das Beispiel aus dem Unterkapitel [Das gaußsche Eliminationsverfahren](#das-gaußsche-eliminationsverfahren) verwendet. Es wird vorrausgesetzt, dass das gaußsche Eliminationsverfahren bereits angewandt wurde.
 $$
 A:= 
 \begin{pmatrix} 

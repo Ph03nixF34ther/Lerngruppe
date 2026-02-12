@@ -11,9 +11,7 @@ x_i = \frac{det(A_i)}{det(A)}
 $$
 
 1. Errechne die Determinante $det(A)$
-
 2. Setze den Bildvektor an der $i$ ten Spalte der Koeffizientenmatrix $A$ ein (diese neue Matrix heißt $A_i$)
-
 3. Errechne die Determinante $det(A_i)$
 4. Rechne $x_i = \frac{det(A_i)}{det(A)}$
 
@@ -40,7 +38,7 @@ det\left(\left[
 3 & 5 & -2 \\ 
 4  & -1 & 4 \\ 
 1 & 1 & 1 
-\end{array}\right]\right):= -33
+\end{array}\right]\right):= -25
 $$
 Die Determinante ist $\not = 0$, dh. es gibt eine Lösung des LGS.
 $$
