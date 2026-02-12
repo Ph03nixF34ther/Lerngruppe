@@ -48,7 +48,7 @@ $$
 $$
 x_{20} + x_{21} + x_{22} = 150
 $$
-- Gleichzeitig muss das Bedürfnis gedeckt sein, d.h. alle alle weiterverarbeiteten Güter müssen produziert worden sein:
+- Gleichzeitig muss das Bedürfnis gedeckt sein, d.h. alle weiterverarbeiteten Güter müssen produziert worden sein:
 $$
 X^T \cdot
 \begin{pmatrix}
@@ -71,7 +71,7 @@ $$
 $$
 x_{02} + x_{12} + x_{22} = 250
 $$
-Wie gut eine gegebene Lösung ist, kann bestimmt werden, in dem die Werte $x_{0} \dots x_{8}$ bzw. $x_{00}\dots x_{22}$ mit den Gewichten aus der Matrix $A$ verechnet werden
+Wie gut eine gegebene Lösung ist, kann bestimmt werden, in dem die Werte $x_{0} \dots x_{8}$ bzw. $x_{00}\dots x_{22}$ mit den Gewichten aus der Matrix $A$ verrechnet werden
 
 $$
 \epsilon = x_{00} \cdot a_{00} + x_{01} \cdot a_{01} + \dots + x_{22} \cdot a_{22}
@@ -324,7 +324,9 @@ x_{21} & = & 80 - b - d\\
 x_{22} & = & 150 - (120 - a - c) - (80 - b - d) & =a + b + c + d - 50
 \end{matrix}
 $$
-## Aufstellung der Kostenfunktion und wichtiger Vorraussetzungen
+## Aufstellung der Kostenfunktion und wichtiger Vo
+
+# Voraussetzungen
 
 ### Kostenfunktion der 1. Plantage
 $$

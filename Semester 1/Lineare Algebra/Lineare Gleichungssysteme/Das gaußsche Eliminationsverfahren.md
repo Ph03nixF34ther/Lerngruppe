@@ -4,24 +4,24 @@
 |---------|------------|
 | Gegeben | $b$, $A$    |
 
-Das gaußsche Eliminationsverfahren verändert durch simple Rechenschritte sowohl die Matrix $A$ alsauch den Bildvektor $b$ um die Matrix in eine Dreiecksmatrix umzuwandeln.
+Das gaußsche Eliminationsverfahren verändert durch simple Rechenschritte sowohl die Matrix $A$ als auch den Bildvektor $b$ um die Matrix in eine Dreiecksmatrix umzuwandeln.
 
-Die Variablen des Urbildvektors lassen sich dann aus $A'$ un $b'$ ableiten.
+Die Variablen des Urbildvektors lassen sich dann aus $A'$ und $b'$ ableiten.
 
 # Beispiel für das gaußsche Eliminationsverfahren
 $$
 A:= 
 \begin{pmatrix} 
-3 & 5 & -2 \\ 
+1 & 1 & 1 \\ 
 4  & -1 & 4 \\ 
-1 & 1 & 1 
+3 & 5 & -2 
 \end{pmatrix} 
 \hspace{1cm}
 b := 
 \begin{pmatrix} 
-10 \\
+20 \\
 5 \\ 
-20 
+10
 \end{pmatrix}
 $$
 $$

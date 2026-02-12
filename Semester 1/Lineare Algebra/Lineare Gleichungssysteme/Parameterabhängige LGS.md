@@ -57,7 +57,7 @@ p_{1} \simeq 3.1061
 $$
 Daraus ergeben sich zwei mögliche Lösungsvektoren $\vec{x}(p)$, bei denen $\vec{x}_{0} = 1$
 $$
-x_0 = 
+\vec{x}_0 = 
 \begin{pmatrix}
 1.0001  \\
 -1.7122  \\
@@ -65,7 +65,7 @@ x_0 =
 \end{pmatrix}
 $$
 $$
-x_{1} = 
+\vec{x}_0 = 
 \begin{pmatrix}
 1.0000  \\
 3.2122  \\
