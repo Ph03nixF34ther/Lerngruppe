@@ -33,8 +33,9 @@ b_1 \\
 b_2
 \end{pmatrix}
 $$
-# Beispielmatrix
+$$
 
+$$
 # Darstellung 3 Dimensionaler Gleichungssysteme als Ebenen im 3 Dimensionalen Raum
 
 Jede Gleichung in einem 3 dimensionalen Gleichungssystem kann im 3 dimensionalen Raum als Ebene dargestellt werden.
