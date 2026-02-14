@@ -8,6 +8,10 @@ Das gaußsche Eliminationsverfahren verändert durch simple Rechenschritte sowoh
 
 Die Variablen des Urbildvektors lassen sich dann aus $A'$ und $b'$ ableiten.
 
+>**WICHTIG**
+>Manche linearen Gleichungssysteme haben keine Lösung
+>Für solche Gleichungssysteme ist die [[Grundlegende Matrix Operationen#Determinante von Matrizen (siehe Addition)|Determinante]] der [[Koeffizienten-Matrix]] $\det(A)=0$
+
 # Beispiel für das gaußsche Eliminationsverfahren
 $$
 A:= 
