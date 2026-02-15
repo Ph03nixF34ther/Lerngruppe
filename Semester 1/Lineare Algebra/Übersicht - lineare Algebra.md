@@ -28,9 +28,9 @@
     12. Jacobi-Matrix
     13. [[Hesse-Matrix]]
     14. [[Begleitmatrix]]
-    15. Vandermonde-Matrix
+    15. [[Vandermonde-Matrix]]
     16. [[Koeffizienten-Matrix]]
-    17. Krylow-Matrix
+    17. [[Krylow-Matrix]]
     18. Cholesky-Zerlegung
     19. [[QR-Zerlegung]]
 3. Komplexe Zahlen (Lenny)
