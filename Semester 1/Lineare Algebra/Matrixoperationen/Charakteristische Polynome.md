@@ -1,6 +1,6 @@
 Das Charakteristische Polynom $p(\lambda)$ wird aus einer Matrix $A$ gebildet, in Abhängigkeit von $\lambda$ gebildet. Dafür wird folgende Formel verwendet:
 $$
-p(\lambda)= \det(A-\lambda\cdot E)
+p(\lambda)= \det(\lambda\cdot E - A)
 $$
 Dabei ist E die Einheitsmatrix in der Form von $A$.
 
@@ -25,29 +25,32 @@ A=
 \right]
 $$
 $$
-A-\lambda\cdot E=
+\lambda\cdot E -A=
 \left[
 \begin{matrix}
-1-\lambda & 3 & 2 \\
-2 & 4-\lambda & 5 \\
-6 & 1 & 4-\lambda
+\lambda-1 & -3 & -2 \\
+-2 & \lambda-4 & -5 \\
+-6 & -1 & \lambda-4
 \end{matrix}
 \right]
 $$
 Die [[Grundlegende Matrix Operationen#Determinante von Matrizen (siehe Addition)|Determinante]] dieser Matrix muss jetzt nur noch gebildet werden:
 $$
-(1-\lambda)\cdot(4-\lambda)\cdot(4-\lambda)+90+4-6\cdot(4-\lambda)\cdot 2-1\cdot 5\cdot (1-\lambda)-(4-\lambda)\cdot 2\cdot 3
+(\lambda-1)\cdot(\lambda-4)\cdot(\lambda-4) -90 - 4 - (-6\cdot (\lambda -4)\cdot -2) - (-1 \cdot -5 \cdot (\lambda -1)) - ( (\lambda-4)\cdot -2 \cdot -3)
 $$
 $$
-(1-\lambda)\cdot(4-\lambda)^2- 48 + 12\lambda - 5 + 5\lambda - 24 + 6\lambda +94
+(\lambda-1)\cdot(\lambda-4)^2 - 90 - 4 - 12\lambda + 48 -  5\lambda + 5 - 6\lambda + 24
 $$
 $$
--\lambda ^3 +9\lambda ^2 -24\lambda +16 + 23\lambda +17
+(\lambda-1)\cdot (\lambda^2 - 8\lambda + 16) - 23\lambda  - 17
 $$
 $$
--\lambda ^3 + 9\lambda ^2 -\lambda + 33
+\lambda^3 - 8\lambda^2 + 16\lambda - \lambda^2 + 8\lambda - 16 - 23\lambda - 17
+$$
+$$
+\lambda^3 - 9 \lambda^2  + \lambda - 33
 $$
 Dementsprechend ist das Charakteristische Polynom $p(\lambda)$:
 $$
-p(\lambda) = -\lambda ^3 + 9\lambda ^2 -\lambda + 33
+p(\lambda) = \lambda ^3 - 9\lambda ^2 + \lambda -33
 $$
