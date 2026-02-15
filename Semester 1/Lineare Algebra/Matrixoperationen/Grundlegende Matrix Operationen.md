@@ -130,7 +130,15 @@ x & x & x \\
 $$
 
 ## Determinante  von Matrizen (siehe Addition)
-Die Determinante einer Matrix A gibt an, wie sich das Volumen einer aus Eckpunkten erstellten Geometrie skaliert, wenn sie durch die Matrix A abgebildet wird. Einfach gesagt wird durch die Determinante einer Matrix eine Zahl zugeordnet, welche Auskünfte über die Eigenschafften der Matrix gibt. Determinanten lassen sich nur von Quadratischen Matrizen berechnen. Die wichtigste Aussage, die wir aus der Determinante entnehmen können ist die Invertierbarkeit. Eine Matrix A ist nur dann invertierbar, wenn ihre Determinante ungleich Null ist. Angegeben wird sie durch '|'. Also |A| oder det(A). 
+Die Determinante einer Matrix A gibt an, wie sich das Volumen einer aus Eckpunkten erstellten Geometrie skaliert, wenn sie durch die Matrix A abgebildet wird.
+Einfach gesagt wird durch die Determinante einer Matrix eine Zahl zugeordnet, welche Auskünfte über die Eigenschafften der Matrix gibt.
+
+Determinanten lassen sich nur von Quadratischen Matrizen berechnen.
+
+Die wichtigste Aussage, die wir aus der Determinante entnehmen können ist die Invertierbarkeit.
+Eine Matrix A ist nur dann invertierbar, wenn ihre Determinante ungleich Null ist.
+
+Angegeben wird sie durch '|'. Also |A| oder det(A). 
 
 $$
 \left[
