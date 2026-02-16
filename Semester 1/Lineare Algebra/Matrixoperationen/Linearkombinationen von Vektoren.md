@@ -1,4 +1,4 @@
-# Linearkombinationen von Vektoren
+
 
 Bei der Linearkombination wird ein Vektor gesucht der sich aus verschiedenen anderen Vektoren ergibt. Die ursprünglichen Vektoren werden jeweils mit einem Faktor multipliziert um addiert den Vektor zu Ergeben.
 
@@ -96,7 +96,7 @@ $$
 \left[
 \begin{matrix}
 5 & 2 & 1 \\
-0 & 13 &14 \\
+0 & -13 &-14 \\
 0 & 0 & 10
 \end{matrix}
 \right]
@@ -112,8 +112,8 @@ c
 \left[
 \begin{matrix}
 3 \\
-2 \\
--176
+-2 \\
+-240
 \end{matrix}
 \right]
 $$
@@ -121,13 +121,13 @@ $$
 Daraus folgt:
 
 $$
-c = 17,6
+c = -24
 $$
 $$
-b = -18,8
+b = 26
 $$
 $$
-a = 4,6
+a = -5
 $$
 So ist die Lösung:
 $$
@@ -142,9 +142,9 @@ $$
 *
 \left[
 \begin{matrix}
-4,6 \\
--18,8 \\
-17,6
+-5 \\
+26 \\
+-24
 \end{matrix}
 \right]
 = 
