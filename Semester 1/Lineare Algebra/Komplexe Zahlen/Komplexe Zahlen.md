@@ -97,19 +97,13 @@ Hier sind die Zahlen $-4$, $-\dfrac{1}{3}$, $\sqrt{2}$, $2$ und $\pi$ auf dem Za
 \usepackage{pgfplots}
 
 \begin{document}
-\begin{tikzpicture}[
-    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
-    filled/.style={dot},
-    open/.style={dot=white}
-]
+\begin{tikzpicture}
 \begin{axis}[
-    x=40pt,
-    y=40pt,
+    width=\textwidth,
+    clip=false,
     axis y line=none,
     axis x line=center,
-    xtick={-5,...,0,...,5},
-    xmin=-5, xmax=5, 
-    ymin=0, ymax=0
+    xmin=-5, xmax=5,
 ]
 \addplot coordinates {(2,0)} node[above]{$2$};
 \addplot coordinates {(-4,0)} node[above]{$-4$};
@@ -133,17 +127,14 @@ Gauß kam auf die Idee die Zahlengerade auf die zweite Dimension zu erweitern un
 \usepackage{pgfplots}
 
 \begin{document}
-\begin{tikzpicture}[
-    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
-    filled/.style={dot},
-    open/.style={dot=white}
-]
+\begin{tikzpicture}
 \begin{axis}[
-    x=40pt,
-    y=40pt,
+    width=\textwidth,
+    height=50pt, % Minimal height 
+    scale only axis, 
+    clip=false,
     axis y line=none,
     axis x line=center,
-    xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
     ymin=0, ymax=2
 ]
@@ -159,15 +150,10 @@ Das lässt sich auf alle komplexen Zahlen $a + b\mathrm{i}$ übertragen wo $a$ a
 \usepackage{pgfplots}
 
 \begin{document}
-\begin{tikzpicture}[
-    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
-    filled/.style={dot},
-    open/.style={dot=white}
-]
+\begin{tikzpicture}
 \begin{axis}[
-	x=40pt,
-    axis y line=center,
-    axis x line=center,
+	width=\textwidth,
+    axis lines=center,
     xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
     yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
@@ -191,15 +177,10 @@ Wie wir zuvor festgestellt haben lassen sich reelle Zahlen als $a+0\mathrm{i}$ d
 \usepackage{pgfplots}
 
 \begin{document}
-\begin{tikzpicture}[
-    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
-    filled/.style={dot},
-    open/.style={dot=white}
-]
+\begin{tikzpicture}
 \begin{axis}[
-	x=40pt,
-    axis y line=center,
-    axis x line=center,
+	width=\textwidth,
+    axis lines=center,
     xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
     yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
