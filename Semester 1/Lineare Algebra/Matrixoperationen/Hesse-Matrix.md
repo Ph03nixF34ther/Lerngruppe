@@ -1,7 +1,7 @@
 Die Hesse-Matrix ist ein Werkzeug aus der mehrdimensionalen Analysis. Sie sammelt alle zweiten partiellen Ableitungen einer Funktion in einer Matrix. Das bedeutet, dass mithilfe der Hesse-Matrix Aussagen über das Krümmungsverhalten einer Funktion getroffen werden können Damit ist sie wie folgt aufgebaut:
 
 $$
-H_{f(x,,y,z)}=
+H_{f(x,y,z)}=
 
 \begin{matrix}
 \begin{matrix}

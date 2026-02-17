@@ -1,8 +1,43 @@
-Ein Eigenvektoren ist ein Vektor $\vec{v}$, der mit einer quadratischen Matrix $M$ Multipliziert wieder diesen Vektor $\vec{v}$ ergeben, nur mit einem Faktor $a$. Diesen Faktor $a$ nennt man Eigenwert.
+Ein Eigenvektor ist ein Vektor $\vec{v}$, der mit einer quadratischen Matrix $M$ Multipliziert wieder diesen Vektor $\vec{v}$ ergeben, nur mit einem Faktor $a$. Diesen Faktor $a$ nennt man Eigenwert.
 
 $$
-M*\vec{v}= a*\vec{v}
+M \cdot \vec{v}= a \cdot \vec{v}
 $$
+
+``` tikz
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+	width=\textwidth,
+    axis lines=center,
+    xmin=-2, xmax=7, 
+    ymin=-2, ymax=7,
+    xlabel={$x$},
+    ylabel={$y$},
+    xtick=\empty,
+    ytick=\empty,
+]
+\coordinate (N) at (axis cs:0,0);
+\coordinate (A) at (axis cs:3,2);
+\coordinate (B) at (axis cs:1,2);
+
+\coordinate (aA) at (axis cs:6,4);
+\coordinate (aB) at (axis cs:2,4);
+
+\draw[->, red, thick] (N) -- (aA) node[above] {$M \cdot \vec{v}_1 = a \cdot \vec{v}_1$};
+\draw[->, red, thick] (N) -- (aB) node[right] {$M \cdot \vec{v}_2 = a \cdot \vec{v}_2$};
+
+\draw[->, green, thick] (N) -- (A) node[below] {$\vec{v}_1$};
+\draw[->, green, thick] (N) -- (B) node[right] {$\vec{v}_2$};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+
 Die Suche nach dem erfüllen dieser Gleichung nennt man Eigenwertproblem.
 Der Eigenvektor darf dabei nicht der Nullvektor sein.
 
