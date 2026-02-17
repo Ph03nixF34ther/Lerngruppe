@@ -222,7 +222,7 @@ Die Darstellung $z = \left| z \right| \cdot E(\varphi)$ kann wie folgt interpret
 > > $\varphi = 60 \degree$
 > > $\underline{z = 2 \cdot E(60 \degree)}$
 > 
-> $z = \mathrm{i}$
+> $z = 2 - 3 \mathrm{i}$
 > 
 > > [!success]- Lösung
 > > $z = 2 - 3 \mathrm{i}$

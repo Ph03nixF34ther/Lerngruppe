@@ -35,7 +35,7 @@ z = 2 + 3 \mathrm{i}
 \end{array}$$
 
 $$\begin{array}{l}
-\left| z \right| = \sqrt{a^2 + b^2} = \sqrt{2^2 + 3^2} = 5 \\
+\left| z \right| = \sqrt{a^2 + b^2} = \sqrt{2^2 + 3^2} = \sqrt{13} \\
 \varphi = \arctan(\dfrac{b}{a}) = \arctan(\dfrac{3}{2}) = 56.31 \degree
 \end{array}$$
 
@@ -138,6 +138,33 @@ $$\begin{array}{l|l}
 \underline{= 2 \cdot E(50 \degree)}
 \end{array}$$
 
+> [!Tip]- Rechenbeispiele
+> 
+> Rechne: 
+> 
+> $(2 - 5\mathrm{i}) + (5 + 2\mathrm{i})$
+> > [!Success]- Lösung
+> > $= 2 - 5\mathrm{i} + 5 + 2\mathrm{i}$
+> > $= 2 + 5 + 2\mathrm{i} - 5\mathrm{i}$
+> > $\underline{= 7 - 3\mathrm{i}}$
+> 
+> $(1 + \mathrm{i})^4$
+> > [!Success]- Lösung
+> > $= (( 1 + \mathrm{i})( 1 + \mathrm{i}))^2$
+> > $= (1 + 2\mathrm{i} + \mathrm{i}^2)^2$
+> > $= (1 + 2\mathrm{i} - 1)^2$
+> > $= (2\mathrm{i})^2$
+> > $= 4\mathrm{i}^2$
+> > $= 4 * (-1)$
+> > $\underline{= -4}$
+> 
+> $\dfrac{4 + 5\mathrm{i}}{3 - 4\mathrm{i}}$
+> > [!Success]- Lösung
+> > $=\dfrac{(4 + 5\mathrm{i}) * (3 + 4\mathrm{i})}{(3 - 4\mathrm{i}) * (3 + 4\mathrm{i})}$
+> > $=\dfrac{12 + 16\mathrm{i} + 15\mathrm{i} + 20\mathrm{i}^2}{9 - (\mathrm{4i})^2}$
+> > $= \dfrac{12 + 16\mathrm{i} + 15\mathrm{i} + 20 (-1)}{9 - 16(-1)}$
+> > $\underline{= \dfrac{-8 + 31\mathrm{i}}{25} = - 0.32 + 1.24\mathrm{i}}$
+
 ---
 
 # Konjugation
@@ -215,13 +242,9 @@ $$
 Der Betrag einer [[Komplexe Zahlen|komplexen Zahl]] $\mathbb{C}$ wird durch die Anwendung des Satz des Pythagoras zwischen reellem und imaginären Teil berechnet
 
 $$\begin{array}{c}
-z = \left| z \right| \cdot E(\varphi) \\
-w = \left| w \right| \cdot E(\psi)
-\end{array}$$
-
-$$\begin{array}{l}
-z \cdot w = \left| z \right| \cdot \left| w \right| \cdot E(\varphi) \cdot E(\psi) \\
-z \cdot w = \left| z \right| \cdot \left| w \right| \cdot E(\varphi + \psi)
+z = a \cdot b\mathrm{i} \\
+z = 2 + 3 \mathrm{i} \\
+\left| z \right| = \sqrt{a^2 + b^2} = \sqrt{2^2 + 3^2} = \sqrt{13}
 \end{array}$$
 
 ---
@@ -640,7 +663,7 @@ $$\begin{array}{l|l}
 = \dfrac{2 + 4 \mathrm{i} + \mathrm{i} + 2 \mathrm{i}^2}{1 + 2 \mathrm{i} - 2 \mathrm{i} - 4 \mathrm{i}^2} & \mathrm{i}^2 = \sqrt{-1}^2 = -1 \\
 = \dfrac{2 + 4 \mathrm{i} + \mathrm{i} + 2 \cdot (-1)}{1 + 2 \mathrm{i} - 2 \mathrm{i} - 4 \cdot (-1)} & \text{Vereinfachen} \\
 = \dfrac{2 + 5 \mathrm{i} - 2}{1 + 4} \\
-= \dfrac{5 \mathrm{i}}{5}
+= \dfrac{5 \mathrm{i}}{5} = \mathrm{i}
 \end{array}$$
 
 $$
