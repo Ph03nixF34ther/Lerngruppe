@@ -15,7 +15,10 @@ $$
 
 Bei der Anwendung der [[Methode der kleinsten Quadrate]] ist eine Möglichkeit, die auftauchenden Minimierungsprobleme über die Normalgleichungen zu lösen, die eine symmetrische positiv definite Systemmatrix haben. Dies ist mit Hilfe der Cholesky-Zerlegung möglich und dies war die Motivation von Cholesky, die Zerlegung zu entwickeln. Beim Gauß-Newton-Verfahren ist damit bei jedem Iterationsschritt ein Gleichungssystem zu lösen, das sich mit dem Cholesky-Verfahren bestimmen lässt. 
 
-# Herleitung
+# Herleitung und Berechnung
+
+Um $G$ zu berechnen wird die Allgemeine Form von $G$ verwendet, mit ihrer Transponierten multipliziert und mit $A$ gleichgesetzt, so dass dann die einzelnen Variablen von $G$ errechnet werden können.
+
 $A$ ist eine $3\times3$ Matrix und ihre Cholesky-Zerlegung soll bestimmt werden:
 $$
 A = LDL^T = \begin{bmatrix}
