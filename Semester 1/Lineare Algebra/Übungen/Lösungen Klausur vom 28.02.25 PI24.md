@@ -18,12 +18,12 @@ $$
 $$
 Bgleitmatrix bilden:
 $$
-Cp=
+\underline{Cp=
 \begin{bmatrix}
 0 & 1 & 0 \\
 0 & 0 & 1 \\
 36 & -49 & 14
-\end{bmatrix}
+\end{bmatrix}}
 $$
 Hauptachsentransformation $VDV ^{-1}$
 Berechnen von D mithilfe der Eigenwerten:
@@ -81,12 +81,12 @@ $$
 -x ^3+14x ^2-49x+36=0 \to (1,4,9)
 $$
 $$
-D=
+D=\underline{\underline{
 \begin{bmatrix}
 1 & 	0 & 0 \\
 0 & 4 & 0 \\
 0 & 0 & 9
-\end{bmatrix}
+\end{bmatrix}}}
 $$
 Berechnen von V mithilfe der Eigenvektoren:
 $$
@@ -394,3 +394,152 @@ z
 0,25
 \end{bmatrix}
 $$
+### Aufgabe 7
+
+Vandermonde-Matrix berechnen:
+$$
+V= \underline{
+\begin{bmatrix}
+1 & 1 & 1 \\
+1 & 2 & 3 \\
+1 & 4 & 9
+\end{bmatrix}}
+$$
+LU- Zerlegung:
+$$
+L_{0}=
+\begin{bmatrix}
+1 & 0 & 0 \\
+-1 & 1 & 0 \\
+-1 & 0 & 1
+\end{bmatrix}
+\cdot
+V=
+\begin{bmatrix}
+1 & 1 & 1 \\
+0 & 1 & 2 \\
+0 & 3 & 8
+\end{bmatrix}
+$$
+$$
+U=
+\overbrace{  
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & -3 & 1
+\end{bmatrix}} ^{L_{1}}
+\cdot
+\begin{bmatrix}
+1 & 1 & 1 \\
+0 & 1 & 2 \\
+0 & 3 & 8
+\end{bmatrix}
+=
+\underline{
+\begin{bmatrix}
+1 & 1 & 1 \\
+0 & 1 & 2 \\
+0 & 0 & 2
+\end{bmatrix}}
+$$
+$$
+L=(L_{1}\cdot L_{0}) ^{-1}=
+\underline{
+\begin{bmatrix}
+1 & 0 & 0 \\
+1 & 1 & 0 \\
+1 & 3 & 1
+\end{bmatrix}}
+$$
+$$
+\underline{\underline{
+\det(U)=\det(V)=2}}
+$$
+### Aufgabe 8
+
+Man approximiere das Monomial x^4 im Sinne der kleinsten Quadrate durch
+ein Polynomial p(x) vom Grad 3 über dem Fundamental-Intervall [1,3]!
+
+Monomial: $f(x)=x ^4$
+
+Was bedeutet im "Sinne der kleinsten Quadrate"?
+
+Stell dir vor du zeichnest $x^4$ auf Papier. Jetzt versuchen wir eine Kurve 3. Gerades darüber zu legen. Es gibt immer Abweichungen aber die Methode der kleinsten Quadrate sorgt dafür, dass die Gesamtfläche der Quadrate dieser Abweichungen über dem Intervall [1,3] so klein wie möglich wird.
+
+Da wir ein Polynom 3. Grades suchen scheiben wir zunächst die allgemeine Form auf:
+
+$$
+p(x)=a_{0}\cdot1+a_{1}\cdot x+a_{2}\cdot x ^2+a_{3}\cdot x ^3
+$$
+
+Das Ziel ist es dabei die vier Unbekannten a0, a1, a2, a3 zu bestimmen. In der Funktionsanalysis nutzt man für solche Aufgaben ein "L2-Skalarprodukt". Für zwei Funktionen g und h im Intervall [1,3] ist das definiert als:
+
+$$
+(g;h)=\int_{1}^3 g(x)\cdot h(x)dx
+$$
+Normalgleichungen:
+$$
+(p;1)=(x ^4;1)\;\;\;\;(p;x)=(x ^4;x)\;\;\;\;(p;x ^2)=(x ^4;x ^2)\;\;\;\;(p;x ^3)=(x ^4;x ^3)
+$$
+Gleichungssystem Aufstellen:
+$$
+\begin{bmatrix}
+(1;1) & (x;1) & (x ^2;1) & (x ^3;1) \\
+(1;x) & (x;x) & (x ^2;x) & (x ^3;x) \\
+(1;x ^2) & (x;x ^2) & (x ^2;x ^2) & (x ^3;x ^2) \\
+(1;x ^3) & (x;x ^3) & (x ^2;x ^3) & (x ^3;x ^3)
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+a_{0} \\
+a_{1} \\
+a_{2} \\
+a_{3}
+\end{bmatrix}
+=
+\begin{bmatrix}
+(x ^4;1) \\
+(x ^4;x) \\
+(x ^4;x ^2) \\
+(x ^4;x ^3)
+\end{bmatrix}
+$$
+Dies ausgerechnet ergibt nun folgendes:
+$$
+N=3 \;\;\; i=0..N \;\;\; j=0..N
+$$
+$$
+G_{i,j}=\int_{1}^3 x ^i \cdot x ^jdx \;\;\; b_{i}=\int_{1}^3 x ^4\cdot x ^idx
+$$
+$$
+G=
+\begin{bmatrix}
+2 & 4 & 8,667 & 20 \\
+4 & 8,667 & 20 & 48,4 \\
+8,667 & 20 & 48,4 & 121,333 \\
+20 & 48,4 & 121,333 & 312,286
+\end{bmatrix}
+\;\;\;\;\;
+b=
+\begin{bmatrix}
+48,4 \\
+121,333 \\
+312,286 \\
+820
+\end{bmatrix}
+$$
+Im letzten Schritt müssen nun noch unsere $a_{0},a_{1},a_{2},a_{3}$ ausgerechnet und eingesetzt werden:
+$$
+G ^-1 \cdot b=
+\begin{bmatrix}
+-12,657 \\
+28,571 \\
+-23,143 \\
+8
+\end{bmatrix}
+$$
+$$
+p(x)=-12,657+28,571\cdot x-23,143\cdot x ^2+8\cdot x ^3
+$$
+![[Pasted image 20260217084304.png|500]]

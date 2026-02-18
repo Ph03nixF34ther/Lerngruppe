@@ -56,33 +56,6 @@ Man rechnet wie mit reellen Zahlen aber berücksichtigt $\mathrm{i}^2 = -1$
 Da die komplexen Zahlen $\mathbb{C}$ die reellen Zahlen $\mathbb{R}$ erweitern, kann jede reelle Zahl $\mathbb{R}$ auch als eine komplexe Zahl $\mathbb{C}$ mit $0$ für den imaginären Teil dargestellt werden
 $$5 = 5 + 0\mathrm{i}$$
 
-> [!Tip]- Rechenbeispiele
-> 
-> Vereinfache: 
-> 
-> $(2 - 5\mathrm{i}) + (5 + 2\mathrm{i})$
-> > [!Success]- Lösung
-> > $= 2 - 5\mathrm{i} + 5 + 2\mathrm{i}$
-> > $= 2 + 5 + 2\mathrm{i} - 5\mathrm{i}$
-> > $\underline{= 7 - 3\mathrm{i}}$
-> 
-> $(1 + \mathrm{i})^4$
-> > [!Success]- Lösung
-> > $= (( 1 + \mathrm{i})( 1 + \mathrm{i}))^2$
-> > $= (1 + 2\mathrm{i} + \mathrm{i}^2)^2$
-> > $= (1 + 2\mathrm{i} - 1)^2$
-> > $= (2\mathrm{i})^2$
-> > $= 4\mathrm{i}^2$
-> > $= 4 * (-1)$
-> > $\underline{= -4}$
-> 
-> $\dfrac{4 + 5\mathrm{i}}{3 - 4\mathrm{i}}$
-> > [!Success]- Lösung
-> > $=\dfrac{(4 + 5\mathrm{i}) * (3 + 4\mathrm{i})}{(3 - 4\mathrm{i}) * (3 + 4\mathrm{i})}$
-> > $=\dfrac{12 + 16\mathrm{i} + 15\mathrm{i} + 20\mathrm{i}^2}{9 - (\mathrm{4i})^2}$
-> > $= \dfrac{12 + 16\mathrm{i} + 15\mathrm{i} + 20 (-1)}{9 - 16(-1)}$
-> > $\underline{= \dfrac{-8 + 31\mathrm{i}}{25} = - 0.32 + 1.24\mathrm{i}}$
-
 ---
 
 ## Darstellung als Punkte
