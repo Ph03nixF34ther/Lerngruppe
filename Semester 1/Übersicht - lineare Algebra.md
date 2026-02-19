@@ -33,6 +33,7 @@
     18. [[Krylow-Matrix]]
     19. Cholesky-Zerlegung
     20. [[QR-Zerlegung]]
+    21. [[Exponential berechnen]]
 3. Komplexe Zahlen
 	1. [[Komplexe Zahlen|Was sind Komplexe Zahlen]]
     2. [[Rechenregeln Komplexe Zahlen|Rechenregeln der komplexen Zahlen]]
