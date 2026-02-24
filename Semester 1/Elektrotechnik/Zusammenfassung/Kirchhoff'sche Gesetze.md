@@ -59,7 +59,7 @@ $$
 \end{tikzpicture}
 \end{document}
 ```
-> Das zweite Kirchhoff'sche Gesetz besagt, dass die Summe aller durch einer Massche auftretenden Spannungen zusammen $0$ ergeben.
+> Das zweite Kirchhoff'sche Gesetz besagt, dass die Summe aller durch einer Masche auftretenden Spannungen zusammen $0$ ergeben.
 
 $$
 \sum U_{k} = 0
