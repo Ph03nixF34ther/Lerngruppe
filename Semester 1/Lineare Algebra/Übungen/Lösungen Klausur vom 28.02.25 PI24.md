@@ -1,5 +1,5 @@
 
-### Aufgab 1
+### Aufgabe 1
 Ausmultiplizieren:
 $$
 p(x)=(x-1)\cdot(x-4)\cdot(x-9)
@@ -458,14 +458,14 @@ $$
 $$
 ### Aufgabe 8
 
-Man approximiere das Monomial x^4 im Sinne der kleinsten Quadrate durch
-ein Polynomial p(x) vom Grad 3 über dem Fundamental-Intervall [1,3]!
+Man approximiere das Monomial $x^4$ im Sinne der kleinsten Quadrate durch
+ein Polynomial p(x) vom Grad 3 über dem Fundamental-Intervall $[1,3]$!
 
 Monomial: $f(x)=x ^4$
 
 Was bedeutet im "Sinne der kleinsten Quadrate"?
 
-Stell dir vor du zeichnest $x^4$ auf Papier. Jetzt versuchen wir eine Kurve 3. Gerades darüber zu legen. Es gibt immer Abweichungen aber die Methode der kleinsten Quadrate sorgt dafür, dass die Gesamtfläche der Quadrate dieser Abweichungen über dem Intervall [1,3] so klein wie möglich wird.
+Stell dir vor du zeichnest $x^4$ auf Papier. Jetzt versuchen wir eine Kurve 3. Gerades darüber zu legen. Es gibt immer Abweichungen aber die Methode der kleinsten Quadrate sorgt dafür, dass die Gesamtfläche der Quadrate dieser Abweichungen über dem Intervall $[1,3]$ so klein wie möglich wird.
 
 Da wir ein Polynom 3. Grades suchen scheiben wir zunächst die allgemeine Form auf:
 
@@ -473,7 +473,7 @@ $$
 p(x)=a_{0}\cdot1+a_{1}\cdot x+a_{2}\cdot x ^2+a_{3}\cdot x ^3
 $$
 
-Das Ziel ist es dabei die vier Unbekannten a0, a1, a2, a3 zu bestimmen. In der Funktionsanalysis nutzt man für solche Aufgaben ein "L2-Skalarprodukt". Für zwei Funktionen g und h im Intervall [1,3] ist das definiert als:
+Das Ziel ist es dabei die vier Unbekannten $a_{0}, a_{1}, a_{2}, a_{3}$ zu bestimmen. In der Funktionsanalysis nutzt man für solche Aufgaben ein "L2-Skalarprodukt". Für zwei Funktionen g und h im Intervall $[1,3]$ ist das definiert als:
 
 $$
 (g;h)=\int_{1}^3 g(x)\cdot h(x)dx
