@@ -56,33 +56,6 @@ Man rechnet wie mit reellen Zahlen aber berücksichtigt $\mathrm{i}^2 = -1$
 Da die komplexen Zahlen $\mathbb{C}$ die reellen Zahlen $\mathbb{R}$ erweitern, kann jede reelle Zahl $\mathbb{R}$ auch als eine komplexe Zahl $\mathbb{C}$ mit $0$ für den imaginären Teil dargestellt werden
 $$5 = 5 + 0\mathrm{i}$$
 
-> [!Tip]- Rechenbeispiele
-> 
-> Vereinfache: 
-> 
-> $(2 - 5\mathrm{i}) + (5 + 2\mathrm{i})$
-> > [!Success]- Lösung
-> > $= 2 - 5\mathrm{i} + 5 + 2\mathrm{i}$
-> > $= 2 + 5 + 2\mathrm{i} - 5\mathrm{i}$
-> > $\underline{= 7 - 3\mathrm{i}}$
-> 
-> $(1 + \mathrm{i})^4$
-> > [!Success]- Lösung
-> > $= (( 1 + \mathrm{i})( 1 + \mathrm{i}))^2$
-> > $= (1 + 2\mathrm{i} + \mathrm{i}^2)^2$
-> > $= (1 + 2\mathrm{i} - 1)^2$
-> > $= (2\mathrm{i})^2$
-> > $= 4\mathrm{i}^2$
-> > $= 4 * (-1)$
-> > $\underline{= -4}$
-> 
-> $\dfrac{4 + 5\mathrm{i}}{3 - 4\mathrm{i}}$
-> > [!Success]- Lösung
-> > $=\dfrac{(4 + 5\mathrm{i}) * (3 + 4\mathrm{i})}{(3 - 4\mathrm{i}) * (3 + 4\mathrm{i})}$
-> > $=\dfrac{12 + 16\mathrm{i} + 15\mathrm{i} + 20\mathrm{i}^2}{9 - (\mathrm{4i})^2}$
-> > $= \dfrac{12 + 16\mathrm{i} + 15\mathrm{i} + 20 (-1)}{9 - 16(-1)}$
-> > $\underline{= \dfrac{-8 + 31\mathrm{i}}{25} = - 0.32 + 1.24\mathrm{i}}$
-
 ---
 
 ## Darstellung als Punkte
@@ -97,19 +70,13 @@ Hier sind die Zahlen $-4$, $-\dfrac{1}{3}$, $\sqrt{2}$, $2$ und $\pi$ auf dem Za
 \usepackage{pgfplots}
 
 \begin{document}
-\begin{tikzpicture}[
-    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
-    filled/.style={dot},
-    open/.style={dot=white}
-]
+\begin{tikzpicture}
 \begin{axis}[
-    x=40pt,
-    y=40pt,
+    width=\textwidth,
+    clip=false,
     axis y line=none,
     axis x line=center,
-    xtick={-5,...,0,...,5},
-    xmin=-5, xmax=5, 
-    ymin=0, ymax=0
+    xmin=-5, xmax=5,
 ]
 \addplot coordinates {(2,0)} node[above]{$2$};
 \addplot coordinates {(-4,0)} node[above]{$-4$};
@@ -133,17 +100,14 @@ Gauß kam auf die Idee die Zahlengerade auf die zweite Dimension zu erweitern un
 \usepackage{pgfplots}
 
 \begin{document}
-\begin{tikzpicture}[
-    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
-    filled/.style={dot},
-    open/.style={dot=white}
-]
+\begin{tikzpicture}
 \begin{axis}[
-    x=40pt,
-    y=40pt,
+    width=\textwidth,
+    height=50pt, % Minimal height 
+    scale only axis, 
+    clip=false,
     axis y line=none,
     axis x line=center,
-    xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
     ymin=0, ymax=2
 ]
@@ -159,18 +123,13 @@ Das lässt sich auf alle komplexen Zahlen $a + b\mathrm{i}$ übertragen wo $a$ a
 \usepackage{pgfplots}
 
 \begin{document}
-\begin{tikzpicture}[
-    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
-    filled/.style={dot},
-    open/.style={dot=white}
-]
+\begin{tikzpicture}
 \begin{axis}[
-	x=40pt,
-    axis y line=center,
-    axis x line=center,
+	width=\textwidth,
+    axis lines=center,
     xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
-    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $1\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
     ytick={-2,...,0,1,2,3,4,5},
     ymin=-2, ymax=5
 ]
@@ -191,18 +150,13 @@ Wie wir zuvor festgestellt haben lassen sich reelle Zahlen als $a+0\mathrm{i}$ d
 \usepackage{pgfplots}
 
 \begin{document}
-\begin{tikzpicture}[
-    dot/.style={draw, fill=#1, circle, inner sep=1.5pt},
-    filled/.style={dot},
-    open/.style={dot=white}
-]
+\begin{tikzpicture}
 \begin{axis}[
-	x=40pt,
-    axis y line=center,
-    axis x line=center,
+	width=\textwidth,
+    axis lines=center,
     xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
-    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $1\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
     ytick={-2,...,0,1,2,3,4,5},
     ymin=-2, ymax=5
 ]
@@ -271,7 +225,7 @@ Dieses Konzept lässt sich genauso auf komplexe Zahlen übertragen
     axis x line=center,
     xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
-    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $1\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
     ytick={-2,...,0,1,2,3,4,5},
     ymin=-2, ymax=5
 ]
@@ -308,7 +262,7 @@ $\vec{z_1} = \vec{z_2}$
     axis x line=center,
     xtick={-5,...,0,...,5},
     xmin=-5, xmax=5, 
-    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $1\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
+    yticklabels={$-2\mathrm{i}$, $-1\mathrm{i}$, 0, $\mathrm{i}$, $2\mathrm{i}$, $3\mathrm{i}$, $4\mathrm{i}$, $5\mathrm{i}$},
     ytick={-2,...,0,1,2,3,4,5},
     ymin=-2, ymax=5
 ]

@@ -1,4 +1,4 @@
-#Rang 
+
 
 Der Rang einer Matrix wird durch die linear unabhängigen Vektoren bestimmt. Dabei wird der Höchstmögliche Rang durch die Dimension bestimmt. Bei einer Quadratischen Matrix ist der Rang maximal gleich der Dimension der Matrix. Dementsprechend ist der rang einer $3*3$ Matrix maximal 3. Bei Unsymmetrischen Matrizen bestimmt den Maximalen Rang die geringste Zeilen beziehungsweise Spalten Anzahl. Bei einer $2*4$ Matrix wäre der höchstmögliche Rang 2. Andersrum bei einer $5*3$ Matrix wäre er 3.
 Wenn die Determinante = 0 ist, ist der Rang automatisch kleiner als das Maximum.
@@ -58,7 +58,7 @@ $$
 Anschließend werden alle Zeilen gezählt, die nicht nur Nullen enthalten. 
 In diese fall ist das 3. Der Rang dieser Matrix ist also 3. 
 
-Ein weiteres Beispiel an dieser $34$ Matrix:
+Ein weiteres Beispiel an dieser $3\cdot4$ Matrix:
 $$
 M =
 \left[

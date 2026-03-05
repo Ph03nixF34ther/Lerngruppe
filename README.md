@@ -182,15 +182,6 @@ Jetzt gibt es zwei Fälle:
 
 Der Git-Pull funktioniert wie geplant und du bist fertig
 
-#### Oh nein es beschwert sich
-
-// TODO
-
----
-
-(**Optional**)
-
-
 ---
 
 ## Obsidian
@@ -214,7 +205,9 @@ Möchtest du nur Lernen empfehlen wir den Read-Mode einzuschalten um das Bearbei
 Damit kann mit unseren Notizen gelernt werden.
 
 Um Schaltungen in der Elektrotechnik ansehen zu können, benötigen wir allerdings noch eine Erweiterung.
-Diese findet man unter Einstellungen > Externe Erweiterungen > Community Erweiterungen aktivieren > Durchsuchen > "TikZJax" suchen > Installieren > Aktivieren
+
+Weil diese schon lange kein Update mehr erhalten hat, ist unsere Variante schon installiert und wir müssen sie nur aktivieren
+Diese findet man unter Einstellungen > Externe Erweiterungen > Community Erweiterungen aktivieren > TikZJax.PDF > Aktivieren
 
 Und fertig! (diesmal aber wirklich)
 

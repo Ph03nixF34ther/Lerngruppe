@@ -346,8 +346,20 @@ $$
 \implies I = \frac{U}{R} - \frac{U}{R} \cdot e^{-\frac{R}{L} \cdot t }
 $$
 $$
-i = \frac{U}{R} \cdot \left( 1 - e^{-\frac{R}{L} \cdot t } \right) = \frac{U}{R} \cdot (1 - e^{-\frac{R}{L} \cdot t })
+i = \frac{U}{R} \cdot \left( 1 - e^{-\frac{R}{L} \cdot t } \right) = \frac{U}{R} \cdot (1 - e^{-\frac{t}{\tau}})
 $$
 $$
 \tau = \frac{L}{R} \hspace{2 cm} \text{Zeitkonstante}
 $$
+Resonanzfrequenz: Strom hat ein Minimum
+$\implies$ Größter Scheinwiderstand / kleinste Admittanz
+$$
+\underline{I} = \frac{U}{\underline{z}}
+$$
+$\implies$ Sperrkreis
+
+bei $\omega_{1}$ und $\omega_{2}$ gilt:
+$$
+I(\omega_{1}) = I (\omega_{2}) = I_{R} \cdot \sqrt{ 2 }
+$$
+Bandbreite $m = f_{2} - f_{1}$

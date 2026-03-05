@@ -2,9 +2,9 @@
     1. [[Das gaußsche Eliminationsverfahren]]
     2. [[Der Gauß-Jordansche Algorithmus]]
     3. [[Die Cramersche Regel]]
-    4. [[Die lineare Abhängigkeit von LGS]]
-    5. [[Parameterabhängige LGS]]
-    6. [[Aufgabe - Kaffeeplantage]]
+    4. [[Parameterabhängige LGS]]
+    5. [[Aufgabe - Kaffeeplantage]]
+    6. System mit komplexer Lösung
 2. Matrixoperationen
     1. [[Grundlegende Matrix Operationen]]
         1. [[Grundlegende Matrix Operationen#Multiplikation von Matrizen|Multiplikation von Matrizen]]
@@ -16,27 +16,29 @@
         7. [[Grundlegende Matrix Operationen#Determinante von Matrizen (siehe Addition)|Determinanten]]
     2. [[Grundlegende Matrix Operationen#Assoziativität bei Matrizen|Assoziativität]]
     3. [[Grundlegende Matrix Operationen#Distributivität bei Matrizen|Distributivität]]
-    4. Charakteristisches Polynom
+    4. [[Charakteristische Polynome]]
     5. Euklidische länge
-    6. [[Rang]](Leon)
-    7. [[Vollrangzerlegung]](Leon)
-    8. [[Linearkombinationen von Vektoren]](Leon)
-    9. Eigenwerte und Eigenvektoren (Leon)
-    10. Formel von Rodrigues
-    11. Jacobi-Matrix
-    12. Natürlicher Logarithmus
-    13. Hesse-Matrix
-    14. Begleitmatrix
-    15. Vandermonde-Matrix
-    16. Koeffizienten Matrix
-    17. Krylow-Matrix
-    18. Cholesky-Zerlegung
-    19. QR Zerlegung(Emil)
-3. Komplexe Zahlen (Lenny)
+    6. [[Rang]]
+    7. [[Vollrangzerlegung]]
+    8. [[Linearkombinationen von Vektoren]]
+    9. [[Die lineare Abhängigkeit von LGS]]
+    10. [[Eigenwerte und Eigenvektoren]]
+    11. [[Rotation eines Teilchens um eine Rotationsachse]]
+    12. [[Formel von Rodrigues]]
+    13. Jacobi-Matrix
+    14. [[Hesse-Matrix]]
+    15. [[Begleitmatrix]]
+    16. [[Vandermonde-Matrix]]
+    17. [[Koeffizienten-Matrix]]
+    18. [[Krylow-Matrix]]
+    19. Cholesky-Zerlegung
+    20. [[QR-Zerlegung]]
+    21. [[Exponential berechnen]]
+3. Komplexe Zahlen
 	1. [[Komplexe Zahlen|Was sind Komplexe Zahlen]]
     2. [[Rechenregeln Komplexe Zahlen|Rechenregeln der komplexen Zahlen]]
     3. [[Polar-Koordinaten-Form]]
     4. Taylorpolynome
-    5. Eulersche Form
+    5. [[Eulersche Form]]
 4. Weitere Verfahren
 	1. [[Newton Verfahren]]
