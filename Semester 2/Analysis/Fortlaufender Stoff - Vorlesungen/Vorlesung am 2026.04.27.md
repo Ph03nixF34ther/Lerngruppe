@@ -70,13 +70,13 @@ $$
 Diesen Grenzwert kann man mittels der Fourier-Reihe berechnen.
 Geometrische Reihe:
 
-$$
-\sum_{k=0}^{\infty} q^k
-$$
+$$\begin{array}{l|l}
+\displaystyle\sum_{k=0}^{\infty} q^k = \dfrac{1}{1 - q} & \text{if } \left| q \right| < 1
+\end{array}$$
 Übung: Man berechne die Summe
 $$
 \sum_{k=0}^{\infty} \frac{2^k}{3^{k+2}}
 $$
 $$
-\frac{1}{9} \cdot\sum_{k=0}^{\infty} \left( \frac{2}{3} \right)^k = \frac{1}{9 \cdot \left( 1-\frac{2}{3} \right)} = \frac{1}{3}
+\frac{1}{9} \cdot\sum_{k=0}^{\infty} \left( \frac{2}{3} \right)^k = \dfrac{1}{9} \cdot \dfrac{1}{1-\frac{2}{3}} = \frac{1}{9 \cdot \left( 1-\frac{2}{3} \right)} = \frac{1}{3}
 $$
