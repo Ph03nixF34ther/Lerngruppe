@@ -131,3 +131,8 @@ Bei [[Special Files]] wird anstatt dem Erstellungsdatum die major device und die
 
 Die Werte für Erstellungs-, Modifikations- und Zugriffsdatum werden in der sog. Unix-Zeit angegeben, (in Sekunden seit dem 1.1.1970)
 
+(Straight aus dem Skript kopiert)
+Der in der i-node enthaltene Teil zum Lokalisieren der Datenblöcke besteht bspw. aus 13 Einträgen. Davon verweisen die ersten 10 direkt auf Datenblöcke. Das heißt, bei einer beispielhaft angenommenen Blockgröße von 512 Byte reichen diese Verweise für Dateien mit einer Dateigröße von bis zu 5 KByte aus. Wird die Datei größer, so zeigt der 11. Eintrag auf einen Block, der (bei einer beispielhaft angenommenen Verweisgröße von 4 Byte) die Verweise auf die nächsten 128 Datenblöcke enthält. Reicht auch das nicht aus, so folgt im 12. Eintrag ein Verweis auf einen Block mit 128 Verweisen auf Blöcke, die wiederum 128 Verweise auf Datenblöcke besitzen. Reichen auch diese Verweise nicht aus, so erfolgt im 13. Eintrag ein Verweis auf einen Block, der 128 Verweise auf Blöcke enthält, die wiederum 128 Verweise auf Blöcke enthalten, die ihrerseits je 128 Verweise auf Datenblöcke enthalten. Das dürfte auch für sehr große Dateien ausreichen. In unserem Beispiel mit einer Blockgröße von 512 Byte wäre die theoretische Dateigröße auf $(10 + 128 + 128 \cdot 128 + 128 \cdot 128 \cdot 128) \cdot 512 = 1.082.201.088 \text{ Bytes} = 1.056.837 \text{ KBytes} ≈ 1.032 \text{ MBytes} ≈ 1 \text{ GByte}$ begrenzt.
+
+![[Inode_Struktur.svg#invert]]
+
