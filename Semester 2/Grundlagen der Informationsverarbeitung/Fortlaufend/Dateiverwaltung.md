@@ -75,3 +75,59 @@ Die Wurzel des B-Baums bildet den Masterindex
 Besitzt generell keine Verweise auf Datensätze sondern auf weiter Indexblöcke
 
 Ein [[Satz|Datensatz]] wird mit üblichen Suchstrategien gefunden
+
+# Interne Struktur
+
+Unix spaltet den physischen Datenträger in mehrere Teile ([[Partition|Partitionen]]), welche mehrere voneinander unabhängige und gegenüber abgesicherte [[Dateisystem|Dateisysteme]] sind, auf
+
+Aufbau in folgende Blöcke:
+
+- log. Block $0$ - (Boot Block) - Boot Anfangslader (nur bei root file system verwendet)
+- log. Block $1$ (Superblock)
+- log. Blöcke $2 ... \text{n}$ (i-node-list) - Liste der Dateideskriptoren
+- log. Blöcke $\text{n}+1 ... \text{m}$ – Datenblöcke für die Speicherung der eigentlichen Nutzdaten
+
+![[Blöcke.drawio.svg]]
+
+## Superblock
+
+Enthält alle Verwaltungsinformationen zum [[Dateisystem]] selbst
+
+- Größe des [[Dateisystem|Dateisystems]] in [[Block|Blöcken]]
+- Name der logischen Datenträgers
+- Name des Dateisystems
+- Größe der i-node-list
+- Blockgröße des Dateisystems
+- Zeiger auf das erste Element der Liste des freien Datenblöcke
+- Zeiger auf das erste Element der Liste der freien i-nodes
+- Datum der letzten Modifikation
+- Datum der letzten Sicherung
+- Indikatoren zum Blockieren des Zugriffs bei Korrekturoperationen
+- Mount Bit
+
+Beim Montieren eines [[Dateisystem|Dateisystems]] wird der Superblock in den Hauptspeicher geladen und gehalten
+
+## i-node-Liste
+
+Hier sind alle [[Dateideskriptor|Dateideskriptoren]] aller [[Datei|Dateien]] gespeichert
+
+Ein Element wird i-node genannt
+
+- Dateityp (reguläre Datei, Verzeichnis, spezielles File)
+- Zugriffsrechte (Eigentümer, Gruppe, Andere)
+- Zahl der Referenzen (links) auf die Datei
+- Eigentümer (UID des Eigentümers)
+- Gruppenzugehörigkeit
+- Länge in Byte
+- Datum und Zeit der Erzeugung
+- Datum und Zeit der letzten Modifikation
+- Datum und Zeit des letzten Zugriffs
+- direkte Verweise auf Datenblöcke
+- Verweis auf Indirektionsblöcke Stufe 1
+- Verweis auf Indirektionsblöcke Stufe 2
+- Verweis auf Indirektionsblöcke Stufe 3
+
+Bei [[Special Files]] wird anstatt dem Erstellungsdatum die major device und die minor device number gespeichert
+
+Die Werte für Erstellungs-, Modifikations- und Zugriffsdatum werden in der sog. Unix-Zeit angegeben, (in Sekunden seit dem 1.1.1970)
+
