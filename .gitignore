@@ -11,3 +11,4 @@
 !.obsidian/plugins/
 .obsidian/plugins/*
 !.obsidian/plugins/tikz/
+!.obsidian/snippets/
