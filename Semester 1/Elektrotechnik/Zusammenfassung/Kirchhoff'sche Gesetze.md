@@ -1,7 +1,9 @@
 # Übersicht
+
 Die Kirchhoff'schen Regeln werden im Rahmen der elektrischen Schaltungstechnik bei der Netzwerkanalyse verwendet. Sie unterteilen sich in zwei grundlegende und zusammenhängende Sätze, den Knotenpunktsatz und den Maschensatz, und beschreiben jeweils den Zusammenhang zwischen mehreren elektrischen Strömen und zwischen mehreren elektrischen Spannungen in elektrischen Netzwerken. Sie wurden 1845 von Gustav Robert Kirchhoff formuliert, nachdem sie bereits 1833 von Carl Friedrich Gauß entdeckt worden waren.
 
 # 1. Kirchhoff'sches Gesetz: Die Knotenregel
+
 ```tikz
 \usepackage{circuitikz}
 \begin{document}
