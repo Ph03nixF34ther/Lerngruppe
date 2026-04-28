@@ -3,7 +3,7 @@ Bezieht sich auf das gesamte Spektrum an [[Software]] und Technologien, die erfo
 - Rechnen-Ressource: Lokal | Cloud
 - [[Virtualisierung]]
 - [[Netzwerk]] ([[Virtual Private Network|VPN]])
-- [[Betriebssystem]] 
+- [[00 Inhalte]] 
 - [[Datenbank|Datenbanken]] 
 - [[Anwendungs-Middleware]]
 - [[Entwicklungs-Framework]] 
