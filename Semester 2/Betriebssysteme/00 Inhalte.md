@@ -10,7 +10,8 @@ aliases:
 ## Klausur 
 - 60 Minuten
 - Keine Unterlagen
-- Fragenkatalog 
+- Fragenkatalog
+- Barié und Zeh Klausur werden Zusammengefasst
 
 ## Inhalte:
 [[01 Aufgaben und Architektur von Betriebssysteme]]
@@ -21,6 +22,7 @@ aliases:
 [[06 Speicherverwaltung]]
 [[07 Prozess- und Ressourcenverwaltung]]
 [[08 IT-Sicherheit von Betriebssystemen und Netzwerke]]
+[[10 Klausur fragen]]
 
 ## Literaturempfehlung:
 - Moderne Betriebssysteme, Andrew Tanenbaum
