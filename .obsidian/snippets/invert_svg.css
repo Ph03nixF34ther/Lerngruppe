@@ -1,0 +1,12 @@
+/* Invert dark images for dark theme */
+.theme-dark div[src$="#invert"] img,
+.theme-dark span[src$="#invert"] img {
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+
+/* Invert light images for light theme */
+.theme-light div[src$="#invertW"] img,
+.theme-light span[src$="#invertW"] img {
+  filter: invert(1) hue-rotate(180deg);
+}
