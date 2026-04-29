@@ -7,3 +7,4 @@
 		1. [[Leibnizsches Kriterium]]
 		2. [[Quotienten-Kriterium]]
 		3. [[Wurzel-Kriterium]]
+	3. [[Taylorreihen]]
