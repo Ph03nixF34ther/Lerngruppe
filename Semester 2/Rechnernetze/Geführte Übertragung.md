@@ -1,0 +1,1 @@
+Signal wird über eine Leitung übertragen
