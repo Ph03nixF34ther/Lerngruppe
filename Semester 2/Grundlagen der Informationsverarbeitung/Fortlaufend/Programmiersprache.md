@@ -76,4 +76,6 @@ Beispiele: Smalltalk, C++, Java usw.
 
 Orientieren sich an der Hardware
 Unterscheidet sich von Maschinentyp zu Maschinentyp
+-> Befehlssatz hängen von [[Zentraleinheit|CPU]] ab
 
+Programme bestehen aus einer Menge von [[Befehl|Befehlen]]
