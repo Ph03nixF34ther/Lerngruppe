@@ -1,0 +1,1 @@
+Jeder Teil der Nachricht wird sofort weitergeleitet
