@@ -1,5 +1,6 @@
 ---
 aliases:
+  - syntaktisch
 ---
 Kommt aus dem Griechischen und steht für "Zusammenordnung" oder "Lehre vom Satzbau"
 

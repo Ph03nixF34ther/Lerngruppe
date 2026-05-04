@@ -2,6 +2,9 @@
 aliases:
   - Worte
   - Worten
+  - Zeichenfolge
+  - Zeichenfolgen
+  - Wörtern
 ---
 Aus den [[Buchstabe|Buchstaben]] eines [[Alphabet|Alphabets]] lassen sich durch Aneinanderreihung Worte $w$ bilden
 
