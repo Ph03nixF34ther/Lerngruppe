@@ -1,5 +1,5 @@
 1. [[Newton Verfahren]]
-2. [[Folgen]]
+2. [[Folge|Folgen]]
 	1. [[Geometrische Folge]]
 3. [[Reihe]]
 	1. [[Partialbruchzerlegung]]
@@ -8,3 +8,5 @@
 		2. [[Quotienten-Kriterium]]
 		3. [[Wurzel-Kriterium]]
 	3. [[Taylorreihen]]
+4. [[Funktion|Funktionen]]
+	1. [[Stetigkeit]]
