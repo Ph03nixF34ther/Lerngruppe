@@ -6,7 +6,7 @@ $A = \left\{ I, O, Q, \delta, q_0, F \right\}$
 - $Q$ steht für die endliche Menge an Zuständen, die sich in dem Automat befinden können
 - $\delta$ steht für eine Überführungsfunktion, die den Automaten, in Abhängigkeit von einem gelesenen Zeichen und dem augenblicklichen Zustand, in einen anderen Zustand überführt
 - $q_0 \in Q$ bezeichnet den Startzustand, in dem sich der Automat am Anfang befindet
-- $F \in Q$ bezeichnet die teilmenge aller Endzustände (Finalzustände), bei deren Erreichen der Automat eine erfolgreich abgearbeitet Aufgabe anzeigt
+- $F \in Q$ bezeichnet die Teilmenge aller Endzustände (Finalzustände), bei deren Erreichen der Automat eine erfolgreich abgearbeitet Aufgabe anzeigt
 
 Ein Automat der bei dem Eingabealphabet $\left\{ a,b \right\}$ weder $aa$ noch $bb$ enthalten darf:
 
