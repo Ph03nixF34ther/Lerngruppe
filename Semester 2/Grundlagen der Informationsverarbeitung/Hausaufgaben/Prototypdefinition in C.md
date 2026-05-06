@@ -25,7 +25,7 @@ Die Rückgabetypen können sein:
 Für die Bezeichnung der Funktion gilt die Regel, sie muss mit einem Buchstaben beginnen. Es dürfen sonst zahlen, Buchstaben und Unterstriche genutzt werden:
 
 ```Gramatik
-<Bezeichner> ::= <Buchstabe> | <Buchstabe><Zeichenkette>
+<Bezeichner> ::= <Buchstabe> | <Buchstabe><Zeichenkette> | _<Zeichenkette>
 <Zeichenkette> ::= <Zeichen> | <Zeichen><Zeichenkette>
 <Zeichen> ::= <Buchstabe> | _ | <Zahl>
 <Buchstabe> ::= a | b | ... | z | A | B | ... | Z
