@@ -20,6 +20,7 @@ $$
 - Automatisierung von Vorgängen
 - Ermöglichen einer einfachen u. Benutzerfreundlichen Bedienung
 - Ziel: Vereinfachung der Nutzung, Vermeidung von Fehler
+#### Mittel und Wege zur Abstraktion:
 - Bereitstellen von Ein- und Ausgabeschnittstellen
 	- standardisierte, aufgabenorientierte Schnittstellen
 - Definition von Nutzungskonzepten
@@ -35,10 +36,12 @@ $$
 - Laden von Programmen
 - Erzeugen von Prozessen
 - Operationen für A/E-Geräte
+	- In der Regel keine Nutzerkontrolle über diese Geräte
 - Interprozesskontrolle
 - Ziel: Privilegiensystem zum Schutz der Anwendung untereinander
+#### Realisierung der Anwenderdienste:
 - Systemaufruf
-	- Zugriff auf vom BS bereitgestellte Funktionalitäten(Bsp.: Lesen/Schreiben) 
+	- Zugriff auf vom BS bereitgestellte Funktionalitäten (Bsp.: Lesen/Schreiben) 
 - Application Programming Interface
 	- Von Software zur Verfügung gestellter Programmteil
 	- Programmierschnittstelle, meist auf Quelltextebene
@@ -50,11 +53,12 @@ $$
 - Steuern von Abläufen
 - Strategien zur Ressourcenverwaltung (Scheduling)
 - Ziel: Effizient, zuverlässige und sichere Ressourcennutzung
+#### Methoden zur Ressourcenverwaltung:
 - Priorisierung von Prozessen
 	- Systemprozesse vor Anwendungsprozessen bspw.
 - Steuern von Abläufen
 	- Regelungen von Zugriffszeiten
-	- Vermeidung von Deadlocks oder Speicherverletzungen
+	- Vermeidung von Deadlocks (Semaphore) oder Speicherverletzungen
 - Strategien zur Ressourcenverwaltung (Scheduling)
 	- Auch hier Verwendung von Priorisierung und Aufteilung der CPU-Zeiten bspw.
 
@@ -64,23 +68,24 @@ $$
 	- Programmierung mittels Lochkarten oder Magnetstreifen
 - Programmabfolge erfolge nacheinander
 	- kein Multitasking und keine parallelen Aufgaben
-- Dialogbetrieb (Interactive-Processing)
-	- Steuerung des Systems über ein Dialog
-	 -> Eingabe werden mit Ausgaben beantwortet
-	- Verwendung von E/A-Geräten
-	 -> Maus/ Tastatur/Gamepads und Bildschirme
-	- Dargestellte Oberfläche können textbasiert oder Grafisch sein
-- Netzwerkbetriebssystem (Network-Processing)
-	- Sind darauf ausgelegt, dass Rechner mit anderen Rechnern in einem Netzwerk arbeiten und kommunizieren
-	- zugriff und Verwendung von fremden Ressourcen und Daten von Rechnern innerhalb des Netzwerks
-	- Unterschiede in Peer-To-Peer-Systeme und Client-Server-Systeme 
-- Realzeit-Betriebssysteme (Realtime-Prozessing)
-	- Reagiert in Echtzeit mit Eingabegeräte (Sensoren)
-	- werden hauptsächlich für Steuerungs- oder Regelungsaufgaben genutzt 
-	 -> meist in Embedded-Bereich zu finden
-	- Fokus liegt auf kurzen Verarbeitungs- und Antwortzeit der einzelnen Prozessen und Aufgaben
-	- Ermittlung von Informationen über Sensoren
-	- Reaktion auf Einflüsse 
+### Dialogbetrieb (Interactive-Processing)
+- Steuerung des Systems über ein Dialog
+	 - Eingabe werden mit Ausgaben beantwortet
+- Verwendung von E/A-Geräten
+	 - Maus/ Tastatur/Gamepads und Bildschirme
+- Dargestellte Oberfläche können textbasiert oder grafisch sein
+### Netzwerkbetriebssystem (Network-Processing)
+- Sind darauf ausgelegt, dass Rechner mit anderen Rechnern in einem Netzwerk arbeiten und kommunizieren
+- zugriff und Verwendung von fremden Ressourcen und Daten von Rechnern innerhalb des Netzwerks
+- Unterschiede in Peer-To-Peer-Systeme und Client-Server-Systeme 
+### Realzeit-Betriebssysteme (Realtime-Processing)
+- Reagiert in Echtzeit mit Eingabegeräte (Sensoren)
+- werden hauptsächlich für Steuerungs- oder Regelungsaufgaben genutzt 
+	 - meist in Embedded-Bereich zu finden
+- Fokus liegt auf kurzen Verarbeitungs- und Antwortzeit der einzelnen Prozessen und Aufgaben
+- Ermittlung von Informationen über Sensoren
+- Reaktion auf Einflüsse nahezu in Echtzeit (10 - 100ms)
+- Benötigen spezielle Hard- und Software
 - Universelle Betriebssysteme 
 	- Erfüllen mehrerer der vorweg genannten Kriterien
 	- Können für mehr als einen bestimmten Anwendungszwecken genutzt werden
