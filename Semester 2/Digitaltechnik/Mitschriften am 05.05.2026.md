@@ -20,6 +20,7 @@ Boolische Algebra auf ein Digitales System abbilden:
 Die Vorlesung werden in Positiver Logik gehalten.
 
 ### Digitales System:
+
 Bestehen immer aus Logik und Speicher
 - Logische Verknüpfung:
 	- Gatter 
