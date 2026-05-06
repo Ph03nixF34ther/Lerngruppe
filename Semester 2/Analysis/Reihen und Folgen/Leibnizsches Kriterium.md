@@ -2,7 +2,7 @@ Das Leibniz-Kriterium ist ein [[Konvergenzkriterien|Konvergenzkriterium]]. Diese
 
 Wenn auf eine Reihe das Leibniz-Kriterium zutrifft dann konvergiert die gesamte Reihe gegen Null. $x \to 0$.
 
-Für die Erfüllung Leibniz-Kriterium sind zwei Bedingungen nötig. Die erste ist, dass die Reihe Alternierend ist. Das bedeutet, dass die einzelnen Summanden abwechseln unterschiedliche Vorzeichen haben. 
+Für die Erfüllung Leibniz-Kriterium sind zwei Bedingungen nötig. Die erste ist, dass die Reihe alternierend ist. Das bedeutet, dass die einzelnen Summanden abwechseln unterschiedliche Vorzeichen haben. 
 $$
 	Bsp.: 1 -2 +4 -8 +16 \dots
 $$

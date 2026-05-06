@@ -38,7 +38,7 @@ $$
 - Operationen für A/E-Geräte
 	- In der Regel keine Nutzerkontrolle über diese Geräte
 - Interprozesskontrolle
-- Ziel: Privilegiensystem zum Schutz der Anwendung untereinander
+- Ziel: Privilegien System zum Schutz der Anwendung untereinander
 #### Realisierung der Anwenderdienste:
 - Systemaufruf
 	- Zugriff auf vom BS bereitgestellte Funktionalitäten (Bsp.: Lesen/Schreiben) 
