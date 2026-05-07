@@ -4,7 +4,7 @@ Ein Prozess ist der Vorgang einer algorithmisch ablaufenden Informationsverarbei
 
 # Beschreibung
 
-- Vorgang innerhalb des [[00 Inhalte|Betriebssystems]] welches durch eine [[Programm]] gesteuert wird
+- Vorgang innerhalb des [[Inhalte|Betriebssystems]] welches durch eine [[Programm]] gesteuert wird
 - Eigenschaften:
 	- Laufen geordnet ab, heißt, sie werden gestartet, überwacht und beendet
 	- Können unterbrochen werden und zu späteren Zeitpunkt fortgesetzt werden

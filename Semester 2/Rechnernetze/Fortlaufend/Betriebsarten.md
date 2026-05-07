@@ -1,3 +1,0 @@
-- [[Simplex]]
-- [[Halbduplex]]
-- [[Vollduplex]]

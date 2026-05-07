@@ -1,1 +1,0 @@
-Daten fließen nur in eine Richtung
