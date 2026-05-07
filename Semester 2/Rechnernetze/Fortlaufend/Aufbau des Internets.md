@@ -2,52 +2,20 @@
 
 ## Zentrale Netze
 
-// Image: Struktur Telefonnetz
+![[Telefonnetz.drawio.svg]]
 
-Zentralisiertes Subsidiaritätsnetz
-Herkunft: Militär - Bietet große Ziele
+Zunächst gab es zentrale Systeme, wie im Telefonnetz.
+Auch Kommunikation im Militär fand größten teils über die Telefonnetze statt.
+Die zentrale Struktur bietet allerdings große Ziele, die großen Schaden verursachen können.
 
 
 ## Dezentrale Struktur
 
-// Image: Dezentrale Struktur
+![[Internetznetz.drawio.svg]]
 
-Dezentrale Struktur von Rant 
-Besser zu verteidigen
-(Vorschlag war zunächst technologisch seiner Zeit voraus)
-Durch die ARPA 
-
-
-# Das ARPA-Net
-## Ursprüngliches Design für das ARPA-Net
-
-// ABB. ARPANET
-
-- Subnetz aus IMP (**Internet Message Processors**)
-- Paket mit vollständiger Zieladdresse
-- Daten: Host => IMP, ggf. Zerstückelung
-- 1968 Vertragsabgabe
-- 1969 Host-Software
-
-Hosts reden über ein Netz aus IMPs 
-
-- Packet nach IMP
-- IMP zerstückelt Datenpacket in 1KB Packete und sendet sie durch das IMP-System
-- Ziel IMP sammelt Pakete und sendet sie weiter an den Zielhost
-
-## Weitere Geschichte des Arpanets
-
-=> ARPANET wächst erste 3 Jahre schnell
-
-Versuche Drahtlos, Mobil und mit Sateliten ans ARPANET anzubinden
-=> Funktioniert nicht
-
-Vorstellung: TCP, IP
-Wurde finanziell unterstützt durch ARPA
-
-
-Vorstellung: BSD (Serverbetriebssystem)
-Vorstellung: Berkly-Sockets mit BSD 4.2
+Die von Dezentrale Struktur von Paul Baran (vorgeschlagen bereits 1960)
+Diese war besser zu verteidigen, der Vorschlag war zunächst technologisch seiner Zeit voraus
+Durch die [[ARPA]] wurde wurde das System 1967, sieben Jahre später doch umgesetzt
 
 #  Netz der National Science Foundation
 

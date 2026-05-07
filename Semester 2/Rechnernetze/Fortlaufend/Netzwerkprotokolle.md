@@ -13,8 +13,6 @@ MTU = Maximum Transmition Unit
 
 # Netzwerkschichten
 
-// ABB: Schichtenmodell
-
 - Devide and Conquer
 - Abstraktionsmodell
 - Beim Austausch einer Schicht muss nicht die gesamte Kommunikation getauscht werden, sondern nur die Schicht und ihre Schnittstellen

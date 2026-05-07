@@ -1,1 +1,0 @@
-Daten können parallel in beide Richtungen gesendet werden

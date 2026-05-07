@@ -1,3 +1,4 @@
+# Definition
 Gesamtheit aller Ressourcen, die benötigt werden, um die Kommunikation zu betreiben
 
 Es gibt keine allgemeingültige Einteilung
@@ -37,27 +38,13 @@ Weiterleitung von Verkehr
 
 # Größe von Netzen
 
-| Interprocessor Distance | Processor Location in the same | Name                     |
-| ----------------------- | ------------------------------ | ------------------------ |
-| 1 m                     | Square meter                   | Personal Area Network    |
-| 10 m                    | Room                           | Local Area Network       |
-| 100 m                   | Building                       |                          |
-| 1 km                    | Campus                         |                          |
-| 10 km                   | City                           | Metropolian Area Network |
-| 100 km                  | Country                        | Wide Area Network        |
-| 1000 km                 | Continent                      |                          |
-| 10000 km                | Planet                         | The Internet             |
-
-## LAN
-
-
-
-### Heimnetze
-
-Zunahme an IoT-Geräten
-
-Interoperabilität
-
-Gestiegene Anforderungen an Sicherheit/Zuverlässigkeit
-
-Organische Entwicklung
+| Interprocessor Distance | Processor Location in the same | Name                         |
+| ----------------------- | ------------------------------ | ---------------------------- |
+| 1 m                     | Square meter                   | [[Personal Area Network]]    |
+| 10 m                    | Room                           | [[Local Area Network]]       |
+| 100 m                   | Building                       |                              |
+| 1 km                    | Campus                         |                              |
+| 10 km                   | City                           | [[Metropolian Area Network]] |
+| 100 km                  | Country                        | [[Wide Area Network]]        |
+| 1000 km                 | Continent                      |                              |
+| 10000 km                | Planet                         | [[Internet\|The Internet]]   |
