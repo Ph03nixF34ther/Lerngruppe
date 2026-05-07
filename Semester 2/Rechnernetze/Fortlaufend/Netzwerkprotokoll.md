@@ -9,7 +9,7 @@
 - Skalierbarkeit
 - Sicherheit / Schutz
 
-MTU = Maximum Transmition Unit
+MTU = Maximum Transmittion Unit
 
 # Netzwerkschichten
 
