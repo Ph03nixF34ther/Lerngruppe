@@ -1,7 +1,7 @@
 ---
 aliases:
 ---
-Eine Komponente des [[00 Inhalte|Betriebssystems]]
+Eine Komponente des [[Inhalte|Betriebssystems]]
 
 Verwaltet den gesamten Speicherplatz des [[Externes Massenspeicher|Massenspeichermediums]] 
 
@@ -50,7 +50,7 @@ Beim Aufruf wird über den Index der Einheit ab Beginn sequenziell gesucht
 Gesucht Schulze mit Peronalnummer 5
 ![[Indexsequ.drawio.svg]]
 
-Die Größe der Einheit wird vom [[00 Inhalte]] bestimmt, generell die [[Block]]-Größe
+Die Größe der Einheit wird vom [[Inhalte]] bestimmt, generell die [[Block]]-Größe
 
 ## Multilisten
 
