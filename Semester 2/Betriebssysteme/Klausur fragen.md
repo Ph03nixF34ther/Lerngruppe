@@ -37,3 +37,15 @@ Mikro-Kern-Systeme kommunizieren über IPC-Mechanismen (Intern Prozess Kommunika
 ## Was unterscheidet den Kernel-Modus vom User-Modus?
 
 Direkter Zugriff auf das System. Es gibt weniger Sicherheitsvorkehrungen.
+
+## ?Aus welchen Bestandteilen besteht ein Gerätertreiber?
+
+## ?Welche Aufgaben übernimmt ein Gerätetreiber?
+
+## ?Ein Betriebssystem pflegt eine Prozesstabelle. Was ist drin enthalten?
+
+## ?Wann wird ein Programm zu einem Prozess?
+
+## ?Warum versucht Schadsoftware den Kernel-Modus ein System zu erreichen?
+
+## ?Welcher Umstand führt dazu, dass ein Prozess auf Wartend gesetzt wird?
