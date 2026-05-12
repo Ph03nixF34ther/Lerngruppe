@@ -1,3 +1,8 @@
+---
+aliases:
+  - Automaten
+---
+
 Ist in der Informatik ein Sechstupel der Form
 
 $A = \left\{ I, O, Q, \delta, q_0, F \right\}$ 
@@ -89,6 +94,7 @@ $F$ ist die Menge der Inkrement- und Dekrement-Operationen:
 	  $Ai(x_1, . . .,x_m) = (x_1, . . ., x_{i - 1}, x_i + 1, x_{i + 1}, . . ., x_m)$ 
 	- $S_i : {N^m}_0 \rightarrow {N^m}_0$
 	  $Si(x_1, . . ., x_m) = (x_1, . . ., x_{i - 1}, x_i - 1, x_{i + 1}, . . ., x_m)$ 
+	- $x - 1 = \begin{cases}x - 1 & \text{falls } x > 0 \\ 0 & \text{sonst}\end{cases}$
 
 $T$ steht für die Menge der [[Boolesche Algebra|booleschen]] Funktionen, die testen, ob der Wert des Inhalts eines [[Register|Registers]] gleich $0$ ist:
 
@@ -147,3 +153,135 @@ $$\begin{array}{ll}
 \end{array}$$
 
 Im Zustand $(0, 2, 0)$ stoppt die Maschine, da sie den Sprung `GOTO 3` nicht ausführen kann
+
+---
+
+# Registermaschine mit wahlfreien Zugriff auf Speicherzellen
+
+In der bisherigen [[#Registermaschine]] wird vorausgesetzt, dass in jedem [[Register]] alle drei Registeroperationen implementiert werden können
+-> technische Realisierung wäre sehr aufwendig
+
+Es ist sinnvoll ein besonderes [[Register]], den [[Akkumulator]] zu definieren
+Nur hier können die Registeroperationen ausgeführt werden
+
+Um das umzusetzen muss ebenfalls die Möglichkeit bestehen, Werte aus anderen [[Register|Registern]] in den [[Akkumulator]] zu laden und das Ergebnis wieder zu zurück in ein [[Register]] zu kopieren 
+
+Registermaschine mit wahlfreiem Zugriff auf Speicherzellen RAMs (Random Access Machines)
+
+
+![[RandomAccessMachines.drawio.svg]]
+
+[[Register]], Befehlszähler und  [[Akkumulator]] können beliebig große natürliche Zahlen aufnehmen
+
+Alle [[Register]] bilden den [[Arbeitsspeicher|Speicher]] des Rechners
+
+Die [[Register]] werden durch [[Adresse|Adressen]] gekennzeichnet
+
+Ein [[Programm]] besteht aus einer endlichen Folge von [[Befehl|Befehlen]] aus einer Befehlsliste (ähnlich zu denen der heutigen Mikroprozessoren)
+
+Die Programmzeilen sind durchnummeriert
+
+Der Befehlszähler $b$ startet mit dem Wert $1$ und zeigt jeweils die Nummer des auszuführenden [[Befehl|Befehls]] 
+
+Die Eingabe wird zuerst in den ersten [[Register|Registern]] gespeichert
+
+Die weiteren [[Register]], einschließlich des [[Akkumulator|Akkumulators]] ($c(0)$) werde auf $0$ gesetzt
+
+Am Ende der Berechnung stehen die Ergebnisse in festgelegten [[Register|Registern]]
+
+Der Inhalt eines [[Register|Registers]] $i$ wird mit $c(i)$ dargestellt
+
+## Befehlssatz
+
+Operationen mit Registerinhalten $c(i)$:
+
+```
+LOAD i :  c(0) := c(i),                 b := b + 1
+STORE i : c(i) := c(0),                 b := b + 1
+ADD i :   c(0) := c(0) + c (i),         b := b + 1
+SUB i :   c(0) := max {c(0) - c(i), 0}, b := b + 1
+MULT i :  c(0) := c(0) * c(i),          b := b + 1
+DIV i :   c(0) := c(0) / c(i),          b := b + 1 (ganzzahlige Division)
+```
+
+Operationen mit Konstanten $k$:
+
+```
+DLOAD k : c(0) := k,                 b := b + 1
+DADD k :  c(0) := c(0) + k,          b := b + 1
+DSUB k :  c(0) := max {c(0) - k, 0}, b := b + 1
+DMULT k : c(0) := c(0) * k,          b := b + 1
+DDIV k :  c(0) := c(0) / k,          b := b + 1 (ganzzahlige Division)
+```
+
+Operationen mit indirekt adressierten Operanden $c(c(i))$:
+
+```
+ILOAD i :  c(0)    := c(c(i)),                 b := b + 1
+ISTORE i : c(c(i)) := c(0),                    b := b + 1
+IADD i :   c(0)    := c(0) + c(c(i)),          b := b + 1
+ISUB i :   c(0)    := max {c(0) - c(c(i)), 0}, b := b + 1
+IMULT i :  c(0)    := c(0) * c(c(i)),          b := b + 1
+IDIV i :   c(0)    := c(0) / c(c(i)),          b := b + 1 (ganzzahlige Division)
+```
+
+Sprungbefehle:
+
+```
+GOTO j :        b := j
+IF ? l GOTO j : b := j falls c(o) = 1 und sonst b := b + 1 mit ? ∈ { =, <, ≤, >, ≥}
+```
+
+Halt-Befehl:
+
+```
+END : b := b
+```
+
+Ähnelt einem abstraktem [[Assembler]] 
+
+Daraus kann man, wenn auch mühevoll, unterschiedliche [[Algorithmus|Algorithmen]] und [[Programm|Programme]] auf Registermaschinen übertragen
+
+Interpretiert man den Inhalt als Zeichen kann man problemlos Alphabete verarbeiten
+
+## Beispiel
+
+Das [[Programm]] liest ein Wort $W$, dessen Elemente Zeichen aus einem Alphabet $\left\{ 0, 1 \right\}$ sind, aus den ersten $r$ [[Register|Registern]] des [[Arbeitsspeicher|Speichers]] un speichert das Wort in umgekehrter Reihenfolge in diesen [[Register|Registern]]
+
+Die [[Register]] $r + 1$ bis $m - 2$ werden als Kellerspeicher benutzt
+
+Das letzte [[Register]] $(m)$ dient als Stack Pointer un im [[Register]] $x = m - 1$ wird die [[Adresse]] gespeichert, an die der nächste Ausgabewert gebracht werden soll
+
+Der Wert $r$ ist bekannt, womit sich folgende Voraussetzungen ergeben:
+
+$$\begin{array}{cc}
+s = r & m = 2r + 2
+\end{array}$$
+
+```
+ 1 : DLOAD r
+ 2 : IF = 0  GOTO 24
+ 3 : DADD 1
+ 4 : STORE m
+ 5 : DSUB r
+ 6 : ILOAD 0
+ 7 : ISTORE m
+ 8 : LOAD m
+ 9 : DSUB r
+10 : IF = r  GOTO 13
+11 : LOAD m
+12 : GOTO 3
+13 : DLOAD 1
+14 : STORE x
+15 : ILOAD m
+16 : ISTORE x
+17 : LOAD m
+18 : DSUB 1
+19 : STORE m
+20 : LOAD x
+21 : DADD 1
+22 : If > r  GOTO 24
+23 : GOTO 14
+24 : END
+```
+
