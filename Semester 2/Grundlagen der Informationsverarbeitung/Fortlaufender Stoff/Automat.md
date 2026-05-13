@@ -40,6 +40,26 @@ Ein nicht-deterministischer Automat akzeptiert die Worte, für die es mindestens
 
 ---
 
+# Überführung von Nicht-Deterministische in Deterministische Automaten
+
+**Es gibt genau 2 Schritte**
+
+## Beispiel
+
+Nicht-Deterministischer Automat:
+
+![[NichtDetAB.drawio.svg]]
+
+Zwischenschritt:
+
+![[NichtDetZwischenschritt.svg#invert]]
+
+Deterministischer Automat:
+
+![[DetAusNichtDet.svg#invert]]
+
+---
+
 # Registermaschine
 
 > [!Warning]+ Hinweis

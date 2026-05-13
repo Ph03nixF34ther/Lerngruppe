@@ -126,4 +126,7 @@ Formal so definiert wie [[#Deterministische Turing-Maschine]], mit dem Unterschi
 Die Auswahl wird willkürlich von einer übernatürlichen Kraft vorgenommen, die dafür sorgt, dass dieser der richtige Weg ist
 In Wirklichkeit werden alle Entscheidungen bestritten und geschaut, ob einer richtig ist
 
-Ein Wort $w$ wird von einer nicht-deterministischer Turing-Maschine angenommen, wenn es mindestens einen Weg gibt in einem Finalzustand stoppt
+Ein Wort $w$ wird von einer nicht-deterministischer Turing-Maschine angenommen, wenn es mindestens einen Weg gibt, der in einem Finalzustand stoppt
+
+Universelle nicht-deterministische Turing-Maschinen sind praktisch nicht realisierbar, da man vorher nicht weiß, welche Verzweigung die "richtige" ist
+Sie dient nur als Modell
