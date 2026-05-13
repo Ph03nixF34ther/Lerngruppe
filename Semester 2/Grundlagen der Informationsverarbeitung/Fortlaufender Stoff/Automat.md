@@ -2,6 +2,7 @@
 aliases:
   - Automaten
 ---
+# Deterministischer Automat
 
 Ist in der Informatik ein Sechstupel der Form
 
@@ -30,6 +31,12 @@ Erkennende Automaten (Akzeptoren) werden benötig, um festzustellen, ob [[Progra
 Zusammenfassung eines Akzeptors und eines Transduktors ergibt Werkzeug, mit dem ein Eingabestring auf seine [[Syntax|syntaktische]] Korrektheit bezüglich einer bestimmten [[Sprache]] geprüft wird und anschließend, wenn der String korrekt ist, diesen in eine andere Sprache übersetzt (z.B. Compiler)
 
 Weiterhin werden sie verwendet, um zu bestimmen, ob ein Problem überhaupt rechnerisch gelöst werden kann
+
+---
+
+# Nicht-Deterministische Automaten
+
+Ein nicht-deterministischer Automat akzeptiert die Worte, für die es mindestens einen Weg vom Startzustand durch den Automatengraph gibt, der in einen Finalzustand führt und bei der das Wort vollständig abgearbeitet wird
 
 ---
 
