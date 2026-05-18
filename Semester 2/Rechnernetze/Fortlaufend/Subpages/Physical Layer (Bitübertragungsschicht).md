@@ -1,0 +1,6 @@
+- Übertragung von Rohbits über einen Kanal
+- Welcher Spannungspegel ist 0, welcher ist 1?
+- Welchen Kanal, dh. welche Frequenz?
+- Abtastrate / Timingfragen / Taktung
+- [[Simplex Betriebsart|Simplex]], [[Halbduplex Betriebsart|Halbduplex]] [[Vollduplex Betriebsart|Duplex]]
+- Stecker / Kabel

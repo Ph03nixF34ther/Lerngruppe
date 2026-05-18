@@ -14,4 +14,4 @@ Verbindung mit Paketvermittlung, nicht direkte ohm'scher Verbindung
 
 - Telefonat
 - Whatsapp 
-- TCP-Verbindung
+- [[TCP-IP|TCP]]-Verbindung
