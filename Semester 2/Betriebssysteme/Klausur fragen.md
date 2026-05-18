@@ -49,3 +49,5 @@ Direkter Zugriff auf das System. Es gibt weniger Sicherheitsvorkehrungen.
 ## ?Warum versucht Schadsoftware den Kernel-Modus ein System zu erreichen?
 
 ## ?Welcher Umstand führt dazu, dass ein Prozess auf Wartend gesetzt wird?
+
+## 

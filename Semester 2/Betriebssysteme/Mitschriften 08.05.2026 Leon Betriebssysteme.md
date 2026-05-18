@@ -1,24 +1,32 @@
-# Kommunikation zwischen Anwendung
+# Kommunikation zwischen Anwendern
 
-- es gibt drei Systeme
-- Menschlesbare Geräte: LEDs/ Lampen
-- Maschinen Lesbare: Netzwerk Ports/ Speicher
-- Kommunikationsgeräte: Netzwerke/ Telefon/ Server
+- E/A-Geräte sind die wichtigsten Hardwarekomponente eines Systems
+	- Sie bilden die Kommunikationsschnittstelle zu Anwender
 
-## Schnittstellen Mensch- Maschine:
+## Klassifikation von E/A-Geräten
 
-- Grafische Benutzeroberfläche
-- Kommandozeile
-- Touchscreen
+- es gibt drei Systeme:
+	- Menschlesbare Geräte: LEDs/ Lampen
+	- Maschinen Lesbare: Netzwerk Ports/ Speicher
+	- Kommunikationsgeräte: Netzwerke/ Telefon/ Server
+
+### Schnittstellen Mensch- Maschine:
+
+- Grafische Benutzeroberflächen
+- Kommandozeilen
+- Touchscreens
 - Sprachsteuerung
 - Gestensteuerung
 ## Kommunikation mit Anwender
 ### Varianten der Kommunikation:
-Zeichen/ Blockorientiert: Netzwerk/ Speicher(Festplatten)
-Sequentiell/ Wahlfreier Zugriff: Speicherzugriff
-Synchron/ Asynchrone Übertragung: Netzwerk: Warten auf Antwort(Synchron); 
-Gemeinsame/ Exlusiv genutze Kanäle: Anschlüsse auf dem Mainboard(Exlusiv (mehr bandbreite)); 
-Read-Write/Read Only/ Write Only: 
+
+- Zeichen/ Blockorientiert: Netzwerk/ Speicher(Festplatten)
+- Sequentiell/ Wahlfreier Zugriff: Speicherzugriff
+- Synchron/ Asynchrone Übertragung: Netzwerk: Warten auf Antwort(Synchron); Airtag (Asynchron) 
+- Gemeinsame/ Exlusiv genutze Kanäle: Anschlüsse auf dem Mainboard(Exlusiv (mehr bandbreite)); Lan-Kabel
+- Read-Write/Read Only/ Write Only
+
+# Ein/Ausgabegeräte
 
 ## Anforderung an ein E/A-System
 
@@ -28,18 +36,40 @@ Read-Write/Read Only/ Write Only:
 - Benutzerfreundlichkeit
 - Fehlertoleranz
 
-### Ein-/Ausgabegeräte
+## Theoretische Unterscheidung
 
-Blockorientiert: speichern Informationen in Blöcken mit fester Größe am jewils eigenen Adressen
-			Blöcke können unabhängig voneinander gelsen und geschrieben werden
-Zeichenorientiert: verabeitet Zeichenströme ohne auf Blockstrucktur zu achten. Sie sind nicht adressierbar
+- Blockorientiert: 
+	- speichern Informationen in Blöcken mit fester Größe am jeweils eigenen Adressen
+	- Blöcke können unabhängig voneinander gelesen und geschrieben werden
+- Zeichenorientiert: 
+	- Verarbeitet Zeichenströme ohne auf Blockstrukturen zu achten. 
+	- Sie sind nicht adressierbar
+
+## Zusammensetzung E/A-Geräte
 
 - bestehen aus Controller (Elektronik) und gesteuerter Mechanik
 - Controller:
 	- verwaltet und steuert Geräte
 	- Stellt einfache Schnittstelle für Betriebssystem dar
-	- Besitzt Register ... 
---Infos aus Präsentation--
+	- Besitzt Register und Datenpuffer für Kommunikation
+
+- Integration:
+	- Idealisierte, grundsätzliche Struktur einer IO-Verwaltung
+	- Kommunikation zwischen Benachbarten Schichten
+$$ 	
+\begin{matrix}
+\text{User Mode} & \text{Benutzerprozess} \\ \\
+\hline
+\text{Kernel Mode} & \text{kernel-Verteiler} \\
+ & \text{Auftragsverwaltung} \\
+ & \text{Pufferung} \\
+ \text{System} & \text{Treiber} \\
+ \hline 
+ \text{Gerät} & \text{Controller} \\
+  & \text{Gerät} 
+\end{matrix}
+$$
+
 
 ### Programmierte E/A Systeme
 
@@ -56,13 +86,12 @@ Unterbrechung der CPU bei Übertragung des Blockes
 - CPU kann parallel für andere Aufgaben genutzt werden 
 - Verwendung eines DMA-Request 
 	- Adressen Anzahl an Bytes, Reservierung des Hauptspeichers
-	--Infos aus Präsentation--
 
-#### Singel Bus Detached
+#### Single Bus Detached
 - Alle Module nutzen Bus-System gemeinsam
 - DMA-Modul kann als stellvtr. Prozessor gesehen werden
-- Prinzip ist simpel und billig kann aber nicht effizient
-	- Gefahr eines Flschenhals
+- Prinzip ist simpel und billig aber nicht effizient
+	- Gefahr eines Flaschenhalses
 	- Zwei Buszyklen pro Übertragung benötigt
 
 #### Singel Bus Integrated
@@ -86,11 +115,17 @@ Unterbrechung der CPU bei Übertragung des Blockes
 
 # Kommunikation mit E/A-Geräten
 
-#### Polling:
+## Polling:
 
 - Interaktion zwischen Rechner und Controller 
+	- Der Rechner prüft zyklisch den Controller
 	- Passives verhalten des Controllers
 - Verwendung von Statusbits am Controller
+	- Bestehend aus:
+		- BUSY
+		- WRITE
+		- EXECUTE
+		- ERROR
 - Praktisch ineffizient
 - Ablauf:
 	- Rechner liest zyklisch des BUSY-Bit, bis Wert "bereit" anzeigt
@@ -99,9 +134,8 @@ Unterbrechung der CPU bei Übertragung des Blockes
 	- Controller erkennt, dass er arbeiten soll und setzt BUSY-Bit
 	- Controller liest Schreibbefehl, liest Bytes aus Ausgaberegister und löst Ausgabe aus
 	- EXECUTE-Bit, BUSY-Bit und ERROR-Bit wird auf 0 gesetzt
---Infos aus Präsentation--
 
-#### Interrupts
+## Interrupts
 
 - Keine zyklische Abfrage durch den Rechner
 - Controller "meldet sich selbständig"
@@ -111,37 +145,38 @@ Unterbrechung der CPU bei Übertragung des Blockes
 	- Prioritäten, Nebenläufigkeiten etc.
 
 
---Infos aus Präsentation--
-# Gerätetreiber
+# Treiber für Ein- und Ausgabegeräte
+
+## Gerätetreiber
 
 - Modul des Systemkerns, das ein oder mehrere Geräte desselben Typs kontrolliert
 - Idealerweise Implementierung einer einheitlichen Schnittstelle für sämtliche E/A-Funktionen
 - Bspw.: "write" zum Schreiben von Informationen in ein Gerät
 
-#### Aufgaben:
+### Aufgaben:
 
-- Stellt eine Schnittstelle für BS und Hardware zur Verfügung
-- Übersetzt befehle für Controller 
-- Funktionskontrolle
-- definiert das Gerät gegenüber dem Betriebssystem
-- Ereignisverwaltung
-- meldet/leitet weiter Geräte- und Controllerbefehle
-- wandelt E/A-Anforderungen im gerätespezifische Befehle um
-- bearbeitet Schreib- und Lesebefehle
-- definiert sich gegenüber dem Betriebssystem 
 - antwortet auf Hardwaresignale
+- wandelt E/A-Anforderungen im gerätespezifische Befehle um
+- definiert das Gerät gegenüber dem Betriebssystem
+- definiert sich selbst gegenüber dem Betriebssystem 
 - initialisiert den Controller und das Gerät bei Systemstart
-- aktiviert das Gerät
+- bearbeitet Schreib- und Lesebefehle
 - puffert Daten bei der Ein- und Ausgabe
+- Ereignisverwaltung
+- aktiviert das Gerät
+- meldet/leitet weiter Geräte- und Controllerbefehle
+- Funktionskontrolle
+- Übersetzt befehle für Controller 
+- Stellt eine Schnittstelle für BS und Hardware zur Verfügung
 
-#### Abhängig vom Betriebssystem ist...
+### Abhängig vom Betriebssystem ist...
 
 - ob alle Treiber bei der Systemkonfiguration eingebunden werden müssen 
 	- Neu Kompilieren/Übersetzten des BS notwendig
 - ob sich Treiber später hinzufügen lassen, aber bei Systemstart bekannt sein müssen
 - ob Treiber während des Betriebs installiert und gestarrte/ gestoppt werden können
 
-#### Sonderfälle
+### Sonderfälle
 
 - Neue Geräte können hinzukommen
 	- Identifikation 
@@ -151,30 +186,55 @@ Unterbrechung der CPU bei Übertragung des Blockes
 	- Wartende Anfragen entfernen
 	- Alle Aufrufer informieren
 
---Infos aus Präsentation--
+### Systemkontext
 
-#### Ein-/Ausgabe-Anforderungspakete (IORP)
+$$
+	\begin{matrix}
+	\text{User Mode} & \text{write} &  \\
+	\hline \\
+	\text{Kernel Mode} & \text{sys\_write} & \text{systemunbahängig} \\ \\
+	\hline
+	 & \text{Zugriffsrechte checken} &  \\
+	 & \text{Pufferung verwalten} &  \\
+	 &  & \text{geräteunabhängige Software} \\
+	 &  \text{Treiber-Funktion} & \\
+	 &  \text{aufrufen} &  \\
+	 \hline \\
+	 \text{System}  & \text{einheitliche Geräteschnittstelle} \\
+	 \hline \\
+	 \text{Geräte}  & \text{dev\_write} & \text{gerätespezifisch}  \\
+	\end{matrix}
+$$
+dev_write: Bildschirm, Platte, Drucker
+
+### Ein-/Ausgabe-Anforderungspakete (IORP)
 
 - Enthält alle vom Treiber für die E/A-Operation benötigten Informationen
 	- Geräteadresse, Anzahl an Bytes etc.
 - Verwaltung der Pakete in gerätespezifischen Listen
 	- Verwendung von optimierten Verwaltungsalgorithmen
-#### Geräteunabhängige Software
+### Geräteunabhängige Software
 
-- Unabhängig vom E/A-Gerätdurchführbare Aufgaben
+- Unabhängig vom E/A-Gerätdurchführbare Aufgaben:
 	- einheitliches Interface
 	- Pufferung
 	- Fehlerbericht
 	- Anforderung/Freigabe von Geräten
 	- Geräteabhängige Blockgröße
 
-#### Geräteunabhängige Software
+### Geräteunabhängige Software
 
 Hauptaufgabe:
 - Einheitliche Darstellung unterschiedlicher E/A-Geräte und Treiber
 
 weil
 - Leichtere Einbindung von Treibern an einheitlichen Schnittstellen
+
+
+
+
+# ----- Noch zu berichtigen -----
+
 
 # Prozesse und Threads
 
