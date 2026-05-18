@@ -24,15 +24,15 @@ Die Studierenden sollen nach Abschluss des Moduls in der Lage sein:
 ## In der Modulbeschreibung erwähnte Literatur
 
 Betriebssysteme:
-- Tanenbaum A. S.: Moderne Betriebssysteme
-- Vogt C.: Betriebssysteme
+- Tanenbaum A. S.: [[Modern Operating Systems 4th Edition--Andrew Tanenbaum.pdf|Moderne Betriebssysteme]]
+- Vogt C.: [[Carsten_Vogt_Betriebssysteme.pdf|Betriebssysteme]]
 - Stallings W.: Betriebssysteme
 - Glatz E.: Betriebssysteme
 - Ayaz F.: Linux konfigurieren und administrieren
 
 Rechnernetze:
 - Tanenbaum A.S.: [[Computer Networks - A Tanenbaum - 5th edition-1.pdf|Computer Networks]]
-- Badach A., Hoffmann E.: Technik der IP-Netze
+- Badach A., Hoffmann E.: [[Badach_Hoffmann_TECHNOLOGYOFIPNETWORKS.pdf|Technik der IP-Netze]]
 
 ## Von den Professoren erwähnte Literatur
 
