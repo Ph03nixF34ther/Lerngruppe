@@ -3,6 +3,7 @@ aliases:
   - CPU
 ---
 
+
 Hauptelement jedes [[Computer|Computers]] 
 
 Unter Steuerung des [[Inhalte|Betriebssystems]] werden Steuer-, Rechen- und Speichervorgänge ausgeführt

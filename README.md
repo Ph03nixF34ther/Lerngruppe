@@ -209,6 +209,10 @@ Um Schaltungen in der Elektrotechnik ansehen zu können, benötigen wir allerdin
 Weil diese schon lange kein Update mehr erhalten hat, ist unsere Variante schon installiert und wir müssen sie nur aktivieren
 Diese findet man unter Einstellungen > Externe Erweiterungen > Community Erweiterungen aktivieren > TikZJax.PDF > Aktivieren
 
+Manche Automaten sind von der Farbgebung für User im Dark Mode schlecht zu erkennen
+Dafür binden wir benutzerdefiniertes CSS ein mit dem die SVG-Dateien invertiert werden können
+Diese Funktion lässt sich unter Einstellungen > Darstellung > CSS-Bausteine finden und mit dem Regler bei invert_svg aktivieren
+
 Und fertig! (diesmal aber wirklich)
 
 [[Cheat Sheet]] um dich mit der Syntax vertraut zu machen

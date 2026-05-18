@@ -1,6 +1,7 @@
 ---
 aliases:
   - Befehlen
+  - Befehls
 ---
 Kleinste nicht weiter teilbare Einheit in einer [[Programmiersprache]]
 

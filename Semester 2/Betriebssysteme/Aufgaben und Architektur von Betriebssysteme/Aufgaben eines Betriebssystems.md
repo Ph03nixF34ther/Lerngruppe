@@ -15,8 +15,8 @@
 - Bereitstellen von Ein- und Ausgabeschnittstellen
 	- standardisierte, aufgabenorientierte Schnittstellen
 - Definition von Nutzungskonzepten
-	- Prozess-Konzept
-	- Datei-Konzept
+	- Prozess-Konzept: Es gibt Prozesse die können gestartet werden
+	- Datei-Konzept: Daten werden in Dateien gespeichert. Es gibt Dateitypen
 	- Speicher-Konzept
 - Dienste zur einfachen Nutzung von Systemressourcen
 	- Vordefinierte und unveränderlich
@@ -34,7 +34,7 @@
 
 ### Realisierung der Anwenderdienste:
 
-- Systemaufruf
+- Systemaufruf (Lesen/Schreiben)
 	- Zugriff auf vom BS bereitgestellte Funktionalitäten (Bsp.: Lesen/Schreiben) 
 - Application Programming Interface
 	- Von Software zur Verfügung gestellter Programmteil
@@ -56,6 +56,7 @@
 - Steuern von Abläufen
 	- Regelungen von Zugriffszeiten
 	- Vermeidung von Deadlocks (Semaphore) oder Speicherverletzungen
+	-> Semaphore: ein Weg, um parallele Zugriffe zu vermeiden 
 - Strategien zur Ressourcenverwaltung (Scheduling)
 	- Auch hier Verwendung von Priorisierung und Aufteilung der CPU-Zeiten bspw.
 
