@@ -861,3 +861,7 @@ wählt man beispielsweise für $R=10\Omega$:
 $$
 C = \frac{1}{2 \pi 200 \frac{1}{s} \cdot 10\Omega} = 79,6 \mu F
 $$
+Das bedeutet, dass bei:
+$$
+R = 10\Omega \qquad \text{und} \qquad C = 79,6\mu F
+$$
