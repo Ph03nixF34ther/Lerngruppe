@@ -50,4 +50,56 @@ Direkter Zugriff auf das System. Es gibt weniger Sicherheitsvorkehrungen.
 
 ## ?Welcher Umstand führt dazu, dass ein Prozess auf Wartend gesetzt wird?
 
-## 
+## Welcher Schritt ist notwendig um Signale zu Interpretieren?
+
+  
+
+## Nennen Sie drei Bestandteile des Prozessdeskriptor!
+
+  
+
+## Welche Ziele werden beim Scheduling verfolgt?
+
+  
+
+## Wie wird der Vorgang genannt, wenn der Prozessor von einem Prozess zum anderen wechselt?
+
+  
+
+Der Vorgang wird Kontext Wechsel genannt.
+
+  
+
+## Was bedeutet "kooperatives Scheduling"? Worin besteht das Risiko bei diesem Verfahren?
+
+  
+
+## Erläutern Sie den Unterschied zwischen synchronen und asynchronen Ereignissen während eines Prozesses!
+
+  
+
+## Wozu kommunizieren Prozesse miteinander? Welche Ziele werden verfolgt?
+
+  
+
+Es werden Daten und Informationen ausgetauscht. Dies ist notwendig um zugriff auf begrenzt Ressourcen zu koordinieren, oder Informationen an einen Kind Prozess weiter zu geben.
+
+  
+
+## Welche Informationen sind in der Thread-ID im Threadkontrollblock enthalten?
+
+  
+
+## Welche Umstände führen zu Verklemmungen zwischen Prozessen?
+
+  
+
+## Welcher Faktor verhindert, dass ein System durch Parallelisierung nicht unendlich beschleunigt werden kann?
+
+  
+
+## Was wird hauptsächlich durch das Anlegen mehrerer Threads auf User-Ebene erzeugt?
+
+  
+
+##

@@ -231,63 +231,75 @@ weil
 - Leichtere Einbindung von Treibern an einheitlichen Schnittstellen
 
 
-
-
-# ----- Noch zu berichtigen -----
-
-
 # Prozesse und Threads
 
 
 ## Begriffsklärung
 
-- Task: Synony für Prozess, aber auch Thread; Aufgabe die ein Betriebsystem hat
-- Prozess ist ein Programm in der Ausführung
-- Programm: statische  
-- Thread: ein seq
---Infos aus Präsentation--
+- Task: Synonym für Prozess, aber auch Thread; Aufgabe die ein Betriebssystem hat
+- Prozess: ist ein Programm in der Ausführung
+- Programm: statische Beschreibung eines sequentiellen Algorithmus
+- Thread: ein seq. Abarbeitungsablauf innerhalb eines Prozesses
 
 ### Unterscheidung der Betriebsmodi eines Betriebssystem
 
-#### Anwender Modus:
+#### Anwender-Modus:
 - CPU-Kontrolle liegt beim aktuellen Programm
 - Einfacher Befehlssatz
---Infos aus Präsentation--
+- Anwendungsprogramme meist im User-Mode
+- User-Mode nutzt nur API-Funktionen um aufs System zuzugreifen 
 
-- User-Mode nutzt nur API-Funktionen
-- Betriebssystem im Kernel-Modus nutzt System direkt
-- Umschaltung durch die CPU
+#### Kernel-Modus
+- CPU wird in privilegierten Modus versetzt
+- Erweiterter Befehlssatz
+- Aufhebung hardwareseitiger Speicherzugriffsbeschränkungen
+- BS arbeitet im Kernel-Modus
+- BS nutzt System direkt
+- Umschaltung durch die CPU zwischen den Modi
+- Hacker und Schadsoftware setzten immer beim Kernel-Modus an
 
-"Ein Prozess ist ein in Asführung befindeliches Programm"
 
---Infos aus Präsentation--
+### Parallelität
+- "Prozesse spiegeln den Eindruck wider, dass Computer mehrere Aufgaben gleichzeitig erledigen können."
+	- Lesen von Festplatte
+	- Dateiinhalte drucken
+	- Programm ausführen
+- Realität: Bei Einzelprozessorsystemen nur simuliert Parallelität
+- Zu jedem Zeitpunkt nur ein Programm auf der CPU
+- Jeder Prozess erhält nur begrenzte CPU-Zeit
+- Echte Parallelität nur durch mehrere Prozessoren
+- CPU-Zeitschalt: Quantum
 
-#### Parallelität
-- Realität: Bei Einzelprozessorsystemen nur 
---Infos aus Präsentation--
-
-# CPU-Zeitschalt: Quantum
-
-#### Prozessumschaltung
-- Problem: Mehrere Proesse sollen ausgeführt werden
-- Frage: Welcher Prozess soll gestertet werden?
-- Scheduler: "entscheidet" welcher Prozess
---Infos aus Präsentation--
+### Prozessumschaltung
+- Problem: Mehrere Prozesse sollen ausgeführt werden
+- Frage: Welcher Prozess soll gestartet werden?
+- Scheduler: "entscheidet" welcher Prozess ausgeführt bzw. fortgesetzt wird
 
 #### Prozessumschaltung durch Scheduling
-- Früher:
-	- Stapelbetrieb
---Infos aus Präsentation--
-- Heute:
-	- Unterbrechung durch Timer
-	- Scheduler entscheidet über Unterbrechung des laufenden Prozesses
-	- Fortsetzung eines laufenden Prozesses zu späterem Zeitpunkt
-	- Verteilung der Prozesse anhand unterschiedlicher Parameter
+
+##### Früher:
+- Stapelbetrieb
+- Prozess zu Ende -> Nächster Prozess starten
+$$
+	\begin{matrix}
+	\text{Upper Next} \\
+	\downarrow \\
+	\text{Next} \\
+	\downarrow \\
+	\text{Current} \\
+	\end{matrix}
+$$
+##### Heute:
+- Unterbrechung durch Timer
+- Scheduler entscheidet über Unterbrechung des laufenden Prozesses
+- Fortsetzung eines laufenden Prozesses zu späterem Zeitpunkt
+- Verteilung der Prozesse anhand unterschiedlicher Parameter
 -> Präventives Scheduling 
 
-## Prozessmerkmale
+# Prozessmerkmale
 
-### Prozesse ... 
+## Prozesse ... 
+
 - sind die aktiven Komponenten eines Systems
 - können voneinander abhängen
 - besitzt einen eigenen Adressraum
@@ -295,55 +307,122 @@ weil
 - benutzen und benötigen Ressourcen
 - haben einen Vaterprozess und ggf. Kindprozesse 
 
-### Prozesse werde erzeugt für ...
+## Prozesse werde erzeugt für ...
 
 - Benutzeranfragen
---Infos aus Präsentation--
+- Hintergrundprozesse (Deamons)
+- Systemaufruf eines bestehenden Prozesses
+- Initiierung eines Batch-Jobs
 
-### Prozesse werden terminiert ...
-- Freiwillig
-	- Exit-Schlüsselwort
-	- Fehler innerhalb des Prozesses
-- Unfreiwillig
-	- Schwerwiegende Fehler 
-	- Durch andere Prozesse (kill)
-	-> Reaktion des Prozesses auf Ereignisse Mögliche 
+## Prozesse werden terminiert ...
 
-### Dabei haben Prozesse immer einen der folgenden Zustände:
+### Freiwillig
+
+- Exit-Schlüsselwort
+- Fehler innerhalb des Prozesses
+
+### Unfreiwillig
+
+- Schwerwiegende Fehler 
+- Durch andere Prozesse (kill)
+-> Reaktion des Prozesses auf Ereignisse Mögliche 
+
+## Lebenszyklus von Prozessen
+
+- Prozesse haben einen vorgegebenen Lebenszyklus
+	- Erzeugung
+	- Abarbeitung
+	- Beendigung
+
+
+## Prozesszustände 
+
+Dabei haben Prozesse immer einen der folgenden Zustände:
 
 - aktiv: besitz alle Ressourcen und CPU und wird abgearbeitet
 - bereit: besitzt nicht die CPU, aber alle notwendigen Ressourcen
-- wartende: wartend auf Zuteilung 
+- wartende: wartend auf Zuteilung einer Ressource, keine CPU
 
---Infos aus Präsentation--
+$$
+	\begin{matrix}
+	 & \text{Deaktivierung} &  \\
+	 &  \longleftarrow  & \\
+	 \text{bereit} &  & \text{aktiv} \\
+	  & \longrightarrow &  \\
+	  & \text{Aktvierung}
+\end{matrix}
+$$
 
 
-## Bestandteil eines Prozesses
+$$
+	\begin{matrix}
+	 & \text{aktiv} &  \\
+	\downarrow \uparrow &  & \downarrow \\
+	\text{bereit} & \longleftarrow & \text{wartend}
+	\end{matrix}
+$$
 
-- zwei Bestandteile des Pro --Infos aus Präsentation--
-- Programmspeicher
-	- enthält auszuführenden Code des Prozesses
-	- Maschinenbefehle
-	- abgelegt in geschütztem Speicherbereich
-	- Programmkontext: kleiner Speicherbereich für Aufrufparameter und Umgebungsvariablen
-	- Maschinencode: Maschinenbefehle, durch Compiler  und Linker aus Programmcode erzeugt
-	- Statische Daten: statisch reservierte Bereiche für variablen und Konstanten des Programms
-	- Heap: dynamischer Speicher, der während Laufzeit genutzt werden kann
-	- Laufzeitstack: dynamischer Speicher, für Daten für Unterprogrammaktivierungen
-- Prozessdeskriptor:
-	- Datenstruktur des Systemkerns
-	- Beinhaltet Metadaten des Prozesses
-	- "beschriebt den Prozess"
-	- Eindeutige Prozessidentifikation 
-	- Zustand
-	- Zugriffsrechtsdeskriptor
-	- Dateideskriptor
-	- Priorität
-	- Ressourcenverbrauch
-	- Hauptspeicherdeskriptor
-	- Maschinenzustand
+$$
+	\begin{matrix}
+	\text{Erzeugung} & \text{Start} &  & \text{Aktivierung} &  & \text{Ende} &  \\
+	\text{neu} & \longrightarrow & \text{bereit} & \longrightarrow & \text{aktiv} & \longrightarrow & \text{beendet} \\
+	 &  &  & \longleftarrow &  &  &  \\
+	 &  &  & \text{Deaktivierung} &  &  &  \\
+	 & \text{Ereignis} & \uparrow &  & \downarrow  & \text{warten auf} &  \\
+	 & \text{tritt ein} &  & \text{wartend} &  & \text{Ereignis}
+	\end{matrix}
+$$
 
-## Implementierung von Prozessen
+### Zustandsänderung
+
+- ausführen
+	bereit $\longrightarrow$ aktiv
+- verdrängen
+	aktiv $\longrightarrow$ bereit
+- blockieren
+	aktiv $\longrightarrow$ wartend
+- aufwecken
+	wartend $\longrightarrow$ bereit
+
+# Das Prozessmodell
+
+- konzeptionelles Modell, das den Umgang mit Parallelität vereinfacht
+- erleichtert Beschreibung von Prozessen und deren Synchronisation
+- hilft, sich  Abläufe innerhalb eines Systems darzustellen
+
+# Bestandteil eines Prozesses
+
+## zwei Bestandteile des Prozessors im Hauptspeicher 
+
+### Programmspeicher
+
+- enthält auszuführenden Code des Prozesses
+- Maschinenbefehle
+- abgelegt in geschütztem Speicherbereich
+
+#### Bestandteile
+
+- Programmkontext: kleiner Speicherbereich für Aufrufparameter und Umgebungsvariablen
+- Maschinencode: Maschinenbefehle, durch Compiler  und Linker aus Programmcode erzeugt
+- Statische Daten: statisch reservierte Bereiche für variablen und Konstanten des Programms
+- Heap: dynamischer Speicher, der während Laufzeit genutzt werden kann
+- Laufzeitstack: dynamischer Speicher, für Daten für Unterprogrammaktivierungen
+
+### Prozessdeskriptor
+
+- Datenstruktur des Systemkerns
+- Beinhaltet Metadaten des Prozesses
+- "beschriebt den Prozess"
+- Eindeutige Prozessidentifikation 
+- Zustand
+- Zugriffsrechtsdeskriptor
+- Dateideskriptor
+- Priorität
+- Ressourcenverbrauch
+- Hauptspeicherdeskriptor
+- Maschinenzustand
+
+# Implementierung von Prozessen
 
 - Verwaltung der Prozesstabelle
 	- Ein Eintrag pro Prozess
