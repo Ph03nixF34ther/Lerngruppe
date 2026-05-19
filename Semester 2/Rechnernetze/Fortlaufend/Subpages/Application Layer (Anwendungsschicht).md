@@ -1,0 +1,1 @@
+- Anwendungsprotokolle für kommunikationsteilnehmer (nicht Browser, sondern http / https / BitTorrent / Mail (SMTP, POP, IMAP, ...))

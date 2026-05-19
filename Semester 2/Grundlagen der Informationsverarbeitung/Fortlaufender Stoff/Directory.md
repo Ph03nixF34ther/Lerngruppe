@@ -12,4 +12,4 @@ Wird wie eine [[Ordinary Files|reguläre Datei]] gelesen, aber Satzstruktur muss
 
 Dateiverzeichnisse können wiederum auf neue Dateiverzeichnisse weisen, wodurch eine Baumartige Struktur entsteht, in der jegliche [[Datei|Dateien]] abgelegt werden
 
-Bei vielen [[Inhalte|Betriebssystemen]] in hierarchische Strukturen, genannt Dateibäume, zusammengefasst
+Bei vielen [[Betriebssysteme Übersicht|Betriebssystemen]] in hierarchische Strukturen, genannt Dateibäume, zusammengefasst

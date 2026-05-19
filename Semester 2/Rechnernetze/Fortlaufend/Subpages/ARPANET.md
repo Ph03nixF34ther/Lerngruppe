@@ -31,7 +31,7 @@ Zwölf Unternehmen gaben Angebote ab. Nach Auswertung aller Vorschläge wählte 
 
 Die Subnetzsoftware bestand aus dem IMP-Ende der Host-IMP-Verbindung, dem IMP-IMP-Protokoll und einem Quell-IMP-Ziel-IMP-Protokoll zur Verbesserung der Zuverlässigkeit.
 
-Vorstellung: [[TCP]], [[IP]]
+Vorstellung: [[TCP-IP]]
 Wurde finanziell unterstützt durch ARPA
 
 
