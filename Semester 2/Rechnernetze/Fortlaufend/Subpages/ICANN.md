@@ -1,6 +1,8 @@
 ---
 aliases:
   - Internet Corperation for Assigned Names and Numbers
+tags:
+  - Rechnernetze
 ---
 
 Die Internet Corporation for Assigned Names and Numbers (kurz: ICANN) koordiniert die Vergabe von einmaligen Namen und Adressen im Internet. Dazu gehört die Koordination des [[Domain Name System|Domain Name Systems]] und die Zuteilung von IP-Adressen, was auch als „IANA-Funktion“ (abgeleitet von engl. Internet Assigned Numbers Authority) bezeichnet wird. Die ICANN hat ihren Hauptsitz in Los Angeles und ist in Kalifornien als Non-Profit-Organisation eingetragen.

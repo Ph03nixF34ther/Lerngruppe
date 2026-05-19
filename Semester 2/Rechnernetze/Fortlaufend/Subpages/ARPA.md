@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 Advanced Research Projects Agency
 
 Am 4. Oktober 1957 startete die Sowjetunion den Satelliten Sputnik. Dieses Ereignis löste in den USA den so genannten Sputnik-Schock aus.

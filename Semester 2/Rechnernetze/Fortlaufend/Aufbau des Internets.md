@@ -1,3 +1,7 @@
+---
+tags:
+  - Rechnernetze
+---
 # Dezentrale und Zentrale Netze
 
 ## Zentrale Netze

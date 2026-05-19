@@ -1,3 +1,9 @@
+---
+tags:
+  - TODO
+  - Rechnernetze
+---
+
 # Erklärung
 
 > Dienst:

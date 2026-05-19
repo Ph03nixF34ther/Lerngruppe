@@ -1,3 +1,9 @@
+---
+tags:
+  - Rechnernetze
+  - TODO
+---
+
 # Designziele von TCP / IP
 
 - Zuverlässugkeit

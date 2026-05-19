@@ -1,3 +1,9 @@
+---
+tags:
+  - TODO
+  - Rechnernetze
+---
+
 # Wichtigste Punkte für Netzwerkprotokolldesign
 
 - Zuverlässigkeit: Redundanz

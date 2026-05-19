@@ -1,3 +1,10 @@
+---
+tags:
+  - OSI-Schicht
+  - Rechnernetze
+  - TODO
+---
+
 - Korrektur von Übertragungsfehlern
 - Dazu: Bildung vom Rahmen / Frams 
 - ggf. Bestätigung für zuverlässigen Dienst senden nach Empfangen von Rahmen

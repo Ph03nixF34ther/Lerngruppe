@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 # Erklärung 
 
 In einem Peer-to-Peer Netz  verbinden sich [[Client|Clients]] mit anderen [[Client|Clients]]. Dabei gibt es keinen zentralen [[Server]]

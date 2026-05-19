@@ -3,6 +3,8 @@ aliases:
   - ISP
   - Provider
   - Internet Access Provider
+tags:
+  - Rechnernetze
 ---
 # Erklärung
 
@@ -15,4 +17,3 @@ Je nach Größe ihrer Netze lassen sich Anbieter in die Kategorien Tier-3 (lokal
 # Beispiele
 
 - Telekom
-- 

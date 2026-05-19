@@ -1,3 +1,9 @@
+---
+tags:
+  - Rechnernetze
+  - TODO
+---
+
 # Definition
 Gesamtheit aller Ressourcen, die benötigt werden, um die Kommunikation zu betreiben
 

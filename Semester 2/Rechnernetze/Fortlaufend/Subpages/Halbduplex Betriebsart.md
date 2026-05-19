@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 # Erklärung
 
 Der Halbduplex ist eine [[Einteilungsmöglichkeiten von Netzen#Einteilung über die Betriebsarten|Betriebsart]] von Netzwerkkommunikation.

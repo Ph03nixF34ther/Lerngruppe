@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 # Erklärung
 
 Das Client-Servermodell ist eine [[Einteilungsmöglichkeiten von Netzen#Einteilung über das Verbindungsmodell|Netzwerkarchitektur]].

@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 # Erklärung
 
 Als Vermittlung versteht man die gezielte Verbindung zwischen Teilnehmern über ein [[Netz]].

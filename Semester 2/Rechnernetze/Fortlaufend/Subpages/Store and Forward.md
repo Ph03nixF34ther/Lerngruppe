@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 # Erklärung
 
 Store and forward  ist eine [[Einteilungsmöglichkeiten von Netzen#Einteilung nach Weiterleitungsmethoden|Art der Informationsübermittlung über ein Netz]]

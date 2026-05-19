@@ -1,6 +1,8 @@
 ---
 aliases:
   - PAN
+tags:
+  - Rechnernetze
 ---
 # Erklärung
 

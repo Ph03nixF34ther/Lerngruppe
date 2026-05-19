@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 # Einteilung über die logische Ebene
 
 Logisch gesehen kann eine Nachricht entweder gerichtet oder ungerichtet sein. 

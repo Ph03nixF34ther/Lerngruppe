@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 # Erklärung
 
 Die verbindungslose Übermittlung ist eine [[Einteilungsmöglichkeiten von Netzen#Einteilung in verbindungslose und verbindungsorientierte Übertragung|Art der Informationsübermittlung über ein Netz]]

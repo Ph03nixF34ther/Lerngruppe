@@ -1,6 +1,8 @@
 ---
 aliases:
   - LAN
+tags:
+  - Rechnernetze
 ---
 # Erklärung
 

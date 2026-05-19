@@ -1,6 +1,8 @@
 ---
 aliases:
   - MAN
+tags:
+  - Rechnernetze
 ---
 # Erklärung
 

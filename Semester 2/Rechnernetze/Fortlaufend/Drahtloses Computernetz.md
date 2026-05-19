@@ -1,3 +1,7 @@
+---
+tags:
+  - Rechnernetze
+---
 # Aufbau
 
 Kommunikation nur über den Accesspoint (802.11 => WiFi, kommt aber aus der Industrie)

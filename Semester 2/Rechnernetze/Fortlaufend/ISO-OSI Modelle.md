@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 # Aufbau
 
 ![[5Layer.drawio.svg]]
@@ -18,3 +23,12 @@
 # Sieben Schichten des ISO / OSI Modell
 
 - xPDU: x Protocoll Data Xunit, die zwischen den Netzwerkteilnehmern austauschen
+
+- [[Application Layer (Anwendungsschicht)]]
+- [[Presentation Layer (Darstellungsschicht)]]
+- [[Session Layer (Sitzungsschicht)]]
+- [[Transport Layer (Transportschicht)]]
+- [[Network Layer (Vermittlungsschicht)]]
+- [[Data Link Layer (Sicherungsschicht)]]
+- [[Physical Layer (Bitübertragungsschicht)]]
+

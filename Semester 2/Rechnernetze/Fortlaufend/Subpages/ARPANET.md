@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 ## Ursprüngliches Design für das ARPA-Net
 
 ![[ARPANETDesign.drawio.svg]]
