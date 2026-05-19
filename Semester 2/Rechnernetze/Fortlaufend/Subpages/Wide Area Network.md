@@ -1,6 +1,8 @@
 ---
 aliases:
   - WAN
+tags:
+  - Rechnernetze
 ---
 # Erklärung
 

@@ -1,3 +1,7 @@
+---
+tags:
+  - Rechnernetze
+---
 # Dezentrale und Zentrale Netze
 
 ## Zentrale Netze
@@ -20,12 +24,12 @@ Durch die [[ARPA]] wurde wurde das System 1967, sieben Jahre später doch umgese
 #  Netz der National Science Foundation
 
 - Netz, dass sich Parallel zum ARPA-Netz entwickelt hat
-- Von Anfang an TCP/IP WAN
+- Von Anfang an [[TCP-IP|TCP/IP]] WAN
 - 1990 Übergabe an private Unternehmen
 
 # Heutige Architektur des Internets
 
-// ABB: Architektur des Internets
+![[Aufbau_Internet.png]]
 
 Modem: Modulator, Demodulator = Umwandeln und Rückwandeln
 
@@ -33,7 +37,7 @@ Internetservice Provider unterhält POP (Point of Presence)
 
 Zusammenhang der ISP (Internet-Service-Provider) nennt man Peering an sog IXP (Internet Exchange Points)
 
-// ABB: Das Internet war mal Hierarchisch
+![[Internet_hierarchisch.png]]
 
 Heute ist das Tier-1 ISP nichtmehr so wichtig.
 Bsp: Netflix - Hierarchische Struktur ist teuer und langsam 
@@ -41,38 +45,4 @@ Caching auf Regional ISPs
 
 Heute: Weniger Regional ISP mehr National und Consumer Content Provider
 
-// ABB: Internetaufbau heute
-
-# Internet Governance
-
-// ABB: Internet Governance
-
-## ICANN
-
-- Gemeinnützige Organisation
-- Multistakeholder Ansatz
-- U.A. für das DNS verantwortlich
-- Tochterabteilung IANA (Internet assigned Numbers Authoritity) Verwaltet IP-Adressen und Ports
-
-## Regional Internet Registries
-
-- Verteilen IP-Adressen (Mieten IP-Adressen bei IANA)
-- Bottom-up Prozess
-
-=> AFRINIC
-
-## TLD-Organisationen
-
-- Steht für Topleveldomain
-- ccTLD Registries: technische Verwaltung/Betrieb länderspezifischer TLDs
-- Aufgaben / Verantwortliche
-
-## Internet Society
-
-- Globale gemeinnützige Organisation
-- Ziel: offene Entwicklung, Nutzung , Weiterentwicklung des Internets
-- Mitarbeit in GNSO und TLG ICANN
-
-## ISOC: IAB
-
-- Internet Architecture Board
+![[Internet_heute.png]]

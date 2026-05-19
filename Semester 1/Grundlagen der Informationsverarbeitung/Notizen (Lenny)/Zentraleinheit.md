@@ -6,7 +6,7 @@ aliases:
 
 Hauptelement jedes [[Computer|Computers]] 
 
-Unter Steuerung des [[Inhalte|Betriebssystems]] werden Steuer-, Rechen- und Speichervorgänge ausgeführt
+Unter Steuerung des [[Betriebssysteme Übersicht|Betriebssystems]] werden Steuer-, Rechen- und Speichervorgänge ausgeführt
 
 Enthält ein oder mehrere [[Prozessor|Prozessoren]] 
 

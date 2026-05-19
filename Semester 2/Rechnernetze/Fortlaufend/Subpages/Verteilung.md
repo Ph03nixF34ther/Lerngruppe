@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 # Erklärung
 
 Wird bei einer Datenübermittlung nach der Verteilung eine Nachricht in ein Netz gesender, erhält jeder die gleiche Nachricht und kann sie Empfangen, bzw. lesen, oder sie ignorieren.

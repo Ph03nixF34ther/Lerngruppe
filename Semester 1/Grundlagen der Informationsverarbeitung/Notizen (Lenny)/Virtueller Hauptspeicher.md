@@ -1,4 +1,4 @@
-In vielen modernen [[Inhalte|Betriebssystemen]] können sehr große [[Adressraum|Adressräume]] gebildet werden
+In vielen modernen [[Betriebssysteme Übersicht|Betriebssystemen]] können sehr große [[Adressraum|Adressräume]] gebildet werden
 
 Bei vielen Rechnersystemen wird dieser [[Adressraum]] durch den [[Realer Hauptspeicher|realen Hauptspeicher]] nicht ausgenutzt
 Um einen größtmöglichen [[Adressraum]] nutzen zu können werden [[Hintergrundspeicher]] verwendet

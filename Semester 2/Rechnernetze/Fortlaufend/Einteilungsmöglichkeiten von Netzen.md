@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 # Einteilung über die logische Ebene
 
 Logisch gesehen kann eine Nachricht entweder gerichtet oder ungerichtet sein. 
@@ -49,3 +54,28 @@ In der Praxis können Netze und Verbindungen auch über ihren konkreten Aufbau, 
 Am wichtigsten sind:
 - das [[Client-Server Modell]]
 - das [[Peer-To-Peer Modell]]
+
+# Verbindungsorientierung und Zuverlässigkeit
+
+> *Zuverlässig*:
+> Alle Daten kommen an und die Reihenfolge passt 
+
+>*Verbindungsorientiert*:
+>Verbindung wird aufgebaut => Nachrichten werden gesendet => Verbindung wird abgebaut
+>bei verbindungsloser Kommunikation wird keine Antwort erwartet
+
+
+| Dienst                                                 | Beispiel                                        |
+| ------------------------------------------------------ | ----------------------------------------------- |
+| Verbindungsorientierter zuverlässiger Nachrichtenstrom | Abfolge von Seiten                              |
+| Verbindungsorientierter zuverlässiger Bytestrom        | Download eines Films                            |
+| Verbindungsorientierte unzuverlässige Verbindung       | Voice over IP (VoIP)                            |
+| Verbindungslose unzuverlässige Diagramme               | Meldung Bluetooth // Präsenzerkennung // AirTag |
+| Verbindungslose bestätigte Datagramme                  | Textnachrichten                                 |
+| Verbindungslose Frage-Antwort                          | Datenbankabfrage                                |
+Nachrichtenstrom <=> Bytestrom:
+Es gibt sinnabschnitte (Fax)
+
+VoIP:
+Keine Bestätigung
+Ke

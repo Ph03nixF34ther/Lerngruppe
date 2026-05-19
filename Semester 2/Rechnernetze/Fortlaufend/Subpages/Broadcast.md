@@ -1,3 +1,8 @@
+---
+tags:
+  - Rechnernetze
+---
+
 # Erklärung
 
 ![[Broadcast.png]]

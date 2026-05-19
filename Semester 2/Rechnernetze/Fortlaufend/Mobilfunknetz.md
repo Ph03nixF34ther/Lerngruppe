@@ -1,3 +1,9 @@
+---
+tags:
+  - TODO
+  - Rechnernetze
+---
+
 # Bandbreite
 
 Bandbreite wird an Anbieter verkauft
