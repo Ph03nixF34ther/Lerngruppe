@@ -422,6 +422,12 @@ $$
 - Hauptspeicherdeskriptor
 - Maschinenzustand
 
+
+
+
+# -Prozesskontrollblock muss noch berichtigt werden-
+
+
 # Implementierung von Prozessen
 
 - Verwaltung der Prozesstabelle
