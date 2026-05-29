@@ -102,4 +102,18 @@ Es werden Daten und Informationen ausgetauscht. Dies ist notwendig um zugriff au
 
   
 
-##
+## RAID-System Lückentext
+
+## Wissen: Systemprüfpunkt
+
+## Was wird mit dem Prinzip der Deduplizierung erreicht?
+
+## RAID 0 ist kein echtes RAID-System. warum?
+
+## Warum können keine einzelne Dateien aus einem Windows-Systemabbild wiederhergestellt werden?
+
+## Warum können Dateien aus einem Blocklevel-Backup nicht ohne viel Mehraufwand hergestellt werden?
+
+## Wie viele Festplatten können bei RAID 6 ausfallen bevor Schaden entsteht?
+
+## Wann wird ein Systemprüfpunkt angelegt? Was wird hier nicht gesichert?
