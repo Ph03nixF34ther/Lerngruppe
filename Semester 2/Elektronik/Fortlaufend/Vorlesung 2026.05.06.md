@@ -1,3 +1,9 @@
+---
+tags:
+  - Elektronik
+  - TODO
+---
+
 > [!Warning]+ Hinweis
 > Es wurde nur aufgeschrieben, was nicht in der OneNote-Mappe steht
 > Nacharbeitung nötig!!!

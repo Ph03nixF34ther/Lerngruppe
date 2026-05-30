@@ -16,3 +16,4 @@ Deutsche Version der Norm: DIN EN 50173
 Amerikanische Version der Norm: TIA-568
 
 [[Einteilungsmöglichkeiten von Kabeln]]
+[[Stecker]]
