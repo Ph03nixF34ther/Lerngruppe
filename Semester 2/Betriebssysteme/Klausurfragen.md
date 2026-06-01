@@ -117,3 +117,23 @@ Es werden Daten und Informationen ausgetauscht. Dies ist notwendig um zugriff au
 ## Wie viele Festplatten können bei RAID 6 ausfallen bevor Schaden entsteht?
 
 ## Wann wird ein Systemprüfpunkt angelegt? Was wird hier nicht gesichert?
+
+## Erläutern Sie den Unterschied zwischen einem differentiellen und einem inkrementellen Backup!
+
+## Welche Speichermedien eignen sich speziell für Backups? Warum?
+
+## Was unterscheidet persistenten und flüchtigen Speicher? Nennen Sie je ein Beispiel!
+
+## Wie ist es möglich, dass mehr als ein Zustand in einer Flash-Zelle gespeichert wird? Worin besteht der Nachteil bei diesem Verfahren?
+
+## Welche Systeme verfügen nicht über L3-Cache? Wofür wird dieser Speicher genutzt?
+
+## Welche Komponente übersetzten logische in physische Speicheradressen? Warum passiert dieser Schritt nicht auf Programm-/Prozessebene?
+
+## Was soll mit der Defragmentierung einer Festplatte erreicht werden?
+
+## Wann tritt der Seitenfehler auf? Welches Verfahren soll Seitenfehler vermeiden?
+
+## Wo tritt interne Fragmentierung auf? 
+
+## Erläutern Sie eine der fünf Anforderungen an eine Speicherverwaltung!
