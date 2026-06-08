@@ -154,3 +154,11 @@ Memory Management Unit
 
 ## Welche Phasen durchläuft ein Virus? Was passiert in der jeweiligen Phase?
 
+## Was unterscheidet Spoofing und Phishing?
+
+## Bringen Sie Authentisierung, Autorisierung und Authentifizierung in die richtige Reihenfolge!
+
+## Welche zwei Werkzeuge nutzt ein Computerwurm zur Verbreitung?
+
+## Nenn Sie zwei Eigenschaften eines sicheren Systems!
+
