@@ -52,14 +52,12 @@ Rechnernetze:
 ## Betriebssysteme
 
 - [[Kapitel 1 - Einführung und Allgemeines]]
-- [[Schnittstellen von Betriebssystemen]]
-- [[Aufbau eines Betriebssystems]]
-- [[Grundlagen der Softwareverwaltung -entwicklung]]
-- [[Ein- und Ausgabe von Daten]]
-- [[Speicherverwaltung]]
-- [[Prozess- und Ressourcenverwaltung]]
-- [[IT-Sicherheit von Betriebssystemen und Netzwerke]]
-- [[Semester 2/Betriebssysteme/Klausurfragen]]
+- [[Kapitel 2 - Ein- und Ausgabegeräte]]
+- [[Kapitel 3 - Prozesse & Threads]]
+- [[Kapitel 4 - Datensicherung]]
+- [[Kapitel 5 Speicherverwaltung]]
+- [[Kapitel 6 - Sicherheit in Betriebssystemen]]
+- [[Semester 2/Betriebssysteme/Klausurfragen|Klausurfragen]]
 
 ## Rechnernetze
 
