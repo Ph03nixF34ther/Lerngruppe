@@ -1,6 +1,6 @@
 Basiert darauf, dass sich [[Leitungsträger]] bewegen können
 
-Unterscheidung in [[Isolator]], [[Leiter]], [[Halb-Leiter]]
+Unterscheidung in [[Isolator]], [[Leiter]], [[Halbleiter]]
 
 Formelzeichen: $G$
 

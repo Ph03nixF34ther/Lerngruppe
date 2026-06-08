@@ -63,3 +63,14 @@ mit Berücksichtigung der Kapazität: Wechselstrom Kleinsignal Ersatzschaltbild
 
 Diode in Durchlassrichtung: niederohmig, RLZ verschwindet ( mit Ladungsträgern überschwemmt)
 Bauteil wird wieder hochohmig, wenn die Sperrschicht wieder aufgebaut und die Ladungsträger verschwinden sind
+
+### Zenerdioden
+Bei einer Zenerdiode findet der Zenerdurchbruch bereits bei niedriger Spannung in Sperrrichtung statt
+
+Verhalten im Durchbruchbereich:
+=> Lawineneffekt (Beschleunigte Ladungsträger => Kollosion im Gitter => mehr Ladungsträger)
+=> Zenereffekt: Sperrspannung erzeugt ein starkes elektrisches Feld (lokal am pn-Übergang), Elektronen werden aus dem Gitter gezerrt => Freie Ladungsträger, Sperrschicht Leitfähig
+	Entscheidend: Dotierung ($200 k\frac{V}{cm}$)
+	Unterschreiten der Zener-Spannung: Feldstärke sinkt wieder: keine weitere Regeneration von Ladungsträgern: Sperrschicht wird wieder Hochohmig
+
+// Abb: Sperrbereich, Knickbereich Durchbruchbereich
