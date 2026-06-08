@@ -1,6 +1,4 @@
-# Inhalt:
-
-## Darstellung in Schalenmodell
+# Darstellung in Schalenmodell
 
 - Veredelung der Hardware mit jeder Schicht
 - Kommunikation mit benachbarten Schichten/ über festgelegte Schnittstellen
@@ -8,7 +6,7 @@
 - Dienste: Funktionen einer Schicht
 - Protokolle: Nutzungsvorschrift der Dienste
 
-### Kern des Systems
+## Kern des Systems
 
 - setzt direkt an der Hardware des physischen Systems an
 	- Verwaltung von Ressourcen
@@ -18,7 +16,7 @@
 	- Speicherverwaltung
 	- Prozessverwaltung
 
-### Anwendungsschicht
+## Anwendungsschicht
 
 - Schnittstelle zum Anwender
 - nutzt Schnittstellen von Betriebssystemen
@@ -27,46 +25,46 @@
 	- Grafische Oberfläche
 	- Programmierschnittstellen (API)
 
-## Monolithische Systeme
+# Monolithische Systeme
 
 - "klassischer Aufbau"
 - Sammlung von Programmen und Funktionen
 	- werden bei Bedarf aufgerufen
 - wird vollständig in Hautspeicher geladen und ausgeführt
-### Bestandteile:
+## Bestandteile:
 
 - Programme und Funktionen
 - Datenstrukturen zur Verwaltung von Geräten, Prozessen und Benutzern
-### Vorteile:
+## Vorteile:
 
 - Systemverhalten nicht von User-Programmen abhängig
 - Kommunikation zwischen BS-Modulen
-### Nachteile:
+## Nachteile:
 
 - Änderungen an Bestandteilen aufwendig
 - Isolation des SW-Komponenten schwierig
 
-## Mikrokern-Systeme
+# Mikrokern-Systeme
 
 - modularer Aufbau
 - Aufteilung der Systemdienste in separaten Programmen
 - Kommunikation über IPC(Intern Prozess Kommunikation)-Mechanismen
 	- Hardware-Traps -> Abgerungen zu Interrupts
-### Bestandteile:
+## Bestandteile:
 
 - Mikrokern
 - Programme
 	- "Server"-Prozesse
-### Vorteile:
+## Vorteile:
 
 - Einfacher Tausch von Softwarekomponenten
 - Hohe Absturzsicherheit
-### Nachteile:
+## Nachteile:
 
 - Geschwindigkeitseinbußen durch Wechsel der Prozesse
 - Schwierige Synchronisation der einzelnen Prozesse
 
-## Hybridkernel-Systeme
+# Hybridkernel-Systeme
 
 - vereint Mikrokern- und Monolith-Vorteile
 - Systemfunktionen im Kernel

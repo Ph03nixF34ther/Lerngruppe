@@ -51,7 +51,7 @@ Rechnernetze:
 
 ## Betriebssysteme
 
-- [[Aufgaben und Architektur von Betriebssysteme]]
+- [[Kapitel 1 - Einführung und Allgemeines]]
 - [[Schnittstellen von Betriebssystemen]]
 - [[Aufbau eines Betriebssystems]]
 - [[Grundlagen der Softwareverwaltung -entwicklung]]

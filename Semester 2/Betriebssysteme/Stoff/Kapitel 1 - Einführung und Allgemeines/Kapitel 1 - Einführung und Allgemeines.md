@@ -8,8 +8,7 @@ Es gib unterschiedliche Betriebssysteme für unterschiedliche Anwendungen. Ein B
 "Zusammenfassende Bezeichnung für alle Programme, die die Ausführung der Benutzerprogramme, die Verteilung der Betriebsmittel auf die einzelnen Benutzerprogramme und die Aufrechterhaltung der Betriebsart steuern und überwachen"
 ## Inhalt
 
-[[Aufgaben eines Betriebssystems]]
-[[Klassifizierung nach Betriebsart]]
-[[Klassifizierung nach Prozessanzahl]]
+[[Aufgaben von Betriebssystemen]]
+[[Klassifizierung von Betriebssystemen]]
 [[Architektur von Betriebssystemen]]
 

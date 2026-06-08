@@ -1,6 +1,4 @@
-# Inhalt:
-
-## Abstraktion des Systems: 
+# Abstraktion des Systems: 
 
 - Bereitstellung von Werkzeugen zur Benutzung des Systems
 - Bereitstellung von A/E-Schnittstellen
@@ -10,7 +8,7 @@
 - Ermöglichen einer einfachen u. Benutzerfreundlichen Bedienung
 - Ziel: Vereinfachung der Nutzung, Vermeidung von Fehler
 
-### Mittel und Wege zur Abstraktion:
+## Mittel und Wege zur Abstraktion:
 
 - Bereitstellen von Ein- und Ausgabeschnittstellen
 	- standardisierte, aufgabenorientierte Schnittstellen
@@ -22,7 +20,7 @@
 	- Vordefinierte und unveränderlich
 	- Unabhängig von physischen Gerät
 
-## Dienste für Anwender und Anwendungsprogramme:
+# Dienste für Anwender und Anwendungsprogramme:
 
 - Bereitstellung von Programmierschnittstellen
 - Laden von Programmen
@@ -32,7 +30,7 @@
 - Interprozesskontrolle
 - Ziel: Privilegien System zum Schutz der Anwendung untereinander
 
-### Realisierung der Anwenderdienste:
+## Realisierung der Anwenderdienste:
 
 - Systemaufruf (Lesen/Schreiben)
 	- Zugriff auf vom BS bereitgestellte Funktionalitäten (Bsp.: Lesen/Schreiben) 
@@ -41,7 +39,7 @@
 	- Programmierschnittstelle, meist auf Quelltextebene
 	- Wiederkehrende Nutzung von Schnittstellen zur Verwendung in unterschiedlichen Programmen
 	
-## Verwaltung der Systemressourcen:
+# Verwaltung der Systemressourcen:
 
 - Koordination von Prozesse
 - Schutz der systeminternen und verarbeiteten Informationen
@@ -49,7 +47,7 @@
 - Strategien zur Ressourcenverwaltung (Scheduling)
 - Ziel: Effizient, zuverlässige und sichere Ressourcennutzung
 
-### Methoden zur Ressourcenverwaltung:
+## Methoden zur Ressourcenverwaltung:
 
 - Priorisierung von Prozessen
 	- Systemprozesse vor Anwendungsprozessen bspw.
