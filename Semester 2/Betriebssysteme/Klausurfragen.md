@@ -137,3 +137,20 @@ Es werden Daten und Informationen ausgetauscht. Dies ist notwendig um zugriff au
 ## Wo tritt interne Fragmentierung auf? 
 
 ## Erläutern Sie eine der fünf Anforderungen an eine Speicherverwaltung!
+
+## An welcher Stelle findet interne Fragmentierung statt? Mit welchem Verfahre lässt sie sich theoretische beheben?
+
+## Welche Komponente verwaltet die Speichermedien und den Datenfluss in einem Rechnersystem?
+
+Memory Management Unit
+
+## Welche Anforderungen werden an ein Speichersystem gestellt?
+
+## Was wird mit der Working-Set-Methode versucht zu verhindern?
+
+## Welche Unterscheidung können Sie zwischen Safety und Security treffen?
+
+## Wie beschreiben Sie Malware?
+
+## Welche Phasen durchläuft ein Virus? Was passiert in der jeweiligen Phase?
+
