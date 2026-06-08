@@ -41,7 +41,7 @@ Grundprinzip, dass beim [[Halleffekt]] Anwendung findet ist, dass bewegte Ladung
 ![[Hall_Effekt.gif]]
 
 Nachgewiesen wird der Hall-Effekt, indem ein stromdurchflossener Leiter in ein [[magnetisches Feld]] gebracht wird. 
-In diesem Beispiel ist das Plättchen [[#n-dotierte Halbleiter|n-dotiert]], das heißt, dass [[Elektron|Elektronen]] die [[Ladungsträger|Majoritätsträger]] sind.
+In diesem Beispiel ist das Plättchen ein [[dotierte Halbleiter|n-dotierter Halbleiter]], das heißt, dass [[Elektron|Elektronen]] die [[Ladungsträger|Majoritätsträger]] sind.
 
 - Der Steuerstrom $I_{St}$ fließt durch das Plättchen
 - Der [[magnetische Fluss]] durchsetzt das Plättchen mit der [[magnetische Flussdichte]] $B$
