@@ -1,3 +1,7 @@
+Version: 1.0
+Datum: 11.06.2026
+Kurs: PIB (25)
+Gruppenteilnehmer: Wiemuth Emil; Turre Leonardo-Diego 
 
 ## Vorbereitungsaufgaben
 
@@ -28,7 +32,7 @@ $$
 $$
 b)
 $$
-\to y_{min}=x_{1}\overline{x}_{3}\overline{x}_{4} V \overline{x}_{1}x_{3}\overline{x}_{4} V x_{2}x_{4}
+\to y_{min}=\underline{\underline{x_{1}\overline{x}_{3}\overline{x}_{4} V \overline{x}_{1}x_{3}\overline{x}_{4} V x_{2}x_{4}}}
 $$
 c)
 
@@ -67,7 +71,7 @@ $$
 $$
 c)
 $$
-\to y_{min}=s\ e_{1}\ \ V \ \ \overline{s}\ e_{0}
+\to y_{min}=\underline{\underline{s\ e_{1}\ \ V \ \ \overline{s}\ e_{0}}}
 $$
 d)
 
@@ -126,7 +130,7 @@ y_{min}=s\ e_{1}\ \ V \ \ \overline{s}\ e_{0}
 $$
 Hinzufügen des Steuersignales $s_{1}$ sowie der Eingänge $e_{2},e_{3}$. Dabei werden die Steuersignale als Binäre Eingänge betrachtet. Jede Möglichkeit der Schaltung von $s_{0}$ und $s_{1}$ schaltet dabei je ein Eingang durch. Daraus ergibt sich folgende Gatter Funktion:
 $$
-y_{min}=\overline{s_{0}} \ \overline{s_{1}}\ e_{0}\ V \ \overline{s_{0}} \ s_{1}\ e_{1}\ V \ s_{0} \ \overline{s_{1}}\ e_{2}\ V \ s_{0} \ s_{1}\ e_{3}
+y_{min}=\underline{\underline{\overline{s_{0}} \ \overline{s_{1}}\ e_{0}\ V \ \overline{s_{0}} \ s_{1}\ e_{1}\ V \ s_{0} \ \overline{s_{1}}\ e_{2}\ V \ s_{0} \ s_{1}\ e_{3}}}
 $$
 
 
@@ -166,3 +170,50 @@ $$
 y_{0min}=\overline{s_{0}}\ \overline{s_{1}}\ e_{0}
 $$
 
+Zusatzaufgabe:
+
+$t_{in}$ = Tür Eingang
+$e_{0}$ = Eingang Hauptschalter (An/Aus Motor)
+$s_{0}$ = Schalter 50% Beladung (1)
+$s_{1}$ = Schalter 50% Beladung (2)
+
+$t_{out}$ = Tür Ausgang
+$a_{0}$ = Zustand 0
+$a_{1}$ = Zustand 1
+$a_{2}$ = Zustand 2
+$a_{3}$ = Zustand 3
+
+$$
+\begin{array}{cccc|cccc}
+t_{in} & e_{0} & s_{0} & s_{1} & a_{0} & a_{1} & a_{2} & a_{3} & t_{out}\\
+\hline 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\
+0 & 1 & 0 & 1 & 0 & 0 & 1 & 0 & 1 \\
+0 & 1 & 1 & 0 & 0 & 0 & 1 & 0 & 1 \\
+0 & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 \\
+\hline 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+1 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\
+1 & 1 & 1 & 0 & 0 & 1 & 0 & 0 & 0 \\
+1 & 1 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
+\end{array}
+$$
+
+$$
+a_{0}=\overline{e_{0}}
+$$
+$$
+a_{1}=\overline{t_{0}}\ e_{0}\ \overline{s_{0}}\ \overline{s_{1}} \ V \ e_{0} \ t
+$$
+$$
+a_{2}=\overline{t_{0}}\ e_{0}\ \overline{s_{0}}\ s_{1} \ V \  \overline{t_{0}}\ e_{0}\ s_{0}\ \overline{s_{1}}
+$$
+$$
+a_{3}=t \ e_{0} \ s_{0} \ s_{1}
+$$
