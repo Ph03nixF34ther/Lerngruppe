@@ -1,10 +1,12 @@
 (*J*unction *F*ield *E*ffect *T*ransistor)
 
+![[JFET_unbeschaltet_labled.png|300]]
+
 # Aufbau und Steuerung
 
-![[Structure_of_JFET.jpg]]
+![[JFET_beschaltet_labled.png|300]]
 
-
+![[JFET_sperrbeschaltet_labled.png|300]]
 # Symbole
 
 ```tikz
@@ -18,4 +20,15 @@
 	\node[pjfet] at (7, 6){};
 \end{tikzpicture}
 \end{document}
+```
+
+```mermaid
+graph LR
+	START:::hidden --"Start"--> A(Bereit)
+	A --"Aktivierung"--> B(Aktiv)
+	B --"Deaktiviertung"--> A
+	B --"Ende"--> ENDE:::hidden
+	
+	
+	classDef hidden display:none;
 ```
