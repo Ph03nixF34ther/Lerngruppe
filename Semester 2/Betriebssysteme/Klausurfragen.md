@@ -162,3 +162,24 @@ Memory Management Unit
 
 ## Nenn Sie zwei Eigenschaften eines sicheren Systems!
 
+## Nach welchen zwei Zwecken lässt sich Schadsoftware unterscheiden?
+
+## Welche Kanäle lassen sich zur verdeckten Kommunikation nutzen?
+
+- Zeitkanal:
+- Speicherkanal:
+
+## Warum ist verdeckte Kommunikation so schwer aufzudecken?
+
+
+## Nach welchem Prinzip arbeitet das Bell-Lapadula-Modell?
+
+
+## Welche Fragen können bei einer Authentifizierung gestellt werden?
+
+
+## Erläutern Sie das Prinzip der drei ihnen bekannten Sicherheitspolitiken und nennen Sie je einen Vor- und Nachteil!
+
+## Nennen Sie vier Aufgaben der Firewall!
+
+## Aufbau der Firewall kennen und die Funktionsweise/ den Nutzen der einzelnen Komponenten kennen.
