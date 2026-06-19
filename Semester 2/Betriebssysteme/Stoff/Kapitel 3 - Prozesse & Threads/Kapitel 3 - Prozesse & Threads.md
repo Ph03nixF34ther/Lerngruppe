@@ -75,5 +75,3 @@ $$
 - [[Prozessoperationen]]
 - [[Scheduling]]
 - [[Interprozesskommunikation]]
-- 
-- 
