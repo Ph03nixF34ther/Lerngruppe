@@ -1,4 +1,4 @@
-# Katalog:
+# Einführung und Allgemeines
 
 ## Welche Aufgaben hat ein Betriebssystem?
 
@@ -25,7 +25,8 @@ Mikro-Kern-Systeme kommunizieren über IPC-Mechanismen (Intern Prozess Kommunika
 
 ## Was ist der Unterschied zwischen Traps und Interrupts
 
-
+Eine Trap ist ein eine Unterbrechung eines Prozesses, die durch den Prozess selber ausgelöst wurde. 
+Ein Interrupt ist eine unplanmäßige Unterbrechung ausgelöst durch ein externes Ereignis.
 
 ## Welche drei Nutzungskonzepte werden bei der Abstraktion vom System Verfolgt?
 
@@ -35,8 +36,25 @@ Mikro-Kern-Systeme kommunizieren über IPC-Mechanismen (Intern Prozess Kommunika
 
 ## Was ist der Zweck einer API? 
 
+Eine API (Application Programming Interface) ist eine definierte Schnittstelle, über die Anwendungsprogramme auf Dienste und Funktionen des Betriebssystems oder einer Bibliothek zugreifen können, ohne deren interne Implementierung zu kennen. Sie sorgt für die Abstraktion von Programmen zwischen unterschiedlichen Systemen sowie einen einheitlichennmZugriff auf Systemfunktionen.
+
+# Prozesse und Threads
+
+## Was sind die Hauptmerkmale eines Prozesses?
+
+- Ein eigener (logischer) Adressraum mit Code-, Daten-, Heap- und Stack-Bereich 
+- Ein eigener Ausführungskontext (Programmzähler, Registerinhalte, Prozessorstatus) 
+- Eine eindeutige Prozess-Identifikationsnummer (PID) 
+- Ihm zugeordnete Ressourcen (offene Dateien, Geräte, Kommunikationskanäle) 
+- Ein aktueller Prozesszustand (z.B. bereit, laufend, blockiert) 
+- Ein Prozesskontrollblock (PCB), in dem alle relevanten Informationen verwaltet werden
+
+
+
+
 
 ## Was passiert beim Polling?
+
 
 
 ## Welche Aufgaben hat die geräteunabhängige Software in einem System?
