@@ -29,10 +29,14 @@ Der Sperrbetrieb läuft, wenn der Basisstrom $0$ ist und damit der Transistor sp
 
 Der Verstärkerbetrieb ist der "Normalbetrieb" des Transistors, in der eine Stromverstärkung nach einem nahezu konstanten Faktor $B$ stattfindet. 
 
-## Übersteuerung (B)
+### Übersteuerung (B)
 
 Übersteuerung geschieht, wenn der Basisstrom über einen bestimmten Punkt hinaus erhöht wird, was zu einer schnelleren Schaltzeit führt, aber auch die Ausschaltzeit verlängern kann.
 Der relativ konstante Stromverstärkungsfaktor gilt ab hier nicht mehr, da die Arbeitsgerade des Basisstroms hier einen Knick erfährt. 
+
+### Sättigung (A)
+
+Keine weitere Stromverstärkung, Strom begrenzt durch Vorwiderstand.
 
 ## Aufgabe 3
 
@@ -65,10 +69,10 @@ I_{R_{1}} = 11 \cdot I_{B} = 33\ mA
 $$
 Da wir wissen, dass über die Zenerdiode und über $R_{1}$ insgesamt die Quellspannung $U_{1}$ abfallen soll und die Zenerdiode die abfallende Spannung etwa konstant bei $6,2\ V$ hält, können wie die an $R_{1}$ abfallende Spannung errechnen:
 $$
-U_{1} = U_{Z_{1}} + U_{R_{1}} \implies U_{R_{1}} = U_{1} - U_{Z_{1}} =3,8\ V
+U_{1} = U_{Z_{1}} + U_{R_{1}} \implies U_{R_{1}} = U_{1} - U_{Z_{1}} =8,8\ V
 $$
 Der benötigte Widerstand zum Einstellen des Strom bei dieser Spannung kann dann mittels des ohmschen Gesetzes berechnet werden.
 
 $$
-R = \frac{U}{I} = \frac{3,8\ V}{33\ mA} = 115,15\ \Omega
+R = \frac{U}{I} = \frac{8,8\ V}{33\ mA} = 266,67\ \Omega
 $$
