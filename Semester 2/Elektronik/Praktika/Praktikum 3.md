@@ -3,9 +3,9 @@
 ## Aufgabe 1
 
 #### Gegeben:
-Quellspannung $U_{q}$ = 5V
-Wiederstand $R_{1}$ = 1000 Ohm
-Ausgangspotential am Punkt A = 2,2V
+Quellspannung $U_{q} = 5\ V$
+Wiederstand $R_{1} = 1000 \Omega$
+Ausgangspotential am Punkt $A = 2,2\ V$
 
 #### Lösung:
 Da die Gesamtspannung $U_q$ die Summe der Teilspannungen ist ($U_q = U_1 + U_2$), können wir die Spannung über $R_1$ direkt berechnen:
@@ -20,6 +20,7 @@ $$R_2 = R_1 \cdot \frac{U_2}{U_1}$$
 $$R_2 = 1000\,\Omega \cdot \frac{2{,}2\,\text{V}}{2{,}8\,\text{V}}$$
 $$R_2 \approx 785{,}71\,\Omega$$
 ## Aufgabe 2
+
 **a) p-Kanal Anreicherungstyp** _(Unterbrochene Linie = Anreicherungstyp (normal sperrend); Pfeil zeigt nach außen = p-Kanal)_
 
 **b) n-Kanal Anreicherungstyp** _(Unterbrochene Linie = Anreicherungstyp (normal sperrend); Pfeil zeigt nach innen = n-Kanal)_
