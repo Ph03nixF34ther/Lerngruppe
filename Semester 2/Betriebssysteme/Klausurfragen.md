@@ -38,7 +38,7 @@ Ein Interrupt ist eine unplanmäßige Unterbrechung ausgelöst durch ein externe
 
 Eine API (Application Programming Interface) ist eine definierte Schnittstelle, über die Anwendungsprogramme auf Dienste und Funktionen des Betriebssystems oder einer Bibliothek zugreifen können, ohne deren interne Implementierung zu kennen. Sie sorgt für die Abstraktion von Programmen zwischen unterschiedlichen Systemen sowie einen einheitlichennmZugriff auf Systemfunktionen.
 
-# Prozesse und Threads
+# Prozesse und Prozesszustände
 
 ## Was sind die Hauptmerkmale eines Prozesses?
 
@@ -48,6 +48,195 @@ Eine API (Application Programming Interface) ist eine definierte Schnittstelle, 
 - Ihm zugeordnete Ressourcen (offene Dateien, Geräte, Kommunikationskanäle) 
 - Ein aktueller Prozesszustand (z.B. bereit, laufend, blockiert) 
 - Ein Prozesskontrollblock (PCB), in dem alle relevanten Informationen verwaltet werden
+
+## Welche Zustände kann ein Prozess einnehmen? Was sagt jeder Zustand aus?
+
+- Erzeugt:
+	- Die Verwaltungsstruktur wurde angelegt, der Prozess aber noch nicht.
+- Bereit:
+	- Dem Prozess sind alle nötigen Ressourcen abgesehen von der CPU zugeteilt.
+- Ausführung:
+	- Der Prozess wird gerade von der CPU ausgeführt
+- Blockiert/Wartend:
+	- Der Prozess wartet auf Zuteilung von Notwendigen Ressourcen oder einem anderen Ereignis.
+- Beendet:
+	- Die Verwaltungsdaten existieren noch, der Prozess ist Terminiert.
+
+## Worüber werden Prozesse vom Betriebssystem verwaltet?
+
+Prozesse werden über den Prozesskontrollblock verwaltet, der in einer zentralen Prozesstabelle des Betriebssystems abgelegt ist. Dort sind alle für die Verwaltung notwendigen Informationen  gespeichert.
+
+## Welche Ursachen für einen Kontextwechsel existieren?
+
+- Systemaufruf:
+	- Prozess gibt Kontrolle (Prozessor) freiwillig ab
+- Interrupt:
+	- Behandlung des Interrupts erfolgt im BS Autom. Timer verhindern Monopol-Steuerung
+- Ausnahme:
+	- Prozess wird ggf. beendet. Behandlung der Ausnahme im Betriebssystem 
+- Warten auf Ressourcen:
+	- Prozess wartet bspw. auf Netzwerkressourcen und blockiert den Fortschritt
+
+## Was beinhaltet der Programmspeicher eines Prozesses?
+
+- Programmkontext 
+	- kleiner Speicherbereich für Aufrufparameter und Umgebungsvariablen
+- Maschinencode
+	- Maschinenbefehle, durch Compiler und Linker aus Programmcode erzeugt
+- Statische Daten
+	- statische reservierte Bereiche für Variablen und Konstanten des Programms
+- Heap
+	- dynamischer Speicher, der während Laufzeit genutzt werden kann
+- Laufzeitstack
+	- dynamischer Speicher, für Daten der Unterprogrammaktivierung
+
+## Was unterscheidet den Kernel-Modus vom User-Modus?
+
+- User-Modus:
+	- CPU Kontrolle liegt beim Aktuellen Programm
+	- eingeschränkten Rechten: Einfacher Befehlssatz
+- Kernel-Modus:
+	- CPU wird in privilegierten Modus versetzt
+	- Geringere Sicherheit: Erweiterter Befehlssatzt
+	- Aufhebung hardwareseitiger Speicherzugriffbeschränkungen
+
+## Mit welchem Zustand startet ein Prozess immer?
+
+Ein Prozess Startet immer im Zustand Neu.
+
+# Prozessverwaltung und Scheduling
+
+## Was unterscheidet kooperative und verdrängende Scheduling-Verfahren?
+
+- Kooperative Verfahren:
+	- Prozess gibt Ressource selbständig zurück
+	- Kein Aktiver eingriff des Scheduler
+	- Fehlerhafte Prozesse können Blockaden auslösen
+- Verdrängende Verfahren:
+	- Scheduler entzieht dem Prozess die CPU-Ressource
+	- Steuerung durch Interrupt
+	- Fehlerhafte Prozesse lösen keine Blockaden aus
+	- Verdrängung durch Timer- und Hardware-Interrupts
+
+## Wie funktioniert das Round-Robin-Verfahren? Welches Risiko birgt dieses Verfahren?
+
+- Alle Prozesse mit dem Status bereit sind in einer Warteschlange nach dem FIVO Prinzip geordnet
+- Jeder Prozess erhält bei Ausführung eine festgelegte Teil der Zeitscheibe
+- In dieser Zeit wird der Prozess abgearbeitet
+- Nach Ablauf der Zeiteinheit wird der Prozess unterbrochen und ans Ende der Warteschlange eingereiht
+- Das Risiko von Latenzen entsteht bei zu vielen aktiven Prozessen
+
+## Wozu dient der Prozesskontrollblock?
+
+Der Prozesskontrollblock enthält wichtige Information der einzelnen Prozesse. Zu diesen gehören:
+- Prozessidentifikation
+- Dateizustände
+- Stack-Zeiger
+- Befehlssätze
+- Verwaltungsinformationen
+- Speicherbelegung
+
+## Welche Ziele werden beim Scheduling verfolgt?
+
+- Fairness
+- Reaktionszeit
+- Ressourcennutzung
+- Auftrags-Wartezeiten
+- Programm-Durchsatz
+
+## Was beinhaltet der Prozessdeskriptor?
+
+- Eindeutige Prozessidentifikation
+- Priorität
+- Zustand
+- Ressourcenverbrauch
+- Zugriffsrechtsdeskriptor
+- Hauptspeicherdeskriptor
+- Dateideskriptor
+- Maschinenzustand
+
+# Rechnerarchitekturen
+
+## Was zeichnet echte Parallelität aus?
+
+Echte Parallelität bedeutet, dass tatsächlich zwei Prozesse zur selben Zeit bearbeitet werden, dass kann nur durch mehrere Prozessoren Realisiert werden
+
+## Was zeichnet nebenläufige Prozesse aus?
+
+Nebenläufige Prozesse laufen scheinbar Parallel ab, tatsächlich wechselt der Kontext immer wieder in kurzer Zeit zwischen den Prozessen.
+
+## Erläutern Sie die Abarbeitung von zwei „pseudo parallelen“ Prozessen!
+
+Bei pseudo-paralleler Ausführung auf einem einzelnen Prozessorkern läuft zu jedem Zeitpunkt nur einer der beiden Prozesse. Das Betriebssystem schaltet über das Scheduling sehr schnell zwischen beiden Prozessen hin und her, indem es jeweils einen Kontextwechsel durchführt. Durch die hohe Wechselfrequenz entsteht für den Benutzer der Eindruck, beide Prozesse würden gleichzeitig laufen, obwohl die CPU sie nur abwechselnd, scheibchenweise bearbeitet.
+
+## Welchen Vorteil bietet die Distributed-Memory-Access-Architektur ggü. der Uniform-Memory-Architektur ?
+
+Bei einer Uniform-Memory-Architektur greifen alle Prozessoren über einen gemeinsamen Bus auf einen zentralen Hauptspeicher zu, wodurch bei steigender Prozessorzahl der Bus zum Engpass wird. 
+Bei einer Distributed-Memory-Architektur besitzt dagegen jeder Prozessor einen eigenen, lokalen Speicherbereich mit sehr schnellem Zugriff. Dadurch können Speicherzugriffe stärker parallelisiert werden und das System lässt sich deutlich besser auf viele Prozessoren skalieren.
+
+# Interprozesskommunikation
+
+## Was unterscheidet synchrone und asynchrone Kommunikation?
+
+Bei synchroner Kommunikation müssen Sender und Empfänger zum Zeitpunkt der Übertragung beide bereit sein. Auf Jede gesendete Nachricht folgt eine Bestätigung. 
+Bei asynchroner Kommunikation kann der Sender eine Nachricht abschicken und sofort mit seiner Arbeit fortfahren, ohne auf den Empfang durch den Empfänger warten zu müssen. Diese Art der Kommunikation ist nicht sicher.
+
+## Erklären Sie die Kommunikation über Pipes!
+
+Eine Pipe ist ein unidirektionaler Kommunikationskanal zwischen zwei Prozessen. Ein schreibender Prozess legt Daten am Eingang der Pipe ab, ein lesender Prozess entnimmt sie am Ausgang in genau der Reihenfolge, in der sie geschrieben wurden. Die Pipe besitzt einen begrenzten Puffer im Kernel. Ist der Puffer voll, wird der schreibende Prozess blockiert, bis wieder Platz frei ist. Wenn der Puffer leer ist, wird der lesende Prozess blockiert, bis neue Daten verfügbar sind.
+
+## Was unterscheidet Multicast- und Broadcast-Informationen?
+
+Eine Broadcast-Nachricht wird an alle Teilnehmer eines Netzes bzw. Systems gesendet, während eine Multicast-Nachricht gezielt nur an eine ausgewählte Gruppe von Empfängern adressiert wird.
+
+## Was unterscheidet ein Signal von einer Nachricht?
+
+Ein Signal ist eine kurze, asynchrone Benachrichtigung ohne Nutzdateninhalt. Eine Nachricht dagegen transportiert tatsächliche Daten/Inhalte zwischen Prozessen und wird gezielt vom empfangenden Prozess gelesen und verarbeitet.
+
+## Nennen Sie drei Möglichkeiten zur Interprozesskommunikation!
+
+- Kommunikation über Dateien
+- Kommunikation über Nachrichten
+- Kommunikation über Shared Memory
+
+## Erläutern Sie die Funktionsweise eines Monitors!
+
+Ein Monitor fasst Daten und die Prozeduren, die auf diese Daten zugreifen, in einer gemeinsamen Einheit zusammen. Die Laufzeitumgebung stellt dabei sicher, dass zu jedem Zeitpunkt nur ein Thread oder Prozess innerhalb des Monitors aktiv sein kann, wodurch der gegenseitige Ausschlussautomatisch garantiert wird. Zusätzlich besitzt ein Monitor Bedingungsvariablen, über die wartende Prozesse schlafen gelegt und bei Eintreten einer bestimmten Bedingung von anderen Prozessen wieder geweckt werden können.
+
+## Welches Risiko birgt synchrone Kommunikation zwischen zwei Prozessen? 
+
+Es besteht das Risiko eines Deadlocks: Wenn beide Prozesse gleichzeitig blockierend aufeinander warten. Beide könnten darauf warten, dass der jeweils andere zuerst sendet oder empfängt dadurch blockieren sich beide gegenseitig dauerhaft, und keiner von ihnen kann fortfahren.
+
+# Verklemmung 
+
+## Wie kann Verklemmungen in einem System vorgebeugt werden?
+
+- Vermeidung von unnötigen Exklusivsperrungen
+- Ressourcen müssen in einer Geordneten Reihenfolge angefordert werden
+- Alle benötigten Ressourcen werden vor Ausführung vergeben
+- Entzug von Ressourcen zulassen
+- Verklemmungserkennung mit Softwareseitiger Auflösung
+
+## Erläutern Sie das Erzeuger-Verbraucher-Problem!
+
+Beim Erzeuger-Verbraucher-Problem produzieren ein oder mehrere Erzeuger-Prozesse Daten und legen sie in einem gemeinsamen Puffer begrenzter Größe ab, während ein oder mehrere Verbraucher-Prozesse diese Daten aus dem Puffer entnehmen und weiterverarbeiten. Dabei muss sichergestellt werden, dass ein Erzeuger nicht in einen vollen Puffer schreibt und ein Verbraucher nicht aus einem leeren Puffer liest oder Beide Gleichzeitig auf den Speicher zugreifen.
+
+## Welche Bedingungen führen zu einer Verklemmung in einem System?
+
+- Exklusivnutzung von Ressourcen
+	- Ressourcen werden exklusiv von einem Prozess genutzt
+- Reservieren und Warten
+	- Reservierte Ressourcen werden erst nach der Nutzung Freigegeben
+- Keine Wegnahme
+	- Ressourcen, die ein Prozess reserviert hat, werden ihm nicht weggenommen
+- Gegenseitiges Warten
+	- Es gibt mehrere Prozesse die auf Ressourcen werten, die von jedem Prozess Reserviert sind
+
+## Erklären Sie die Strategie der atomaren Ressourcenzuteilung!
+
+Bei der atomaren Ressourcenzuteilung muss ein Prozess vor Beginn seiner Ausführung alle Ressourcen anfordern, die er insgesamt benötigt. Das Betriebssystem vergibt diese Ressourcen entweder vollständig und gleichzeitig oder gar nicht. Können nicht alle angeforderten Ressourcen sofort bereitgestellt werden, wird der Prozess zurückgestellt. Dies kann jedoch dazu führen das der Prozess sehr lange Wartezeit hat bis zur Ausführung.
+
+# Threads und Threadverwaltung
 
 
 
@@ -219,3 +408,9 @@ Memory Management Unit
 ## Nennen Sie vier Aufgaben der Firewall!
 
 ## Aufbau der Firewall kennen und die Funktionsweise/ den Nutzen der einzelnen Komponenten kennen.
+
+
+
+# Soll ich aufschreiben:
+
+Vermittlung zw. logischer Sicht von Dateien und Verzeichnissen und physikalischer Sicht von Blöcken, Spuren, Sektoren, Geräten, Netzlaufwerken etc.
