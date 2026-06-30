@@ -21,7 +21,7 @@ Wird der Pluspol an den [[dotierte Halbleiter|n-dotierten Halbleiter]] angeschlo
 
 Durch die nun breitere [[Verarmungszone|Raumladungszone]] kann kein Strom fließen, da sich in der Zone keine freien [[Ladungsträger]] befinden.
 
->[!Anmerkung] 
+>[!Info] 
 >Durch thermisch erzeugte Ladungsträger kommt es zu einem geringen Stromfluss
 
 ## In Durchlassrichtung
