@@ -18,7 +18,6 @@ Häufig werden in Schaltplänen Zählpfeile (= Bezugspfeile) für den Strom ein
 \end{tikzpicture}
 \end{document}
 ```
-// Abb.: Simpler Stromkreis mit eingezeichnetem Bezugssinn
 
 Der in der Abbildung eingezeichnete Bezugssinn der [[Elektrische Spannung|Spannung]] $U_{q}$ und der [[Elektrische Stromstärke|Stromstärke]] $I$ sind rein willkürlich gewählt.
 

@@ -49,15 +49,15 @@ Die Studierenden sollen nach Abschluss des Moduls in der Lage sein:
 
 ## Elektronik (Nach Prof. Barié)
 
-1. Grundlagen Halbleiter
+1. Grundlagen [[Halbleiter]]
 	1.  Elektrische Leitfähigkeit von Materialien
-	2. [[Semester 2/Elektronik/Einträge/Sekundär/Halbleiter]], Eigenleitung
-	3. Dotierung von Halbleitermaterialien / Störstellenleitung
-	4. Hall-Effekt zum Nachweis der Elektronen-/Löcherleitung
-2. pn-Übergang
-	1. Durchlass / Sperrrichtung
-	2. Sperrschicht, Verarmungszone, Diffusionsspannung
-	3. Steuerung der Sperrschicht durch externe Einflüsse: Spannung / Licht
+	2. [[Halbleiter]], Eigenleitung
+	3. [[dotierte Halbleiter|Dotierung von Halbleitermaterialien]] / Störstellenleitung
+	4. [[Halleffekt|Hall-Effekt]] zum Nachweis der Elektronen-/Löcherleitung
+2. [[pn-Übergang]]
+	1. [[Verarmungszone#In Durchlassrichtung|Durchlass]] / [[Verarmungszone#In Sperrrichtung|Sperrrichtung]]
+	2. [[Verarmungszone|Sperrschicht]], [[Verarmungszone]], [[Diffusionsspannung]]
+	3. Steuerung der Sperrschicht durch externe Einflüsse: [[Verarmungszone|Spannung]] / [[Photodiode|Licht]]
 3. Halbleiterkanäle
 	1. [[JFET]] 
 	2. [[MOSFET]]
@@ -67,7 +67,7 @@ Die Studierenden sollen nach Abschluss des Moduls in der Lage sein:
 	3. Kennlinienlösung einer Reihenschaltung von Diode mit ohm'schen Widerstand
 	4. Übertragungskennlinien am Beispiel Diode (für spätere Anwendung bei Transistorschaltungen)
 	5. Begrenzerschaltungen mit Dioden
-5. Spannungsstabilisierung mit Zenerdioden
+5. Spannungsstabilisierung mit [[Zenerdiode]]
 	1. Zener-Effekt
 	2. Lawiniendurchbruch
 	3. Anwendung der unbelasteten Z-Diodenschaltung zur Spannungsstabilisierung, Strombelastbarkeit, Leistungsbetrachtung
@@ -142,7 +142,7 @@ Die Studierenden sollen nach Abschluss des Moduls in der Lage sein:
 
 ## Laborpraktika
 
-- Kennlinien von Dioden und Transistoren
-- Transistor Grundschaltungen
+- [[Praktikum 1|Kennlinien von Dioden und Transistoren]]
+- Transistor Grundschaltungen ([[Praktikum 2|Teil 1]] und [[Praktikum 3|Teil 2]])
 - Digitale Kodierung
 - Digitale Zähler und Speicher
