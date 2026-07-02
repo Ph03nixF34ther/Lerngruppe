@@ -262,7 +262,6 @@ mit Berücksichtigung der Kapazität: Wechselstrom Kleinsignal Ersatzschaltbild
 
 # Temperaturverhalten von Dioden
 
-## Temperaturverhalten im Sperrbetrieb
 
 ![[Temperatur-Sperrrichtung.png|400]]
 
