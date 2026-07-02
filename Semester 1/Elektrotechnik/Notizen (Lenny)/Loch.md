@@ -1,3 +1,12 @@
+---
+aliases:
+  - Defektelektron
+  - Defektelektronen
+  - positiver Ladungsträger
+  - positive Ladungsträger
+  - Löcher
+---
+
 Metaphorisch
 
 Die Fehlstelle, welche durch ein [[Elektron#Freie Elektronen|freies Elektron]] entsteht

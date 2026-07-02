@@ -13,7 +13,7 @@ $$
 
 Der Satz von Cayley-Hamilton besagt: Jede quadratische Matrix $A$ genügt ihrem charkteristischen Polynom, d.h
 
-$p(x) =x^3+3 x^2 +x +1$ ist das charakteristische Polynom zur Matrix $A$
+$p(x) =x^3+3 x^2 +x +1$ ist das [[Charakteristische Polynome|charakteristische Polynom]] zur Matrix $A$
 $$
 A = \begin{bmatrix}
 1 & 1 & 0 \\

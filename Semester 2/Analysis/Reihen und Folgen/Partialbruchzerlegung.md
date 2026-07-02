@@ -85,3 +85,27 @@ $$
 \frac{3}{x-1}-\frac{2}{x-3}+\frac{1}{x+5}
 $$
 
+---
+
+# Feldmann-Verfahren
+
+$$
+h(x) = \dfrac{x^3+x^2+2 \cdot x - 4}{(x-2) \cdot (x + 3) \cdot (x - 7) \cdot (x + 5)}
+$$
+
+Zähler-Funktion $q(x)$, deren Ableitung $dq(x)$ und Nenner-Funktion $p(x)$ bilden
+
+$$\begin{array}{l} \\
+p(x) = x^3 + x^2 + 2 \cdot x - 4 \\
+q(x) = (x-2) \cdot (x + 3) \cdot (x - 7) \cdot (x + 5) \\
+dq(x) = \frac{d}{dx} q(x) = 4 \cdot x^3 - 3 \cdot x^2 - 86 \cdot x - 23
+\end{array}$$
+
+Nenner-Funktion durch die Ableitung der Zählerfunktion teilen und für $x$ die kritischen Stellen einsetzen
+
+$$\begin{array}{l}
+A = \dfrac{p(2)}{dq(2)} = -\dfrac{12}{175} \\
+B = \dfrac{p(-3)}{dq(-3)} = -\dfrac{7}{25} \\
+C = \dfrac{p(7)}{dq(7)} = \dfrac{67}{100} \\
+D = \dfrac{p(-5)}{dq(-5)} = \dfrac{19}{28}
+\end{array}$$
