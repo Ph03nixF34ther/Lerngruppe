@@ -217,3 +217,86 @@ $$
 $$
 = \frac{3}{2} \cdot \left[ \ln(x - 1) \right]^2_1 + 5 \cdot \left[ \ln(x - 2) \right]^2_1 + \frac{7}{2} \cdot \left[ \ln(x - 3) \right]^2_1
 $$
+
+---
+
+# Aufgabe 6
+
+## Aufgabe
+
+Man approximiere die Funktion $\sin(x) \cos(x)$ über dem Intervall $[0,\pi]$ im Sinne der kleinsten Quadrate durch ein Polynom 5. Grades: wie sind die 6 Koeffizienten von $p(x)$ zu wählen, damit folgender Ausdruck minimal wird
+
+$$
+\int^\pi_0 \left( \sin(x) \cdot \cos(x) - p(x) \right)^2 \ dx
+$$
+
+## Lösung
+
+$$\begin{array}{cc}
+G = \displaystyle \int_0^\pi \left[ \begin{array}{cccc} x^0 & x^1 & \dots & x^5 \\ x^1 & x^2 & \dots & x^6 \\ \vdots & \vdots & \ddots & \vdots \\ x^5 & x^6 & \dots & x^{10} \end{array} \right] \ dx
+&
+b = \displaystyle \int_0^\pi \left[ \begin{array}{c} f(x) \\ f(x) \cdot x \\ f(x) \cdot x^2 \\ \vdots \\ f(x) \cdot x^5 \end{array} \right] \ dx
+\end{array}$$
+$$\begin{array}{c}
+G^{-1} \cdot b = p \\
+p \approx \left[ \begin{array}{c} 0.007989 \\ 0.861085 \\ 0.572644 \\ -1.60673 \\ 0.709135 \\ -0.09029 \end{array} \right]
+\end{array}$$
+$$\begin{array}{l}
+h(x) = \left[ \begin{array}{cccccc} x^0 & x^1 & x^2 & x^3 & x^4 & x^5 \end{array} \right] \cdot \left[ \begin{array}{c} a \\ b \\ c \\ c \\ d \\ e \end{array} \right] \\
+h(x) = \left[ \begin{array}{cccccc} x^0 & x^1 & x^2 & x^3 & x^4 & x^5 \end{array} \right] \cdot \left[ \begin{array}{c} 0.007989 \\ 0.861085 \\ 0.572644 \\ -1.60673 \\ 0.709135 \\ -0.09029 \end{array} \right]
+\end{array}$$
+
+---
+
+# Aufgabe 7
+
+## Aufgabe
+
+Man berechne die Fourier-Reihe folgender Funktion
+
+$$
+f(x,c) = \begin{cases} \dfrac{1}{2 \cdot c} & \text{if } -c \le x \le c \\ 0 & \text{else} \end{cases}
+$$
+
+$f(x,c)$ ist eine gerade Funktion, daher gestattet sie die Darstellung in einer reinen $\cos$-Reihe, es reicht aus, die F-Koeffizienten $a(k,c)$. Was beobachten Sie für $c$ gegen $0$?
+
+$$
+a(k, c) = \frac{1}{\pi} \cdot \int_{-c}^c \dfrac{1}{2 \cdot c} \cdot \cos(k \cdot x) \ dx
+$$
+
+## Lösung
+
+$$\begin{array}{lc}
+a_k(c) = \dfrac{1}{\pi} \cdot & \displaystyle \int_{-c}^c \dfrac{1}{2 \cdot c} \cdot \cos(k \cdot x) \ dx \\
+a_k(c) = \dfrac{1}{2 \cdot \pi \cdot c} \cdot & \displaystyle \underbrace{\int_{-c}^c \cos(k \cdot x) \ dx} \\
+a_k(c) = \dfrac{1}{2 \cdot \pi \cdot c \cdot k} \cdot & \left[ \sin(k \cdot x) \right]^c_{-c} \\
+a_k(c) = \dfrac{1}{2 \cdot \pi \cdot c \cdot k} \cdot & 2 \cdot \sin(c \cdot k)
+\end{array}$$
+$$
+a_k(c) = \dfrac{\sin(c \cdot k)}{\pi \cdot c \cdot k}
+$$
+
+Verhalten von $c \rightarrow 0$
+
+$$
+\lim_{x \rightarrow 0} \left( \dfrac{\sin(x)}{\pi (x)} \right) \widehat{=} \dfrac{\cos(x)}{\pi}
+$$
+
+---
+
+# Aufgabe 8
+
+## Aufgabe
+
+Man löse folgende DGL (AWP)
+
+$$\begin{array}{l}
+y''' + \dfrac{13}{12} \cdot y'' + \dfrac{3}{8} \cdot y' + \dfrac{1}{24} \cdot y = 0 \\
+y(0) = y'(0) = 0  \\
+y''(0) = 1 
+\end{array}$$
+
+Demnach wird die Impulsantwort g(t) dieser DGL gesucht
+
+## Lösung
+
