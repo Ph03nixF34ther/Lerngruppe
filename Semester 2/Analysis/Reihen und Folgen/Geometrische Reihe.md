@@ -1,3 +1,9 @@
+---
+aliases:
+  - geometrischen Reihe
+  - geometrische Reihe
+---
+
 Die Reihe
 
 $$

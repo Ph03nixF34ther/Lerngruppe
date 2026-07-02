@@ -55,3 +55,15 @@ H_f(x,y,z)=
 \end{matrix}
 \right]}}
 $$
+
+# Eigenwerte
+
+Nutzt man die Hesse-Matrix, um die Art von den kritischen Stellen zu bestimmen gibt es folgende Fälle
+
+- **Alle Eigenwerte sind positiv**: Die Hesse-Matrix ist **positiv definit**, was auf ein **lokales Minimum** hinweist. 
+
+- **Alle Eigenwerte sind negativ**: Die Hesse-Matrix ist **negativ definit**, was auf ein **lokales Maximum** hinweist. 
+
+- **Gemischte Vorzeichen (sowohl positive als auch negative Eigenwerte)**: Die Hesse-Matrix ist **indefinit**, was einen **Sattelpunkt** anzeigt. 
+
+- **Ein oder mehrere Eigenwerte sind null**: Die Matrix ist **semidefinit**.  In diesem Fall liefert die Hesse-Matrix allein **keine eindeutige Aussage** über die Art des kritischen Punktes; weitere Untersuchungen sind erforderlich.
