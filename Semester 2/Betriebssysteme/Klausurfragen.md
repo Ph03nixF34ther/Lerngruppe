@@ -238,179 +238,334 @@ Bei der atomaren Ressourcenzuteilung muss ein Prozess vor Beginn seiner Ausführ
 
 # Threads und Threadverwaltung
 
+## Was ist der Unterschied zwischen Kernel- und User-Threads? Nennen Sie je ein Beispiel für einen dieser Threads!
 
+ Der Wechsel zwischen User-Level-Threads ist sehr schnell, blockiert allerdings den gesamte Prozess mit allen seinen Threads. Beispiel: Eingabeverwaltung.
+ 
+  Kernel-Level-Threads können unabhängig von den anderen blockieren oder ausgeführt werden, Sie laufen echt Parallel bei einem Multiprozessor System. Der Kontextwechsel dauert jedoch länger. Beispiel: Systemaufruf.
 
+## Nennen Sie die Bestandteile eines Threadkontrollblocks!
 
+- Thread-ID
+- Stackpointer
+- Register
+- Scheduling Eigenschaften
+- Statusinformationen
 
-## Was passiert beim Polling?
+## Welche Ziele werden beim Multithreading verfolgt?
 
+- Optimiertes Antwortverhalten
+- Gemeinsame Nutzung von Ressourcen
+- Effiziente Nutzung von Mehrkernarchitekturen
+- Wirtschaftlichkeit
 
+## Wie werden Threads und Prozesse miteinander verknüpft?
+
+Threads werden mit Prozesse über die Thread-ID Verknüpft
+
+## Welcher Umstand sorgt dafür, dass ein Prozess blockiert wird?
+
+Ein Prozess wird Blockiert, wenn ihm Notwendige Ressourcen entzogen werden, oder die Vorgegebene Zeitscheibe überschritten werden. Ebenfalls ist eine Blockade durch einen Internen Fehler möglich.
+
+## Wann wird ein Programm zu einem Prozess?
+
+Ein Programm wird zu einem Prozess sobald es sich in Ausführung befindet.
+
+## Ein BS pflegt eine Prozesstabelle. Was ist darin enthalten?
+
+Die Prozesstabelle hat für jeden Prozesses einen Eintrag. Dieser Eintrag ist der Prozesskontrollblock für den jeweiligen Prozess.
+
+# Kommunikation zw. System und Anwender
+
+## Erklären Sie, wie Polling funktioniert!
+
+Beim Polling Interagieren Rechner und Controller miteinander. Der Controller hat dabei ein Passives Verhalten. 
+- Der Rechner liest zyklisch das BUSY-Bit, bis der Wert "Bereit" anzeigt.
+- Anschließend Überträgt der Rechner ein Byte in das Ausgaberegister
+- Rechner setzt das EXECUTE-Bit
+- Controller erkennt, dass er Arbeiten soll und setzt BUSY-Bit
+- Der Controller liest den Schreibbefehl und das eingetragene Byte aus dem Ausgaberegister und löst die Ausgabe aus.
+- Abschließend werden EXECUTE-Bit, BUSY-Bit und ERROR-Bit auf 0 gesetzt.
+
+## Was ist der Unterschied zwischen Polling und Interrupt-Steuerung?
+
+Bei der Interrupt Steuerung gibt es keine Zyklische Abfrage durch den Rechner. Der Controller meldet sich im Interrupt-Fall selbstständig.
+
+# Treiber
 
 ## Welche Aufgaben hat die geräteunabhängige Software in einem System?
 
-## Nennen Sie drei Aufgaben eines Gerätetreibers
+Die Hauptaufgabe der Geräteunabhängigen Software ist die Einheitliche Darstellung unterschiedlicher E/A-Geräte und Treiber. 
+Aber auch:
+- einheitliches Interface
+- Pufferung
+- Fehlerbericht
+- Anforderung/Freigabe von Geräten
+- Geräteunabhängige Blockgröße
 
+## Nennen Sie drei Aufgaben eines Gerätetreibers!
+
+- Ereignisverwaltung
+- antworten auf Hardwaresignale
+- aktivieren des Gerätes
+
+## Aus welchen Bestandteilen besteht ein Gerätetreiber?
+
+Ein Gerätetreiber besteht aus Schnittstellen zum Betriebssystem, der Hardware und zur Konfiguration des Gerätes. 
+
+# Ein und Ausgabegeräte
 
 ## Erläutern Sie Funktionsweise und Vorteile einer beliebigen Direct Memory Access-Strategie
 
-## Zeichne das Erweiterte Prozessmodell
+Single Bus Detached:
 
-## Worüber werden Prozesse vom Betriebssystem verwaltet
+Alles Module nutzen das Selbe Bus-System. Dadurch kann das DMA als Stellvertretender Prozessor gesehen werden. Jedoch sind Zwei Buszyklen pro Übertragung Nötig. Bei zu vielen Angeschlossenen Geräten entsteht die Gefahr eines Flaschenhals. 
+Der Vorteil dieses Systems ist, dass es Simpel und billig ist.
 
-## Wo werden zur Laufzeit erzeugte Variablen bei einem Prozess gespeichert?
+## Worin unterscheiden sich blockorientierte und zeichenorientierte Kommunikation?
 
-## Was unterscheidet den Kernel-Modus vom User-Modus?
+Blockorientierte Kommunikation speichert Informationen in Blöcken mit fester Größe an jeweils eigenen Adressen. Die Zeichenorientierte Kommunikation verarbeitet die Zeichenströme ohne auf eine Blockstruktur zu Achten. Dadurch sind diese einzelnen Ströme nicht direkt Adressierbar.
 
-Direkter Zugriff auf das System. Es gibt weniger Sicherheitsvorkehrungen.
+# Speichermedien
 
-## ?Aus welchen Bestandteilen besteht ein Gerätertreiber?
+## Was unterscheidet Cache-Speicher vom Hauptspeicher?
 
-## ?Welche Aufgaben übernimmt ein Gerätetreiber?
+Der Cachespeicher ist im Gegensatz zum Hauptspeicher nicht flüchtig. Er ist keine Physische Komponente eines Computers sondern lediglich in der CPU/Grafikkarte. der Cache Speicher ist Teurer und hat eine geringere Speicherkapazität, hat jedoch eine geringere Zugriffszeit.
 
-## ?Ein Betriebssystem pflegt eine Prozesstabelle. Was ist drin enthalten?
+## Was bedeuten die Abkürzungen RAM- und ROM-Speicher?
 
-## ?Wann wird ein Programm zu einem Prozess?
+RAM: Random Access Memory
 
-## ?Warum versucht Schadsoftware den Kernel-Modus ein System zu erreichen?
+ROM: Read Only Memory
 
-## ?Welcher Umstand führt dazu, dass ein Prozess auf Wartend gesetzt wird?
+## Wie können mit einer Flash-Speicherzelle mehr als ein Bit gespeichert werden? Erläutern Sie die verwendete Technik mit wenigen Sätzen!
 
-## Welcher Schritt ist notwendig um Signale zu Interpretieren?
+Im Standartfall wird die Spannung zwischen Source und Drain gemessen. Bei 0V ist das Bit eine 0 und bei 1V ist das Bit eine 1. Wenn die Spannung jetzt genauer Ausgewertet wird, kann eine höheren Spannungen noch einen Drittenwert darstellen. Bspw. Ab 2V stellen zwei Bits eine 10 dar.
 
-  
+## Nennen Sie drei Aufgaben der Speicherverwaltung!
 
-## Nennen Sie drei Bestandteile des Prozessdeskriptor!
+- Relocation
+- Protection
+- Sharing
 
-  
+## Was unterscheidet direkte und dynamische Speicherverwaltung?
 
-## Welche Ziele werden beim Scheduling verfolgt?
+Bei der Direkten Speicherverwaltung wird der Speicher in gleich große Partitionen aufgeteilt. Jeder Prozess erhält eine Solche Partition. Wenn der Prozess nicht den gesamten Speicherplatz der Partition ausnutzt ist dieser Verloren, bis zur Freigabe des gesamten Blockes.
+Bei der dynamischen Speicherverwaltung wird der Speicher in Blöcke mit Variabler Länge aufgeteilt, dadurch erhält jeder Prozess genau so viel Speicher, wie er benötigt.
 
-  
+## Welche Anforderungen werden an eine SV gestellt?
 
-## Wie wird der Vorgang genannt, wenn der Prozessor von einem Prozess zum anderen wechselt?
+- Relocation
+- Protection
+- Sharing
+- Physical Organisation
+- Logical Organisation
 
-  
+## Erläutern Sie eine beliebige der Ihnen bekannten SV-Anforderungen!
 
-Der Vorgang wird Kontext Wechsel genannt.
+Protection:
+Da die Daten und Informationen für Prozesse nebeneinander im Speicher Abgelegt werden muss die SV dafür sorgetragen, dass die einzelnen Prozesse die Daten der anderen Prozesse weder Lesen oder verändern können, es sei den dies ist gewollt. Ebenfalls dürfen die Daten nicht versehentlich vermischt werden.
 
-  
+# Speicherverwaltung
 
-## Was bedeutet "kooperatives Scheduling"? Worin besteht das Risiko bei diesem Verfahren?
+## Was verstehen Sie unter Paging?
 
-  
+Das Paging ist ein Prinzip der Speicherverwaltung. Bei diesem verfahren wird der Hauptspeicher in definiert große Blöcke unterteilt, diese werden Seitenrahmen genannt. Der Logische Adressrau eines Prozess wird in Seiten Unterteilt. Dabei ist die Maximale Seitengröße ein Seitenrahmen. Die Seiten werden dann auf Seitenrahmen aufgeteilt.
 
-## Erläutern Sie den Unterschied zwischen synchronen und asynchronen Ereignissen während eines Prozesses!
+## Warum werden HDD-Festplatten defragmentiert?
 
-  
+Durch eine Defragmentierung von HDD-Festplatten, werden einzelne Speicherblöcke, die zum selben Prozess gehören, zusammengelegt. Dadurch verkürzt sich die Zugriffszeit, da der Lesekopf einen geringeren Weg zurücklegen muss
 
-## Wozu kommunizieren Prozesse miteinander? Welche Ziele werden verfolgt?
+## Warum sollten Flash-Speichermedien nicht defragmentiert werden?
 
-  
+Da die Position der einzelnen Speicherblöcke eines Prozesse bei Flash-Speicher irrelevant von der Zugriffszeit ist, hat eine Defragmentierung lediglich den unnötigen verbrach von Lese und Schreibzyklen der Festplatte zur folge.
 
-Es werden Daten und Informationen ausgetauscht. Dies ist notwendig um zugriff auf begrenzt Ressourcen zu koordinieren, oder Informationen an einen Kind Prozess weiter zu geben.
+## Erläutern Sie, wie es im Hauptspeicher zur Speicherfragmentierung kommen kann!
 
-  
+Im Hauptspeicher kann es zu Zwei Arten der Fragmentierung kommen, Interner und Externer.
 
-## Welche Informationen sind in der Thread-ID im Threadkontrollblock enthalten?
+Externe Fragmentierung:
 
-  
+Es kommt zur Externen Fragmentierung bei Dynamische Partitionierung wenn Prozesse beendet werden, der Speicher freigegeben wird und in der entstehenden Lücke Speicher für einen neuen Prozess belegt wird, der etwas geringer ist, als der Vorgänger. Diese kleine Lücke reicht nicht aus um Speicher für einen Neuen Prozess zu bieten. Dadurch ist er Verloren.
 
-## Welche Umstände führen zu Verklemmungen zwischen Prozessen?
 
-  
+Interne Fragmentierung:
 
-## Welcher Faktor verhindert, dass ein System durch Parallelisierung nicht unendlich beschleunigt werden kann?
+Es kommt zur Internen Fragmentierung bei der Aufteilung des Hauptspeichers in feste Partitionen. Da Jedem Prozess eine vorgegebene Größe an Speicher zugeteilt wird, geht der Speicher einer Jeden Partition, den der Prozess nicht benötigt verloren, bis zur Freigabe durch den Prozess.
 
-  
+## Welches Ziel wird bei der Segmentierung von Speicher verfolgt?
 
-## Was wird hauptsächlich durch das Anlegen mehrerer Threads auf User-Ebene erzeugt?
+Bei der Segmentierung des Speichers wird, der Speicher in unterschiedlich Große Segmente Geteilt. Jedes Segment hat dementsprechend eine andere Größe, gleichzeitig hat jedes Speichersegment eine Unterschiedliche Zugriffsberechtigung. Dies wird verwendet um unterschiedlichen teilen eines Programmes lediglich die Nötigen Berechtigungen zu erteilen und dementsprechend unrechtmäßigen Zugriff zu verhindern.
 
-  
+## An welcher Stelle findet interne Fragmentierung statt? Mit welchem Verfahren lässt sie sich theoretisch beheben?
 
-## RAID-System Lückentext
+Es kommt zur Internen Fragmentierung bei der Aufteilung des Hauptspeichers in feste Partitionen. Da Jedem Prozess eine vorgegebene Größe an Speicher zugeteilt wird, geht der Speicher einer Jeden Partition, den der Prozess nicht benötigt verloren, bis zur Freigabe durch den Prozess. Den kann entgegengewirkt werden, indem die Partitionen unterschiedliche Größen haben. Dadurch geht weniger Speicher verloren.
 
-## Wissen: Systemprüfpunkt
+## Welche Komponenten verwaltet die Speichermedien und den Datenfluss in einem Rechnersystem?
 
-## Was wird mit dem Prinzip der Deduplizierung erreicht?
-
-## RAID 0 ist kein echtes RAID-System. warum?
-
-## Warum können keine einzelne Dateien aus einem Windows-Systemabbild wiederhergestellt werden?
-
-## Warum können Dateien aus einem Blocklevel-Backup nicht ohne viel Mehraufwand hergestellt werden?
-
-## Wie viele Festplatten können bei RAID 6 ausfallen bevor Schaden entsteht?
-
-## Wann wird ein Systemprüfpunkt angelegt? Was wird hier nicht gesichert?
-
-## Erläutern Sie den Unterschied zwischen einem differentiellen und einem inkrementellen Backup!
-
-## Welche Speichermedien eignen sich speziell für Backups? Warum?
-
-## Was unterscheidet persistenten und flüchtigen Speicher? Nennen Sie je ein Beispiel!
-
-## Wie ist es möglich, dass mehr als ein Zustand in einer Flash-Zelle gespeichert wird? Worin besteht der Nachteil bei diesem Verfahren?
-
-## Welche Systeme verfügen nicht über L3-Cache? Wofür wird dieser Speicher genutzt?
-
-## Welche Komponente übersetzten logische in physische Speicheradressen? Warum passiert dieser Schritt nicht auf Programm-/Prozessebene?
-
-## Was soll mit der Defragmentierung einer Festplatte erreicht werden?
-
-## Wann tritt der Seitenfehler auf? Welches Verfahren soll Seitenfehler vermeiden?
-
-## Wo tritt interne Fragmentierung auf? 
-
-## Erläutern Sie eine der fünf Anforderungen an eine Speicherverwaltung!
-
-## An welcher Stelle findet interne Fragmentierung statt? Mit welchem Verfahre lässt sie sich theoretische beheben?
-
-## Welche Komponente verwaltet die Speichermedien und den Datenfluss in einem Rechnersystem?
-
-Memory Management Unit
+Die Memory Management Unit (MMU)
 
 ## Welche Anforderungen werden an ein Speichersystem gestellt?
 
+- Relocation
+- Sharing
+- Protection
+- Physical Origanisation
+- Logical Origanisation
+
 ## Was wird mit der Working-Set-Methode versucht zu verhindern?
+
+Die Working-Set-Methode versucht Seitenfehler zu verhindern, indem der Gesamte Arbeitsablauf geladen wird.
+
+## Welche Systeme verfügen nicht über L3-Cache?
+
+Lediglich Multikernsysteme verfügen über ein L3-Cache. Dieser ermöglicht den Datenaustausch zwischen der Kernen.
+
+## Welche Komponente übersetzt logische in physische Speicheradressen? Warum passiert dieser Schritt nicht auf Programm/Prozessebene?
+
+Die Memory Management Unit übersetzt die logischen Adressen in physische. Dieser Schritt erfolgt nicht auf Programm- bzw. Prozessebene, da Anwendungsprogramme keine Kenntnis von der tatsächlichen physischen Speicherbelegung haben. Außerdem ist die Übersetzung auf Hardware Ebene effizienter und schneller.
+
+# Datensicherung
+
+## Warum ist RAID 0 kein „richtiges“ RAID-System?
+
+Bei einem RAID 0 werden die Daten auf Zwei Festplatten Aufgeteilt, dies erhöht die Geschwindigkeit, jedoch führt dies nicht zu einer Datenredundanz und das System ist somit kein richtiges RAID-System.
+
+## Was wird mit dem Prinzip der Deduplizierung erreicht?
+
+Die Deduplizierung erhöht die Speichereffizienz von Sicherungen indem es Redundante Daten innerhalb der Sicherung entfernt und mit Pointern ersetzt.
+
+## Warum ist es ratsam, persönliche/wichtige Dateien unabhängig von einem Systemabbild zu sichern?
+
+Bei einem Systemabbild wird das Gesamte System gesichert. Bei einer Wiederherstellung kann dementsprechend nur alles Wiederhergestellt werden. Einzelne Daten können aus dieser Sicherung nicht entnommen werden. Daher ist es sinnvoll wichtige und Persönliche Daten separat zu sicher um die Widerherstellung dieser Daten schneller zu ermöglichen.
+
+## Was unterscheidet File-Level-Backup und Block-Level-Backup?
+
+Bei einem File-Level-Backup werden ganze Dateien Gespeichert, beim Block-Level-Backup dagegen werden die Physischen Speicherblöcke gesichert. Das ausschließliche Speichern der geänderten Blöcke führt zu einer effizienteren Speichernutzung, jedoch ist es dadurch nicht mehr möglich einzelne Dateien wie beim File-Level-Backup wiederherzustellen.
+
+## Was wird bei einem Wiederherstellungspunkt gesichert?
+
+Bei einem Wiederherstellungspunkt werden System- und Konfigurationsdateien des Betriebssystem gespeichert. Persönliche Dateien werden dabei nicht gesichert.
+
+## Was ist ein Systemprüfpunkt? Welche Informationen werden dabei nicht gesichert?
+
+Ein Systemprüfpunkt sind durch das System automatisch angelegte Wiederherstellungspunkte. Dabei werden keine persönliche Dateien gesichert.
+
+# Sicherheit in Betriebssystemen
+
+## Nennen Sie drei Arten von Malware
+
+- Trojaner
+- Würmer
+- Viren
+
+## Wie verbreiten sich Computerwürmer?
+
+Würmer verbreiten sich Aktiv über ein Netzwerk, indem sie sich kopieren und selbst ausführen. Dabei nutzen Hilfsproramme zur Verbreitung z.B. E-Mail-Programme.
+
+## Welche Phasen durchläuft ein Virus?
+
+- Schlafphase
+	- Virus ist nicht aktiv und Wartet auf ein Ereignis. Nicht jeder Virus hat eine Schlafphase.
+- Verbreitungsphase
+	- Identische Klone werden in andere Programme oder Systembereiche gesetzt.
+- Auslösephase
+	- Virus wird Aktiviert. Bspw. durch ein Systemereignis
+- Ausführungsphase
+	- Schadfunktion wird ausgeführt.
+
+## Erläutern Sie das Prinzip einer digitalen Signatur für eine Software!
+
+Mit einer Privat Key kann aus einem Programm ein Prüfsumme Gebildet werden. Diese Prüfsumme kann anschließend durch einen Public Key bestätigt werden. Damit wird sichergegangen, dass das Programm tatsächlich vom Herausgeber stammt.
+
+
+## Nach welchen Zwecken lässt sich Schadsoftware unterscheiden?
+
+Schadsoftware lässt sich unterscheiden zwischen Zugriffs Wege und tatsächliche Schadprogramme. Während Schadprogramme tatsächlichen Schaden an Software oder Hardware zu folge haben, konzentrieren sich die Anderen darauf Daten abzugreifen.
+
+## Worauf zielen Phishing-Angriffe ab?
+
+Phishing angriffe zielen mit der Nachahmung von bekannten/vertrauenswürdigen Seiten auf auf die Persönlichen Daten ab.
+
+## Was stellt das Regelwerk in einer Firewall dar?
+
+Das Regelwerk einer Firewall enthält alle Informationen über Nutzer, Authentifizierungsverfahren, Verbindung etc. die Notwendig sind um eine Entscheidung über ein Protokollelement zu treffen.
+
+## Wo ist die Bastion einer Firewall zu finden?
+
+Als Bastion werden IT-Systeme mit dem App-Gateway bezeichnet.
+
+## Was ist die Aufgabe eines Proxys?
+
+Ein Proxy übernimmt die Kommunikation zwischen dem Anwendergerät und dem Zielsystem. Sämtliche Kommunikation wird über den jeweiligen Proxy abgehandelt. Damit können die einzelnen Pakte genau analysiert werden.
+
+## Erläutern Sie die Arbeitsweise eines Packet-Filters!
+
+Packet-Filter interpretieren den Inhalt eines empfangenen Pakets. Anschließend verifizieren sie den Header-Inhalt mit der definierten Regeln für die jeweilige Kommunikationsebene.
+
+## Warum ist es sicherheitskritisch, Firewall-Regeln offen zu legen?
+
+Wenn die Firewall-Regeln bekannt sind, können Angreifer erkennen, wie die Schutzmechanismen aufgebaut sind. Dieses Wissen erleichtert es Sicherheitslücken im Regelwerk zu identifizieren und auszunutzen.
+
+## Nennen und erläutern Sie ein Designkonzept einer Firewall!
+
+Getrenntes Security Management:
+Es soll keine Möglichkeit geschaffen werden von außen auf das Sicherheitsmanagement zuzugreifen. Aufgrund von minimaler Software muss das Security Management von den Sicherheitsfunktionen des aktiven Firewall-Elementes getrennt realisiert werden. Die Realisierung dieser Firewall muss auf einem separaten IT-System innerhalb des Sicheren Netzwerkes erfolgen. 
+
+## Was bedeutet „transparente Arbeitsweise“ im Bezug auf eine Firewall?
+
+
 
 ## Welche Unterscheidung können Sie zwischen Safety und Security treffen?
 
-## Wie beschreiben Sie Malware?
-
-## Welche Phasen durchläuft ein Virus? Was passiert in der jeweiligen Phase?
-
-## Was unterscheidet Spoofing und Phishing?
-
-## Bringen Sie Authentisierung, Autorisierung und Authentifizierung in die richtige Reihenfolge!
-
-## Welche zwei Werkzeuge nutzt ein Computerwurm zur Verbreitung?
-
-## Nenn Sie zwei Eigenschaften eines sicheren Systems!
-
-## Nach welchen zwei Zwecken lässt sich Schadsoftware unterscheiden?
+Safety Schütz das System vor Softwarefehlern, Störungen und Ausfällen. Security hingegen schütz ein System Menschen und Rechnern vor Angriffen.
 
 ## Welche Kanäle lassen sich zur verdeckten Kommunikation nutzen?
 
-- Zeitkanal:
-- Speicherkanal:
+Zur verdeckten Kommunikation lässt sich der Zeitkanal und der Speicherkanal nutzen.
 
 ## Warum ist verdeckte Kommunikation so schwer aufzudecken?
 
+Verdeckte Kanäle sind so schwer zu Identifizieren, da sie die Bandbreite eines legetimen Kanals nutzen um Informationen zu übermitteln. Sie können nur identifiziert werden, wenn das Verhalten des Angreifers mit dem des Nutzers abweicht. Dafür müssen gewisse Schwellenwerte festgelegt werden.
 
 ## Nach welchem Prinzip arbeitet das Bell-Lapadula-Modell?
 
+Jeder Nutzer wird in eine Sicherheitsstufe eingeordnet. Die Sicherheitsstufe bestimmt welche Dateien lesbar, beschreibbar oder überhaupt nicht aufrufbar sind. Dabei sind Dateien der eigenen und Niederen Sicherheitsstufe immer lesbar und beschreibbar doch Dateien einer höheren stufe nur bedingt Lesbar. 
 
 ## Welche Fragen können bei einer Authentifizierung gestellt werden?
 
+Authentisierung:
+- Was hat jemand?
+- Was weiß jemand? 
+- Was ist jemand?
+
+Authentifizierung:
+- Existiert der Nutzername mit dem Passwort?
+
+Autorisierung:
+- Besitzt der Nutzer die Berechtigung für die Aktion?
 
 ## Erläutern Sie das Prinzip der drei ihnen bekannten Sicherheitspolitiken und nennen Sie je einen Vor- und Nachteil!
 
-## Nennen Sie vier Aufgaben der Firewall!
+Offenen Politik:
+Bei der Offenen Politik sind Grundsätzlich alle Zugriffe erlaubt. Es gibt keine Beschränkungen welche Seiten besucht beziehungsweise nicht besucht werden dürfen.
+- Vorteil: Wenig bis keinen Aufwand
+- Nachteil: Hohes Risiko
 
-## Aufbau der Firewall kennen und die Funktionsweise/ den Nutzen der einzelnen Komponenten kennen.
+Eingeschränkte Politik:
+Bei der Eingeschränkten Sicherheitspolitik wird der Zugriff schädliche und unerwünschte Seiten gesperrt. Alle nicht explizit Gesperrte Seiten sind Aufrufbar.
+- Vorteil: Regeln können universell auf Alle Nutzer angewendet werden.
+- Nachteil: hoher verwaltungsaufwand
 
+Exklusive Politik:
+Bei der Exklusiven Politik werden grundsätzlich alle Seiten gesperrt. Es sind lediglich für einen Nutzer freigegebene Seiten Aufrufbar.
+- Vorteil: Hohe Sicherheit
+- Nachteil: Jeder Nutzer benötigt individuelle Anpassungen
 
+## Nennen Sie vier Aufgaben einer Firewall!
 
-# Soll ich aufschreiben:
+- Alarmierung
+- Rechteverwaltung
+- Zugangskontrolle
+- Entkopplung von Diensten
 
-Vermittlung zw. logischer Sicht von Dateien und Verzeichnissen und physikalischer Sicht von Blöcken, Spuren, Sektoren, Geräten, Netzlaufwerken etc.
