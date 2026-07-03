@@ -35,4 +35,3 @@ Dienst, Grundelemente (Operationen), die Benutzerprozessen für den Zugriff bere
 | DISCONNECT |                               |
 
 # Beispielhafter Protokollablauf für verbindungsorientierte Kommunikation mit diesen Dienstprimitiven
-

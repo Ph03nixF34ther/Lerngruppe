@@ -1,0 +1,496 @@
+# Interprozesskommunikation
+
+## Unterscheidung in: 
+
+Synchronisation:
+- Signale
+- Semaphoren
+
+Kommunikation:
+- nachrichtenbasiert
+	- Nachrichten
+- Strombasiert
+	- Pipes
+	- Socket
+- speicherbasiert
+	- Shared Memory
+	- Dateien
+
+## Kommunikationsbeziehungen werden bestimmt durch
+
+Anzahl Teilnehmer:
+- 1:1
+- 1:n
+- m:1
+- m:n
+
+Lokalität:
+- lokale Kommunikation
+- entfernte Kommunikation
+
+Synchronität:
+- synchron
+	- Senden: Sender warten (blockiert), bis Empfänger Information quittiert hat
+	- Empfangen: Die Empfangsoperation blockiert den Empfänger bis Information eintrifft
+	- Direkte Zustellung der Information (ohne Puffer)
+	- Implizite Empfangsbestätigung
+	- Blockade bei Abbruch der Übertragung
+	- einfacher zu programmieren
+	- Standard bei Unix- Systemen
+- asynchron
+	- Senden: Sender setzt nach Senden seine Arbeit fort ("Fire and Forget")
+	- . Empfangen: Empfänger liest Information, falls empfangen wurde und arbeitet weiter, auch wenn nicht empfangen wurde
+	- Nachricht muss zwischengespeichert werden
+	- Keine sichere Art der Kommunikation
+	- Bei Kommunikationsabbruch entsteht keine Blockade beim Empfänger
+
+Gleichzeitigkeit von Hin- und Rückkanal
+- unidirektional
+- bidirektional
+
+
+## Verbindungsarten
+
+- Verbindungsorientiert
+	- Aufbau der Verbindung; Übertragung;  Abbau der Verbindung
+	- Beispiele: analoge Telefone, TCP-Protokoll, Pipes
+- verbindungslos
+	- Übertragung
+	- Beispiele: IP-Protokoll, Signale
+Unicast
+- Informationen werden nur zwischen zwei Teilnehmern gesendet
+
+Multicast
+- Informationen werden nur eine ausgewählte gruppe gesendet 
+
+Broadcast
+- Informationen werden an alle gesendet
+
+## Kommunikation über Dateien
+
+- ältester IPC-Mechanismus
+- zweimaliger Zugriff auf Massenspeicher notwendig
+- überlappender Zugriff durch Sender und Empfänger
+- Realisierung durch Sperren der Datei
+
+### Ablauf
+
+1. Sender sperrt und schreibt die Datei
+2. Der Empfänger prüft den Zugang und wartet auf Dateifreigabe
+3. Sender entsperrt die Datei
+4. Empfänger sperrt und liest die Datei
+
+## Kommunikation über Pipes
+
+- erste richtige Form der IPC
+- Spezielle gepufferter Informationskanal
+- Ablauf über FIVO
+- unidirektionaler Zugriff im Halb-Duplex-Verfahren
+	- Streampipes erlauben Duplex-Betrieb
+- Prozess bekommt die Umleitung nicht mit
+	- Synchronisation im Kernel
+- nur möglich zwischen Prozessen mit gemeinsamen Vorfahren
+- Streampipes erlauben Duplexbetrieb 
+
+### Ablauf
+
+1. Initialisierung der Pipe
+2. Senden der Daten
+3. Empfangen der Daten
+4. Schließen der Verbindung
+5. Löschen der Pipe
+
+# Prozesssynchronisation 
+
+## Erzeuger-Verbraucher-Problem
+
+### Probleme: 
+
+- Zugriff auf Daten, die noch gar nicht produziert sind
+- Ablage in einem schon vollen Speicher
+- Gleichzeitige Speicherzugriffe
+
+### Hintergrund:
+
+- Zugriff auf gemeinsam genutzten Ressourcen muss synchronisiert sein
+- Vermeidung von Race-Conditions
+	- entsteht wenn die Ausführung von zwei oder mehreren Prozessen gleichzeitig beginnt das Ergebnis allerdings vom zeitlichen Verhalten der Fertigstellung abhängig ist.
+	- Race-Condition: "... entspricht einer Situation, in der das Ergebnis einer Abfolge von Operation vom zeitlichen Verhalten bestimmter Einzelinstruktionen abhängt."
+		- Problem: nicht-deterministische Ergebnisse eines Algorithmus
+		- Ursache: Unterbrechung durch blockierende Funktion, Hardware Interrupts
+		- Lösung: Schutz des kritischen Bereichs
+	- Kritischer Bereich: "... ist ein Stück Quellcode, innerhalb dessen auf ein gemeinsames Betriebsmittel zugegriffen wird und auf welches von nicht mehr als einem Prozess oder Thread zum selben Zeitpunkt zugegriffen werden darf."
+- Beispiel:
+	- Verwendung eines Ring-Buffers zwischen zwei Prozessen
+
+## Mutex
+
+- Blockade des kritischen Bereich eines Prozesse
+- Synchronisationsobjekt mit den Zuständen "frei" und "belegt"
+- exklusive Besitzerbindung (vgl. Semaphore)
+- Gefahr eines Deadlocks bei mehreren Mutex ohne Reihenfolge
+
+## Spinlocks 
+
+- kleine Sperrvariable schützt kritischen Abschnitt eines Prozesses
+- wiederholte Prüfung auf Zugriff (busy-waiting)
+- Warten in einer aktiven Schleife
+- Sinnvoll für kurze, frequente oder Kritische Abschnitte eines Prozesses
+
+## Monitore
+
+- Kontrollkonzept zur Synchronisation von Zugriffen
+- Kontrolliert Zugang zu kritischem Bereich in einem Programm
+- Prozesse/Threads in Monitor- Warteschlange sind blocked
+- Als Monitor definierter Bereich im Quellcode
+- Zugriff auf Kritischen Bereich im Monitor-Operationen
+- Ausführung unter wechselseitigem Ausschluss der Akteure 
+- Erkennung eines Monitors beim Kompilieren des Programms
+- Verwaltung auf Betriebssystem-Ebene
+
+## Zusammenfassung
+
+$$
+	\begin{array}{c|c|c|c}
+	 & \text{Mutex} & \text{Semaphore} & \text{Monitor} \\
+	\hline \\
+	\text{Hauptzweck} & \text{Exlusiver Zugriff} & \text{Zugriff mit Zählerbegrenzung} & \text{Strukturierte Synchronisation eines Objekts} \\
+	\hline \\
+	\text{Gleichzeitige Zugriffe} & \text{Genau einer} & \text{Beliebig viele} & \text{Genau 1 im kritischen Bereiech} \\
+	\hline \\
+	\text{Besitzerprinzip} & \text{Ja, meist ein Besitzer} & \text{Kein strenger Besitzer} & \text{Implezit über das Objekt/Laufzeitkonzept} \\
+	\hline \\
+	\text{Typische Ebene} & \text{BS/Laufzeit} & \text{BS/Laufzeit} & \text{Sprache/Laufzeit} \\
+	\hline \\
+	\text{Beispiel} & \text{Eine Datei Sperren} & \text{3Schnittstellen verwalten} & \text{Gemeinsame Warteschlange mit wait/signal} 
+	\end{array}
+$$
+
+# Verklemmungen
+
+"Verklemmungen treten bei konkurrierenden zugriff auf Ressourcen auf, die exklusiv nur von einem Prozess benutzt werden sollen"
+
+Verklemmung treten auf, wenn folgende Bedingungen erfüllt sind:
+- Exklusivnutzung
+	- Ressourcen werden exklusiv von einem Prozess genutzt
+- Reservieren und Warten
+	- Reservierte Ressourcen werden erst nach der Nutzung freigegeben
+- Keine Wegnahme
+	- Ressourcen, die ein Prozess reserviert hat, werden ihm nicht weggenommen
+- Gegenseitiges Warten
+	- Es gibt mehrere Prozesse p, die auf Ressourcen warten, die --Infos aus Präsentation--
+
+## Vogel-Strauß-Algoritus
+
+- Problem ignorieren -> Kopf in den Sand stecken
+Entdeckung, Behebung / Verhindern von Verklemmungen ist mit Aufwand verbunden.
+Was passiert bei Verklemmung? Wie groß ist das Risiko?
+-> Bei geringem Risiko keine Behandlung von Verklemmungen
+
+
+## Vermeidung der Verklemmungsvoraussetzungen
+
+- Vermeidung von unnötigen Exklusivsperren
+	- Keine Sperren von nicht exklusiv benötigten Ressourcen
+	- Beispiel: Exklusive Schreib und Leserechte
+- Atomare Ressourcenreservierung
+	- Einmalige Ressourcenanforderung bei Prozessstart
+	- Anforderung aller benötigten Ressourcen auf einmal
+	- Risiko des Verhungerns 
+- Wegnahme von Ressourcen
+	- Prozesse nehmen sich gegenseitig die Ressourcen weg
+	- Blockieren der Prozesse notwendig
+	- Wegnahme nur möglich, wenn Prozess unterbrochen und wiederaufgenommen werden kann
+	- Erfordert technischen Aufwand --Infos aus Präsentation--
+- Gegenseitiges Warten vermeiden
+	- Softwarelösung
+	- Verwaltung der Ressourcen durch Indizierung / Nummerierung
+	- Festlegen einer Strategie zur geordneten Reservierung von Ressourcen
+
+## Entdeckung und Behebung
+
+- Kontrolle über Ressourcennutzung der Prozesse erforderlich
+- System führt regelmäßig "Zyklustests" durch, um auf Verklemmungen zu prüfen 
+- Terminierung oder Ressourcenwegnahme als Lösung
+
+# Parallele Rechnerarchitekturen
+
+- Bisher behandelte [[Von-Neuman-Architektur]] 
+- Verarbeitung eines Maschinenbefehls zu einem Zeitpunkt
+- Sequenzielle Befehlsverarbeitung
+	Upper Next
+	$\downarrow$
+	Next
+	$\downarrow$
+	Current
+
+
+## Ausprägung der parallelen Befehlsverarbeitung 
+
+### Parallele Befehlsverarbeitung 
+#### zeitlich
+- Eine Einheit eines Typs verarbeiten gleichzeitig Teilschritte unterschiedliche Aufgaben
+- Vorteile:
+	- weniger zusätzlicher Aufwand 
+	- erhöhter Durchsatz
+- Nachteil:
+	- Latenz wird erhöht
+#### räumlich
+- Mehrere Einheiten des selben Typs verarbeiten gleichzeitig unterschiedliche Aufgaben vollständig
+- Vorteile:
+	- erhöhter Durchsatz
+	- keine Auswirkung auf Latenz
+- Nachteil:
+	- Doppelter Ressourcenbedarf
+
+## Amdahlsches Gesetzt
+
+- Gene Amdahl
+	- In den 60er Jahren Entwickler bei IBM
+	- Entwickelte parallelel verarbeitende Vektorrechner
+- Vollständige Parallelisierung eines Programms nicht möglich
+	- einmalig stattfindende Ereignisse verhindern Parallelität
+
+$$
+	n_{s}= \frac{T}{t_{s}+\frac{t_{p}}{n_{p}}}\leq \frac{T}{t_{s}}= \frac{T}{T-t_{p}}
+$$
+
+- max. Speedup: Beschleunigung des Algorithmus
+	- Kann nie kürzer als Zeit für sequentiellen Teil des Algorithmus sein
+
+$$
+	\begin{array}{c|c|c|c}
+	\text{sequentiell} & 60\text{min} & 60\text{min} & 60\text{min} \\
+	\hline \\
+	\text{parallel} & 120\text{min} & 60\text{min 60min} & \text{30min 30min 30 min 30min} \\
+	\hline \\
+	\text{Laufzeit} & \text{180min} & \text{120min} & \text{90min}
+	\end{array}
+$$
+"Der Kontrollaufwand für die Hardware übersteigt ab einem Punkt den Rechenaufwand, der durch zusätzliche kerne übernommen wird."
+
+## Shared Memory-Architektur
+
+Uniform Memory Access (UMA)-Architektur
+- Verwendung eines globalen Adressraums 
+- Zugriffsweise der Prozessoren auf Speichermodulen ist identisch (gleichförmig)
+- Vorteile: 
+	- Einfaches Programmiermodell mit Zugriff auf gesamten Adressraum wird erhalten
+- Nachteil:
+	- Nur bei kleinen Prozessorzahlen leicht kontrollierbar
+	- Setzt hohe Bandbreite des Netzwerkes voraus
+
+### Architektur-Beispiele
+
+#### Distributed Memory-Architektur
+
+Non Uniform Memory Access-Architektur (NUMA)
+Cache Only Memory-Architektur (COMA)
+
+- Verwendung eines lokalen Adressraums (ausschl. als Puffer / Cache)
+- Zugriffsweise der Prozessoren auf Speichermodule ist nicht gleich (ungleichförmig)
+- Vorteile:
+	- Hoher Durchsatz
+	- "Einfach" skalierbar Architektur
+- Nachteil:
+- Latenzen bei entfernten Speicherzugriffen
+- Effizienz ist von Lokalität der verarbeiten Daten abhängig
+
+# Nebenläufigkeit in Programmen
+
+## Begriffsklärung
+
+### Parallelität
+
+Zwei Aktivitäten sind Parallel, wenn sie echt gleichzeitig ausgeführt werden können und kausal voneinander unabhängig sind.
+Dies ist nur auf Multiprozessorsystemen möglich.
+
+### Nebenläufigkeit
+
+Zwei Aktivitäten sind nebenläufig, wenn sie parallel ausgeführt werden können und es keinen kausalen Abhängigkeiten zwischen ihnen gibt.
+
+betrifft:
+- Kommunikation zwischen Prozessen 
+- Gemeinsame Nutzung von und Wettbewerb
+- Synchronisation der Aktivität von Prozessen
+- Zuteilung von Prozessorzeit an Prozesse
+
+### Mehrprogrammbetrieb
+
+Verwaltung mehrere Prozesse in einem System mit einem Prozessor
+
+### Mehrprozessorbetrieb
+
+Verwaltung mehrerer Prozessoren in einem Mehrprozessorsystem
+
+### Verteilte Verarbeitung 
+
+Verwaltung mehrerer Prozesse, die auf mehreren, verteilten Computersystemen ausgeführt werden (Cluster)
+
+## Nebenläufigkeit in Programmen
+
+- Spezifizierung von parallel ausführbaren Bearbeitungsschritten innerhalb eines Programms
+- Nutzungskonzept oder softwareseitige Anforderungen erfordern Zerlegung eines Programms
+- Ergebnis
+	- Gesteigerte Effizienz
+	- Kapselung der Software
+
+# Definition eines Threads
+
+- Threads als sequenzielle Bestandteile eines Prozesses
+	- einzelläufiges Programm
+	- nebenläufiges Programm
+
+"Ein Thread (thread of controll, Kontrollfaden) ist eine sequentiell abzuarbeitende Befehlsfolge innerhalb eines Programms"
+
+"Man spricht von Multithreadding, wenn innerhalb eines Programms zwei oder mehr nebenläufige Befehlssequenzen spezifiziert werden."
+
+## Verfolgte Ziele des Multithreading
+
+- Optimiertes Antwortverhalten
+- Gemeinsame Nutzung von Ressourcen
+- Effiziente Nutzung von Mehrkernarchitektur
+- Wirtschaftlichkeit
+
+## Vorteile von Multithreading 
+
+- Mehrere Kontrollflüsse innerhalb eines Programms möglich
+- Echte Parallelität möglich (Hyper Threading oder Multiprozessor)
+- Schnellere Umschaltung zwischen Threads als zw. Prozessen
+- Nutzung von Prozessressourcen innerhalb mehrerer Threads 
+- Bessere Nutzung der verfügbaren Rechenzeit
+	- Kürzere Reaktionszeiten auf Benutzereingaben
+	- Wartezeiten können auf einzelne Threads ausgelagert werden
+
+# Implementierung von Threads
+
+## Bestandteile eines Threadkontrollblock
+
+- Thread-ID: Kennung zu Thread und des dazugehörigen Prozessen
+- Stack Pointer: Zeiger auf Speicherbereich
+- Register: Speicherbereich für Steuersignale usw.
+- Scheduling Eigenschaften: Zustand, Metadaten, Deadline, Prioritäten etc.
+- Statusinformationen: Dateizustände, Prozesszustände etc.  
+
+## Threadmodelle 
+
+### Kernel-Level-Thread
+
+- bekannt im gesamten Systemkontext
+- Implementierung innerhalb des Systems
+- Threadkontrollblock wird auf systemebene bzw. im Systemkern angelegt und verwaltet.
+- Beispiele: 
+	- Systemaufrufe
+	- Interrupt-Handler
+
+Vorteile:
+- KLTs des gleichen Prozesses können echt parallel auf unterschiedlichen Prozessoren eines SMP-Systems gleichzeitig rechnen
+- Bei Blockade eines Systemaufrufs wird nur aufrufender KLT blockiert. Andere bereitere KLTs des Prozesses könnten nachfolgend dem Prozessor zugeordnet werden
+
+Nachteile:
+- Weil jeder KLT ein Systemaufruf ist, sind u.U. aufwendige Kerneintritte und -austritte notwendig
+- Erzeugen eines KLT erfordert zusätzliche Initialisierungsaufwand (Anlegen des Threadkontrollblocks im Systemkern)
+- Threads werden global einheitlich nach der global scheduling policy behandelt
+
+### User-Level-Thread
+
+- Wird verwendet, um mehrere Steuerungsflüsse innerhalb eines Programms zu realisieren
+- nur im Programmkontext / innerhalb des Prozesses bekannt
+- Implementierung über API-Funktionen (Threadbibliotheken)
+- CPU-Scheduler "Kennt" nur Programmprozess
+- Beispiel: 
+	- Handler für serielle Schnittstellen
+	- UI-Steuerung
+	- Eingabeverwaltung
+
+Vorteile:
+- Alle Operationen sind auf User-Ebene, was die Sequenz automatisch sehr schnell werden lässt
+- User-Threads können auch auf System ohne Multithreading-Funktion ausgeführt werden 
+- User-Level-Scheduling kann an Rahmenbedingungen des Programms angepasst werden
+
+Nachteile:
+- Pro Prozess kann nur ein ULT zu einem Zeitpunkt aktiv sein (Scheduler kennt nur den Prozess)
+- Systemaufruf blockieren den gesamten Prozess
+- Bei Veränderung eines Ressourcen blockierendes ULT kann es zu latenzen im System kommen
+- Erhöhter Fokus auf Trennung der verwendeten Varaiblen im Quellcode bei Verwendung von Multitheading
+
+### Hybride-Threads
+
+- Vereinigung der Vorteile beider Thread-Modelle
+	- Unmittelbare Kontrolle und Werkzeuge der Threadbibliotheken der User Level-Threads
+und
+- Eigenständigkeit und Parallelität der Kernel Level Threads
+
+Vorteile: 
+- Alle Operationen sind auf User-Ebene, was die Sequenz automatisch sehr schnell werden lässt. 
+- User-Threads können auch auf System ohne Multithreading Funktion ausgeführt werden
+- User-Level-Scheduling kann an Rahmenbedingungen des Programms angepasst werden
+
+## Realisierungsformen
+
+### m:1
+
+- Zuordnung aller User-Threads zu einem Kernel-Thread
+- Multithreading findet nur auf User-Ebene statt
+- Ein Kernel-Thread innerhalb des Prozess
+
+### 1:1
+
+- Jedem User-Thread ist genau ein Kernel-Thread zugeordnet
+- Multithreading findet nur auf System-Ebene statt
+- Ein Kernel-Thread innerhalb des Prozess
+
+### m:n
+
+- Mehrere User-Threads sind einem Kernel-Thread zugeordnet
+- Multithreading auf Kernel- und auf User-Ebene
+- Mehrere Kernel-Threads innerhalb des Prozess
+
+
+
+# Datensicherung
+
+## Welchen Wert haben meine Daten?
+
+Wertvolle Daten:
+- Belege / Zeugnisse /Zertifikate
+- Bachelorarbeiten kurz vor Abgabe 
+- große ideelle Werte: Fotos, Erinnerungen etc. 
+- mühsame Werte: Einstellungen von Programmen, Spielstände
+
+Mittel oder weniger wichtig:
+- wieder auffindbare Inhalte wie Webseiten / Links
+- Downloads
+
+## Einführung
+
+### Backup
+
+- ist eine Zusatzkopie, an der nicht gearbeitet wird 
+- dient der eigenen Rückversicherung 
+- vermeidet Verlust von Zeit, Wissen und Daten 
+- ist keine revisionssichere Langzeitarchivierung 
+- ist keine kopierte Festplatte in einer offen zugänglichen Schublade
+
+### Brauch ich ein Backup?
+
+#### Wie verschwinden Daten?
+
+- Malware
+- Bedienungsfehler
+- Treiberprobleme
+- Programmfehler
+- Hardwareschäden
+
+#### Grundproblematik
+
+- Bequemlichkeit
+- "Mir ist noch nie etwas verloren gegangen"
+- Datenvolumen zu groß, Speichermedium zu teuer
+- Daten liegen verstreut oder versteckt auf Festplatten oder Server
+
+#### Lösung
+
+- Sicherung der wichtigsten Daten mit vernünftigem Aufwand
+- Abwägen, welche Inhalte sind wichtig, welche nicht? 
+- Wie viel Aufwand ist für welche Dateien notwendig?

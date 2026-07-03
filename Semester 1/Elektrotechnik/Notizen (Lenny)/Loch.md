@@ -1,3 +1,12 @@
+---
+aliases:
+  - Defektelektron
+  - Defektelektronen
+  - positiver Ladungsträger
+  - positive Ladungsträger
+  - Löcher
+---
+
 Metaphorisch
 
 Die Fehlstelle, welche durch ein [[Elektron#Freie Elektronen|freies Elektron]] entsteht
@@ -12,13 +21,13 @@ Die Fehlstelle, welche durch ein [[Elektron#Freie Elektronen|freies Elektron]] e
 
 Durch Energiezufuhr lösen sich [[Elektron|Elektronen]] vom [[Atomrumpf]] $\rightarrow$ Löcher entstehen
 
-## Dotierung von [[Halb-Leiter|Halb-Leitern]]
+## Dotierung von [[Halbleiter|Halb-Leitern]]
 
-Einbringen von anderen [[Atom|Atomen]] in den [[Halb-Leiter]] 
+Einbringen von anderen [[Atom|Atomen]] in den [[Halbleiter]] 
 
-Dotieratome haben weniger [[Valenzelektron|Valenzelektronen]] und nehmen [[Elektron|Elektronen]] vom [[Halb-Leiter]] auf $\rightarrow$ Löcher entstehen
+Dotieratome haben weniger [[Valenzelektron|Valenzelektronen]] und nehmen [[Elektron|Elektronen]] vom [[Halbleiter]] auf $\rightarrow$ Löcher entstehen
 Beispielelement: Bohr
-$\rightarrow$ [[Akzeptoratome]]
+$\rightarrow$ [[Halbleiter#p-dotierte Halbleiter|Akzeptoratome]]
 
 ## Photonenabsorption
 

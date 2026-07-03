@@ -5,7 +5,7 @@
 	1. [[Partialbruchzerlegung]]
 	2. [[Konvergenzkriterien]]
 		1. [[Leibnizsches Kriterium]]
-		2. [[Quotienten-Kriterium]]
+		2. [[Quotientenkriterium]]
 		3. [[Wurzel-Kriterium]]
 	3. [[Taylorreihen]]
 4. [[Funktion|Funktionen]]
