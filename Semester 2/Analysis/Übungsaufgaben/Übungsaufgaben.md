@@ -164,11 +164,16 @@ u'(x) = 1 & v'(x) = e^x \cdot \sin x
 $$
 \int x \cdot e^x \cdot \sin x \ dx = \int e^x \cdot \sin x \ dx \cdot x - \int \int e^x \cdot \sin x \ dx \ dx
 $$
+
+### Exkurs: Integral von $\sin(x)\cdot e^x$
+
 $$\begin{array}{ccccl}
 \int e^x \cdot \sin x \ dx &= \boxed{e^x \cdot \sin x - \underline{\int e^x \cdot \cos x \ dx}} & \Rightarrow & \int e^x \cdot \sin x \ dx &= \dfrac{\sin x - \cos x}{2} \cdot e^x \\
 & \Updownarrow \\
 \int e^x \cdot \cos x \ dx &= \boxed{e^x \cdot \cos x + \underline{\int e^x \cdot \sin x \ dx}} & \Rightarrow & \int e^x \cdot \cos x \ dx &= \dfrac{e^x \cdot \cos x + e^x \cdot \sin x}{2}
 \end{array}$$
+
+
 $$
 \int e^x \cdot \sin x \ dx \cdot x - \int \int e^x \cdot \sin x \ dx \ dx = e^x \cdot \dfrac{\sin x - \cos x}{2} \cdot x - \int \dfrac{e^x \cdot \sin x}{2} - \dfrac{\cos x \cdot e^x}{2} \ dx
 $$
@@ -206,17 +211,20 @@ $$
 \dfrac{2 \cdot x + 1}{(x - 1) \cdot (x - 2) \cdot (x - 3)} = \dfrac{A}{x - 1} + \dfrac{B}{x - 2} + \dfrac{C}{x - 3}
 $$
 $$
-= \dfrac{3}{2 \cdot (x - 1)} + \dfrac{5}{x - 2} + \dfrac{7}{2 \cdot (x - 3)}
+= \dfrac{3}{2 \cdot (x - 1)} - \dfrac{5}{x - 2} + \dfrac{7}{2 \cdot (x - 3)}
 $$
 $$
-\int^2_1 \dfrac{3}{2 \cdot (x - 1)} + \dfrac{5}{x - 2} + \dfrac{7}{2 \cdot (x - 3)} \ dx = \int^2_1 \dfrac{3}{2 \cdot (x - 1)} \ dx + \int^2_1 \dfrac{5}{x - 2} \ dx + \int^2_1 \dfrac{7}{2 \cdot (x - 3)} \ dx
+\int^2_1 \dfrac{3}{2 \cdot (x - 1)} - \dfrac{5}{x - 2} + \dfrac{7}{2 \cdot (x - 3)} \ dx = \int^2_1 \dfrac{3}{2 \cdot (x - 1)} \ dx - \int^2_1 \dfrac{5}{x - 2} \ dx + \int^2_1 \dfrac{7}{2 \cdot (x - 3)} \ dx
 $$
 $$
-= \int^2_1 3 \cdot (2x - 2)^{-1} \ dx + \int^2_1 5 \cdot (x - 2)^{-1} \ dx + \int^2_1 7 \cdot (2x - 6)^{-1} \ dx
+= \int^2_1 3 \cdot (2x - 2)^{-1} \ dx - \int^2_1 5 \cdot (x - 2)^{-1} \ dx + \int^2_1 7 \cdot (2x - 6)^{-1} \ dx
 $$
 $$
-= \frac{3}{2} \cdot \left[ \ln(x - 1) \right]^2_1 + 5 \cdot \left[ \ln(x - 2) \right]^2_1 + \frac{7}{2} \cdot \left[ \ln(x - 3) \right]^2_1
+= \frac{3}{2} \cdot \left[ \ln(x - 1) \right]^2_1 - 5 \cdot \left[ \ln(x - 2) \right]^2_1 + \frac{7}{2} \cdot \left[ \ln(x - 3) \right]^2_1
 $$
+
+$[\ln(1-1)]$ ist nicht definiert, deswegen gibt es kein Ergebnis.
+Die Aufgabe will den Flächeninhalt zwischen zwei undefinierten Stellen der Funktion. Damit ist diese
 
 ---
 

@@ -133,7 +133,6 @@ R_{BC} = R_{B} + R_{C} + \frac{R_{B} + R_{C}}{R_{A}}
 $$
 # Beispielaufgabe
 
-![[Schaltung2.png]]
 
 ![[Schaltung2.1.png]]
 

@@ -12,7 +12,6 @@ Die wichtigsten Transistoren sind:
 
 Ein Aufgabentyp, der während der Vorlesungen eine wichtige Rolle spielte ist die Dimensionierung von Vorwiderständen in Transistorschaltungen
 
-
 # Allgemeine Eigenschaften und Berechnungsgrundlagen von Transistoren
 
 ## Stromverstärkung
