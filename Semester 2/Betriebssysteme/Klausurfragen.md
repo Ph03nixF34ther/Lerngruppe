@@ -3,11 +3,14 @@
 ## Welche Aufgaben hat ein Betriebssystem?
 
 Ein Betriebssystem ist für die Abstraktion des Gesamten Systemen Zuständig. Ebenfalls stellt es Dienste für Anwender und Anwendungsprogramme bereit. Zusätzlich Verwaltet es die Systemressourcen. Ein Typisches Programm des Betriebssystem ist der Taskmanager oder der Reckeddit 
+
 ## Was sind Protokolle und Dienste im BS-Kontext?
 
 Dienste eines Betriebssystems sind die Funktionen der einzelnen Schichten (Anwendungsprogramme, Betriebssystemkern). Die Protokolle wiederum sind die Nutzungsvorschriften der einzelnen Dienste.
 
-## Welche Schichten beinhaltet das Schichtenmodell
+## Welche Schichten beinhaltet das Schichtenmodell?
+
+// TODO FRAGE 1
 
 - Hardware
 - Betriebssystem Kern (Kernel)
@@ -36,7 +39,7 @@ Ein Interrupt ist eine unplanmäßige Unterbrechung ausgelöst durch ein externe
 
 ## Was ist der Zweck einer API? 
 
-Eine API (Application Programming Interface) ist eine definierte Schnittstelle, über die Anwendungsprogramme auf Dienste und Funktionen des Betriebssystems oder einer Bibliothek zugreifen können, ohne deren interne Implementierung zu kennen. Sie sorgt für die Abstraktion von Programmen zwischen unterschiedlichen Systemen sowie einen einheitlichennmZugriff auf Systemfunktionen.
+Eine API (Application Programming Interface) ist eine definierte Schnittstelle, über die Anwendungsprogramme auf Dienste und Funktionen des Betriebssystems oder einer Bibliothek zugreifen können, ohne deren interne Implementierung zu kennen. Sie sorgt für die Abstraktion von Programmen zwischen unterschiedlichen Systemen sowie einen einheitlichen Zugriff auf Systemfunktionen.
 
 # Prozesse und Prozesszustände
 
@@ -64,7 +67,7 @@ Eine API (Application Programming Interface) ist eine definierte Schnittstelle, 
 
 ## Worüber werden Prozesse vom Betriebssystem verwaltet?
 
-Prozesse werden über den Prozesskontrollblock verwaltet, der in einer zentralen Prozesstabelle des Betriebssystems abgelegt ist. Dort sind alle für die Verwaltung notwendigen Informationen  gespeichert.
+Prozesse werden über den Prozesskontrollblock verwaltet, der in einer zentralen Prozesstabelle des Betriebssystems abgelegt ist. Dort sind alle für die Verwaltung notwendigen Informationen gespeichert.
 
 ## Welche Ursachen für einen Kontextwechsel existieren?
 
@@ -78,6 +81,8 @@ Prozesse werden über den Prozesskontrollblock verwaltet, der in einer zentralen
 	- Prozess wartet bspw. auf Netzwerkressourcen und blockiert den Fortschritt
 
 ## Was beinhaltet der Programmspeicher eines Prozesses?
+
+// TODO Frage 2
 
 - Programmkontext 
 	- kleiner Speicherbereich für Aufrufparameter und Umgebungsvariablen
@@ -120,13 +125,15 @@ Ein Prozess Startet immer im Zustand Neu.
 
 ## Wie funktioniert das Round-Robin-Verfahren? Welches Risiko birgt dieses Verfahren?
 
-- Alle Prozesse mit dem Status bereit sind in einer Warteschlange nach dem FIVO Prinzip geordnet
-- Jeder Prozess erhält bei Ausführung eine festgelegte Teil der Zeitscheibe
+- Alle Prozesse mit dem Status bereit sind in einer Warteschlange nach dem FIFO Prinzip geordnet
+- Jeder Prozess erhält bei Ausführung eine festgelegte Teil der Zeitscheibe (Quantum)
 - In dieser Zeit wird der Prozess abgearbeitet
 - Nach Ablauf der Zeiteinheit wird der Prozess unterbrochen und ans Ende der Warteschlange eingereiht
 - Das Risiko von Latenzen entsteht bei zu vielen aktiven Prozessen
 
 ## Wozu dient der Prozesskontrollblock?
+
+// TODO Frage 3
 
 Der Prozesskontrollblock enthält wichtige Information der einzelnen Prozesse. Zu diesen gehören:
 - Prozessidentifikation
@@ -138,6 +145,8 @@ Der Prozesskontrollblock enthält wichtige Information der einzelnen Prozesse. Z
 
 ## Welche Ziele werden beim Scheduling verfolgt?
 
+// TODO Frage 4
+
 - Fairness
 - Reaktionszeit
 - Ressourcennutzung
@@ -146,7 +155,7 @@ Der Prozesskontrollblock enthält wichtige Information der einzelnen Prozesse. Z
 
 ## Was beinhaltet der Prozessdeskriptor?
 
-- Eindeutige Prozessidentifikation
+- Eindeutige Prozessidentifikation (PID)
 - Priorität
 - Zustand
 - Ressourcenverbrauch
@@ -159,17 +168,19 @@ Der Prozesskontrollblock enthält wichtige Information der einzelnen Prozesse. Z
 
 ## Was zeichnet echte Parallelität aus?
 
-Echte Parallelität bedeutet, dass tatsächlich zwei Prozesse zur selben Zeit bearbeitet werden, dass kann nur durch mehrere Prozessoren Realisiert werden
+Echte Parallelität bedeutet, dass tatsächlich zwei Prozesse zur selben Zeit bearbeitet werden, dass kann nur durch mehrere Prozessoren realisiert werden
 
 ## Was zeichnet nebenläufige Prozesse aus?
 
-Nebenläufige Prozesse laufen scheinbar Parallel ab, tatsächlich wechselt der Kontext immer wieder in kurzer Zeit zwischen den Prozessen.
+Nebenläufige Prozesse laufen scheinbar parallel ab, tatsächlich wechselt der Kontext immer wieder in kurzer Zeit zwischen den Prozessen.
 
 ## Erläutern Sie die Abarbeitung von zwei „pseudo parallelen“ Prozessen!
 
 Bei pseudo-paralleler Ausführung auf einem einzelnen Prozessorkern läuft zu jedem Zeitpunkt nur einer der beiden Prozesse. Das Betriebssystem schaltet über das Scheduling sehr schnell zwischen beiden Prozessen hin und her, indem es jeweils einen Kontextwechsel durchführt. Durch die hohe Wechselfrequenz entsteht für den Benutzer der Eindruck, beide Prozesse würden gleichzeitig laufen, obwohl die CPU sie nur abwechselnd, scheibchenweise bearbeitet.
 
 ## Welchen Vorteil bietet die Distributed-Memory-Access-Architektur ggü. der Uniform-Memory-Architektur ?
+
+// TODO Frage 5
 
 Bei einer Uniform-Memory-Architektur greifen alle Prozessoren über einen gemeinsamen Bus auf einen zentralen Hauptspeicher zu, wodurch bei steigender Prozessorzahl der Bus zum Engpass wird. 
 Bei einer Distributed-Memory-Architektur besitzt dagegen jeder Prozessor einen eigenen, lokalen Speicherbereich mit sehr schnellem Zugriff. Dadurch können Speicherzugriffe stärker parallelisiert werden und das System lässt sich deutlich besser auf viele Prozessoren skalieren.
@@ -223,6 +234,8 @@ Beim Erzeuger-Verbraucher-Problem produzieren ein oder mehrere Erzeuger-Prozesse
 
 ## Welche Bedingungen führen zu einer Verklemmung in einem System?
 
+// TODO Frage 6
+
 - Exklusivnutzung von Ressourcen
 	- Ressourcen werden exklusiv von einem Prozess genutzt
 - Reservieren und Warten
@@ -240,11 +253,15 @@ Bei der atomaren Ressourcenzuteilung muss ein Prozess vor Beginn seiner Ausführ
 
 ## Was ist der Unterschied zwischen Kernel- und User-Threads? Nennen Sie je ein Beispiel für einen dieser Threads!
 
- Der Wechsel zwischen User-Level-Threads ist sehr schnell, blockiert allerdings den gesamte Prozess mit allen seinen Threads. Beispiel: Eingabeverwaltung.
- 
-  Kernel-Level-Threads können unabhängig von den anderen blockieren oder ausgeführt werden, Sie laufen echt Parallel bei einem Multiprozessor System. Der Kontextwechsel dauert jedoch länger. Beispiel: Systemaufruf.
+// TODO Frage 7
+
+Der Wechsel zwischen User-Level-Threads ist sehr schnell, blockiert allerdings den gesamte Prozess mit allen seinen Threads. Beispiel: Eingabeverwaltung.
+
+Kernel-Level-Threads können unabhängig von den anderen blockieren oder ausgeführt werden, Sie laufen echt Parallel bei einem Multiprozessor System. Der Kontextwechsel dauert jedoch länger. Beispiel: Systemaufruf.
 
 ## Nennen Sie die Bestandteile eines Threadkontrollblocks!
+
+// TODO Frage 8
 
 - Thread-ID
 - Stackpointer
@@ -279,6 +296,8 @@ Die Prozesstabelle hat für jeden Prozesses einen Eintrag. Dieser Eintrag ist de
 
 ## Erklären Sie, wie Polling funktioniert!
 
+//TODO Frage 9
+
 Beim Polling Interagieren Rechner und Controller miteinander. Der Controller hat dabei ein Passives Verhalten. 
 - Der Rechner liest zyklisch das BUSY-Bit, bis der Wert "Bereit" anzeigt.
 - Anschließend Überträgt der Rechner ein Byte in das Ausgaberegister
@@ -311,7 +330,7 @@ Aber auch:
 
 ## Aus welchen Bestandteilen besteht ein Gerätetreiber?
 
-Ein Gerätetreiber besteht aus Schnittstellen zum Betriebssystem, der Hardware und zur Konfiguration des Gerätes. 
+Ein Gerätetreiber besteht aus Schnittstellen zum Betriebssystem, zur Hardware und zur Konfiguration des Gerätes. 
 
 # Ein und Ausgabegeräte
 
@@ -319,8 +338,8 @@ Ein Gerätetreiber besteht aus Schnittstellen zum Betriebssystem, der Hardware u
 
 Single Bus Detached:
 
-Alles Module nutzen das Selbe Bus-System. Dadurch kann das DMA als Stellvertretender Prozessor gesehen werden. Jedoch sind Zwei Buszyklen pro Übertragung Nötig. Bei zu vielen Angeschlossenen Geräten entsteht die Gefahr eines Flaschenhals. 
-Der Vorteil dieses Systems ist, dass es Simpel und billig ist.
+Alles Module nutzen das Selbe Bus-System. Dadurch kann das DMA als Stellvertretender Prozessor gesehen werden. Jedoch sind Zwei Buszyklen pro Übertragung Nötig. Bei zu vielen angeschlossenen Geräten entsteht die Gefahr eines Bottle-Necks. 
+Der Vorteil dieses Systems ist, dass es simpel und billig ist.
 
 ## Worin unterscheiden sich blockorientierte und zeichenorientierte Kommunikation?
 
@@ -329,7 +348,7 @@ Blockorientierte Kommunikation speichert Informationen in Blöcken mit fester Gr
 # Speichermedien
 
 ## Was unterscheidet Cache-Speicher vom Hauptspeicher?
-
+[[]]
 Der Cachespeicher ist im Gegensatz zum Hauptspeicher nicht flüchtig. Er ist keine Physische Komponente eines Computers sondern lediglich in der CPU/Grafikkarte. der Cache Speicher ist Teurer und hat eine geringere Speicherkapazität, hat jedoch eine geringere Zugriffszeit.
 
 ## Was bedeuten die Abkürzungen RAM- und ROM-Speicher?
@@ -370,11 +389,14 @@ Da die Daten und Informationen für Prozesse nebeneinander im Speicher Abgelegt 
 
 ## Was verstehen Sie unter Paging?
 
-Das Paging ist ein Prinzip der Speicherverwaltung. Bei diesem verfahren wird der Hauptspeicher in definiert große Blöcke unterteilt, diese werden Seitenrahmen genannt. Der Logische Adressrau eines Prozess wird in Seiten Unterteilt. Dabei ist die Maximale Seitengröße ein Seitenrahmen. Die Seiten werden dann auf Seitenrahmen aufgeteilt.
+//TODO Frage 10
+
+Das Paging ist ein Prinzip der Speicherverwaltung. Bei diesem Verfahren wird der Hauptspeicher in definiert große Blöcke unterteilt, diese werden Seitenrahmen genannt. Der logische Adressraum eines Prozess wird in Seiten unterteilt. Dabei ist die maximale Seitengröße ein Seitenrahmen. Die Seiten werden dann auf Seitenrahmen aufgeteilt.
 
 ## Warum werden HDD-Festplatten defragmentiert?
 
-Durch eine Defragmentierung von HDD-Festplatten, werden einzelne Speicherblöcke, die zum selben Prozess gehören, zusammengelegt. Dadurch verkürzt sich die Zugriffszeit, da der Lesekopf einen geringeren Weg zurücklegen muss
+Durch eine Defragmentierung von HDD-Festplatten, werden einzelne Speicherblöcke, die zum selben Prozess gehören, zusammengelegt. Dadurch verkürzt sich die Zugriffszeit, da der Lesekopf einen geringeren Weg zurücklegen muss.
+Außerdem wird mehr nutzbarer Speicher frei.
 
 ## Warum sollten Flash-Speichermedien nicht defragmentiert werden?
 
@@ -407,6 +429,8 @@ Die Memory Management Unit (MMU)
 
 ## Welche Anforderungen werden an ein Speichersystem gestellt?
 
+//TODO Frage 11
+
 - Relocation
 - Sharing
 - Protection
@@ -419,7 +443,7 @@ Die Working-Set-Methode versucht Seitenfehler zu verhindern, indem der Gesamte A
 
 ## Welche Systeme verfügen nicht über L3-Cache?
 
-Lediglich Multikernsysteme verfügen über ein L3-Cache. Dieser ermöglicht den Datenaustausch zwischen der Kernen.
+Lediglich Multikernsysteme verfügen über ein L3-Cache. Dieser ermöglicht den Datenaustausch zwischen den Kernen.
 
 ## Welche Komponente übersetzt logische in physische Speicheradressen? Warum passiert dieser Schritt nicht auf Programm/Prozessebene?
 
@@ -433,7 +457,7 @@ Bei einem RAID 0 werden die Daten auf Zwei Festplatten Aufgeteilt, dies erhöht 
 
 ## Was wird mit dem Prinzip der Deduplizierung erreicht?
 
-Die Deduplizierung erhöht die Speichereffizienz von Sicherungen indem es Redundante Daten innerhalb der Sicherung entfernt und mit Pointern ersetzt.
+Die Deduplizierung erhöht die Speichereffizienz von Sicherungen indem es redundante Daten innerhalb der Sicherung entfernt und mit Pointern ersetzt.
 
 ## Warum ist es ratsam, persönliche/wichtige Dateien unabhängig von einem Systemabbild zu sichern?
 
@@ -478,18 +502,17 @@ Würmer verbreiten sich Aktiv über ein Netzwerk, indem sie sich kopieren und se
 
 Mit einer Privat Key kann aus einem Programm ein Prüfsumme Gebildet werden. Diese Prüfsumme kann anschließend durch einen Public Key bestätigt werden. Damit wird sichergegangen, dass das Programm tatsächlich vom Herausgeber stammt.
 
-
 ## Nach welchen Zwecken lässt sich Schadsoftware unterscheiden?
 
 Schadsoftware lässt sich unterscheiden zwischen Zugriffs Wege und tatsächliche Schadprogramme. Während Schadprogramme tatsächlichen Schaden an Software oder Hardware zu folge haben, konzentrieren sich die Anderen darauf Daten abzugreifen.
 
 ## Worauf zielen Phishing-Angriffe ab?
 
-Phishing angriffe zielen mit der Nachahmung von bekannten/vertrauenswürdigen Seiten auf auf die Persönlichen Daten ab.
+Phishing-Angriffe zielen mit der Nachahmung von bekannten/vertrauenswürdigen Seiten auf auf die persönlichen Daten ab.
 
 ## Was stellt das Regelwerk in einer Firewall dar?
 
-Das Regelwerk einer Firewall enthält alle Informationen über Nutzer, Authentifizierungsverfahren, Verbindung etc. die Notwendig sind um eine Entscheidung über ein Protokollelement zu treffen.
+Das Regelwerk einer Firewall enthält alle Informationen über Nutzer, Authentifizierungsverfahren, Verbindung etc., die notwendig sind um eine Entscheidung über ein Protokollelement zu treffen.
 
 ## Wo ist die Bastion einer Firewall zu finden?
 
@@ -514,11 +537,11 @@ Es soll keine Möglichkeit geschaffen werden von außen auf das Sicherheitsmanag
 
 ## Was bedeutet „transparente Arbeitsweise“ im Bezug auf eine Firewall?
 
-
+// TODO Frage 12
 
 ## Welche Unterscheidung können Sie zwischen Safety und Security treffen?
 
-Safety Schütz das System vor Softwarefehlern, Störungen und Ausfällen. Security hingegen schütz ein System Menschen und Rechnern vor Angriffen.
+Safety schützt das System vor Softwarefehlern, Störungen und Ausfällen. Security hingegen schützt ein System Menschen und Rechnern vor Angriffen.
 
 ## Welche Kanäle lassen sich zur verdeckten Kommunikation nutzen?
 
@@ -533,6 +556,8 @@ Verdeckte Kanäle sind so schwer zu Identifizieren, da sie die Bandbreite eines 
 Jeder Nutzer wird in eine Sicherheitsstufe eingeordnet. Die Sicherheitsstufe bestimmt welche Dateien lesbar, beschreibbar oder überhaupt nicht aufrufbar sind. Dabei sind Dateien der eigenen und Niederen Sicherheitsstufe immer lesbar und beschreibbar doch Dateien einer höheren stufe nur bedingt Lesbar. 
 
 ## Welche Fragen können bei einer Authentifizierung gestellt werden?
+
+// TODO Frage 13
 
 Authentisierung:
 - Was hat jemand?
@@ -568,4 +593,85 @@ Bei der Exklusiven Politik werden grundsätzlich alle Seiten gesperrt. Es sind l
 - Rechteverwaltung
 - Zugangskontrolle
 - Entkopplung von Diensten
+<<<<<<< HEAD
 
+# Linux-Systeme
+
+## ?? Warum sind Echtzeit-Linux-Systeme nicht so performant, wie „echte“ Realtime-Betriebssysteme?
+
+Echtzeit-Linux-Systeme haben ein wesentlich höheren Ressourcen verbrauch da die den deterministischen Betrieb Priorisieren.
+
+## ? Distributionen liefern Werkzeuge und Applikationen. Was ist der Unterschied? Nennen Sie je ein Beispiel!
+
+Werkzeuge sind für die Konfiguration und Wartung des Betriebssystems zuständig. Sie werden hauptsächlich für das System und Administratoren entwickelt.
+
+Applikationen hingegen sind Programme die der Endanwender aktiv Nutz. 
+
+-- Beispiele noch einfügen --
+
+## Was unterscheidet UNIX-artige und UNIX-oide Betriebssysteme?
+
+UNIX-artige Systeme enthalten Originalcode auf UNIX. UNIX-oide Systeme hingegen haben keine Verbindung zum echten UNIX. Sie wurden unabhängig entwickelt, ahmen aber die Funktionen von UNIX nach.
+
+## Erläutern Sie das Prinzip “Everything is a file“
+
+Everything is a file ist eine definierte Eigenschaft von UNIX-Systemen. Nach diesem Prinzip sind Ein- / Ausgabe-Ressourcen aber auch Interprozess- und Netzwerkverbindung als Byteströme durch Dateisysteme verfügbar.
+
+## ?? Wie wirkt sich die modulare monolithische Struktur des Linux-Kernels aus?
+
+Durch die modulare monolithische Struktur können beim Systemstart vorgegebene Bestandteile direkt geladen werden. Ebenfalls  können während der Laufzeit Module unabhängig vom Kernel geladen werden. Zu dem werden Treiber aus Treiberdateien geladen und entladen. 
+	Dies erhöht die Flexibilität des Systems, ermöglicht die Verwendung unterschiedlicher Hardware während der Laufzeit und reduziert Speicherbedarf, da nur notwendige Treiber geladen werden müssen. 
+
+# Dateisysteme
+
+## Lineare Dateisysteme finden in modernen BS keine Verwendung mehr. Warum?
+
+Da alle Dateien in in einem Verzeichnis abgelegt werden, ist es bei der immer größer werdenden Anzahl von Dateien wurde es immer schwerer mir diesem System zu Arbeiten unter anderem, weil die Dateien nur sequentiell lesbar sind.
+
+## Erläutern Sie die Funktionsweise des Magic Words
+
+Magic Word ist eine Option um Dateien zu Unterscheiden. Durch eine bestimmte Bytesequenz am Beginn der Datei wird der Dateityp Identifiziert.
+
+## Kann eine Datei modifiziert werden, ohne den Inhalt zu ändern?
+
+Ja, bspw. kann der Dateiname unabhängig vom Inhalt geändert werden.
+
+## Was ist die Hauptaufgabe eines Dateisystems? Zwischen welchen Schichten vermittelt ein Dateisystem?
+
+Die Hauptaufgabe ist die Verwirklichung sinnvoller Abstraktionen zum Strukturieren der abzulegenden Information und das Management des Freispeichers. Ein Dateisystem vermittelt zwischen der logischen Schicht und der physikalischen Schicht.
+
+## Für welche Speichermedien findet das FAT-Dateisystem hauptsächlich Verwendung?
+
+Wechselmedien
+
+## Welches Dateisystem muss genutzt werden, um ISO-Dateien > 4GB auf einem USB- Stick ablegen zu können?
+
+FAT 32
+
+# Netzwerkbetriebssysteme
+
+## ? Welche Schwerpunkte werden bei NOS vorrangig gesetzt?
+
+
+
+## Warum sind automatische Updates bei Server-Systemen riskant?
+
+Bei Automatischen Updates werden möglicherweise vor beginn keine Backups angelegt, dadurch kann es bei einem Fehlerhaftem Update zum Datenverlust kommen. 
+Ebenfalls ist es möglich, dass vor kurzem erschienen Updates Fehler enthalten, die noch nicht entdeckt wurden. Diese können dem System schaden.
+
+## Was unterscheidet dedizierte und nicht dedizierte Server?
+
+Dedizierte Server haben nur einen Anwendungszweck. Auf nicht dedizierten Server hingegen laufen mehrere Anwendungen. 
+
+## ? Erläutern Sie das Prinzip „Run-to-Completion“!
+
+##  ?Beschreiben Sie das Prinzip des NUMA-Speichers in eigenen Worten!
+
+
+
+## Nennen Sie zwei Anwendungsbereiche für Netzwerkbetriebssysteme!
+
+- Gemeinsame Nutzung von Software
+- Virtualisierung von Systemen
+=======
+>>>>>>> 00a984f143906b280d5bd511c23180a885fb7245

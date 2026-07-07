@@ -476,8 +476,9 @@ $$
 =\overline{Q^n_2} \land \overline{Q^n_0}
 $$
 
-![[5 zu 1 Frequenzteiler.drawio.svg]]
-
 ### d)
+
+![[5 zu 1 Frequenzteiler.drawio.svg|700]]
+d)
 
 ![[Frequenzteiler_5_zu_1.svg 1.png]]

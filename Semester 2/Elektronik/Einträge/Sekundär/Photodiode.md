@@ -27,7 +27,7 @@ Bei Solarzellen werden deshalb viele Dioden in Reihe geschaltet.
 
 # Fotodiodenbetrieb 
 
-![[Kennlinie_Photodiode_1.png]]
+![[Kennlinie_Photodiode_1.png|600]]
 
 Betrieb in [[Verarmungszone|Sperrrichtung]], um mittels einer Vorspannung die Sperrschicht zu verbreitern.
 Durch ein stärkeres [[elektrisches Feld]] ist die Chance, dass [[Ladungsträger]] direkt nach ihrer Entstehung direkt wieder miteinander rekombinieren geringer

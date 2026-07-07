@@ -269,8 +269,6 @@ Bei höherer Temperatur entstehen thermisch in der [[Verarmungszone|Sperrschicht
 
 ![[Temperatur-Durchlass.png|400]]
 
-
-
 # Grenzwerte und Kennlinien
 
 >[!Info] Grenzwerte vs. Kennwerte
@@ -280,8 +278,8 @@ Bei höherer Temperatur entstehen thermisch in der [[Verarmungszone|Sperrschicht
 ## Typisch angegebene Grenzwerte
 
 - maximaler Durchlassstrom $I_{F}$
-- maximaler periodischer Spitzenstron $I_{FRM}$
-- maximaler Stoßstrim $I_{FSM}$
+- maximaler periodischer Spitzenstrom $I_{FRM}$
+- maximaler Stoßstrom $I_{FSM}$
 - Verlustleistung $P_{tot}$
 - Sperrschichttemperatur $T_{y}$
 - Spitzensperrspannung $U_{RM}$
