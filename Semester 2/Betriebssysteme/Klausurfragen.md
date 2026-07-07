@@ -569,3 +569,81 @@ Bei der Exklusiven Politik werden grundsätzlich alle Seiten gesperrt. Es sind l
 - Zugangskontrolle
 - Entkopplung von Diensten
 
+# Linux-Systeme
+
+## ?? Warum sind Echtzeit-Linux-Systeme nicht so performant, wie „echte“ Realtime-Betriebssysteme?
+
+Echtzeit-Linux-Systeme haben ein wesentlich höheren Ressourcen verbrauch da die den deterministischen Betrieb Priorisieren.
+
+## ? Distributionen liefern Werkzeuge und Applikationen. Was ist der Unterschied? Nennen Sie je ein Beispiel!
+
+Werkzeuge sind für die Konfiguration und Wartung des Betriebssystems zuständig. Sie werden hauptsächlich für das System und Administratoren entwickelt.
+
+Applikationen hingegen sind Programme die der Endanwender aktiv Nutz. 
+
+-- Beispiele noch einfügen --
+
+## Was unterscheidet UNIX-artige und UNIX-oide Betriebssysteme?
+
+UNIX-artige Systeme enthalten Originalcode auf UNIX. UNIX-oide Systeme hingegen haben keine Verbindung zum echten UNIX. Sie wurden unabhängig entwickelt, ahmen aber die Funktionen von UNIX nach.
+
+## Erläutern Sie das Prinzip “Everything is a file“
+
+Everything is a file ist eine definierte Eigenschaft von UNIX-Systemen. Nach diesem Prinzip sind Ein- / Ausgabe-Ressourcen aber auch Interprozess- und Netzwerkverbindung als Byteströme durch Dateisysteme verfügbar.
+
+## ?? Wie wirkt sich die modulare monolithische Struktur des Linux-Kernels aus?
+
+Durch die modulare monolithische Struktur können beim Systemstart vorgegebene Bestandteile direkt geladen werden. Ebenfalls  können während der Laufzeit Module unabhängig vom Kernel geladen werden. Zu dem werden Treiber aus Treiberdateien geladen und entladen. 
+	Dies erhöht die Flexibilität des Systems, ermöglicht die Verwendung unterschiedlicher Hardware während der Laufzeit und reduziert Speicherbedarf, da nur notwendige Treiber geladen werden müssen. 
+
+# Dateisysteme
+
+## Lineare Dateisysteme finden in modernen BS keine Verwendung mehr. Warum?
+
+Da alle Dateien in in einem Verzeichnis abgelegt werden, ist es bei der immer größer werdenden Anzahl von Dateien wurde es immer schwerer mir diesem System zu Arbeiten unter anderem, weil die Dateien nur sequentiell lesbar sind.
+
+## Erläutern Sie die Funktionsweise des Magic Words
+
+Magic Word ist eine Option um Dateien zu Unterscheiden. Durch eine bestimmte Bytesequenz am Beginn der Datei wird der Dateityp Identifiziert.
+
+## Kann eine Datei modifiziert werden, ohne den Inhalt zu ändern?
+
+Ja, bspw. kann der Dateiname unabhängig vom Inhalt geändert werden.
+
+## Was ist die Hauptaufgabe eines Dateisystems? Zwischen welchen Schichten vermittelt ein Dateisystem?
+
+Die Hauptaufgabe ist die Verwirklichung sinnvoller Abstraktionen zum Strukturieren der abzulegenden Information und das Management des Freispeichers. Ein Dateisystem vermittelt zwischen der logischen Schicht und der physikalischen Schicht.
+
+## Für welche Speichermedien findet das FAT-Dateisystem hauptsächlich Verwendung?
+
+Wechselmedien
+
+## Welches Dateisystem muss genutzt werden, um ISO-Dateien > 4GB auf einem USB- Stick ablegen zu können?
+
+FAT 32
+
+# Netzwerkbetriebssysteme
+
+## ? Welche Schwerpunkte werden bei NOS vorrangig gesetzt?
+
+
+
+## Warum sind automatische Updates bei Server-Systemen riskant?
+
+Bei Automatischen Updates werden möglicherweise vor beginn keine Backups angelegt, dadurch kann es bei einem Fehlerhaftem Update zum Datenverlust kommen. 
+Ebenfalls ist es möglich, dass vor kurzem erschienen Updates Fehler enthalten, die noch nicht entdeckt wurden. Diese können dem System schaden.
+
+## Was unterscheidet dedizierte und nicht dedizierte Server?
+
+Dedizierte Server haben nur einen Anwendungszweck. Auf nicht dedizierten Server hingegen laufen mehrere Anwendungen. 
+
+## ? Erläutern Sie das Prinzip „Run-to-Completion“!
+
+##  ?Beschreiben Sie das Prinzip des NUMA-Speichers in eigenen Worten!
+
+
+
+## Nennen Sie zwei Anwendungsbereiche für Netzwerkbetriebssysteme!
+
+- Gemeinsame Nutzung von Software
+- Virtualisierung von Systemen
