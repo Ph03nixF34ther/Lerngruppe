@@ -10,8 +10,6 @@ Dienste eines Betriebssystems sind die Funktionen der einzelnen Schichten (Anwen
 
 ## Welche Schichten beinhaltet das Schichtenmodell?
 
-// TODO FRAGE 1
-
 - Hardware
 - Betriebssystem Kern (Kernel)
 - Anwendungsprogramme
@@ -80,9 +78,7 @@ Prozesse werden über den Prozesskontrollblock verwaltet, der in einer zentralen
 - Warten auf Ressourcen:
 	- Prozess wartet bspw. auf Netzwerkressourcen und blockiert den Fortschritt
 
-## Was beinhaltet der Programmspeicher eines Prozesses?
-
-// TODO Frage 2
+## Was beinhaltet der Programmspeicher eines Prozesses? (Nicht in der Klausur)
 
 - Programmkontext 
 	- kleiner Speicherbereich für Aufrufparameter und Umgebungsvariablen
@@ -133,19 +129,9 @@ Ein Prozess Startet immer im Zustand Neu.
 
 ## Wozu dient der Prozesskontrollblock?
 
-// TODO Frage 3
-
-Der Prozesskontrollblock enthält wichtige Information der einzelnen Prozesse. Zu diesen gehören:
-- Prozessidentifikation
-- Dateizustände
-- Stack-Zeiger
-- Befehlssätze
-- Verwaltungsinformationen
-- Speicherbelegung
+Der Prozesskontrollblock enthält wichtige Information der einzelnen Prozesse. Diese dienen dazu den Prozess in der Prozesstabelle zu verwalten. 
 
 ## Welche Ziele werden beim Scheduling verfolgt?
-
-// TODO Frage 4
 
 - Fairness
 - Reaktionszeit
@@ -179,8 +165,6 @@ Nebenläufige Prozesse laufen scheinbar parallel ab, tatsächlich wechselt der K
 Bei pseudo-paralleler Ausführung auf einem einzelnen Prozessorkern läuft zu jedem Zeitpunkt nur einer der beiden Prozesse. Das Betriebssystem schaltet über das Scheduling sehr schnell zwischen beiden Prozessen hin und her, indem es jeweils einen Kontextwechsel durchführt. Durch die hohe Wechselfrequenz entsteht für den Benutzer der Eindruck, beide Prozesse würden gleichzeitig laufen, obwohl die CPU sie nur abwechselnd, scheibchenweise bearbeitet.
 
 ## Welchen Vorteil bietet die Distributed-Memory-Access-Architektur ggü. der Uniform-Memory-Architektur ?
-
-// TODO Frage 5
 
 Bei einer Uniform-Memory-Architektur greifen alle Prozessoren über einen gemeinsamen Bus auf einen zentralen Hauptspeicher zu, wodurch bei steigender Prozessorzahl der Bus zum Engpass wird. 
 Bei einer Distributed-Memory-Architektur besitzt dagegen jeder Prozessor einen eigenen, lokalen Speicherbereich mit sehr schnellem Zugriff. Dadurch können Speicherzugriffe stärker parallelisiert werden und das System lässt sich deutlich besser auf viele Prozessoren skalieren.
@@ -234,8 +218,6 @@ Beim Erzeuger-Verbraucher-Problem produzieren ein oder mehrere Erzeuger-Prozesse
 
 ## Welche Bedingungen führen zu einer Verklemmung in einem System?
 
-// TODO Frage 6
-
 - Exklusivnutzung von Ressourcen
 	- Ressourcen werden exklusiv von einem Prozess genutzt
 - Reservieren und Warten
@@ -253,15 +235,11 @@ Bei der atomaren Ressourcenzuteilung muss ein Prozess vor Beginn seiner Ausführ
 
 ## Was ist der Unterschied zwischen Kernel- und User-Threads? Nennen Sie je ein Beispiel für einen dieser Threads!
 
-// TODO Frage 7
-
 Der Wechsel zwischen User-Level-Threads ist sehr schnell, blockiert allerdings den gesamte Prozess mit allen seinen Threads. Beispiel: Eingabeverwaltung.
 
-Kernel-Level-Threads können unabhängig von den anderen blockieren oder ausgeführt werden, Sie laufen echt Parallel bei einem Multiprozessor System. Der Kontextwechsel dauert jedoch länger. Beispiel: Systemaufruf.
+Kernel-Level-Threads können unabhängig von den anderen blockieren oder ausgeführt werden. Sie werden direkt vom Betriebssystem gestartet. Sie laufen echt Parallel bei einem Multiprozessor System. Der Kontextwechsel dauert jedoch länger. Beispiel: Systemaufruf.
 
 ## Nennen Sie die Bestandteile eines Threadkontrollblocks!
-
-// TODO Frage 8
 
 - Thread-ID
 - Stackpointer
@@ -296,15 +274,7 @@ Die Prozesstabelle hat für jeden Prozesses einen Eintrag. Dieser Eintrag ist de
 
 ## Erklären Sie, wie Polling funktioniert!
 
-//TODO Frage 9
-
-Beim Polling Interagieren Rechner und Controller miteinander. Der Controller hat dabei ein Passives Verhalten. 
-- Der Rechner liest zyklisch das BUSY-Bit, bis der Wert "Bereit" anzeigt.
-- Anschließend Überträgt der Rechner ein Byte in das Ausgaberegister
-- Rechner setzt das EXECUTE-Bit
-- Controller erkennt, dass er Arbeiten soll und setzt BUSY-Bit
-- Der Controller liest den Schreibbefehl und das eingetragene Byte aus dem Ausgaberegister und löst die Ausgabe aus.
-- Abschließend werden EXECUTE-Bit, BUSY-Bit und ERROR-Bit auf 0 gesetzt.
+Beim Polling Interagieren Rechner und Controller miteinander. Der Controller hat dabei ein Passives Verhalten. Der Rechner liest zyklisch das BUSY-Bit, bis der Wert "Bereit" anzeigt.
 
 ## Was ist der Unterschied zwischen Polling und Interrupt-Steuerung?
 
@@ -330,7 +300,7 @@ Aber auch:
 
 ## Aus welchen Bestandteilen besteht ein Gerätetreiber?
 
-Ein Gerätetreiber besteht aus Schnittstellen zum Betriebssystem, zur Hardware und zur Konfiguration des Gerätes. 
+Sie bestehen aus einem Geräte abhängigen Teil, einem Geräteunabhängigen Teil und einem Systemunabhängigen Teil. 
 
 # Ein und Ausgabegeräte
 
@@ -348,7 +318,7 @@ Blockorientierte Kommunikation speichert Informationen in Blöcken mit fester Gr
 # Speichermedien
 
 ## Was unterscheidet Cache-Speicher vom Hauptspeicher?
-[[]]
+
 Der Cachespeicher ist im Gegensatz zum Hauptspeicher nicht flüchtig. Er ist keine Physische Komponente eines Computers sondern lediglich in der CPU/Grafikkarte. der Cache Speicher ist Teurer und hat eine geringere Speicherkapazität, hat jedoch eine geringere Zugriffszeit.
 
 ## Was bedeuten die Abkürzungen RAM- und ROM-Speicher?
@@ -389,8 +359,6 @@ Da die Daten und Informationen für Prozesse nebeneinander im Speicher Abgelegt 
 
 ## Was verstehen Sie unter Paging?
 
-//TODO Frage 10
-
 Das Paging ist ein Prinzip der Speicherverwaltung. Bei diesem Verfahren wird der Hauptspeicher in definiert große Blöcke unterteilt, diese werden Seitenrahmen genannt. Der logische Adressraum eines Prozess wird in Seiten unterteilt. Dabei ist die maximale Seitengröße ein Seitenrahmen. Die Seiten werden dann auf Seitenrahmen aufgeteilt.
 
 ## Warum werden HDD-Festplatten defragmentiert?
@@ -426,16 +394,6 @@ Es kommt zur Internen Fragmentierung bei der Aufteilung des Hauptspeichers in fe
 ## Welche Komponenten verwaltet die Speichermedien und den Datenfluss in einem Rechnersystem?
 
 Die Memory Management Unit (MMU)
-
-## Welche Anforderungen werden an ein Speichersystem gestellt?
-
-//TODO Frage 11
-
-- Relocation
-- Sharing
-- Protection
-- Physical Origanisation
-- Logical Origanisation
 
 ## Was wird mit der Working-Set-Methode versucht zu verhindern?
 
@@ -537,7 +495,7 @@ Es soll keine Möglichkeit geschaffen werden von außen auf das Sicherheitsmanag
 
 ## Was bedeutet „transparente Arbeitsweise“ im Bezug auf eine Firewall?
 
-// TODO Frage 12
+Andere Teilnehmer haben keinerlei Informationen das über eine Firewall kommuniziert wird. Das wird realisiert indem die Latenz so gering wie möglich gehalten wird. 
 
 ## Welche Unterscheidung können Sie zwischen Safety und Security treffen?
 
@@ -555,20 +513,11 @@ Verdeckte Kanäle sind so schwer zu Identifizieren, da sie die Bandbreite eines 
 
 Jeder Nutzer wird in eine Sicherheitsstufe eingeordnet. Die Sicherheitsstufe bestimmt welche Dateien lesbar, beschreibbar oder überhaupt nicht aufrufbar sind. Dabei sind Dateien der eigenen und Niederen Sicherheitsstufe immer lesbar und beschreibbar doch Dateien einer höheren stufe nur bedingt Lesbar. 
 
-## Welche Fragen können bei einer Authentifizierung gestellt werden?
+## Welche Fragen können bei einer Authentisierung gestellt werden?
 
-// TODO Frage 13
-
-Authentisierung:
 - Was hat jemand?
 - Was weiß jemand? 
 - Was ist jemand?
-
-Authentifizierung:
-- Existiert der Nutzername mit dem Passwort?
-
-Autorisierung:
-- Besitzt der Nutzer die Berechtigung für die Aktion?
 
 ## Erläutern Sie das Prinzip der drei ihnen bekannten Sicherheitspolitiken und nennen Sie je einen Vor- und Nachteil!
 
@@ -593,21 +542,21 @@ Bei der Exklusiven Politik werden grundsätzlich alle Seiten gesperrt. Es sind l
 - Rechteverwaltung
 - Zugangskontrolle
 - Entkopplung von Diensten
-<<<<<<< HEAD
+
 
 # Linux-Systeme
 
-## ?? Warum sind Echtzeit-Linux-Systeme nicht so performant, wie „echte“ Realtime-Betriebssysteme?
+## Warum sind Echtzeit-Linux-Systeme nicht so performant, wie „echte“ Realtime-Betriebssysteme?
 
-Echtzeit-Linux-Systeme haben ein wesentlich höheren Ressourcen verbrauch da die den deterministischen Betrieb Priorisieren.
+Echtzeit-Linux-Systeme hat einen großen Overhead, wodurch es nicht nicht auf den echtzeitbetrieb ausgelegt sind, anders als die real time Betriebssysteme.
 
-## ? Distributionen liefern Werkzeuge und Applikationen. Was ist der Unterschied? Nennen Sie je ein Beispiel!
+## Distributionen liefern Werkzeuge und Applikationen. Was ist der Unterschied? Nennen Sie je ein Beispiel!
 
 Werkzeuge sind für die Konfiguration und Wartung des Betriebssystems zuständig. Sie werden hauptsächlich für das System und Administratoren entwickelt.
+Beispiel: Dateimanager
 
 Applikationen hingegen sind Programme die der Endanwender aktiv Nutz. 
-
--- Beispiele noch einfügen --
+Beispiel: Paint
 
 ## Was unterscheidet UNIX-artige und UNIX-oide Betriebssysteme?
 
@@ -617,10 +566,9 @@ UNIX-artige Systeme enthalten Originalcode auf UNIX. UNIX-oide Systeme hingegen 
 
 Everything is a file ist eine definierte Eigenschaft von UNIX-Systemen. Nach diesem Prinzip sind Ein- / Ausgabe-Ressourcen aber auch Interprozess- und Netzwerkverbindung als Byteströme durch Dateisysteme verfügbar.
 
-## ?? Wie wirkt sich die modulare monolithische Struktur des Linux-Kernels aus?
+## Wie wirkt sich die modulare monolithische Struktur des Linux-Kernels aus?
 
-Durch die modulare monolithische Struktur können beim Systemstart vorgegebene Bestandteile direkt geladen werden. Ebenfalls  können während der Laufzeit Module unabhängig vom Kernel geladen werden. Zu dem werden Treiber aus Treiberdateien geladen und entladen. 
-	Dies erhöht die Flexibilität des Systems, ermöglicht die Verwendung unterschiedlicher Hardware während der Laufzeit und reduziert Speicherbedarf, da nur notwendige Treiber geladen werden müssen. 
+Die Monolithische Struktur ist nur ein kleiner Teil des Kernels der beim Systemstart geladen wird, dadurch hat der Kernel nur einen Geringen Speicher während der Laufzeit, da nachträglich nur wirklich nötige Treiber geladen werden.
 
 # Dateisysteme
 
@@ -650,9 +598,18 @@ FAT 32
 
 # Netzwerkbetriebssysteme
 
-## ? Welche Schwerpunkte werden bei NOS vorrangig gesetzt?
+## Welche Schwerpunkte werden bei NOS vorrangig gesetzt?
 
+Spezialisierte Betriebssysteme:
+- Datendurchsatz
+- Verfügbarkeit
+- Effizient
 
+Server-Betriebssysteme:
+- Datendurchsatz
+- Ressourcenverwaltung
+- Sicherheitsfunktionen
+- Multitasking
 
 ## Warum sind automatische Updates bei Server-Systemen riskant?
 
@@ -663,15 +620,44 @@ Ebenfalls ist es möglich, dass vor kurzem erschienen Updates Fehler enthalten, 
 
 Dedizierte Server haben nur einen Anwendungszweck. Auf nicht dedizierten Server hingegen laufen mehrere Anwendungen. 
 
-## ? Erläutern Sie das Prinzip „Run-to-Completion“!
+## Erläutern Sie das Prinzip „Run-to-Completion“!
 
-##  ?Beschreiben Sie das Prinzip des NUMA-Speichers in eigenen Worten!
+Das Run-to-Completion Prinzip besagt, dass eingehende packte mittels Interrupts so schnell wie möglich weitergeleitet werden bis Sie ihr angegebenes Ziel erreicht haben.
 
+## Beschreiben Sie das Prinzip des NUMA-Speichers in eigenen Worten!
 
+Beim Prinzip des NUMA-Speichers Wird der RAM in einzelne Knoten geteilt. Dadurch werden mehrere Speicherbereiche für mehrere Prozessoren geschaffen. Das minimiert die Latenz von Speicherzugriffen.
 
 ## Nennen Sie zwei Anwendungsbereiche für Netzwerkbetriebssysteme!
 
 - Gemeinsame Nutzung von Software
 - Virtualisierung von Systemen
-=======
->>>>>>> 00a984f143906b280d5bd511c23180a885fb7245
+
+# Virtualisierung
+
+## Was unterscheidet den Bare-Metal-HyperV und Hosted HyperV
+
+Der Bare-Metal-HyperV setzt direkt auf der Hardware und dadurch wesentlich Performater. Es wird eher in der Industrie genutzt. der Hosted HyperV setzt auf einem Betriebssystem auf ist dadurch Kostengünstiger. Diese System wird hauptsächlich im Privaten Sektor verwendet.
+
+## Nennen Sie vier Zwecke, wofür die Verwendung einer virtuellen Maschine sinnvoll ist!
+
+- Test von Programmen
+- Skalierbarkeit / Wenn mehrere Systeme angeboten werden sollen aber nur ein server zur Verfügung steht
+- Erhöhte Verfügbarkeit von Systemen durch Redundanz
+- Effektivere Nutzung von Hardware
+
+## Was unterscheidet Simulation und Emulation?
+
+Simulation:
+Ein System wird so gut wie nötig nachgebildet. Dem Anwender ist bewusst, das es sich nicht um die Wirklichkeit handelt, da es unwichtige Faktoren, wie bspw. die Zeit verändert.
+
+Emulation:
+Mittels Software wird Hardware so detailgetreu wie möglich nachgebildet. Es werden Echtweltdaten verwendet um den Eindruck zu erwecken, dass es die Wirklichkeit ist.
+
+## Welcher Reale Faktor wird bei virtuellen Systemen in der Regel vernachlässigt?
+
+Zeit und andere Physische Faktoren wie der Stromverbrauch.
+
+## Was unterscheidet Container-Systeme von Virtuellen Maschinen?
+
+Bei Virtuellen Maschinen wird das gesamte Betriebssystem Virtualisiert bei einem Container-Systeme gibt es nur ein Bereich für eine Anwendung. Ebenfalls ist die Lebensdauer kürzer als bei einer Virtuellen Maschine
