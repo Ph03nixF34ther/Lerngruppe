@@ -144,7 +144,7 @@ $$
 Die Funktion wird mit der [[Partialbruchzerlegung]] zerlegt
 
 $$
-\dfrac{x^3 + 2 \cdot x^2 + 1}{(x-1) \cdot (x + 1) \cdot (x + 2)} = \dfrac{A}{x - 1} + \dfrac{B}{x + 1} + \dfrac{C}{x + 2}
+\dfrac{x^3 + 2 \cdot x^2 + 1}{(x-1) \cdot (x + 1) \cdot (x + 2)} = \dfrac{A}{x - 1} + \dfrac{B}{x + 1} + \dfrac{C}{x + 2} + 1
 $$
 
 Wir nutzen das [[Partialbruchzerlegung#Feldmann-Verfahren|Feldmann'sche Verfahren]] 
@@ -249,7 +249,7 @@ $$
 a(0) = \dfrac{2 \cdot \pi^2}{3}
 $$
 $$
-\dfrac{a(0)}{2} + \sum_{k=1}^{\infty} (a(k))^2 = \dfrac{1}{\pi} \int_{-\pi}^{\pi} \left( f \left( x \right) \right)^{2} \ dx \approx 38.96
+S = \dfrac{a(0)}{2} + \sum_{k=1}^{\infty} (a(k))^2 = \dfrac{1}{\pi} \int_{-\pi}^{\pi} \left( f \left( x \right) \right)^{2} \ dx \approx 38.96
 $$
 
 ---
@@ -264,26 +264,62 @@ $$
 
 Und einer Bedingung
 
-$$
-y(0) = y'(0) = 0
-$$
+$$\begin{array}{c}
+y(0) = 0 & y'(0) = 1
+\end{array}$$
 
 Da die Differentialgleichung ungleich $0$ ist, ist sie inhomogen
 
 ## Lösung
 
+Zuerst bildet man den homogenen teil der DGL
+
+$$
+y'' + 2 \cdot y' + 5 \cdot y = 0
+$$
+
 Wir bilden das charakteristische Polynom
 
 $$
-p(x) = x^2 + 2 \cdot x + 5
+p(\lambda) = \lambda^2 + 2 \cdot \lambda + 5
 $$
 
 Die Nullstellen dieses Polynoms sind die Eigenwerte des DGLs
 (Sind alle Realteile negativ ist das DGL stabil)
 
-$$\begin{array}{l}
-p(x) = 0 \\
-x = \left[ \begin{array}{c} -1 - 2 \cdot i \\ -1 + 2 \cdot i \end{array} \right]
+$$\begin{array}{c}
+p(\lambda) = 0 \\ \\
+\lambda = \left[ \begin{array}{c} -1 - 2 \cdot i \\ -1 + 2 \cdot i \end{array} \right]
 \end{array}$$
 
-Zuerst wird die Impulsantwort gebildet
+Hier unterscheidet man in drei Fälle:
+
+1. Zwei verschiedene reelle Lösung $\lambda_1 \ne \lambda_2$
+	Lösungsansatz: $y_h(x) = c_1 \cdot e^{\lambda_1x} + c_2 \cdot e^{\lambda_2x}$
+
+2. Eine doppelte reelle Lösung $\lambda_1 = \lambda_2 = \lambda$
+	Lösungsansatz: $y_h(x) = (c_1 + c_2 x) \cdot e^{\lambda x}$
+
+3. Komplex konjugierte Lösung $\lambda_{1,2} = a \pm b \cdot i$ $\Rightarrow$ Unser Fall
+	Lösungsansatz: $y_h(x) = e^{a x} \cdot (c_1 \cos(b x) + c_2 \sin(b x)$
+
+$$\begin{array}{l}
+y_h(x) = e^{-i} \cdot (c_1 \cos(2x) + c_2 \sin(2x)) \\
+y_h'(x) = 2 \cdot \cos(1) \cdot (c_2 \cdot \cos(2x) - c_1 \cdot \sin(2x)) - 2 \cdot \sin(1) \cdot (c_2 \cdot \cos(2x) - c_1 \cdot \sin(2x)) \cdot i
+\end{array}$$
+
+$$\begin{array}{ll}
+I. & y_h(0) = 0 \\
+II. & y_h'(0) = 1
+\end{array}$$
+$$\begin{array}{c}
+c_1 = 0 & c_2 = \dfrac{\cos(1)}{2} + \dfrac{\sin(1)}{2} \cdot i
+\end{array}$$
+$$
+y_h(x) = \dfrac{\sin(2x)}{2}
+$$
+$$\begin{array}{l}
+y_h(0) = 0 \\
+y_h(1) = \dfrac{\sin(2)}{2}
+\end{array}$$
+
