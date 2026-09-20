@@ -8,8 +8,8 @@ Elektronenschalen:
 - Innere Schalen haben ein niedriges Energieniveau
 - Äußere Schalen haben ein hohes Energieniveau
 
-Das Atom besteht aus Valenzelektronen (grün) und Atomrumpf
-Der Atomrumpf besteht aus Rumpfelektronen und dem Atomkern
+Das Atom besteht aus Valenzelektronen (grün) und [[Atom|Atomrumpf]]
+Der [[Atom|Atomrumpf]] besteht aus Rumpfelektronen und dem Atomkern
 
 Silizium ordnet sich durch die vier freien Valenzelektronen in einer Kristallstruktur an
 

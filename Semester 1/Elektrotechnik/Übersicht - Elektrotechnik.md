@@ -4,17 +4,17 @@ Im folgenden stehen alle wichtigen grundlegenden Formel für die Elektroctechnic
 # Stoff
 - Physikalische Grundlagen und Umformung von Gleichungen
 - Gleichstrom-/Gleichspannung
-	- [[Elektrische Stromstärke]], [[Elektrische Stromdichte]], [[Elektrische Spannung]]
-	- [[Elektrischer Widerstand|Widerstand]], [[Elektrischer Leitwert]]
-	- [[Spezifischer Widerstand]], [[Spezifischer Leitwert]]; lineare und nichtlineare [[Elektrischer Widerstand|Widerstände]]
+	- [[elektrische Stromstärke]], [[elektrische Stromdichte]], [[elektrische Spannung]]
+	- [[elektrischer Widerstand|Widerstand]], [[elektrischer Leitwert]]
+	- [[spezifischer Widerstand]], [[spezifischer Leitwert]]; [[Arbeitsgerade#Rezept|nichtlineare Widerstände]] [[elektrischer Widerstand|lineare Widerstände]] 
 	- [[Arbeit]] und [[Leistung bei Gleichstrom]]
 	- [[Bezugssinn und Pfeilsysteme]]
-	- [[Kirchhoff'sche Gesetze]]
-	- [[Spannungsquelle]]und [[Stromquellen]] mit Innenwiderstand/-leitwert
+	- [[kirchhoff'sche Gesetze]]
+	- [[Spannungsquelle|Spannungsquellen]] und [[Stromquellen]] mit Innenwiderstand/-leitwert
 	- Berechnung von Gleichstromkreisen ([[Reihenschaltung|Reihenschaltungen]] / [[Parallelschaltung|Parallelschaltungen]]) 
 	- [[Stern-Dreieck-Transformation]]
 	- Netzwerkberechnungen für Netzwerke mit Spannungsquellen nach weiteren Verfahren ([[Maschenstromverfahren]], [[Knotenpotenzialverfahren]], [[Überlagerungsverfahren]])
-	- [[Ersatzspannungsquelle|Ersatzspannungsquellen]] und [[Ersatzstromquelle|Ersatzstromquellen]]
+	- [[Umrechnung nichtidealer Strom- in nichtideale Spannungsquellen und umgekehrt]]
 	- [[Leistungsanpassung]]
 	- [[Nichtlineare Stromkreise]] (Vorschau auf [[Diode]], nichtlineare Strom-/Spannungskennlinie)
 

@@ -16,7 +16,7 @@ Die Bitübertragungsschicht kann von Netzwerk zu Netzwerk variieren. Verschieden
 
 # Theoretische Analyse der Datenübermittlung
 
-Informationen können über eine Leitung je nach physikalischen Eigenschaften per [[Elektrische Stromstärke|Strom]] oder [[Elektrische Spannung|Spannung]] übertragen werden.
+Informationen können über eine Leitung je nach physikalischen Eigenschaften per [[elektrische Stromstärke|Strom]] oder [[elektrische Spannung|Spannung]] übertragen werden.
 
 Diese elektrischen Eigenschaften können dann als Funktion mit einem Parameter (der Zeit) $f(t)$ interpretiert werden.
 

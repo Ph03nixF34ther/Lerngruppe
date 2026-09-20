@@ -1,1 +1,0 @@
-Der restliche Teil vom Atom, ohne [[Valenzelektron|Valenzelektronen]] 

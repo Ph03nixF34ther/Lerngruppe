@@ -1,6 +1,6 @@
 # Erklärung
 
-Die Arbeitsgerade wird genutzt, wenn der Arbeitspunkt eines linearen Bauteils (wie ein [[Elektrischer Widerstand|Widerstand]]) in Reihe mit einem nichtlinearen Bauteil (wie einer [[Diode]] oder einem [[Transistor]]) mit einer gegebenen Kennlinie geschaltet wurde.
+Die Arbeitsgerade wird genutzt, wenn der Arbeitspunkt eines linearen Bauteils (wie ein [[elektrischer Widerstand|Widerstand]]) in Reihe mit einem nichtlinearen Bauteil (wie einer [[Diode]] oder einem [[Transistor]]) mit einer gegebenen Kennlinie geschaltet wurde.
 
 ```tikz
 \usepackage{circuitikz}

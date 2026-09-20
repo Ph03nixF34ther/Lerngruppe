@@ -14,7 +14,7 @@ Durch die Kombination von n- und p-dotierten Halbleitern können Bauelemente, wi
 ![[n_dotiertes_Silizium.svg]]
 
 In diesem Beispiel ist der Donator ein Phosphoratom, welches ein zusätzliches [[Elektron]] spendet.
-Das löst sich schon bereits bei geringen Temperaturen vom Atomrumpf und wirkt als freier [[Ladungsträger]]. In einem elektrischen Feld kann es dann zu einem Elektronenstrom kommen.
+Das löst sich schon bereits bei geringen Temperaturen vom [[Atom|Atomrumpf]] und wirkt als freier [[Ladungsträger]]. In einem elektrischen Feld kann es dann zu einem Elektronenstrom kommen.
 
 In n-dotierten Halbleitern sind Elektronen die [[Ladungsträger|Majoritätsträger]].
 
