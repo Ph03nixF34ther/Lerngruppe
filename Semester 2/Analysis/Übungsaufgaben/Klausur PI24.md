@@ -108,3 +108,88 @@ $$
 
 Um $S$ zu bestimmen muss man $a(0)$, $a(k)$ und $b(k)$ bestimmen
 
+$a(k)$ und $b(k)$ lassen sich wie folgt definieren
+
+$$\begin{array}{c}
+a(k) = \dfrac{1}{\pi} \displaystyle \int_{-\pi}^{\pi} f(t) \cos (k \cdot t) \ dt \\
+b(k) = \dfrac{1}{\pi} \displaystyle \int_{-\pi}^{\pi} f(t) \sin (k \cdot t) \ dt
+\end{array}$$
+
+Außerhalb des Intervalls $\left[ -\pi, \frac{-\pi}{2} \right]$ ist $f(x) = 0$, wodurch das Integral in diesem Intervall ebenfalls $0$ ist und es vernachlässigt werden kann
+
+$$\begin{array}{l}
+a(k) = \dfrac{1}{\pi} \displaystyle \int_{-\pi}^{\frac{-\pi}{2}} 1 \cdot \cos (k \cdot t) \ dt = \dfrac{\sin(k \cdot k) - \sin \left( \dfrac{k \cdot \pi}{2} \right)}{k \cdot \pi} \\
+b(k) = \dfrac{1}{\pi} \displaystyle \int_{-\pi}^{\frac{-\pi}{2}} 1 \cdot \sin (k \cdot t) \ dt = \dfrac{\cos(k \cdot k) - \cos \left( \dfrac{k \cdot \pi}{2} \right)}{k \cdot \pi} \\
+a(0) = \displaystyle \lim_{k \rightarrow 0} a(k) = \frac{1}{2}
+\end{array}$$
+$$
+S = \dfrac{a(0)^2}{2} + \displaystyle \sum_{k = 1}^{\infty} \left( a(k)^2 + b(k)^2 \right)
+$$
+
+Für $S$ lässt sich der Satz von Parseval anwenden und es ergibt sich
+
+$$
+S = \dfrac{a(0)^2}{2} + \displaystyle \sum_{k = 1}^{\infty} \left( a(k)^2 + b(k)^2 \right) = \dfrac{1}{\pi} \int_{-\pi}^{\pi} f(x)^2 \ dx
+$$
+
+Selbe Geschichte mit dem Intervall und es ergibt sich
+
+$$
+S = \dfrac{1}{\pi} \int_{-\pi}^{\frac{-\pi}{2}} 1^2 \ dx = 0.5
+$$
+
+---
+
+# Aufgabe 3
+
+## Aufgabe
+
+Man bestimme die Lösung von folgendem inhomogenen [[Anfangswertproblem]]
+
+$$\begin{array}{cc}
+y''(t) + 4 \cdot y'(t) + 3 \cdot y(t) = \cos(2 \cdot t) & y(0) = y'(0) = 0
+\end{array}$$
+
+## Lösung
+
+Das charakteristische Polynom ergibt sich wie folgt
+
+$$
+p(x) = x^2 + 4 \cdot x + 3
+$$
+
+Als nächstes wird die Impulsantwort über die Nullstellen von $p(x)$ festgestellt
+
+$$\begin{array}{c}
+p(x) = 0 \\
+x = \left[ \begin{array}{c} -3 \\ -1 \end{array} \right]
+& \begin{array}{l} y1(x) = e^{-3 \cdot x} \cdot \cos(x) \\ y2(x) = e^{-1 \cdot x} \cdot \sin(x) \end{array}
+\end{array}$$
+
+// TODO
+
+---
+
+# Aufgabe 4
+
+## Aufgabe 
+
+Man bestimme durch [[Partielle Integration|partielle Integration]] folgendes unbestimmtes Integral
+
+$$
+F(x, k) = \int e^x \cdot \cos(k \cdot x) \ dx
+$$
+## Lösung
+
+$$
+\int v'(x) \cdot u(x) \ dx = v(x) \cdot u(x) - \int v(x) \cdot u'(x) \ dx
+$$
+
+Man sucht $u(x)$ und $v(x)$
+
+$$\begin{array}{ccc}
+u(x) = e^x & v'(x) = \cos(k \cdot x) & \Rightarrow & v(x) = \dfrac{\sin(k \cdot x)}{k}
+\end{array}$$
+$$
+\int e^x \cdot \cos(k \cdot x) \ dx = e^x \cdot \dfrac{\sin(k \cdot x)}{k} - \int \dfrac{\sin(k \cdot x)}{k} \cdot e^x \ dx
+$$

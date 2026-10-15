@@ -1,0 +1,1 @@
+Wichtigster Punkt ist die Verarbeitung von Daten (die Programmierung) an sich
