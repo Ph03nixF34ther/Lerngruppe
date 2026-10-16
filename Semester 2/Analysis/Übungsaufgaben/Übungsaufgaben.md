@@ -308,3 +308,7 @@ Demnach wird die Impulsantwort g(t) dieser DGL gesucht
 
 ## Lösung
 
+$$
+\alpha \pm i \beta = e^{\alpha x} (\cos(\beta x) + \sin(\beta x))
+$$
+

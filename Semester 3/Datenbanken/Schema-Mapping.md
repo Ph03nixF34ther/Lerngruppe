@@ -1,0 +1,1 @@
+Das Abbilden von Objekten eines höheren Schemas auf ein anderes meist tieferes Schema

@@ -1,4 +1,3 @@
-
 #### Digitales System
 - verarbeitet, speichert und überträgt Informationen in Form wert- und zeitdiskreter Signale
 - Vorteil: Störsicherheit, einfache Realisierung, Reproduzierbarkeit

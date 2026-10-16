@@ -1,0 +1,1 @@
+Programme und Daten sind gleichberechtigt

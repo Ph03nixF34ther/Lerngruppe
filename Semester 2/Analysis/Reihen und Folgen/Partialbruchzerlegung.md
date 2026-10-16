@@ -109,3 +109,4 @@ B = \dfrac{p(-3)}{dq(-3)} = -\dfrac{7}{25} \\
 C = \dfrac{p(7)}{dq(7)} = \dfrac{67}{100} \\
 D = \dfrac{p(-5)}{dq(-5)} = \dfrac{19}{28}
 \end{array}$$
+
